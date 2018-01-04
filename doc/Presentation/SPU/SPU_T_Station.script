@@ -1,0 +1,45 @@
+/*
+This is a smaple script file for SPU, script process unit.
+All of the content is the correctly format for SPU script.
+These demo introduce all commands of SPU but comparetrue.
+*/
+
+//sleep 5000 illiseconds
+0x0000 sleep 5000
+
+//wait for use input string to [var1]
+0x0001 waitforinput [var1]
+
+//output the content of [var1] to monitor
+0x0002 print [var1]
+
+//start loop twice, and set [loopIP] to be 0x0004, set [loopCount] to be 2
+0x0003 loop 2
+
+//check if [break] from UI
+0x0004 checkbreak
+
+//execuate the Function1 with a parameter, the Function1 is external function from API.dll
+//All of external functions are be formated like bool fun([const char* szCharVar1],...)
+0x0005 run API.dll::Function1 [var1] [var2]::integer [var3]::output
+
+//if [compare] is false, go to 0x0008
+0x0006 comparefalse 0x0008
+
+//decrease [loopCount] with 1, and go to [loopIP] if [loopCount] is zero
+0x0007 loop 
+
+/* registers
+[IP] : type int
+[break] : type bool
+[compare] : type bool
+[loopIP] : type int
+[loopCount] : type int
+[var1] : type string
+[var2] : type string
+[var3] : type string
+[var4] : type string
+[var5] : type string
+[var6] : type string
+...
+*/

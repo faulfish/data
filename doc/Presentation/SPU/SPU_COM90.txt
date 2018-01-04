@@ -1,0 +1,71 @@
+Wednesday, October 22, 2008 17:25:56
+
+Instruction :
+0x0001 print [var1]
+
+Variable:
+[break]:false
+[IP]:0x0001
+[compare]:false
+[loopIP]:0x0000
+[loopcount]:0
+[var0]:
+[var1]:"Hello world!"
+[var2]:
+[var3]:
+[var4]:
+[var5]:
+
+Wednesday, October 22, 2008 17:25:59
+
+Instruction :
+0x0001 sleep 5000
+
+Variable:
+[break]:false
+[IP]:0x0001
+[compare]:false
+[loopIP]:0x0000
+[loopcount]:0
+[var0]:
+[var1]:"Hello world!"
+[var2]:
+[var3]:
+[var4]:
+[var5]:
+
+Wednesday, October 22, 2008 17:30:59
+
+Instruction :
+error
+
+Variable:
+[break]:false
+[IP]:0x0001
+[compare]:false
+[loopIP]:0x0000
+[loopcount]:0
+[var0]:
+[var1]:"Hello world!"
+[var2]:
+[var3]:
+[var4]:
+[var5]:
+
+Wednesday, October 22, 2008 17:30:59
+
+Instruction :
+break
+
+Variable:
+[break]:false
+[IP]:0x0001
+[compare]:false
+[loopIP]:0x0000
+[loopcount]:0
+[var0]:
+[var1]:"Hello world!"
+[var2]:
+[var3]:
+[var4]:
+[var5]:
