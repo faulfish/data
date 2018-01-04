@@ -1,0 +1,54 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////////////////
+////////// %var1 comPort %var10 Error code %var11 Error message/////////
+////////////////////////////////////////////////////////////////////////
+0000 print "==========CHECK SW/HW/ME/PROCESS/MOBILEID START==========" "Title"
+
+0001 waitinput %var1 COM_PORT
+0002 assign %var2 2497
+0003 assign %var5 3000
+0004 assign %var11 2
+0005 loop %var11
+0006 Run MobileToolKit_StaticM.dll ReadFactoryAreaNew_ForSPU %var1 %var2 %var3 %var4 %var5
+0007 comparetrue 11
+0008 print "Read Mobile ID fail......" "Log"
+0009 loop
+0010 print "M20" "Error"  
+
+0011 print %var3 "UPDATE_LABEL_MOBILEID"
+0012 print "Read Mobile ID Success..." "Log"
+0013 print "==========CHECK SW/HW/ME/PROCESS/MOBILEID END==========" "Title"
+0014 print 10 "Progress"
+
+0015 print "============CHECK CEFS FILE NAME START============" "Title"
+0016 waitinput %var0 TARGET_TYPE
+0017 compare %var0 PHONE
+0018 comparefalse 31
+0019 waitinput %var0 PPF_CHECK_FLAG
+0020 compare %var0 1
+0021 comparefalse 31
+0022 assign %var2 256
+0023 loop %var11
+0024 Run MobileToolKit_StaticM.dll CheckCEFSFileName_ForSPU %var1 %var3 %var2 
+0025 comparetrue 29
+0026 print "Read CEFS File Name fail......" "Log"
+0027 loop
+0028 print "M20" "Error"  
+
+0029 print "Read CEFS File Name success..." "Log"
+0030 print %var3 "CHECK_CEFS_FILE_NAME"
+0031 print 15 "Progress"
+0032 print "============CHECK CEFS FILE NAME END============" "Title"
+
+}

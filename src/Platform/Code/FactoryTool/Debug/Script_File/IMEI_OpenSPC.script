@@ -1,0 +1,82 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+
+{Code
+////////////////////////////////open SPC////////////////////////////////
+0000 waitinput %var1 COM_PORT
+
+0001 print  "============OPEN SPC============" "Title"
+0002 print "Query SPC Lock Status..." "Log"
+0003 Run MobileToolKit_StaticM.dll IsSPCLocked_ForSPU %var1 %var6
+0004 comparetrue 7
+0005 print "Query SPC Lock Status Fail....." "Log"
+0006 print "F66" "Error"
+0007 compare %var6 SPC Locked
+0008 comparefalse 52  //SPC is unlocked
+
+//SPC is locked
+0009 print "1" "Update Lock Status"
+0010 print "Write default SPC(000000) to unlock SPC......" "Log"
+0011 assign %var7 000000
+0012 run MobileToolKit_StaticM.dll UnlockSPC_ForSPU %var1 %var7 %var6
+0013 comparetrue 16
+0014 print "Run Unlock SPC fail..." "Log"
+0015 print "F66" "Error"
+0016 compare %var6 Unlock SPC succeed. 
+0017 comparetrue 51   
+
+0018 print "Unlock SPC (000000) to phone fail......" "Log"
+0019 sleep 3000
+0020 waitinput %var3 IMEI_FROM_PHONE
+0021 print %var3 "Use IMEI to query SPC from PICS--->"
+0022 Run FactoryIMEIDll_StaticM.dll QuerySpc_PICS %var3 %var6 %var7
+0023 comparetrue 30
+0024 compare %var6 -9
+0025 comparetrue 28
+0026 print "Query SPC from PICS fail......" "Log"
+0027 print "F70" "Error"
+0028 print %var3 "There is no SPC for--->"
+0029 print "F69" "Error"
+
+0030 print %var7 "Query SPC success, the SPC is--->"
+0031 print "Write SPC to unlock SPC......" "Log"
+0032 run MobileToolKit_StaticM.dll UnlockSPC_ForSPU %var1 %var7 %var6
+0033 comparetrue 36
+0034 print "run Unlock SPC fail..." "Log"
+0035 print "F66" "Error"
+0036 compare %var6 Unlock SPC succeed.
+0037 comparetrue 40  
+0038 print "SPC is not correct, SPC is still locked......" "Log"
+0039 print "F69" "Error"
+
+0040 Run MobileToolKit_StaticM.dll IsSPCLocked_ForSPU %var1 %var6
+0041 comparetrue 44
+0042 print "Query SPC Lock Status Fail......" "Log"
+0043 print "F66" "Error"
+0044 compare %var6 SPC Locked
+0045 comparefalse 48  //SPC is open
+0046 print "SPC is not correct, SPC is still locked......" "Log"
+0047 print "F69" "Error"
+0048 print "SPC is correct, SPC is already unlocked......" "Log"
+
+0049 compare 0 0
+0050 comparetrue 52
+// unlock by default spu success...
+0051 print "=========OPEN SPC by default SUCCESS========" "Title"
+
+
+0052 print "0" "Update Lock Status"
+0053 print "============OPEN SPC SUCCESS============" "Title"
+
+0054 print 40 "Progress"
+
+}

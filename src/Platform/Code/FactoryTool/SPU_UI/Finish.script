@@ -1,0 +1,12 @@
+{Header
+}
+{Description
+}
+{Code
+//Finish MMI station
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticM.dll WriteProcessInfo %var1 7
+//0002 Run MobileToolKit_StaticM.dll ChangeFTM_ForSPU %var1
+0002 Run MobileToolKit_StaticM.dll ChangeOnline_ForSPU %var1
+0003 print "Finish test"
+}

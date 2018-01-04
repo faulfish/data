@@ -1,0 +1,32 @@
+{Header
+}
+{Description
+}
+{Code
+//Mp3 test
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticMD.dll SpeakerDevice %var1 "true"
+0002 comparetrue 0005
+0003 print "Error on SpeakerDevice API"
+0004 comparefalse 9999
+0005 Run MobileToolKit_StaticMD.dll SpeakerDeviceMultimediaLevel %var1 "10"
+0006 comparetrue 0009
+0007 print "Error on SpeakerDeviceMultimediaLevel API"
+0008 comparefalse 9999
+0009 Run MobileToolKit_StaticMD.dll PlayMP3 %var1 "true"
+0010 comparetrue 0013
+0011 print "Error on PlayMP3 API"
+0012 comparefalse 9999
+0013 assign %var2 "Does PlayMP3 test success ?"
+0014 waitinput %var2 ComfirmYesNo
+0015 compare %var2 "Yes"
+0016 comparetrue 0021
+0017 print "PlayMP3 test fail"
+0018 Run MobileToolKit_StaticMD.dll PlayMP3 %var1 "false"
+0019 Run MobileToolKit_StaticM.dll SpeakerDevice %var1 "false"
+0020 comparefalse 9999
+0021 Run MobileToolKit_StaticMD.dll PlayMP3 %var1 "false"
+0022 Run MobileToolKit_StaticMD.dll SpeakerDevice %var1 "false"
+0023 Run MobileToolKit_StaticMD.dll WriteMMIFlag %var1 429 1
+//EM_BZ_MP3 429
+}

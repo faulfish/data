@@ -1,0 +1,33 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station Download
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+//This following is a sample test code
+0000 sleep 1000
+0001 waitinput %var1
+//test loop
+0002 loop 2
+0003 print testprint
+0004 print %var1
+0005 checkbreak
+0006 comparetrue 9999
+0007 comparefalse 0009
+0008 loop
+0009 Run MobileToolKit_StaticMD.dll TestForSPU BCD %var3
+0010 comparetrue 0011
+0011 print %var3
+0012 print Run TestForSPU Successful
+0013 assign %var1 test assign command
+0014 print %var1
+0015 assign %var1 
+0016 print %var1
+0017 print hello
+}

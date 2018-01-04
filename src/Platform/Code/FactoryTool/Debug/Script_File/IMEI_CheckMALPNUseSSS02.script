@@ -1,0 +1,60 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+
+{Code
+//0000 waitinput %var11 TRANCIVER_FLAG
+//0001 compare %var11 1
+//0002 comparetrue 3
+
+0000 print "============Check IMEI\\NAL\\PN in PICS============" "Title"
+0001 waitinput %var1 PART_NUMBER
+0002 waitinput %var3 IMEI_FROM_SCANNER
+0003 waitinput %var4 MAL_FROM_SCANNER
+0004 assign %var9 2
+0005 loop %var9
+0006 Run FactoryIMEIDll_StaticM.dll Check_MAL_PN_SSSO2 %var3 %var1 %var4 %var10 %var11
+0007 comparetrue 13
+0008 print "Check NAL\\PN fail......" "Log"
+0009 loop
+0010 print %var10 "Error code------->"
+0011 print %var11 "Error message------->"
+0012 print "F59" "Error" 
+//success
+0013 print "============Check NAL\\PN success============" "Title"
+0014 print 25 "Progress"
+
+0015 waitinput %var11 TRANCIVER_FLAG
+0016 compare %var11 1
+0017 comparetrue 33
+
+0018 print "==========Create IMEI use PICS=========="  "Title"
+0019 loop %var9
+0020 Run FactoryIMEIDll_StaticM.dll Create_IMEI_PICS %var3 %var6
+0021 comparetrue 31
+0022 compare %var6 -7
+0023 comparetrue 28 
+0024 print %var3 "Create IMEI as a record in PICS fail-->"
+0025 print %var6 "Error code-->"
+0026 loop
+0027 print "F100" "Error"
+
+0028 print %var3 "The record for IMEI is already existe in PICS......"
+0029 compare 0 0
+0030 comparetrue 32
+
+//Success
+0031 print %var3  "Create IMEI as a record in PICS success--->"
+0032 print "==========Create IMEI use PICS Success=========="  "Title"
+
+0033 print 30 "Progress"
+
+}

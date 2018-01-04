@@ -1,0 +1,145 @@
+Country,Mobile operator,Access point name
+Argentina,Personal,gprs.personal.com
+Argentina,Unifon,internet.gprs.unifon.com.ar
+Australia,Telstra,telstra.internet
+Australia,Optus,internet
+Australia,Three,3netaccess
+Australia,Vodafone,internet
+Austria,Max Online,gprsinternet
+Austria,One,wap.one.at
+Belgium,Orange,orangeinternet
+Belgium,Mobistar,web.pro.be
+Belgium,Proximus,internet.proximus.be
+Bermuda,AT&T,proxy
+Bermuda,Mobility,net.bm
+Brazil,Claro,claro.com.br
+Brazil,Oi,gprs.oi.com.br
+Brazil,TIM,tim.br
+Bulgaria,Mobiltel (Mtel),inet-gprs.mtel.bg
+Canada,Fido,internet.fido.ca
+Canada,Rogers AT&T,internet.com
+Chile,Entel PCS,imovil.entelpcs.cl
+Chile,Entel PCS,bam.entelpcs.cl
+Chile,Telefonica GSM,web.tmovil.cl
+China,China Mobile,cmnet
+Croatia,VIPNET,gprs.vipnet.hr
+Czech Republic,Eurotel,internet
+Czech Republic,Oskar,internet
+Czech Republic,Oskar prepaid cards,ointernet
+Czech Republic,T-Mobile,internet.t-mobile.cz
+Denmark,TDCmobil,internet
+Denmark,Orange,web.orange.dk
+Dominican Republic,Orange Dominicana,orangenet.com.do
+Eygpt,Vodafone,internet.vodafone.net
+Finland,Telia Mobile,internet
+Finland,DNA,internet
+Finland,Sonera,internet
+Finland,Radiolinja,internet
+Finland,Saunalahti,saunalahti
+France,Orange,orange.fr
+France,SFR,websfr
+France,Bouygues Telecom,eBouygTel.com
+Germany,D2 Vodafone,web.vodafone.de
+Germany,E-Plus,internet.eplus.de
+Germany,O2,internet
+Germany,Quam,quam.de
+Germany,T-Mobile D1,internet.t-d1.de
+Greece,Vodafone,internet.vodafone.gr
+Greece,Telestet,gint.b-online.gr
+Greece,Cosmote,internet
+Hong Kong,CSL,internet
+Hong Kong,Orange,web.orangehk.com
+Hong Kong,New World,internet
+Hong Kong,People,internet
+Hong Kong,SmarTone,internet
+Hong Kong,Sunday,internet
+Hungary,"Vodafone (Prepaid ""Optimized"")",vitamax.internet.vodafone.net
+Hungary,"Vodafone (Prepaid ""Standard"")",vitamax.snet.vodafone.net
+Hungary,"Vodafone (Postpaid ""Optimized"")",internet.vodafone.net
+Hungary,"Vodafone (Postpaid ""Standard"")",standardnet.vodafone.net
+Iceland,Siminn,gprs.simi.is
+India,"Orange, Hutch",www
+India,BPL Mobile,bplgprs.com
+India,Airtel,airtelgprs.com
+Indonesia,Telkomsel,internet
+Ireland,O2,internet
+Ireland,Vodafone,live.vodafone.com
+Israel,Cellcom,internetg
+Israel,Orange,internet
+Italy,TIM,uni.tim.it
+Italy,TIM,ibox.tim.it
+Italy,Vodafone Omnitel,web.omnitel.it
+Italy,Wind,internet.wind
+Latvia,Latvia Mobile Telefone,internet.lmt.lv
+Luxembourg,LUXGSM,web.pt.lu
+Luxembourg,Tango,internet
+Malaysia,Celcom,celcom.net.my
+Mexico,Movistar,internet.movistar.mx
+Mexico,Telcel,internet.itelcel.com
+Montenegro,Monet,gprs.monetcg.com
+Netherlands,T-Mobile,internet
+Netherlands,KPM Mobile,internet
+Netherlands,Orange,internet
+Netherlands,O2,internet
+Netherlands,Vodafone (normal),web.vodafone.nl
+Netherlands,Vodafone (business),office.vodafone.nl
+New Zealand,Vodafone NZ,www.vodafone.net.nz
+Norway,Netcom,internet.netcom.no
+Norway,Telenor,internet
+Pakistan,UFone,ufone.internet
+Paraguay,Personal,internet
+Paraguay,Tigo,internet.tigo.py
+Philippines,Smart,internet
+Philippines,Globe,internet.globe.com.ph
+Poland,Era,erainternet
+Poland,Idea,www.idea.pl
+Poland,PlusGSM,www.plusgsm.pl
+Portugal,Optimus,internet
+Portugal,TMN,internet
+Portugal,Vodafone (Telcel),internet.vodafone.pt
+Romania,Connex,internet.connex.ro
+Romania,Orange,internet
+Russia,BeeLine,internet.beeline.ru
+Russia,Megafon,internet.nw
+Russia,MTS,internet.mts.ru
+Russia,PrimTel,internet.primtel.ru
+Saudi Arabia,Saudi Telecom,Jawalnet.com.sa
+Serbia-Montenegro,Mobtel Srbija,internet
+Serbia-Montenegro,Telekom Srbija,gprsinternet
+Singapore,M1,sunsurf
+Singapore,Singtel,internet
+Singapore,Starhub,shwapint
+Slovakia,Eurotel,internet
+Slovakia,Orange,internet
+South Africa,MTN,internet
+Spain,Amena,amenawap
+Spain,Telefonica (Movistar),movistar.es
+Spain,Vodafone,airtelnet
+Sweden,Telia,online.telia.se
+Sweden,Vodafone SE,internet.vodafone.net
+Switzerland,Swisscom,gprs.swisscom.ch
+Switzerland,Orange CH,internet
+Switzerland,sunrise,internet
+Switzerland,UMC,www.umc.ua
+Taiwan,Chunghwa Telecom,internet
+Taiwan,Far EasTone,fetnet01
+Taiwan,KG Telecom,internet
+Taiwan,Taiwan Cellular,internet
+Thailand,AIS,internet
+Thailand,DTAC,www.dtac.co.th
+Turkey,Avea,internet
+Turkey,Aycell,aycell
+Turkey,Telsim,telsim
+Turkey,Turkcell,internet
+UK,Jersey Telecom,pepper
+UK,O2,mobile.o2.co.uk
+UK,T-Mobile,general.t-mobile.co.uk
+UK,Vodafone UK,internet
+UK,Orange,orangeinternet
+Ukraine,Kyivstar GSM,www.kyivstar.net
+Ukraine,UMC,www.umc.ua
+USA,T-Mobile,internet2.voicestream.com
+USA,AT&T,proxy
+USA,Cingular,isp.cingular
+Venezuela,Digital TIM,gprsweb.digitel.ve
+Vietnam,MobiFone,Mobi-gprs-wap

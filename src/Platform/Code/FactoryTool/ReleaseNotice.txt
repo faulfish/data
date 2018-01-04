@@ -1,0 +1,8 @@
+20080801 [MobileToolKit_StaticM.dll]Add Read\Write SIMLock file name to NV item
+20080805 [MobileToolKit_StaticM.dll]Add SPC functions,LockSPC,IsSPCLocked,UnlockSPC,ProgramSPC
+20080805 [MobileToolKit_StaticM.dll]Add WriteSimData
+20080805 [MobileToolKit_StaticM.dll]Add WriteSimLockFile
+20080917 [MobileToolKit_StaticM.dll]Add check simlock file name
+20080923 [MobileToolKit_StaticM.dll]Add Check CEFSFileName
+20081104 Add SPU module
+20090122 Add ReportCenter module

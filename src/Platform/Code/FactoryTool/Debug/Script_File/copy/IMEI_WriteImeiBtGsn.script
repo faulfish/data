@@ -1,0 +1,205 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+
+{Code
+//////reset SPC to default 
+0000 print "============write IMEI/BT/GSN============" Title
+0001 waitinput %var1 COM_PORT
+0002 waitinput %var6  pIMEI_STRUCT
+0003 waitinput %var4 MODE_NAME
+0004 compare %var4 "ATHB1A"
+0005 comparetrue 7
+0006 comparefalse 10
+
+//MODE_NAME == ATHB1A
+0007 print "============WRITE IMEI BT MSN============"
+0008 print %var6 "Query BT and MSN from server by IMEI--->"
+0009 compare 0 0
+0010 comparetrue 12
+
+//MODE_NAME != ATHB1A
+0010 print "============WRITE IMEI BT============"
+0011 print %var6 " Query BT and GSN from server by IMEI--->"
+
+//"B" means the IMEI hasn't been written
+0012 assign %var8 "B"
+0013 run FactoryIMEIDll_StaticMD.dll QueryIMEI_SSS02 %var8 %var6 %var10 %var11 %var9
+0014 comparefalse 16
+0015 comparetrue 35
+
+//"I" means the IMEI has been written,
+//"P" means the IMEI has been printed as the label,"S" means the IMEI has been shipped
+0016 assign %var8 "P"
+0017 run FactoryIMEIDll_StaticMD.dll QueryIMEI_SSS02 %var8 %var6 %var10 %var11 %var9
+0018 comparefalse 24
+0019 compaertrue 20
+
+//
+0020 print %var6 "SET_pIMEI"
+0021 print %var9 "QUERY_IMEI_P_TRUE"
+0022 compare 0 0
+0023 comparetrue 37   //go to CHECK_LENGTH if QUERY_IMEI_P_TRUE return true
+//fail
+0024 waitinput %var4 MODE_NAME
+0025 compare %var4 "ATHB1A"
+0026 comparetrue 28
+0027 comparefalse 31
+
+//MODE_NAME == ATHB1A
+0028 print " Query BT and MSN from server fail......"
+0029 compare 0 0
+0030 comparetrue 32
+
+//MODE_NAME != ATHB1A
+0031 print " Query BT and GSN from server fail......"
+
+0032 print %var10 "Error code------->"
+0033 print %var11 "Error message------->"
+0034 print "F81" "Error!"
+
+0035 print %var6 "SET_pIMEI"
+0036 print %var9 "QUERY_IMEI_B_TRUE"
+
+
+0037 print "" "CHECK_LENGTH"
+0038 print "" "WRITE_BT_ADDR_JUDGE"  //
+
+0039 waitinput %var8 WRITE_BT_ADDR_F
+
+0040 compare %var8 0  //Mode_Name=="NORMAL"
+0041 comparetrue 46
+
+0042 compare %var8 1  //Mode_Name!="NORMAL"
+0043 comparetrue 65
+
+0044 compare %var8 2  // goto Combine write MSN with PICASSO AND XCVR
+0045 comparetrue
+
+0046 waitinput %var4 BT_ADDR_UP
+0047 run MobileToolKit_StaticMD.dll WriteHeadsetBTAddress_ForSPU %var1 %var4
+0048 comparefalse 50
+0049 comparetrue 52
+
+//Write BT address to phone fail
+0050 print %var4 "Write BT address to phone fail....." 
+0051 print "F84" "Error!"
+
+//success
+0052 print "To compare the BT address from PICS with the BT address read from phone......"
+0053 assign %var6 13
+0054 run MobileToolKit_StaticMD.dll GetBTAddr_ForSPU %var1 %var5 %var6
+0055 comparefalse 57
+0056 comparetrue 59
+
+0057 print "Read BT address from phone fail......"
+0058 print "F85" "Error!"
+
+//read bt addr from phone success
+//compare 
+0059 waitinput %var4 BT_ADDR_LOW
+0060 compare %var4 %var6
+0061 comparetrue  93  //go to write BT SUCCESS---========
+0062 comparefalse 63
+
+0063 print "BT address read from phone is not equal to BT address write to phone"
+0064 print "F86" "Error!"
+
+//Mode_Name!="NORMAL"
+0065 print "To read BT address from phone......"
+
+0066 assign %var6 13
+0067 run MobileToolKit_StaticMD.dll GetBTAddr_ForSPU %var1 %var5 %var6
+0068 comparefalse 70 //write BT addr to phone
+0069 comparetrue 80  // go to success and to compare
+
+0070 print "Read BT address from phone fail......"
+0071 waitinput %var4 BT_ADDR_UP
+0072 run MobileToolKit_StaticMD.dll WriteHeadsetBTAddress_ForSPU %var1 %var4
+
+0073 comparefalse  75
+0074 comparetrue 77
+
+0075 print %var4 " Write BT address to phone fail......"
+0076 print "F84" "Error!"
+
+0077 print %var4 "Write BT address  to phone success......"
+0078 compare 0 0
+0079 comparetrue  81 // go to compare
+
+0080 print %var4 "Read BT address from phone success......"
+
+0081 print "To compare the BT address from PICS with the BT address read from phone......"
+0082 run MobileToolKit_StaticMD.dll GetBTAddr_ForSPU %var1 %var5 %var6
+0083 comparefalse 85
+0084 comparetrue 87
+
+0085 print "Read BT address from phone fail....."
+0086 print  "F85" "Error!"
+
+0087 waitinput %var4 BT_ADDR_LOW
+0088 compare %var4 %var6
+
+0089 comparetrue 93//go to write BT  SUCCESS---========
+0090 comparefalse 91
+
+0091 print "BT address read from phone is not equal to BT address write to phone"
+0092 print "F86" "Error!"
+
+ //write BT SUCCESS---========
+0093 print "Write BT address %s to phone success......"
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+//Combine write MSN with PICASSO AND XCVR
+
+0094 print "Write IMEI to phone......"
+0095 waitinput %var4 MODE_NAME
+0096 compare %var4 NORMAL
+0097 comparetrue 99
+0098 comparefalse 105
+
+0099 waitinput %var3 IN_IMEI
+0100 run MobileToolKit_StaticMD.dll WriteIMEI_ForSPU %var1 %var3
+0101 comparefalse 103
+0102 comparetrue 105
+0103 print "Read IMEI from phone fail......"
+0104 print "F88" "Error!"
+
+0105 run MobileToolKit_StaticMD.dll GetIMEI_ForSPU %var1 %var4
+0106 comparefalse 108
+0107 comparetrue 110
+
+0108 print "Read IMEI from phone fail......"
+0109 print "F88" "Error!"
+
+0110 compare %var3 %var4
+0111 comparefalse 123
+0112 comparetrue 127
+
+0123 print "IMEI read from phone is not equal to IMEI write to phone ......"
+0124 print %var4 "IMEI read from phone is-------->"
+0125 print %var3 "IMEI write to phone is-------->"
+0126 print "F89" "Error!"
+
+0127 print %var3 "Write IMEI to phone success------>"
+
+0128 waitinput %var4 MODE_NAME
+0129 compare %var4 ATHB1A
+0130 comparetrue  132
+0131 comparefalse 135
+
+0132 print "===========WRITE IMEI BT MSN SUCCESS============"
+0133 compare 0 0
+0134 comparetrue 137
+
+0135 print "===========WRITE IMEI BT MSN SUCCESS============"
+}

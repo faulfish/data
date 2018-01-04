@@ -1,0 +1,269 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BlueClient.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\BlueClient.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 290, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About BlueClient"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "BlueClient Version xxx",IDC_VERSION,41,10,121,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright xxx  All rights reserved.",
+                    IDC_COPYRIGHT,41,23,215,8
+    DEFPUSHBUTTON   "OK",IDOK,233,117,50,14,WS_GROUP
+    LTEXT           "",IDC_STATIC,41,99,121,8
+    LTEXT           "",IDC_STATIC,41,113,121,8
+    LTEXT           "Warning: This computer program is protected by copyright law and international treaties.",
+                    IDC_STATIC,41,35,212,24
+    LTEXT           "Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.",
+                    IDC_STATIC,41,57,222,23
+END
+
+IDD_BLUECLIENT_DIALOG DIALOGEX 0, 0, 355, 274
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "BlueClient"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tree1",IDC_CLIENT_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_TRACKSELECT | WS_BORDER | WS_TABSTOP,51,70,220,165,
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "Static",IDC_STATIC,0,236,354,8,NOT WS_VISIBLE
+    CONTROL         131,IDC_BROADCOM,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_SUNKEN | WS_BORDER,0,0,354,61
+END
+
+IDD_FTPCreate DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "FTP Create File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT1,56,16,122,16,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,128,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,128,74,50,14
+    LTEXT           "File &name:",IDC_STATIC,7,20,43,16
+END
+
+IDD_BT_EXP_DEV_PROPS DIALOG DISCARDABLE  0, 0, 224, 142
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Device Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Bluetooth Device Address",IDC_STATIC,7,10,91,8
+    EDITTEXT        IDC_BD_ADDR,101,7,90,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Bluetooth Device Name",IDC_STATIC,7,25,90,8
+    EDITTEXT        IDC_BD_NAME,101,22,116,14,ES_AUTOHSCROLL | ES_READONLY
+    LISTBOX         IDC_LIST_SERVICE,7,46,210,88,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_NOSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#include "btversinfo.h"
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    BTWFILEVERSION
+ PRODUCTVERSION BTWPRODUCTVERSION
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", BTWCOMPANYNAMESTR
+            VALUE "FileDescription", "BlueClient MFC Application\0"
+            VALUE "FileVersion", BTWFILEVERSIONSTR
+            VALUE "InternalName", "BlueClient\0"
+            VALUE "LegalCopyright", BTWLEGALCOPYRIGHTSTR
+            VALUE "LegalTrademarks", BTWLEGALTRADEMARKSSTR
+            VALUE "OriginalFilename", "BlueClient.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", BTWPRODUCTNAMESTR
+            VALUE "ProductVersion", BTWPRODUCTVERSIONSTR
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_BLUECLIENT_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 354
+        BOTTOMMARGIN, 266
+    END
+
+    IDD_FTPCreate, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_BT_EXP_DEV_PROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BT_DEVICE_IMAGE     BITMAP  DISCARDABLE     "res\\bt_devic.bmp"
+IDB_BROADCOM            BITMAP  DISCARDABLE     "RES\\BROADCOM.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About BlueClient..."
+    IDS_INDICATOR_TIME      "HH:MM"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\BlueClient.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

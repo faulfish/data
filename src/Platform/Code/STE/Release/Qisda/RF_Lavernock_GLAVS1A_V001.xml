@@ -1,0 +1,1076 @@
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by kevin.tai (EMBRACE) -->
+<Configuration>
+   <PredefinedObjectSet>
+      <DeviceObject ClassName="CCMU200" Name="CMU200">
+         <!-- Primary Address will be defined in config.xml-->
+         <RFInput Editable="TRUE" Type="Integer">2</RFInput>
+         <RFOutput Editable="TRUE" Type="Integer">2</RFOutput>
+      </DeviceObject>
+      <DeviceObject ClassName="CPhone" Name="QPhone">
+         <QisdaPhoneLibrary Editable="TRUE" Type="String">MobileToolKit_StaticM.dll</QisdaPhoneLibrary>
+         <UseQPST Enabled="TRUE">FALSE</UseQPST>
+      </DeviceObject>
+      <DeviceObject ClassName="CE3631A" Name="HpE3631"/>
+      <ProcessObject ClassName="CCableLossFinder" Name="CableLossFinder"/>
+   </PredefinedObjectSet>
+   <CRFCalTestProcessor>
+      <Name Editable="FALSE" Type="String">MainRF</Name>
+      <GPIBCardAddress Editable="TRUE" Type="Integer">0</GPIBCardAddress>
+      <TesterDevice Editable="TRUE" Type="String">CMU200</TesterDevice>
+      <Phone Editable="TRUE" Type="String">QPhone</Phone>
+      <PowerSupply Editable="TRUE" Type="String">HpE3631</PowerSupply>
+      <PowSuplVoltage Editable="TRUE" Type="Float">3.8</PowSuplVoltage>
+      <PowSuplCurrent Editable="TRUE" Type="Float">3</PowSuplCurrent>
+      <CableLossFinder Editable="TRUE" Type="String">CableLossFinder</CableLossFinder>
+      <List>
+         <Item Name="InitGSMCal" Enabled="TRUE" Group="Cal" Type="GSM"/>
+         <Item Name="CarrierSuppressionCal" Enabled="TRUE" Group="Cal" Type="GSM"/>
+         <Item Name="PolarCalibration" Enabled="TRUE" Group="Cal" Type="GSM"/>
+         <Item Name="RxFreqCompensation" Enabled="TRUE" Group="Cal" Type="GSM"/>
+         <Item Name="TimingDelay" Enabled="TRUE" Group="Cal" Type="GSM"/>
+         <Item Name="EndGSMCal" Enabled="TRUE" Group="Cal" Type="GSM"/>
+         <Item Name="InitWCDMACal" Enabled="FALSE" Group="Cal" Type="WCDMA"/>
+         <Item Name="ThermCalibration" Enabled="FALSE" Group="Cal" Type="WCDMA"/>
+         <Item Name="DoDC" Enabled="FALSE" Group="Cal" Type="WCDMA"/>
+         <Item Name="TxLinMaster" Enabled="FALSE" Group="Cal" Type="WCDMA"/>
+         <Item Name="TxRxSmartAlignmentCal" Enabled="FALSE" Group="Cal" Type="WCDMA"/>
+         <Item Name="EndWCDMACal" Enabled="TRUE" Group="Cal" Type="WCDMA"/>
+         <Item Name="InitGSMTest" Enabled="TRUE" Group="Test" Type="GSM"/>
+         <Item Name="GSMStartCall" Enabled="TRUE" Group="Test" Type="GSM"/>
+         <Item Name="GSMMeasureLoop900" Enabled="TRUE" Group="Test" Type="GSM"/>
+         <Item Name="GSMMeasureLoop850" Enabled="TRUE" Group="Test" Type="GSM"/>
+         <Item Name="GSMMeasureLoop1800" Enabled="TRUE" Group="Test" Type="GSM"/>
+         <Item Name="GSMMeasureLoop1900" Enabled="TRUE" Group="Test" Type="GSM"/>
+         <Item Name="EndGSMTest" Enabled="TRUE" Group="Test" Type="GSM"/>
+         <Item Name="InitEDGETest" Enabled="FALSE" Group="Test" Type="EDGE"/>
+         <Item Name="EDGEStartCall" Enabled="FALSE" Group="Test" Type="EDGE"/>
+         <Item Name="EDGEMeasureLoop900" Enabled="FALSE" Group="Test" Type="EDGE"/>
+         <Item Name="EDGEMeasureLoop850" Enabled="FALSE" Group="Test" Type="EDGE"/>
+         <Item Name="EDGEMeasureLoop1800" Enabled="FALSE" Group="Test" Type="EDGE"/>
+         <Item Name="EDGEMeasureLoop1900" Enabled="FALSE" Group="Test" Type="EDGE"/>
+         <Item Name="EndEDGETest" Enabled="FALSE" Group="Test" Type="EDGE"/>
+         <Item Name="InitWCDMATest" Enabled="TRUE" Group="Test" Type="WCDMA"/>
+         <Item Name="WCDMAStartCall" Enabled="TRUE" Group="Test" Type="WCDMA"/>
+         <Item Name="WCDMAMeasureLoop2100" Enabled="TRUE" Group="Test" Type="WCDMA"/>
+         <Item Name="WCDMAMeasureLoop850" Enabled="TRUE" Group="Test" Type="WCDMA"/>
+         <Item Name="WCDMAMeasureLoop1900" Enabled="TRUE" Group="Test" Type="WCDMA"/>
+         <Item Name="WCDMAMeasureLoop900" Enabled="TRUE" Group="Test" Type="WCDMA"/>
+         <Item Name="EndWCDMATest" Enabled="TRUE" Group="Test" Type="WCDMA"/>
+         <Item Name="OnlineInitGSMTest" Enabled="TRUE" Group="Test" Type="OnlineGSM"/>
+         <Item Name="OnlineGSMStartCall" Enabled="TRUE" Group="Test" Type="OnlineGSM"/>
+         <Item Name="OnlineGSMMeasureLoop900" Enabled="TRUE" Group="Test" Type="OnlineGSM"/>
+         <Item Name="OnlineGSMMeasureLoop850" Enabled="TRUE" Group="Test" Type="OnlineGSM"/>
+         <Item Name="OnlineGSMMeasureLoop1800" Enabled="TRUE" Group="Test" Type="OnlineGSM"/>
+         <Item Name="OnlineGSMMeasureLoop1900" Enabled="TRUE" Group="Test" Type="OnlineGSM"/>
+         <Item Name="OnlineEndGSMTest" Enabled="TRUE" Group="Test" Type="OnlineGSM"/>
+         <Item Name="FMTest" Enabled="TRUE" Group="Test" Type="Other"/>
+      </List>
+   </CRFCalTestProcessor>
+   <ProcessObjectSet>
+      <GSMCalibrationObjects>
+         <ProcessObject ClassName="CInitGSMCal" Name="InitGSMCal">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">InitGSMCalMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="850" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+               <Item Name="1800" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+            </List>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEndGSMCal" Name="EndGSMCal">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EndGSMCalMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="850" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+               <Item Name="1800" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+            </List>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CKvco" Name="Kvco">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">KvcoMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="850" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+               <Item Name="1800" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+            </List>
+            <CHList_850 Editable="TRUE" Type="IntegerList">128,251</CHList_850>
+            <CHList_900 Editable="TRUE" Type="IntegerList">975,124</CHList_900>
+            <CHList_1800 Editable="TRUE" Type="IntegerList">512,885</CHList_1800>
+            <CHList_1900 Editable="TRUE" Type="IntegerList">512,810</CHList_1900>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CPA_DAC_Search" Name="PA_DAC_Search">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">PA_DAC_SearchMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="900" Enabled="TRUE"/>
+            </List>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CCarrierSuppressionCal" Name="CarrierSuppressionCal">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">CarrierSuppressionCalMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="1800" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+            </List>
+            <!-- 1800 -->
+            <RefARFCN_1800 Editable="TRUE" Type="Integer">698</RefARFCN_1800>
+            <Sweep_Segments_1800 Editable="TRUE" Type="Integer">42</Sweep_Segments_1800>
+            <Idc_list_1800 Editable="TRUE" Type="Integer">0,-1000,-950,-900,-850,-800,-750,-700,-650,-600,-550,-500,-450,-400,-350,-300,-250,-200,-150,-100,-50,0,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000</Idc_list_1800>
+            <Qdc_list_1800 Editable="TRUE" Type="Integer">0,1000,950,900,850,800,750,700,650,600,550,500,450,400,350,300,250,200,150,100,50,0,-50,-100,-150,-200,-250,-300,-350,-400,-450,-500,-550,-600,-650,-700,-750,-800,-850,-900,-950,-1000</Qdc_list_1800>
+            <PA_Dac_1800 Editable="TRUE" Type="Integer">8000</PA_Dac_1800>
+            <PDM_Type_1800 Editable="TRUE" Type="Integer">0</PDM_Type_1800>
+            <AverageCount_1800 Editable="TRUE" Type="Integer">3</AverageCount_1800>
+            <Carrier_Suppression_Max_1800 Editable="TRUE" Type="Integer">-1</Carrier_Suppression_Max_1800>
+            <!-- 1900 -->
+            <RefARFCN_1900 Editable="TRUE" Type="Integer">661</RefARFCN_1900>
+            <Sweep_Segments_1900 Editable="TRUE" Type="Integer">42</Sweep_Segments_1900>
+            <Idc_list_1900 Editable="TRUE" Type="Integer">0,-1000,-950,-900,-850,-800,-750,-700,-650,-600,-550,-500,-450,-400,-350,-300,-250,-200,-150,-100,-50,0,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000</Idc_list_1900>
+            <Qdc_list_1900 Editable="TRUE" Type="Integer">0,1000,950,900,850,800,750,700,650,600,550,500,450,400,350,300,250,200,150,100,50,0,-50,-100,-150,-200,-250,-300,-350,-400,-450,-500,-550,-600,-650,-700,-750,-800,-850,-900,-950,-1000</Qdc_list_1900>
+            <PA_Dac_1900 Editable="TRUE" Type="Integer">8000</PA_Dac_1900>
+            <PDM_Type_1900 Editable="TRUE" Type="Integer">0</PDM_Type_1900>
+            <AverageCount_1900 Editable="TRUE" Type="Integer">3</AverageCount_1900>
+            <Carrier_Suppression_Max_1900 Editable="TRUE" Type="Integer">-1</Carrier_Suppression_Max_1900>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CPolarCalibration" Name="PolarCalibration">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">PolarCalibrationMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="850" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+               <Item Name="1800" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+            </List>
+            <!-- 850 -->
+            <ReferencePower_850 Editable="TRUE" Type="Integer">30</ReferencePower_850>
+            <MaxPwr_850 Editable="TRUE" Type="Integer">33</MaxPwr_850>
+            <MinPwr_850 Editable="FALSE" Type="Integer">-17</MinPwr_850>
+            <RefSegment_850 Editable="TRUE" Type="Integer">1</RefSegment_850>
+            <CalChannel_850 Editable="TRUE" Type="Integer">128,251</CalChannel_850>
+            <SweepTable_850 Editable="TRUE" Type="Integer">2350,2435,2520,2605,2690,2775,2860,2945,3030,3115,3200,3285,3370,3455,3540,3625,3710,3795,3880,3965,4050,4135,4220,4305,4390,4475,4560,4645,4730,4815,4900,4985,5070,5155,5240,5325,5410,5495,5580,5665,5750,5835,5920,6005,6090,6175,6260,6345,6430,6515,6600,6685,6770,6855,6940,7025,7110,7195,7280,7365,7450,7535,7620,7705,7790,7875,7960,8045,8130,8215,8300,8385,8470,8555,8640,8725,8810,8895,8980,9065,9150,9235,9320,9405,9490,9575,9660,9745,9830,9915,10000,10085,10170,10255,10340,10425,10510,10595,10680,10765,10850,10935,11020,11105,11190,11275,11360,11445,11530,11615,11700,11785,11870,11955,12040,12125,12210,12295,12380,12465,12550,12635,12720,12805,12890,12975,13060,13145,13230,13315,13400,13485,13570,13655,13740,13825,13910,13995,14080,14165,14250,14335,14420,14505,14590,14675,14760,14845,14930,15015,15100</SweepTable_850>
+            <SweepLength_850 Editable="TRUE" Type="Integer">13</SweepLength_850>
+            <DeltaPhaseH_850 Editable="TRUE" Type="double">3</DeltaPhaseH_850>
+            <DeltaPhaseL_850 Editable="TRUE" Type="double">3</DeltaPhaseL_850>
+            <DeltaLeave_850 Editable="TRUE" Type="Float">3</DeltaLeave_850>
+            <AmplitudeRefDAC_850 Editable="TRUE" Type="Integer">14500</AmplitudeRefDAC_850>
+            <PhaseRefDAC_850 Editable="TRUE" Type="Integer">4500</PhaseRefDAC_850>
+            <!-- 900 -->
+            <ReferencePower_900 Editable="TRUE" Type="Integer">30</ReferencePower_900>
+            <MaxPwr_900 Editable="TRUE" Type="Integer">33</MaxPwr_900>
+            <MinPwr_900 Editable="FALSE" Type="Integer">-17</MinPwr_900>
+            <RefSegment_900 Editable="TRUE" Type="Integer">1</RefSegment_900>
+            <CalChannel_900 Editable="TRUE" Type="Integer">975,124</CalChannel_900>
+            <SweepTable_900 Editable="TRUE" Type="Integer">2350,2435,2520,2605,2690,2775,2860,2945,3030,3115,3200,3285,3370,3455,3540,3625,3710,3795,3880,3965,4050,4135,4220,4305,4390,4475,4560,4645,4730,4815,4900,4985,5070,5155,5240,5325,5410,5495,5580,5665,5750,5835,5920,6005,6090,6175,6260,6345,6430,6515,6600,6685,6770,6855,6940,7025,7110,7195,7280,7365,7450,7535,7620,7705,7790,7875,7960,8045,8130,8215,8300,8385,8470,8555,8640,8725,8810,8895,8980,9065,9150,9235,9320,9405,9490,9575,9660,9745,9830,9915,10000,10085,10170,10255,10340,10425,10510,10595,10680,10765,10850,10935,11020,11105,11190,11275,11360,11445,11530,11615,11700,11785,11870,11955,12040,12125,12210,12295,12380,12465,12550,12635,12720,12805,12890,12975,13060,13145,13230,13315,13400,13485,13570,13655,13740,13825,13910,13995,14080,14165,14250,14335,14420,14505,14590,14675,14760,14845,14930,15015,15100</SweepTable_900>
+            <SweepLength_900 Editable="TRUE" Type="Integer">13</SweepLength_900>
+            <DeltaPhaseH_900 Editable="TRUE" Type="double">3</DeltaPhaseH_900>
+            <DeltaPhaseL_900 Editable="TRUE" Type="double">3</DeltaPhaseL_900>
+            <DeltaLeave_900 Editable="TRUE" Type="Float">3</DeltaLeave_900>
+            <AmplitudeRefDAC_900 Editable="TRUE" Type="Integer">14500</AmplitudeRefDAC_900>
+            <PhaseRefDAC_900 Editable="TRUE" Type="Integer">4500</PhaseRefDAC_900>
+            <!-- 1800 -->
+            <ReferencePower_1800 Editable="TRUE" Type="Integer">27</ReferencePower_1800>
+            <MaxPwr_1800 Editable="TRUE" Type="Integer">33</MaxPwr_1800>
+            <MinPwr_1800 Editable="FALSE" Type="Integer">-17</MinPwr_1800>
+            <RefSegment_1800 Editable="TRUE" Type="Integer">1</RefSegment_1800>
+            <CalChannel_1800 Editable="TRUE" Type="Integer">512,885</CalChannel_1800>
+            <SweepTable_1800 Editable="TRUE" Type="Integer">2350,2435,2520,2605,2690,2775,2860,2945,3030,3115,3200,3285,3370,3455,3540,3625,3710,3795,3880,3965,4050,4135,4220,4305,4390,4475,4560,4645,4730,4815,4900,4985,5070,5155,5240,5325,5410,5495,5580,5665,5750,5835,5920,6005,6090,6175,6260,6345,6430,6515,6600,6685,6770,6855,6940,7025,7110,7195,7280,7365,7450,7535,7620,7705,7790,7875,7960,8045,8130,8215,8300,8385,8470,8555,8640,8725,8810,8895,8980,9065,9150,9235,9320,9405,9490,9575,9660,9745,9830,9915,10000,10085,10170,10255,10340,10425,10510,10595,10680,10765,10850,10935,11020,11105,11190,11275,11360,11445,11530,11615,11700,11785,11870,11955,12040,12125,12210,12295,12380,12465,12550,12635,12720,12805,12890,12975,13060,13145,13230,13315,13400,13485,13570,13655,13740,13825,13910,13995,14080,14165,14250,14335,14420,14505,14590,14675,14760,14845,14930,15015,15100</SweepTable_1800>
+            <SweepLength_1800 Editable="TRUE" Type="Integer">13</SweepLength_1800>
+            <DeltaPhaseH_1800 Editable="TRUE" Type="double">3</DeltaPhaseH_1800>
+            <DeltaPhaseL_1800 Editable="TRUE" Type="double">3</DeltaPhaseL_1800>
+            <DeltaLeave_1800 Editable="TRUE" Type="Float">3</DeltaLeave_1800>
+            <AmplitudeRefDAC_1800 Editable="TRUE" Type="Integer">14500</AmplitudeRefDAC_1800>
+            <PhaseRefDAC_1800 Editable="TRUE" Type="Integer">4500</PhaseRefDAC_1800>
+            <!-- 1900 -->
+            <ReferencePower_1900 Editable="TRUE" Type="Integer">27</ReferencePower_1900>
+            <MaxPwr_1900 Editable="TRUE" Type="Integer">33</MaxPwr_1900>
+            <MinPwr_1900 Editable="FALSE" Type="Integer">-17</MinPwr_1900>
+            <RefSegment_1900 Editable="TRUE" Type="Integer">1</RefSegment_1900>
+            <CalChannel_1900 Editable="TRUE" Type="Integer">512,810</CalChannel_1900>
+            <SweepTable_1900 Editable="TRUE" Type="Integer">2350,2435,2520,2605,2690,2775,2860,2945,3030,3115,3200,3285,3370,3455,3540,3625,3710,3795,3880,3965,4050,4135,4220,4305,4390,4475,4560,4645,4730,4815,4900,4985,5070,5155,5240,5325,5410,5495,5580,5665,5750,5835,5920,6005,6090,6175,6260,6345,6430,6515,6600,6685,6770,6855,6940,7025,7110,7195,7280,7365,7450,7535,7620,7705,7790,7875,7960,8045,8130,8215,8300,8385,8470,8555,8640,8725,8810,8895,8980,9065,9150,9235,9320,9405,9490,9575,9660,9745,9830,9915,10000,10085,10170,10255,10340,10425,10510,10595,10680,10765,10850,10935,11020,11105,11190,11275,11360,11445,11530,11615,11700,11785,11870,11955,12040,12125,12210,12295,12380,12465,12550,12635,12720,12805,12890,12975,13060,13145,13230,13315,13400,13485,13570,13655,13740,13825,13910,13995,14080,14165,14250,14335,14420,14505,14590,14675,14760,14845,14930,15015,15100</SweepTable_1900>
+            <SweepLength_1900 Editable="TRUE" Type="Integer">13</SweepLength_1900>
+            <DeltaPhaseH_1900 Editable="TRUE" Type="double">3</DeltaPhaseH_1900>
+            <DeltaPhaseL_1900 Editable="TRUE" Type="double">3</DeltaPhaseL_1900>
+            <DeltaLeave_1900 Editable="TRUE" Type="Float">3</DeltaLeave_1900>
+            <AmplitudeRefDAC_1900 Editable="TRUE" Type="Integer">14500</AmplitudeRefDAC_1900>
+            <PhaseRefDAC_1900 Editable="TRUE" Type="Integer">4500</PhaseRefDAC_1900>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CRxFreqCompensation" Name="RxFreqCompensation">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">RxFreqCompensationMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="850" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+               <Item Name="1800" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+            </List>
+            <!-- 850 -->
+            <CalChannel_850 Editable="TRUE" Type="Integer">128,145,163,180,198,215,233,251</CalChannel_850>
+            <RxGainRangeCount_850 Editable="TRUE" Type="Integer">5</RxGainRangeCount_850>
+            <RxInputPower_850 Editable="TRUE" Type="Float">-80.0, -80.0, -50.0, -50.0, -50.0</RxInputPower_850>
+            <RxGainRangeMax_850 Editable="TRUE" Type="Integer">2500,2300,2000,1800,1500</RxGainRangeMax_850>
+            <RxGainRangeMin_850 Editable="TRUE" Type="Integer">1800,1500,1200,1000,700</RxGainRangeMin_850>
+            <RxRangeXBitMask_850 Editable="TRUE" Type="Integer">1,2,4,8,16</RxRangeXBitMask_850>
+            <!-- 900 -->
+            <CalChannel_900 Editable="TRUE" Type="Integer">1,31,62,92,124,975,1000,1023</CalChannel_900>
+            <RxGainRangeCount_900 Editable="TRUE" Type="Integer">5</RxGainRangeCount_900>
+            <RxInputPower_900 Editable="TRUE" Type="Float">-80.0, -80.0, -50.0, -50.0, -50.0</RxInputPower_900>
+            <RxGainRangeMax_900 Editable="TRUE" Type="Integer">2500,2300,2000,1800,1500</RxGainRangeMax_900>
+            <RxGainRangeMin_900 Editable="TRUE" Type="Integer">1800,1500,1200,1000,700</RxGainRangeMin_900>
+            <RxRangeXBitMask_900 Editable="TRUE" Type="Integer">1,2,4,8,16</RxRangeXBitMask_900>
+            <!-- 1800 -->
+            <CalChannel_1800 Editable="TRUE" Type="Integer">512,537,562,587,612,637,662,687,712,737,762,787,812,837,862,885</CalChannel_1800>
+            <RxGainRangeCount_1800 Editable="TRUE" Type="Integer">5</RxGainRangeCount_1800>
+            <RxInputPower_1800 Editable="TRUE" Type="Float">-80.0, -80.0, -50.0, -50.0, -50.0</RxInputPower_1800>
+            <RxGainRangeMax_1800 Editable="TRUE" Type="Integer">2500,2300,2000,1800,1500</RxGainRangeMax_1800>
+            <RxGainRangeMin_1800 Editable="TRUE" Type="Integer">1800,1500,1200,1000,700</RxGainRangeMin_1800>
+            <RxRangeXBitMask_1800 Editable="TRUE" Type="Integer">1,2,4,8,16</RxRangeXBitMask_1800>
+            <!-- 1900 -->
+            <CalChannel_1900 Editable="TRUE" Type="Integer">512,532,552,572,592,612,632,652,672,692,712,732,752,772,792,810</CalChannel_1900>
+            <RxGainRangeCount_1900 Editable="TRUE" Type="Integer">5</RxGainRangeCount_1900>
+            <RxInputPower_1900 Editable="TRUE" Type="Float">-80.0, -80.0, -50.0, -50.0, -50.0</RxInputPower_1900>
+            <RxGainRangeMax_1900 Editable="TRUE" Type="Integer">2500,2300,2000,1800,1500</RxGainRangeMax_1900>
+            <RxGainRangeMin_1900 Editable="TRUE" Type="Integer">1800,1500,1200,1000,700</RxGainRangeMin_1900>
+            <RxRangeXBitMask_1900 Editable="TRUE" Type="Integer">1,2,4,8,16</RxRangeXBitMask_1900>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CTimingDelay" Name="TimingDelay">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">TimingDelayMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="850" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+               <Item Name="1800" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+            </List>
+            <!-- 850 -->
+            <RefChannel_850 Editable="TRUE" Type="Integer">190</RefChannel_850>
+            <FrameMatrixPwr_850 Editable="TRUE" Type="Integer">27</FrameMatrixPwr_850>
+            <MCS_850 Editable="TRUE" Type="Integer">4</MCS_850>
+            <ORFSMeasCount_850 Editable="TRUE" Type="Integer">50</ORFSMeasCount_850>
+            <SearchRange_850 Editable="TRUE" Type="Integer">-64,-32</SearchRange_850>
+            <StepIndex_850 Editable="TRUE" Type="Integer">4</StepIndex_850>
+            <DiffORFSMeasFor400KHz_850 Editable="TRUE" Type="Float">1.0</DiffORFSMeasFor400KHz_850>
+            <!-- 900 -->
+            <RefChannel_900 Editable="TRUE" Type="Integer">1</RefChannel_900>
+            <FrameMatrixPwr_900 Editable="TRUE" Type="Integer">27</FrameMatrixPwr_900>
+            <MCS_900 Editable="TRUE" Type="Integer">4</MCS_900>
+            <ORFSMeasCount_900 Editable="TRUE" Type="Integer">50</ORFSMeasCount_900>
+            <SearchRange_900 Editable="TRUE" Type="Integer">-64,-32</SearchRange_900>
+            <StepIndex_900 Editable="TRUE" Type="Integer">4</StepIndex_900>
+            <DiffORFSMeasFor400KHz_900 Editable="TRUE" Type="Float">1.0</DiffORFSMeasFor400KHz_900>
+            <!-- 1800 -->
+            <RefChannel_1800 Editable="TRUE" Type="Integer">700</RefChannel_1800>
+            <FrameMatrixPwr_1800 Editable="TRUE" Type="Integer">26</FrameMatrixPwr_1800>
+            <MCS_1800 Editable="TRUE" Type="Integer">4</MCS_1800>
+            <ORFSMeasCount_1800 Editable="TRUE" Type="Integer">50</ORFSMeasCount_1800>
+            <SearchRange_1800 Editable="TRUE" Type="Integer">-64,-32</SearchRange_1800>
+            <StepIndex_1800 Editable="TRUE" Type="Integer">4</StepIndex_1800>
+            <DiffORFSMeasFor400KHz_1800 Editable="TRUE" Type="Float">1.0</DiffORFSMeasFor400KHz_1800>
+            <!-- 1900 -->
+            <RefChannel_1900 Editable="TRUE" Type="Integer">660</RefChannel_1900>
+            <FrameMatrixPwr_1900 Editable="TRUE" Type="Integer">26</FrameMatrixPwr_1900>
+            <MCS_1900 Editable="TRUE" Type="Integer">4</MCS_1900>
+            <ORFSMeasCount_1900 Editable="TRUE" Type="Integer">50</ORFSMeasCount_1900>
+            <SearchRange_1900 Editable="TRUE" Type="Integer">-64,-32</SearchRange_1900>
+            <StepIndex_1900 Editable="TRUE" Type="Integer">4</StepIndex_1900>
+            <DiffORFSMeasFor400KHz_1900 Editable="TRUE" Type="Float">1.0</DiffORFSMeasFor400KHz_1900>
+            <!--End of Parameters-->
+         </ProcessObject>
+      </GSMCalibrationObjects>
+      <WCDMACalibrationObjects>
+         <ProcessObject ClassName="CInitWCDMACal" Name="InitWCDMACal">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">InitWCDMACalMainFunc</MainFunction>
+            <!--Parameters-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEndWCDMACal" Name="EndWCDMACal">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EndWCDMACalMainFunc</MainFunction>
+            <!--Parameters-->
+            <List/>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CThermCalibration" Name="ThermCalibration">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">ThermCalibrationMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="800" Enabled="TRUE"/>
+               <Item Name="2100" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+            </List>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CDoDC" Name="DoDC">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">DoDCMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="800" Enabled="TRUE"/>
+               <Item Name="2100" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+            </List>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CTxLinMaster" Name="TxLinMaster">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">TxLinMasterMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="800" Enabled="TRUE"/>
+               <Item Name="2100" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+            </List>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CTxRxSmartAlignmentCal" Name="TxRxSmartAlignmentCal">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">TxRxSmartAlignmentCalMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="800" Enabled="TRUE"/>
+               <Item Name="2100" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+            </List>
+            <!--End of Parameters-->
+         </ProcessObject>
+      </WCDMACalibrationObjects>
+      <GSMTestObjects>
+         <ProcessObject ClassName="CInitGSMTest" Name="InitGSMTest">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">InitGSMTestMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="850" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+               <Item Name="1800" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+            </List>
+            <StartBand Editable="TRUE" Type="Integer">900</StartBand>
+            <StartChannel Editable="TRUE" Type="Integer">977</StartChannel>
+            <StartPCL Editable="TRUE" Type="Integer">5</StartPCL>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CGSMStartCall" Name="GSMStartCall">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">GSMStartCallMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="850" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+               <Item Name="1800" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+            </List>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CGSMHandover" Name="GSMHandover">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">GSMHandoverMainFunc</MainFunction>
+            <!--Parameters-->
+            <List/>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEndGSMTest" Name="EndGSMTest">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EndGSMTestMainFunc</MainFunction>
+            <!--Parameters-->
+            <List>
+               <Item Name="850" Enabled="TRUE"/>
+               <Item Name="900" Enabled="TRUE"/>
+               <Item Name="1800" Enabled="TRUE"/>
+               <Item Name="1900" Enabled="TRUE"/>
+            </List>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CGSMMeasureLoop" Name="GSMMeasureLoop900">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">GSMMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>                                          
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="BurstPower" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToModulation" Enabled="TRUE"/>
+               <Item Name="ReferenceSensitivity" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">GSMHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">900</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">977, 62, 124</CHList>
+            <PCLCount Editable="TRUE" Type="Integer">2</PCLCount>
+            <PCLList Editable="TRUE" Type="Integer">5, 19</PCLList>
+            <!--Limits-->
+            <!--PFER-->
+            <FreqError Editable="TRUE" Type="Float">100.0</FreqError>
+            <PeakPhaseError Editable="TRUE" Type="Float">20.0</PeakPhaseError>
+            <AvgRmsPhaseError Editable="TRUE" Type="Float">5.0</AvgRmsPhaseError>
+            <MaxRmsPhaseError Editable="TRUE" Type="Float">5.0</MaxRmsPhaseError>
+            <!--PCLs-->
+            <ULPwrSpecByPCL Editable="TRUE" Type="Double">36, 10</ULPwrSpecByPCL>
+            <DLPwrSpecByPCL Editable="TRUE" Type="Double">30, 0</DLPwrSpecByPCL>
+            <!--ORFS_switching-->
+            <SWIT_Count Editable="TRUE" Type="Integer">4</SWIT_Count>
+            <OFFSET_Switch Editable="TRUE" Type="Integer">400,600,1200,1800</OFFSET_Switch>
+            <SWIT_PCL1 Editable="TRUE" Type="Float">-19.0, -21.0, -21.0, -24.0</SWIT_PCL1>
+            <SWIT_PCL2 Editable="TRUE" Type="Float">-23.0, -26.0, -32.0, -36.0</SWIT_PCL2>
+            <!--ORFS_Modulation-->
+            <MOD_Count Editable="TRUE" Type="Integer">11</MOD_Count>
+            <OFFSET_MOD Editable="TRUE" Type="Integer">100,200,250,400,600,800,1000,1200,1400,1600,1800</OFFSET_MOD>
+            <MOD_PCL1 Editable="TRUE" Type="Float">0.5,-30,-33,-33.3794,-48.3794,-48.3794,-48.3794,-48.3794,-48.3794,-48.3794,-48.3794</MOD_PCL1>
+            <MOD_PCL2 Editable="TRUE" Type="Float">0.5,-30,-33,-59.54,-59,-60,-60,-60,-60,-60,-60</MOD_PCL2>
+            <!--Sensitivity-->
+            <BER Editable="TRUE" Type="Float">2.439</BER>
+            <!--End of Limits-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CGSMMeasureLoop" Name="GSMMeasureLoop850">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">GSMMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="BurstPower" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToModulation" Enabled="TRUE"/>
+               <Item Name="ReferenceSensitivity" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">GSMHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">850</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">128, 190, 251</CHList>
+            <PCLCount Editable="TRUE" Type="Integer">2</PCLCount>
+            <PCLList Editable="TRUE" Type="Integer">5, 19</PCLList>
+            <!--Limits-->
+            <!--PFER-->
+            <FreqError Editable="TRUE" Type="Float">100.0</FreqError>
+            <PeakPhaseError Editable="TRUE" Type="Float">20.0</PeakPhaseError>
+            <AvgRmsPhaseError Editable="TRUE" Type="Float">5.0</AvgRmsPhaseError>
+            <MaxRmsPhaseError Editable="TRUE" Type="Float">5.0</MaxRmsPhaseError>
+            <!--PCLs-->
+            <ULPwrSpecByPCL Editable="TRUE" Type="Double">36, 10</ULPwrSpecByPCL>
+            <DLPwrSpecByPCL Editable="TRUE" Type="Double">30, 0</DLPwrSpecByPCL>
+            <!--ORFS_switching-->
+            <SWIT_Count Editable="TRUE" Type="Integer">4</SWIT_Count>
+            <OFFSET_Switch Editable="TRUE" Type="Integer">400,600,1200,1800</OFFSET_Switch>
+            <SWIT_PCL1 Editable="TRUE" Type="Float">-19.0, -21.0, -21.0, -24.0</SWIT_PCL1>
+            <SWIT_PCL2 Editable="TRUE" Type="Float">-23.0, -26.0, -32.0, -36.0</SWIT_PCL2>
+            <!--ORFS_Modulation-->
+            <MOD_Count Editable="TRUE" Type="Integer">11</MOD_Count>
+            <OFFSET_MOD Editable="TRUE" Type="Integer">100,200,250,400,600,800,1000,1200,1400,1600,1800</OFFSET_MOD>
+            <MOD_PCL1 Editable="TRUE" Type="Float">0.5,-30,-33,-33.3794,-48.3794,-48.3794,-48.3794,-48.3794,-48.3794,-48.3794,-48.3794</MOD_PCL1>
+            <MOD_PCL2 Editable="TRUE" Type="Float">0.5,-30,-33,-59.54,-59,-60,-60,-60,-60,-60,-60</MOD_PCL2>
+            <!--Sensitivity-->
+            <BER Editable="TRUE" Type="Float">2.439</BER>
+            <!--End of Limits-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CGSMMeasureLoop" Name="GSMMeasureLoop1800">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">GSMMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="BurstPower" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToModulation" Enabled="TRUE"/>
+               <Item Name="ReferenceSensitivity" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">GSMHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">1800</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">512, 700, 885</CHList>
+            <PCLCount Editable="TRUE" Type="Integer">2</PCLCount>
+            <PCLList Editable="TRUE" Type="Integer">0, 15</PCLList>
+            <!--Limits-->
+            <!--PFER-->
+            <FreqError Editable="TRUE" Type="Float">100.0</FreqError>
+            <PeakPhaseError Editable="TRUE" Type="Float">20.0</PeakPhaseError>
+            <AvgRmsPhaseError Editable="TRUE" Type="Float">5.0</AvgRmsPhaseError>
+            <MaxRmsPhaseError Editable="TRUE" Type="Float">5.0</MaxRmsPhaseError>
+            <!--PCLs-->
+            <ULPwrSpecByPCL Editable="TRUE" Type="Double">33, 5</ULPwrSpecByPCL>
+            <DLPwrSpecByPCL Editable="TRUE" Type="Double">27, -5</DLPwrSpecByPCL>
+            <!--ORFS_switching-->
+            <SWIT_Count Editable="TRUE" Type="Integer">4</SWIT_Count>
+            <OFFSET_Switch Editable="TRUE" Type="Integer">400,600,1200,1800</OFFSET_Switch>
+            <SWIT_PCL1 Editable="TRUE" Type="Float">-19.0, -21.0, -21.0, -24.0</SWIT_PCL1>
+            <SWIT_PCL2 Editable="TRUE" Type="Float">-23.0, -26.0, -32.0, -36.0</SWIT_PCL2>
+            <!--ORFS_Modulation-->
+            <MOD_Count Editable="TRUE" Type="Integer">11</MOD_Count>
+            <OFFSET_MOD Editable="TRUE" Type="Integer">100,200,250,400,600,800,1000,1200,1400,1600,1800</OFFSET_MOD>
+            <MOD_PCL1 Editable="TRUE" Type="Float">0.5,-28.3906,-28.3906,-28.3906,-48.3906,-48.3906,-48.3906,-48.3906,-48.3906,-48.3906,-48.3906</MOD_PCL1>
+            <MOD_PCL2 Editable="TRUE" Type="Float">0.5,-30,-33,-59.54,-59,-60,-60,-60,-60,-60,-60</MOD_PCL2>
+            <!--Sensitivity-->
+            <BER Editable="TRUE" Type="Float">2.439</BER>
+            <!--End of Limits-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CGSMMeasureLoop" Name="GSMMeasureLoop1900">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">GSMMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="BurstPower" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToModulation" Enabled="TRUE"/>
+               <Item Name="ReferenceSensitivity" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">GSMHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">1900</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">512, 661, 810</CHList>
+            <PCLCount Editable="TRUE" Type="Integer">2</PCLCount>
+            <PCLList Editable="TRUE" Type="Integer">0, 15</PCLList>
+            <!--Limits-->
+            <!--PFER-->
+            <FreqError Editable="TRUE" Type="Float">100.0</FreqError>
+            <PeakPhaseError Editable="TRUE" Type="Float">20.0</PeakPhaseError>
+            <AvgRmsPhaseError Editable="TRUE" Type="Float">5.0</AvgRmsPhaseError>
+            <MaxRmsPhaseError Editable="TRUE" Type="Float">5.0</MaxRmsPhaseError>
+            <!--PCLs-->
+            <ULPwrSpecByPCL Editable="TRUE" Type="Double">33, 5</ULPwrSpecByPCL>
+            <DLPwrSpecByPCL Editable="TRUE" Type="Double">27, -5</DLPwrSpecByPCL>
+            <!--ORFS_switching-->
+            <SWIT_Count Editable="TRUE" Type="Integer">4</SWIT_Count>
+            <OFFSET_Switch Editable="TRUE" Type="Integer">400,600,1200,1800</OFFSET_Switch>
+            <SWIT_PCL1 Editable="TRUE" Type="Float">-19.0, -21.0, -21.0, -24.0</SWIT_PCL1>
+            <SWIT_PCL2 Editable="TRUE" Type="Float">-23.0, -26.0, -32.0, -36.0</SWIT_PCL2>
+            <!--ORFS_Modulation-->
+            <MOD_Count Editable="TRUE" Type="Integer">11</MOD_Count>
+            <OFFSET_MOD Editable="TRUE" Type="Integer">100,200,250,400,600,800,1000,1200,1400,1600,1800</OFFSET_MOD>
+            <MOD_PCL1 Editable="TRUE" Type="Float">0.5,-28.3906,-28.3906,-28.3906,-48.3906,-48.3906,-48.3906,-48.3906,-48.3906,-48.3906,-48.3906</MOD_PCL1>
+            <MOD_PCL2 Editable="TRUE" Type="Float">0.5,-30,-33,-59.54,-59,-60,-60,-60,-60,-60,-60</MOD_PCL2>
+            <!--Sensitivity-->
+            <BER Editable="TRUE" Type="Float">2.439</BER>
+            <!--End of Limits-->
+            <!--End of Parameters-->
+         </ProcessObject>
+      </GSMTestObjects>
+      <EDGETestObjects>
+         <ProcessObject ClassName="CInitEDGETest" Name="InitEDGETest">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">InitEDGETestMainFunc</MainFunction>
+            <!--Parameters-->
+            <InitBand Editable="TRUE" Type="Integer">900</InitBand>
+            <InitBCChannel Editable="TRUE" Type="Integer">975</InitBCChannel>
+            <InitTCChannel Editable="TRUE" Type="Integer">975</InitTCChannel>
+            <BSPower Editable="TRUE" Type="Integer">-65</BSPower>
+            <InCableLoss Editable="TRUE" Type="Integer">0.3</InCableLoss>
+            <OutCableLoss Editable="TRUE" Type="Integer">0.3</OutCableLoss>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEDGEStartCall" Name="EDGEStartCall">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EDGEStartCallMainFunc</MainFunction>
+            <!--Parameters-->
+            <InitBand Editable="TRUE" Type="Integer">900</InitBand>
+            <InitBCChannel Editable="TRUE" Type="Integer">975</InitBCChannel>
+            <InitTCChannel Editable="TRUE" Type="Integer">975</InitTCChannel>
+            <BSPower Editable="TRUE" Type="Integer">-65</BSPower>
+            <InCableLoss Editable="TRUE" Type="Integer">0.3</InCableLoss>
+            <OutCableLoss Editable="TRUE" Type="Integer">0.3</OutCableLoss>
+            <SessionTimeOut Editable="TRUE" Type="Integer">10000</SessionTimeOut>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEDGEHandover" Name="EDGEHandover">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EDGEHandoverMainFunc</MainFunction>
+            <!--Parameters-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEndEDGETest" Name="EndEDGETest">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EndEDGETestMainFunc</MainFunction>
+            <!--Parameters-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEDGEMeasureLoop" Name="EDGEMeasureLoop900">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EDGEMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_Due_ToModulation" Enabled="TRUE"/>
+               <Item Name="BER" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">EDGEHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">900</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">977, 62, 124</CHList>
+            <!--Limits-->
+            <!--PFER-->
+            <FreqError Editable="TRUE" Type="Float">100.0</FreqError>
+            <PeakPhaseError Editable="TRUE" Type="Float">20.0</PeakPhaseError>
+            <AvgRmsPhaseError Editable="TRUE" Type="Float">5.0</AvgRmsPhaseError>
+            <MaxRmsPhaseError Editable="TRUE" Type="Float">5.0</MaxRmsPhaseError>
+            <!--ORFS_switching-->
+            <SWIIT_Limit Editable="TRUE" Type="Float">-30.0, -27.0, -26.0, -23.0</SWIIT_Limit>
+            <!--ORFS_Modulation-->
+            <MOD_Limit Editable="TRUE" Type="Float">0.5,-30,-33,-53,-58.5,0,0,0,0,0,0</MOD_Limit>
+            <!--Sensitivity-->
+            <BER Editable="TRUE" Type="Float">2.439</BER>
+            <!--End of Limits-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEDGEMeasureLoop" Name="EDGEMeasureLoop850">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EDGEMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_Due_ToModulation" Enabled="TRUE"/>
+               <Item Name="BER" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">EDGEHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">850</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">128, 190, 251</CHList>
+            <!--Limits-->
+            <!--PFER-->
+            <FreqError Editable="TRUE" Type="Float">100.0</FreqError>
+            <PeakPhaseError Editable="TRUE" Type="Float">20.0</PeakPhaseError>
+            <AvgRmsPhaseError Editable="TRUE" Type="Float">5.0</AvgRmsPhaseError>
+            <MaxRmsPhaseError Editable="TRUE" Type="Float">5.0</MaxRmsPhaseError>
+            <!--ORFS_switching-->
+            <SWIIT_Limit Editable="TRUE" Type="Float">-30.0, -27.0, -26.0, -23.0</SWIIT_Limit>
+            <!--ORFS_Modulation-->
+            <MOD_Limit Editable="TRUE" Type="Float">0.5,-30,-33,-53,-58.5,0,0,0,0,0,0</MOD_Limit>
+            <!--Sensitivity-->
+            <BER Editable="TRUE" Type="Float">2.439</BER>
+            <!--End of Limits-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEDGEMeasureLoop" Name="EDGEMeasureLoop1800">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EDGEMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_Due_ToModulation" Enabled="TRUE"/>
+               <Item Name="BER" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">EDGEHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">1800</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">512, 700, 885</CHList>
+            <!--Limits-->
+            <!--PFER-->
+            <FreqError Editable="TRUE" Type="Float">100.0</FreqError>
+            <PeakPhaseError Editable="TRUE" Type="Float">20.0</PeakPhaseError>
+            <AvgRmsPhaseError Editable="TRUE" Type="Float">5.0</AvgRmsPhaseError>
+            <MaxRmsPhaseError Editable="TRUE" Type="Float">5.0</MaxRmsPhaseError>
+            <!--ORFS_switching-->
+            <SWIIT_Limit Editable="TRUE" Type="Float">-31.0, -28.0, -26.0, -23.0</SWIIT_Limit>
+            <!--ORFS_Modulation-->
+            <MOD_Limit Editable="TRUE" Type="Float">0.5,-30,-33,-52,-60,0,0,0,0,0,0</MOD_Limit>
+            <!--Sensitivity-->
+            <BER Editable="TRUE" Type="Float">2.439</BER>
+            <!--End of Limits-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEDGEMeasureLoop" Name="EDGEMeasureLoop1900">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EDGEMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_Due_ToModulation" Enabled="TRUE"/>
+               <Item Name="BER" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">EDGEHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">1900</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">512, 661, 810</CHList>
+            <!--Limits-->
+            <!--PFER-->
+            <FreqError Editable="TRUE" Type="Float">100.0</FreqError>
+            <PeakPhaseError Editable="TRUE" Type="Float">20.0</PeakPhaseError>
+            <AvgRmsPhaseError Editable="TRUE" Type="Float">5.0</AvgRmsPhaseError>
+            <MaxRmsPhaseError Editable="TRUE" Type="Float">5.0</MaxRmsPhaseError>
+            <!--ORFS_switching-->
+            <SWIIT_Limit Editable="TRUE" Type="Float">-31.0, -28.0, -26.0, -23.0</SWIIT_Limit>
+            <!--ORFS_Modulation-->
+            <MOD_Limit Editable="TRUE" Type="Float">0.5,-30,-33,-52,-60,0,0,0,0,0,0</MOD_Limit>
+            <!--Sensitivity-->
+            <BER Editable="TRUE" Type="Float">2.439</BER>
+            <!--End of Limits-->
+            <!--End of Parameters-->
+         </ProcessObject>
+      </EDGETestObjects>
+      <WCDMATestObjects>
+         <ProcessObject ClassName="CInitWCDMATest" Name="InitWCDMATest">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">InitWCDMATestMainFunc</MainFunction>
+            <!--Parameters-->
+            <InitBand Editable="TRUE" Type="Integer">1900</InitBand>
+            <InitChannel Editable="TRUE" Type="Integer">9263</InitChannel>
+            <RFOutPower Editable="TRUE" Type="Double">-65</RFOutPower>
+            <PowerLevel Editable="TRUE" Type="Double">6</PowerLevel>
+            <InCableLoss Editable="TRUE" Type="Double">0.3</InCableLoss>
+            <OutCableLoss Editable="TRUE" Type="Double">0.3</OutCableLoss>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CWCDMAStartCall" Name="WCDMAStartCall">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">WCDMAStartCallMainFunc</MainFunction>
+            <!--Parameters-->
+            <StartCallBand Editable="TRUE" Type="Integer">1900</StartCallBand>
+            <StartCallChannel Editable="TRUE" Type="Integer">9263</StartCallChannel>
+            <StartCallRFOutPower Editable="TRUE" Type="Double">-75</StartCallRFOutPower>
+            <StartCallPowerLevel Editable="TRUE" Type="Double">7</StartCallPowerLevel>
+            <InCableLoss Editable="TRUE" Type="Double">0.3</InCableLoss>
+            <OutCableLoss Editable="TRUE" Type="Double">0.3</OutCableLoss>
+            <BERSessionTimeOut Editable="TRUE" Type="Double">10000</BERSessionTimeOut>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CWCDMAHandover" Name="WCDMAHandover">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">WCDMAHandoverMainFunc</MainFunction>
+            <!--Parameters-->
+            <HandOverRFOutPower Editable="TRUE" Type="Double">-75</HandOverRFOutPower>
+            <HandOverPowerLevel Editable="TRUE" Type="Double">7</HandOverPowerLevel>
+            <InCableLoss Editable="TRUE" Type="Double">0.3</InCableLoss>
+            <OutCableLoss Editable="TRUE" Type="Double">0.3</OutCableLoss>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CEndWCDMATest" Name="EndWCDMATest">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">EndWCDMATestMainFunc</MainFunction>
+            <!--Parameters-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CWCDMAMeasureLoop" Name="WCDMAMeasureLoop2100">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">WCDMAMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="MaxPower" Enabled="TRUE"/>
+               <Item Name="ACLR" Enabled="TRUE"/>
+               <Item Name="OccupiedBandWidth" Enabled="TRUE"/>
+               <Item Name="SpectrumEmmissionMask" Enabled="TRUE"/>
+               <Item Name="Sensitivity" Enabled="TRUE"/>
+               <Item Name="RxLevel" Enabled="TRUE"/>
+               <Item Name="ILPC_E" Enabled="TRUE"/>
+               <Item Name="ILPC_F" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">WCDMAHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">2100</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">9613, 9750, 9887</CHList>
+            <InCableLoss Editable="TRUE" Type="Double">0.3</InCableLoss>
+            <OutCableLoss Editable="TRUE" Type="Double">0.3</OutCableLoss>
+            <DynamicRange Editable="TRUE" Type="Double">85.3</DynamicRange>
+            <RxMin.Power Editable="TRUE" Type="Double">-106.0</RxMin.Power>
+            <BSPower Editable="TRUE" Type="Double">-85</BSPower>
+            <RFPowerForAll Editable="TRUE" Type="Double">-75</RFPowerForAll>
+            <RFPowerForBER Editable="TRUE" Type="Double">-108.2</RFPowerForBER>
+            <RFPowerForILPC Editable="TRUE" Type="Double">-85</RFPowerForILPC>
+            <MaxPowerlimit Editable="TRUE" Type="Double">21,25</MaxPowerlimit>
+            <FrequencyErrorLimit Editable="TRUE" Type="Double">-150,150</FrequencyErrorLimit>
+            <OBWLimit Editable="TRUE" Type="Double">0.0,5.0</OBWLimit>
+            <BERLimit Editable="TRUE" Type="Double">0.0,0.1</BERLimit>
+            <SEMLimit Editable="TRUE" Type="Double">0,-60</SEMLimit>
+            <ILPCLimit Editable="TRUE" Type="Double">0.4,1.6</ILPCLimit>
+            <ACLRLimitLow Editable="TRUE" Type="Double">-100,-100,-100,-100</ACLRLimitLow>
+            <ACLRLimitHigh Editable="TRUE" Type="Double">-43,-33,-33,-43</ACLRLimitHigh>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CWCDMAMeasureLoop" Name="WCDMAMeasureLoop1900">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">WCDMAMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="MaxPower" Enabled="TRUE"/>
+               <Item Name="ACLR" Enabled="TRUE"/>
+               <Item Name="OccupiedBandWidth" Enabled="TRUE"/>
+               <Item Name="SpectrumEmmissionMask" Enabled="TRUE"/>
+               <Item Name="Sensitivity" Enabled="TRUE"/>
+               <Item Name="RxLevel" Enabled="TRUE"/>
+               <Item Name="ILPC_E" Enabled="TRUE"/>
+               <Item Name="ILPC_F" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">WCDMAHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">1900</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">9263, 9400, 9537</CHList>
+            <InCableLoss Editable="TRUE" Type="Double">0.3</InCableLoss>
+            <OutCableLoss Editable="TRUE" Type="Double">0.3</OutCableLoss>
+            <DynamicRange Editable="TRUE" Type="Double">85.3</DynamicRange>
+            <RxMin.Power Editable="TRUE" Type="Double">-106.0</RxMin.Power>
+            <BSPower Editable="TRUE" Type="Double">-85</BSPower>
+            <RFPowerForAll Editable="TRUE" Type="Double">-75</RFPowerForAll>
+            <RFPowerForBER Editable="TRUE" Type="Double">-108.2</RFPowerForBER>
+            <RFPowerForILPC Editable="TRUE" Type="Double">-85</RFPowerForILPC>
+            <MaxPowerlimit Editable="TRUE" Type="Double">21,25</MaxPowerlimit>
+            <FrequencyErrorLimit Editable="TRUE" Type="Double">-150,150</FrequencyErrorLimit>
+            <OBWLimit Editable="TRUE" Type="Double">0.0,5.0</OBWLimit>
+            <BERLimit Editable="TRUE" Type="Double">0.0,0.1</BERLimit>
+            <SEMLimit Editable="TRUE" Type="Double">0,-60</SEMLimit>
+            <ILPCLimit Editable="TRUE" Type="Double">0.4,1.6</ILPCLimit>
+            <ACLRLimitLow Editable="TRUE" Type="Double">-100,-100,-100,-100</ACLRLimitLow>
+            <ACLRLimitHigh Editable="TRUE" Type="Double">-43,-33,-33,-43</ACLRLimitHigh>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CWCDMAMeasureLoop" Name="WCDMAMeasureLoop850">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">WCDMAMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="MaxPower" Enabled="TRUE"/>
+               <Item Name="ACLR" Enabled="TRUE"/>
+               <Item Name="OccupiedBandWidth" Enabled="TRUE"/>
+               <Item Name="SpectrumEmmissionMask" Enabled="TRUE"/>
+               <Item Name="Sensitivity" Enabled="TRUE"/>
+               <Item Name="RxLevel" Enabled="TRUE"/>
+               <Item Name="ILPC_E" Enabled="TRUE"/>
+               <Item Name="ILPC_F" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">WCDMAHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">850</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">4133, 4182, 4232</CHList>
+            <InCableLoss Editable="TRUE" Type="Double">0.3</InCableLoss>
+            <OutCableLoss Editable="TRUE" Type="Double">0.3</OutCableLoss>
+            <DynamicRange Editable="TRUE" Type="Double">85.3</DynamicRange>
+            <RxMin.Power Editable="TRUE" Type="Double">-106.0</RxMin.Power>
+            <BSPower Editable="TRUE" Type="Double">-85</BSPower>
+            <RFPowerForAll Editable="TRUE" Type="Double">-75</RFPowerForAll>
+            <RFPowerForBER Editable="TRUE" Type="Double">-108.2</RFPowerForBER>
+            <RFPowerForILPC Editable="TRUE" Type="Double">-85</RFPowerForILPC>
+            <MaxPowerlimit Editable="TRUE" Type="Double">21,25</MaxPowerlimit>
+            <FrequencyErrorLimit Editable="TRUE" Type="Double">-150,150</FrequencyErrorLimit>
+            <OBWLimit Editable="TRUE" Type="Double">0.0,5.0</OBWLimit>
+            <BERLimit Editable="TRUE" Type="Double">0.0,0.1</BERLimit>
+            <SEMLimit Editable="TRUE" Type="Double">0,-60</SEMLimit>
+            <ILPCLimit Editable="TRUE" Type="Double">0.4,1.6</ILPCLimit>
+            <ACLRLimitLow Editable="TRUE" Type="Double">-100,-100,-100,-100</ACLRLimitLow>
+            <ACLRLimitHigh Editable="TRUE" Type="Double">-43,-33,-33,-43</ACLRLimitHigh>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CWCDMAMeasureLoop" Name="WCDMAMeasureLoop900">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">WCDMAMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="MaxPower" Enabled="TRUE"/>
+               <Item Name="ACLR" Enabled="TRUE"/>
+               <Item Name="OccupiedBandWidth" Enabled="TRUE"/>
+               <Item Name="SpectrumEmmissionMask" Enabled="TRUE"/>
+               <Item Name="Sensitivity" Enabled="TRUE"/>
+               <Item Name="RxLevel" Enabled="TRUE"/>
+               <Item Name="ILPC_E" Enabled="TRUE"/>
+               <Item Name="ILPC_F" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">WCDMAHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">900</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">2712, 2787, 2863</CHList>
+            <InCableLoss Editable="TRUE" Type="Double">0.3</InCableLoss>
+            <OutCableLoss Editable="TRUE" Type="Double">0.3</OutCableLoss>
+            <DynamicRange Editable="TRUE" Type="Double">85.3</DynamicRange>
+            <RxMin.Power Editable="TRUE" Type="Double">-106.0</RxMin.Power>
+            <BSPower Editable="TRUE" Type="Double">-85</BSPower>
+            <RFPowerForAll Editable="TRUE" Type="Double">-75</RFPowerForAll>
+            <RFPowerForBER Editable="TRUE" Type="Double">-108.2</RFPowerForBER>
+            <RFPowerForILPC Editable="TRUE" Type="Double">-85</RFPowerForILPC>
+            <MaxPowerlimit Editable="TRUE" Type="Double">21,25</MaxPowerlimit>
+            <FrequencyErrorLimit Editable="TRUE" Type="Double">-150,150</FrequencyErrorLimit>
+            <OBWLimit Editable="TRUE" Type="Double">0.0,5.0</OBWLimit>
+            <BERLimit Editable="TRUE" Type="Double">0.0,0.1</BERLimit>
+            <SEMLimit Editable="TRUE" Type="Double">0,-60</SEMLimit>
+            <ILPCLimit Editable="TRUE" Type="Double">0.4,1.6</ILPCLimit>
+            <ACLRLimitLow Editable="TRUE" Type="Double">-100,-100,-100,-100</ACLRLimitLow>
+            <ACLRLimitHigh Editable="TRUE" Type="Double">-43,-33,-33,-43</ACLRLimitHigh>
+            <!--End of Parameters-->
+         </ProcessObject>
+      </WCDMATestObjects>
+      <OnlineGSMTestObjects>
+         <ProcessObject ClassName="COnlineInitGSMTest" Name="OnlineInitGSMTest">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">OnlineInitGSMTestMainFunc</MainFunction>
+            <!--Parameters-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="COnlineGSMStartCall" Name="OnlineGSMStartCall">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">OnlineGSMStartCallMainFunc</MainFunction>
+            <!--Parameters-->
+            <StartBand Editable="TRUE" Type="Integer">900</StartBand>
+            <StartChannel Editable="TRUE" Type="Integer">975</StartChannel>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="COnlineGSMHandover" Name="OnlineGSMHandover">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">OnlineGSMHandoverMainFunc</MainFunction>
+            <!--Parameters-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="COnlineEndGSMTest" Name="OnlineEndGSMTest">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">OnlineEndGSMTestMainFunc</MainFunction>
+            <!--Parameters-->
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="COnlineGSMMeasureLoop" Name="OnlineGSMMeasureLoop900">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">OnlineGSMMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="BurstPower" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_Due_ToModulation" Enabled="TRUE"/>
+               <Item Name="ReferenceSensitivity" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">OnlineGSMHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">900</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">977, 62, 124</CHList>
+            <PCLCount Editable="TRUE" Type="Integer">2</PCLCount>
+            <PCLList Editable="TRUE" Type="Integer">5, 19</PCLList>
+            <ULPwrSpecByPCL Editable="TRUE" Type="Double">32, 10</ULPwrSpecByPCL>
+            <DLPwrSpecByPCL Editable="TRUE" Type="Double">28, 0</DLPwrSpecByPCL>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="COnlineGSMMeasureLoop" Name="OnlineGSMMeasureLoop850">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">OnlineGSMMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="BurstPower" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_Due_ToModulation" Enabled="TRUE"/>
+               <Item Name="ReferenceSensitivity" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">OnlineGSMHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">850</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">128, 190, 251</CHList>
+            <PCLCount Editable="TRUE" Type="Integer">2</PCLCount>
+            <PCLList Editable="TRUE" Type="Integer">5, 19</PCLList>
+            <ULPwrSpecByPCL Editable="TRUE" Type="Double">32, 10</ULPwrSpecByPCL>
+            <DLPwrSpecByPCL Editable="TRUE" Type="Double">28, 0</DLPwrSpecByPCL>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="COnlineGSMMeasureLoop" Name="OnlineGSMMeasureLoop1800">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">OnlineGSMMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="BurstPower" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_Due_ToModulation" Enabled="TRUE"/>
+               <Item Name="ReferenceSensitivity" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">OnlineGSMHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">1800</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">512, 700, 885</CHList>
+            <PCLCount Editable="TRUE" Type="Integer">2</PCLCount>
+            <PCLList Editable="TRUE" Type="Integer">5, 19</PCLList>
+            <ULPwrSpecByPCL Editable="TRUE" Type="Double">32, 10</ULPwrSpecByPCL>
+            <DLPwrSpecByPCL Editable="TRUE" Type="Double">28, 0</DLPwrSpecByPCL>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="COnlineGSMMeasureLoop" Name="OnlineGSMMeasureLoop1900">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">OnlineGSMMeasureLoopMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Name="PhaseError" Enabled="TRUE"/>
+               <Item Name="FrequencyError" Enabled="TRUE"/>
+               <Item Name="BurstPower" Enabled="TRUE"/>
+               <Item Name="ORFS_DueToSwitching" Enabled="TRUE"/>
+               <Item Name="ORFS_Due_ToModulation" Enabled="TRUE"/>
+               <Item Name="ReferenceSensitivity" Enabled="TRUE"/>
+            </List>
+            <HandoverObject Editable="TRUE" Type="String">OnlineGSMHandover</HandoverObject>
+            <!--Parameters-->
+            <TestBand Editable="TRUE" Type="Integer">1900</TestBand>
+            <CHCount Editable="TRUE" Type="Integer">3</CHCount>
+            <CHList Editable="TRUE" Type="Integer">512, 661, 810</CHList>
+            <PCLCount Editable="TRUE" Type="Integer">2</PCLCount>
+            <PCLList Editable="TRUE" Type="Integer">5, 19</PCLList>
+            <ULPwrSpecByPCL Editable="TRUE" Type="Double">32, 10</ULPwrSpecByPCL>
+            <DLPwrSpecByPCL Editable="TRUE" Type="Double">28, 0</DLPwrSpecByPCL>
+            <!--End of Parameters-->
+         </ProcessObject>
+         <ProcessObject ClassName="CFMTestProc" Name="FMTest">
+            <!--Main Function is necessary-->
+            <MainFunction Editable="TRUE" Type="String">FMMainFunc</MainFunction>
+            <!--Test Item List-->
+            <List>
+               <Item Enabled="TRUE">EvalRSSIByChannel</Item>
+            </List>
+            <!--Parameters-->
+            <TestCHCount Editable="TRUE" Type="Integer">3</TestCHCount>
+            <TestCHList Editable="TRUE" Type="IntegerList">8810, 9810, 10800</TestCHList>
+            <InCableLoss Editable="TRUE" Type="Double">0.1</InCableLoss>
+            <OutCableLoss Editable="TRUE" Type="Double">0.1</OutCableLoss>
+            <!--The unit in RFLevel is dbuv-->
+            <RFLevel Editable="TRUE" Type="Double">60</RFLevel>
+            <RSSISpec Editable="TRUE" Type="DoublePair">50, 65</RSSISpec>
+            <!--End of Parameters-->
+         </ProcessObject>
+      </OnlineGSMTestObjects>
+   </ProcessObjectSet>
+</Configuration>

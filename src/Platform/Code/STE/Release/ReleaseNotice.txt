@@ -1,0 +1,36 @@
+20080605 Add backup\restore dialog
+20080605 Update the MotoXPRS log to progam folder
+20080610 Rename the dll from ODMSkeleton.dll to qisdacmdmodule.dll
+20080610 Remove the file name fragment "ACC03" from the MotoXPRS log file name.
+20080610 Update the MotoXPRS fields of "First Use Time" and "Last Use Time"
+20080611 Update backup\restore dialog
+20080611 Add Manual CIT Test function
+20080617 Add notice string. Notice user(tester) to watch the mobile
+20080619 Add keypad,clear key,menu key,smart key to log
+20080619 Rename Welfeet to VE538
+20080623 Manual CIT test items.
+20080625 Add TTF field
+20080625 Add function for Calibration on CMU200
+20080625 Add Manual CIT Test function
+20080626 Add Camera VGA, camera 2M fields
+20080703 Calibration for CMU 200 , Add CalTest function 
+20080707 Add 2G & 3G Calibration for Agilent 8960
+20080708 Solve the File Close Exception issue
+20080710 Replace the wrong debug version
+20080723 Add SecurityProgrammingTool solution
+20080727 Add WCDMA NS-Testing
+20080731 Solve the com port not found issue
+20080801 Add GPIB auto search
+20080801 Add close "X" on backup\restore, update backup\restore dlls
+20080804 Add log on backup\restore dlls
+20080808 Add Keypad test and Backup Restore function
+20080813 Fix for fail to launch the motoXPRS
+20080815 Add Flex function
+20080818 Add failure byte function
+20080820 Remove test item "ReadBootLoaderVersion"
+20080820 Change GSM, WCDMA into 3G
+20080820 Change UMTSBand1
+20080822 Update wording for MotoXPRS
+20080825 Remove other language 
+20081009 Add QFuseTool, IMEI, OTP, Security Programming
+20090401 Move Qisdacmdmodule, remember to update this dll

@@ -1,0 +1,93 @@
+; odmtma_api.def : Declares the module parameters for the DLL.
+
+LIBRARY      "odmtma_api"
+
+EXPORTS
+	ODM_Initialize			@1
+	ODM_ConnectCommPort		@2
+	ODM_DisConnectCommPort	@3
+	ODM_APIVersion			@4
+	ODM_UnInitialize		@5
+	
+
+	;Unit power up, down and restart
+	ODM_IsUnitOn			@7
+	ODM_TurnUnitOn			@8
+	ODM_IsUnitOff			@9
+	ODM_TurnUnitOff			@10
+	ODM_RestartUnit			@11
+	
+	;Test Mode, Status Check and Master Clear
+	ODM_SetTestMode					@12
+	ODM_MasterClear					@13
+
+	;Unit Processing information
+	ODM_ReadTrackId					@14
+	ODM_ReadUnitInfo				@15
+
+	;Device identification
+	ODM_ReadIMEI			@16
+	ODM_ReadESN				@17
+	
+	;Flash and Flex
+	ODM_ReadVersion				@18
+
+	;ODM WorkAround
+	ODM_GenericWrite		@19
+	ODM_GenericRead			@20
+	
+	;Call Back
+	ODM_SetCallBack	@21 
+
+    ; Explicit exports can go here
+    ODM_ClearErrorMessage 		@22
+    ODM_ClearFilePath     		@23
+    ODM_CheckDataSize	  		@24
+    ODM_AddPortToString	  		@25
+    ODM_IsProgrammingComplete	@26
+    ODM_ReadBarcode				@27
+    ODM_ReadTransceiverKitNumber @28
+    ODM_ReadFactoryInfoBlock	@29
+    ODM_SetFactoryInfoBlock		@30
+    ODM_SetInFactoryFlag		@31
+    ODM_FactoryFlexSwitch		@32
+    ODM_ProgramIMEI				@33
+    ODM_VerifyIMEI				@34
+    ODM_ProgramESN				@35
+    ODM_VerifyESN				@36
+    ODM_CompareFlash			@37
+    ODM_CompareFlex				@38
+    ODM_Flash					@39
+    ODM_Flex					@40
+    ODM_ProgramPhoneBook		@41
+    ODM_ProgramBlueTooth		@42
+    ODM_ReadBlueTooth			@43
+    ODM_ProgramWLAN				@44
+    ODM_ReadWLAN				@45
+    ODM_SetRealTimeClock		@46
+    ODM_IsUnitLocked			@47
+    ODM_UnLockUnit				@48
+    ODM_ProgramLock				@49
+    ODM_ReadLock				@50
+    ODM_ProgramAkey				@51
+    ODM_ProgramMobileId			@52
+    ODM_ProgramSystemId			@53
+    ODM_ProgramSoc				@54
+    ODM_ProgramIMSI				@55
+    ODM_ExecuteFlow				@56
+    ODM_ReadBatteryLevel		@6
+    
+    
+    
+    
+			
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

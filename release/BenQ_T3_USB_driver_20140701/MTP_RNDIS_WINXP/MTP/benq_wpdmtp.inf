@@ -1,0 +1,52 @@
+; Installation inf for devices supporting Media Transfer Protocol (MTP)
+;
+; Copyright (c) BenQ Corporation.
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=WPD
+ClassGUID={EEC5AD98-8080-425f-922A-DABF3DE3F69A}
+Provider=%Provider%
+DriverVer=07/05/2013,1.0.0.0
+CatalogFile=benq_wpdmtp.cat
+
+[Manufacturer]
+%Provider%=BenQ, NTx86, NTamd64
+
+[BenQ.NTx86]
+%BenQ.MTP.DeviceDesc%=BenQ.Install, USB\VID_1D45&PID_4605&MI_00
+%BenQ.MTP.DeviceDesc%=BenQ.Install, USB\VID_1D45&PID_4606&MI_00
+%BenQ.MTP.DeviceDesc%=BenQ.Install, USB\VID_1D45&PID_461E&MI_00
+%BenQ.MTP.DeviceDesc%=BenQ.Install, USB\VID_1D45&PID_461F&MI_00
+
+[BenQ.NTamd64]
+%BenQ.MTP.DeviceDesc%=BenQ.Install, USB\VID_1D45&PID_4605&MI_00
+%BenQ.MTP.DeviceDesc%=BenQ.Install, USB\VID_1D45&PID_4606&MI_00
+%BenQ.MTP.DeviceDesc%=BenQ.Install, USB\VID_1D45&PID_461E&MI_00
+%BenQ.MTP.DeviceDesc%=BenQ.Install, USB\VID_1D45&PID_461F&MI_00
+
+[BenQ.Install]
+Include = wpdmtp.inf, WINUSB.INF
+Needs   = WPD.MTP, WINUSB.NT
+
+[BenQ.Install.hw]
+Include = wpdmtp.inf
+Needs   = WPD.MTP.Registration
+
+[BenQ.Install.Services]
+Include = wpdmtp.inf
+Needs   = WPD.MTP.Services
+
+[BenQ.Install.CoInstallers]
+Include = wpdmtp.inf
+Needs = WPD.MTP.CoInstallers
+
+[BenQ.Install.Wdf]
+Include = wpdmtp.inf
+Needs = WPD.MTP.Wdf
+UmdfServiceOrder=WpdMtpDriver
+
+[Strings]
+Provider="BenQ Inc."
+BenQ.MTP.DeviceDesc="BenQ Android MTP Device"

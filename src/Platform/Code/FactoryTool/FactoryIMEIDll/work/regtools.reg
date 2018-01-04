@@ -1,0 +1,100 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\.dll]
+@="dllfile"
+
+[HKEY_CLASSES_ROOT\.ocx]
+@="ocxfile"
+
+[HKEY_CLASSES_ROOT\.tlb]
+@="tlbfile"
+
+[HKEY_CLASSES_ROOT\dllfile]
+
+[HKEY_CLASSES_ROOT\dllfile\Shell]
+@="Register"
+
+[HKEY_CLASSES_ROOT\dllfile\Shell\OLEView]
+@="View DLL Server Details"
+
+[HKEY_CLASSES_ROOT\dllfile\Shell\OLEView\command]
+@="C:\\Program Files\\Microsoft Visual Studio\\Common\\Tools\\OleView.exe %L"
+
+[HKEY_CLASSES_ROOT\dllfile\Shell\Unregister]
+@="Unregister DLL Server"
+
+[HKEY_CLASSES_ROOT\dllfile\Shell\Unregister\command]
+@="regsvr32.exe /u \"%L\""
+
+[HKEY_CLASSES_ROOT\dllfile\Shell\Register]
+@="Register DLL Server"
+
+[HKEY_CLASSES_ROOT\dllfile\Shell\Register\command]
+@="regsvr32.exe \"%L\""
+
+[HKEY_CLASSES_ROOT\ocxfile]
+@=""
+
+[HKEY_CLASSES_ROOT\ocxfile\Shell]
+@="Register"
+
+[HKEY_CLASSES_ROOT\ocxfile\Shell\OLEView]
+@="View ActiveX Control Details"
+
+[HKEY_CLASSES_ROOT\ocxfile\Shell\OLEView\command]
+@="C:\\Program Files\\Microsoft Visual Studio\\Common\\Tools\\OleView.exe %L"
+
+[HKEY_CLASSES_ROOT\ocxfile\Shell\Register]
+@="Register ActiveX Control"
+
+[HKEY_CLASSES_ROOT\ocxfile\Shell\Register\command]
+@="regsvr32.exe \"%L\""
+
+[HKEY_CLASSES_ROOT\ocxfile\Shell\Unregister]
+@="Unregister ActiveX Control"
+
+[HKEY_CLASSES_ROOT\ocxfile\Shell\Unregister\command]
+@="regsvr32.exe /u \"%L\""
+
+[HKEY_CLASSES_ROOT\tlbfile]
+
+[HKEY_CLASSES_ROOT\tlbfile\Shell]
+@="Register"
+
+[HKEY_CLASSES_ROOT\tlbfile\Shell\OLEView]
+@="View Type Library Details"
+
+[HKEY_CLASSES_ROOT\tlbfile\Shell\OLEView\command]
+@="C:\\Program Files\\Microsoft Visual Studio\\Common\\Tools\\OleView.exe \"%L\""
+
+[HKEY_CLASSES_ROOT\tlbfile\Shell\Register]
+@="Register Type Library"
+
+[HKEY_CLASSES_ROOT\tlbfile\Shell\Register\command]
+@="CMD /c regtlib -q \"%L\""
+
+[HKEY_CLASSES_ROOT\.exe]
+@="exefile"
+
+[HKEY_CLASSES_ROOT\exefile]
+
+[HKEY_CLASSES_ROOT\exefile\Shell]
+@=""
+
+[HKEY_CLASSES_ROOT\exefile\Shell\OLEView]
+@="View ActiveX EXE Details"
+
+[HKEY_CLASSES_ROOT\exefile\Shell\OLEView\command]
+@="C:\\Program Files\\Microsoft Visual Studio\\Common\\Tools\\OleView.exe %L"
+
+[HKEY_CLASSES_ROOT\exefile\Shell\Register]
+@="Register ActiveX EXE"
+
+[HKEY_CLASSES_ROOT\exefile\Shell\Register\command]
+@="\"%1\" /regserver"
+
+[HKEY_CLASSES_ROOT\exefile\Shell\Unregister]
+@="Unregister ActiveX EXE"
+
+[HKEY_CLASSES_ROOT\exefile\Shell\Unregister\command]
+@="\"%1\" /unregserver"

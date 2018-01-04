@@ -1,0 +1,177 @@
+; Windows Vista Virtual Serial Port Setup File
+; Copyright (c) 2014 BenQ Incorporated
+; Manufacturer: BenQ Incorporated
+;
+
+[Version]
+signature  = "$WINDOWS NT$"
+Class      = Ports
+Provider   = %BENQ%
+ClassGuid  = {4D36E978-E325-11CE-BFC1-08002BE10318}
+DriverVer  = 01/25/2014,2.1.1.0
+Catalogfile= qcser.cat
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%BENQ% = BenQSerialPort, NTia64, NTamd64, NTarm
+
+[SourceDisksNames.x86]
+1000 = %BenQSrcDisk%,"",,\serial\i386
+
+[SourceDisksNames.amd64]
+1000 = %BenQSrcDisk%,"",,\serial\amd64
+
+[SourceDisksNames.arm]
+1000 = %BenQSrcDisk%,"",,\serial\arm
+
+[SourceDisksFiles]
+  qcusbser.sys = 1000
+
+[BenQSerialPort]
+%BenQDevice461B0% = QportInstall00, USB\VID_1D45&PID_461B&MI_00
+%BenQDevice461B3% = QportInstall00, USB\VID_1D45&PID_461B&MI_03
+%BenQDevice461E1% = QportInstall00, USB\VID_1D45&PID_461E&MI_01
+%BenQDevice461E3% = QportInstall00, USB\VID_1D45&PID_461E&MI_03
+%BenQDevice461F2% = QportInstall00, USB\VID_1D45&PID_461F&MI_02
+%BenQDevice461F4% = QportInstall00, USB\VID_1D45&PID_461F&MI_04
+%BenQDevice46202% = QportInstall00, USB\VID_1D45&PID_4620&MI_02
+%BenQDevice46204% = QportInstall00, USB\VID_1D45&PID_4620&MI_04
+%BenQDevice46213% = QportInstall00, USB\VID_1D45&PID_4621&MI_03
+%BenQDevice46215% = QportInstall00, USB\VID_1D45&PID_4621&MI_05
+%BenQDevice90060% = QportInstall00, USB\VID_05C6&PID_9006&MI_00
+%BenQDevice90080% = QportInstall00, USB\VID_05C6&PID_9008
+
+[BenQSerialPort.NTia64]
+%BenQDevice461B0% = QportInstall00, USB\VID_1D45&PID_461B&MI_00
+%BenQDevice461B3% = QportInstall00, USB\VID_1D45&PID_461B&MI_03
+%BenQDevice461E1% = QportInstall00, USB\VID_1D45&PID_461E&MI_01
+%BenQDevice461E3% = QportInstall00, USB\VID_1D45&PID_461E&MI_03
+%BenQDevice461F2% = QportInstall00, USB\VID_1D45&PID_461F&MI_02
+%BenQDevice461F4% = QportInstall00, USB\VID_1D45&PID_461F&MI_04
+%BenQDevice46202% = QportInstall00, USB\VID_1D45&PID_4620&MI_02
+%BenQDevice46204% = QportInstall00, USB\VID_1D45&PID_4620&MI_04
+%BenQDevice46213% = QportInstall00, USB\VID_1D45&PID_4621&MI_03
+%BenQDevice46215% = QportInstall00, USB\VID_1D45&PID_4621&MI_05
+%BenQDevice90060% = QportInstall00, USB\VID_05C6&PID_9006&MI_00
+%BenQDevice90080% = QportInstall00, USB\VID_05C6&PID_9008
+
+[BenQSerialPort.NTamd64]
+%BenQDevice461B0% = QportInstall00, USB\VID_1D45&PID_461B&MI_00
+%BenQDevice461B3% = QportInstall00, USB\VID_1D45&PID_461B&MI_03
+%BenQDevice461E1% = QportInstall00, USB\VID_1D45&PID_461E&MI_01
+%BenQDevice461E3% = QportInstall00, USB\VID_1D45&PID_461E&MI_03
+%BenQDevice461F2% = QportInstall00, USB\VID_1D45&PID_461F&MI_02
+%BenQDevice461F4% = QportInstall00, USB\VID_1D45&PID_461F&MI_04
+%BenQDevice46202% = QportInstall00, USB\VID_1D45&PID_4620&MI_02
+%BenQDevice46204% = QportInstall00, USB\VID_1D45&PID_4620&MI_04
+%BenQDevice46213% = QportInstall00, USB\VID_1D45&PID_4621&MI_03
+%BenQDevice46215% = QportInstall00, USB\VID_1D45&PID_4621&MI_05
+%BenQDevice90060% = QportInstall00, USB\VID_05C6&PID_9006&MI_00
+%BenQDevice90080% = QportInstall00, USB\VID_05C6&PID_9008
+
+[BenQSerialPort.NTarm]
+%BenQDevice461B0% = QportInstall00, USB\VID_1D45&PID_461B&MI_00
+%BenQDevice461B3% = QportInstall00, USB\VID_1D45&PID_461B&MI_03
+%BenQDevice461E1% = QportInstall00, USB\VID_1D45&PID_461E&MI_01
+%BenQDevice461E3% = QportInstall00, USB\VID_1D45&PID_461E&MI_03
+%BenQDevice461F2% = QportInstall00, USB\VID_1D45&PID_461F&MI_02
+%BenQDevice461F4% = QportInstall00, USB\VID_1D45&PID_461F&MI_04
+%BenQDevice46202% = QportInstall00, USB\VID_1D45&PID_4620&MI_02
+%BenQDevice46204% = QportInstall00, USB\VID_1D45&PID_4620&MI_04
+%BenQDevice46213% = QportInstall00, USB\VID_1D45&PID_4621&MI_03
+%BenQDevice46215% = QportInstall00, USB\VID_1D45&PID_4621&MI_05
+%BenQDevice90060% = QportInstall00, USB\VID_05C6&PID_9006&MI_00
+%BenQDevice90080% = QportInstall00, USB\VID_05C6&PID_9008
+
+[QportInstall00.NT]
+CopyFiles=QCUsbDriverFiles
+AddReg = All00, AddReg
+
+[QportInstall01.NT]
+CopyFiles=QCUsbDriverFiles
+AddReg = All00, AddReg, DevFunction1
+
+[QportInstall02.NT]
+CopyFiles=QCUsbDriverFiles
+AddReg = All00, AddReg, DevFunction2
+
+[QportInstall05.NT]
+CopyFiles=QCUsbDriverFiles
+AddReg = All00, AddReg
+
+[QCUsbDriverFiles]
+qcusbser.sys
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[QportInstall00.NT.Services]
+AddService=qcusbser,  0x00000002, QC_USBSerialService
+
+[QportInstall01.NT.Services]
+AddService=qcusbser,  0x00000002, QC_USBSerialService
+
+[QportInstall02.NT.Services]
+AddService=qcusbser,  0x00000002, QC_USBSerialService
+
+[QportInstall05.NT.Services]
+AddService=qcusbser,  0x00000002, QC_USBSerialService05
+
+[QC_USBSerialService]
+DisplayName   = %BENQUSBSER%
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %12%\qcusbser.sys
+
+[QC_USBSerialService05]
+DisplayName   = %BENQUSBSER%
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %12%\qcusbser.sys
+AddReg        = RegEntries
+
+[All00]
+HKR,,NTMPDriver,,qcusbser.sys
+
+[DevFunction1]
+HKR,,QCDeviceFunction,0x00010001,1
+
+[DevFunction2]
+HKR,,QCDeviceFunction,0x00010001,2
+
+[RegEntries]
+HKR, , QCDriverSelectiveSuspendIdleTime, 0x00010001, 0x80000003
+HKR, , QCDriverPowerManagementEnabled, 0x00010001, 1
+
+
+[AddReg]
+HKR,,PortSubClass,1,01
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+HKLM,SYSTEM\CurrentControlSet\Control\UsbFlags,IgnoreHWSerNum1D45461B,1,1
+HKLM,SYSTEM\CurrentControlSet\Control\UsbFlags,IgnoreHWSerNum1D45461E,1,1
+HKLM,SYSTEM\CurrentControlSet\Control\UsbFlags,IgnoreHWSerNum1D45461F,1,1
+HKLM,SYSTEM\CurrentControlSet\Control\UsbFlags,IgnoreHWSerNum1D454620,1,1
+HKLM,SYSTEM\CurrentControlSet\Control\UsbFlags,IgnoreHWSerNum1D454621,1,1
+HKLM,SYSTEM\CurrentControlSet\Control\UsbFlags,IgnoreHWSerNum05C69006,1,1
+HKLM,SYSTEM\CurrentControlSet\Control\UsbFlags,IgnoreHWSerNum05C69008,1,1
+
+[Strings]
+BENQUSBSER = "BenQ USB Device for Legacy Serial Communication"
+BenQSrcDisk = "BenQ USB Driver Disk"
+BENQ   = "BenQ Incorporated"
+BenQDevice461B0 = "BenQ HS-USB Diagnostics 461B"
+BenQDevice461B3 = "BenQ HS-USB NMEA 461B"
+BenQDevice461E1 = "BenQ HS-USB Diagnostics 461E"
+BenQDevice461E3 = "BenQ HS-USB NMEA 461E"
+BenQDevice461F2 = "BenQ HS-USB Diagnostics 461F"
+BenQDevice461F4 = "BenQ HS-USB NMEA 461F"
+BenQDevice46202 = "BenQ HS-USB Diagnostics 4620"
+BenQDevice46204 = "BenQ HS-USB NMEA 4620"
+BenQDevice46213 = "BenQ HS-USB Diagnostics 4621"
+BenQDevice46215 = "BenQ HS-USB NMEA 4621"
+BenQDevice90060 = "BenQ HS-USB Diagnostics 9006"
+BenQDevice90080 = "BenQ HS-USB QDLoader 9008"

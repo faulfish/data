@@ -1,0 +1,20 @@
+{Header
+}
+{Description
+}
+{Code
+//Coincell voltage test
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticM.dll GetCoincellVoltage %var1 %var2
+0002 comparetrue 0005
+0003 print "Error on GetCoincellVoltage API"
+0004 comparefalse 9999
+0005 print "Coin cell voltage(mv)"
+0006 print %var2
+0007 bigger %var2 "2000"
+0008 comparetrue 0011
+0009 print "Coin cell voltage too low"
+0010 comparefalse 9999
+0011 Run MobileToolKit_StaticM.dll WriteMMIFlag %var1 431 1
+//EM_BZ_CONINCELL 431
+}

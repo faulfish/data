@@ -1,0 +1,58 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station Download
+ModelName Lavernock
+MESW 0.1
+MEHW 11 
+SoNumber 1101
+}
+{Code
+//This following is a sample test code
+
+0000 waitinput %var1 COM_PORT
+0001 waitinput %var3 IMEI_FROM_PHONE
+0002 print  "============OPEN SPC============" 
+0003 Run MobileToolKit_StaticMD.dll IsSPCLocked_ForSPU %var1 %var6
+0004 comparefalse 6
+0005 comparetrue 8
+
+//QuerySPC fail
+0006 print "Query IsSPCLocked fail....."
+0007 print "F66" "Error!"
+
+// QuerySPC success
+0008 compare %var6 SPC Locked
+0009 comparefalse 28  //SPC is open
+
+//SPC is locked
+0010 print "" "SPC is locked....."
+0011 print "Write default 000000 to unlock SPC......"
+0012 assign %var7 000000
+0013 run MobileToolKit_StaticMD.dll UnlockSPC_ForSPU %var1 %var7 %var6
+0014 comparefalse 16    
+0015 comparetrue 18
+
+///run unlock fail
+0016 print "run Unlock SPC fail"
+0017 print "" "Error!"
+
+0018 compare %var6 Unlock SPC failed. 
+0019 comparefalse 20   
+
+0020 Run MobileToolKit_StaticMD.dll IsSPCLocked_ForSPU %var1 %var6
+0021 comparefalse 23
+0022 comparetrue 25
+
+//QuerySPC fail
+0023 print "Query IsSPCLocked fail....."
+0024 print "F66" "Error!"
+
+// QuerySPC success
+0025 compare %var6 SPC Locked
+0026 comparefalse 28  //SPC is open
+0027 print "" "Error!"
+0028 print "unlock success!"
+}

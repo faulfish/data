@@ -1,0 +1,6 @@
+; CDCInterface.def : Declares the module parameters for the DLL.
+
+LIBRARY      "CDCInterface"
+
+EXPORTS
+    ; Explicit exports can go here

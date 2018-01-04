@@ -1,0 +1,6 @@
+; PIMDB.def : Declares the module parameters for the DLL.
+
+LIBRARY      "PIMDB"
+
+EXPORTS
+    ; Explicit exports can go here

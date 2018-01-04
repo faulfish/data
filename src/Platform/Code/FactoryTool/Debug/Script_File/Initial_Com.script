@@ -1,0 +1,18 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+0000 assign %var0 ""
+0001 Run FactoryIMEIDll_StaticM.dll  ComCtryObjInitial %var0
+0002 comparetrue 4
+0003 print "ComInit Fail!" "Log"
+0004 print "ComInit Success!" "Log"
+}

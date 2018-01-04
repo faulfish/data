@@ -1,0 +1,80 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+0000 waitinput %var1 COM_PORT
+//0001 waitinput %var10 TRANCIVER_FLAG
+//0002 compare %var10 1
+//0003 comparetrue 17
+
+0001 print "============READ IMEI FROM PHONE============" "Title"
+0002 assign %var11 2
+0003 loop %var11
+0004 Run MobileToolKit_StaticM.dll GetIMEI_ForSPU %var1 %var2 
+0005 comparetrue 9
+0006 print "Read IMEI fail......" "Log"
+0007 loop
+0008 print "F66" "Error"
+//get IMEI success
+0009 print "Read IMEI success......" "Log"
+0010 print %var2 "IMEI_FROM_PHONE"
+0011 print "============READ IMEI FROM PHONE END============" "Title"
+
+0012 waitinput %var10 TRANCIVER_FLAG
+0013 compare %var10 1
+0014 comparefalse 49
+
+0015 print "============READ BT FROM PHONE============" "Title"
+0016 assign %var9 13
+0017 loop %var11
+0018 run MobileToolKit_StaticM.dll GetBTAddr_ForSPU %var1 %var7 %var9
+0019 comparetrue 23
+0020 print "Read BT address from phone fail......" "Log"
+0021 loop
+0022 print "F85" "Error"
+
+0023 print "Read BT address success..." "Log"
+0024 print %var7 "BT_FROM_PHONE"
+0025 print "============READ BT FROM PHONE END============" "Title"
+
+//CHECK Picasso number in PICS
+0026 waitinput %var6 PICASSO_NO
+0027 waitinput %var7 MODEL_NAME
+0028 assign %var8 SMTVI
+0029 run FactoryIMEIDll_StaticM.dll CheckPicassoPICS_SSS02 %var7 %var6 %var10 %var11 %var8 %var9
+0030 comparetrue 48
+0031 compare %var9 0xFF
+0032 comparefalse 35
+0033 print "Picasso Number not in eSMT system!" "Log"
+0034 print "F110" "Error"
+
+0035 compare %var9 0xFE
+0036 comparefalse 39
+0037 print "The Module Name not in IMEI Table!" "Log"
+0038 pirnt "F111" "Error"
+
+0039 compare %var10 %var2
+0040 comparefalse 44
+0041 waitinput %var3 MOBILE_ID
+0042 compare %var11 %var3
+0043 comparetrue 48
+
+0044 print "This Picaso Number related IMEI or MobileID not equal to this phone!" "Log"
+0045 print %var10 "Related IMEI"
+0046 print %var11 "Related Mobile ID"
+0047 pirnt "F112" "Error"
+
+0048 print "Check Picasso Number in PICS pass!" "Log"
+
+0049 print 20 "Progress"
+
+
+}

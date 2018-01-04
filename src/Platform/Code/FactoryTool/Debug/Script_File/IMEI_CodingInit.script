@@ -1,0 +1,52 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+0000 print "CHECK_MAL" "Function"
+0001 print "IMEI_SCANNER" "Function"
+0002 print "PICASSO_CHECK" "Function"
+0003 print "Check Picasso MMI/FAL" "Log"
+0004 waitinput %var2 PICASSO_NO
+0005 waitinput %var3 MODEL_NAME
+0006 run FactoryIMEIDll_StaticM.dll GetProcessResult_SSS02 %var2 %var3 %var11 %var10
+0007 comparetrue 12
+0008 print "GetProcessResult_SSS02 fail!" "Log"
+0009 print %var11 "Error Code"
+0010 print %var10 "Error Msg"
+0011 print "F103" "Error"
+
+0012 print "Check Picasso in SMT" "Log"
+0013 assign %var4 SMTVI
+0014 run FactoryIMEIDll_StaticM.dll CheckPicassoSMT_SSS02 %var2 %var4
+0015 comparetrue 18
+0016 print "Picasso Number SMTVI Test fail!" "Log"
+0017 print "F108" "Error"
+
+0018 print 5 "Progress"
+
+0019 print "============CONNECT PHONE START============" "Title"
+0020 waitinput %var1 COM_PORT
+// connect phone
+0021 assign %var2 200
+0022 loop %var2
+0023 print %var1 "Connect Phone, please wait......"
+0024 run MobileToolKit_StaticM.dll IsConnected_ForSPU %var1 
+0025 comparetrue 30
+0026 sleep 100
+0027 loop
+0028 print "Connect Phone fail......" "Log"
+0029 print "F10" "Error"
+
+0030 print "Connect Phone success......" "Log"
+0031 print 10 "Progress"
+0032 print "============CONNECT PHONE END============" "Title"
+
+}

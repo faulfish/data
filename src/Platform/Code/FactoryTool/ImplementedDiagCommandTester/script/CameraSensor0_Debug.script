@@ -1,0 +1,14 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+}
+{Code
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticMD.dll QLIB_CapturePicture_ForSPU %var1 "0" "1600" "1200" "Sensor0_16001200.jpg"
+0002 comparetrue 0005
+0003 print "Fail DSC Test API"
+0004 comparefalse 9999
+0005 print "Success DSC Test API"
+}

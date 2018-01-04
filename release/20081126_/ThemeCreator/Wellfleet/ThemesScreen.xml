@@ -1,0 +1,44 @@
+<Application name="ThemeScreen">
+	<!-- background -->
+	<Group id="1" parentID="1">
+		<Bodybackground pos="1" zOrder="1" src="IDI_CO_BD_SYS_BODY_BACK"/>
+		<BodybackgroundIcon pos="2601" zOrder="2" src="IDI_CO_L2_THEME_FILE"/>
+		<BodybackgroundIcon pos="2602" zOrder="2" src="IDI_CO_L2_THEME_FILE"/>
+		<BodybackgroundText pos="2603" zOrder="2" src="IDS_TH_LI_ITEM2"/>
+		<BodybackgroundText pos="2604" zOrder="2" src="IDS_TH_LI_ITEM3"/>
+		<BodybackgroundText pos="2605" zOrder="2" src="IDS_TH_LI_ITEM4"/>
+		<BodybackgroundText pos="2606" zOrder="2" src="IDS_TH_LI_ITEM5"/>
+	</Group>
+	<!-- annunciator -->
+	<Group id="2" parentID="1">
+		<AnnunciatorBack pos="2" zOrder="1" src="IDI_CO_BD_ANNUNCIATOR_REGION"/>
+		<SignalIcon pos="3" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+		<BluetoothIcon pos="4" zOrder="2" src="IDI_CO_BD_BT_ACTIVE_VISIBLE"/>
+		<BatteryIcon pos="5" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+	</Group>
+	<!-- title -->
+	<Group id="3" parentID="1">
+		<TitleBack pos="10" zOrder="1" src="IDI_CO_BD_TITLE_REGION"/>
+		<TitleIcon pos="13" zOrder="2" src="IDI_CO_HL_MY_STUFF"/>
+		<TitleText pos="14" zOrder="2" src="IDS_CO_BD_TITLE_THEMES"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="4" parentID="1">
+		<SoftkeyBack pos="6" zOrder="1" src="IDI_CO_BD_SYS_SOFTKEY_BACK"/>
+		<SoftkeyIcon pos="8" zOrder="2" src="IDI_CO_CC_CHECK"/>
+		<SoftkeyText pos="7" zOrder="2" src="IDS_CO_BD_LSK_SELECT"/>
+		<SoftkeyText pos="9" zOrder="2" src="IDS_CO_BD_RSK_BACK"/>
+	</Group>
+	<!-- Twolineselectionbar -->	
+	<Group id="5" parentID="1">
+		<TwoLineSelectionBarBack pos="2609" zOrder="1" src="IDI_CO_BD_SYS_LIST_SELECTION_2LINE"/>
+		<TwoLineSelectionBarIcon pos="2607" zOrder="2" src="IDI_CO_L2_THEME_FILE"/>
+		<TwoLineSelectionBarText pos="2608" zOrder="2" src="IDS_TH_LI_ITEM1"/>
+	</Group>
+	<!-- scrollbar	-->
+	<Group id="6" parentID="5">
+		<ScrollbarBack pos="28" zOrder="1" src="IDI_CO_BD_SYS_SCROLLBAR_BACK"/>
+		<ScrollbarHandle pos="29" zOrder="2" src="IDI_CO_BD_SYS_SCROLLBAR_HANDLE"/>
+	</Group>
+</Application>
+

@@ -1,0 +1,10 @@
+<Phone_Configuration>
+	<Phone>
+		<Model>Wellfleet</Model>
+		<Resolution>240*320</Resolution>
+		<Description>Themes for Mobile Device Athens (Welfleet)</Description>
+		<Image>Athens.bmp</Image>
+		<ThemePath>brew//mod//cmgr//pp//thm//usr//</ThemePath>
+	</Phone>
+</Phone_Configuration>
+	

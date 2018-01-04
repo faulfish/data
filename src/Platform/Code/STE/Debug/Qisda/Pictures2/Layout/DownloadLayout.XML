@@ -1,0 +1,120 @@
+<App Name="QDownload 2.0" Version="1.0">
+	<Widget ClassName="CDownloadDialogDlg" ID="CDownloadDialogDlgID">
+		<Widget ClassName="SplitLayout" ID="MainLayout">
+			<Property Direction="V" FixedStyle="Value" FixedValue="400"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="LeftView">
+			<Property Direction="H" FixedStyle="Value" FixedValue="350"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="RightView">
+			<Property Direction="H" FixedStyle="Value" FixedValue="275"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="RightBottomView">
+			<Property Direction="H" FixedStyle="Value" FixedValue="30"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="BarView">
+			<Property Direction="H" FixedStyle="Value" FixedValue="100"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="LeftBottomView">
+			<Property Direction="H" FixedStyle="Value" FixedValue="200"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="Button">
+			<Property Direction="2" Spacing="25"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="StepButton">
+			<Property Direction="0" Spacing="25"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_LIST1">
+			<Property Win32ID="1000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="CoachImage">    
+			<Property ImagePath="Coach.bmp" ShowStyle="Stretch" Display="" Enable="true" nID="2008"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="ProgressBar">
+			<Property Style="ClipPicture" BkImage="\ProgressBar\ProgressBar_Empty.PNG" BarImage="\ProgressBar\ProgressBar_Full.PNG" TimerID="0" Elapse="0" Count="0" MaxWidth="300" MinWidth="200" MaxHeight="50" MinHeight="36" Enable="true" Display="" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="InfoLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="\BK_StatusBar.png" TextColorAlpha="255" TextColorR="0" TextColorG="255" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="0%" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_COMBO1">
+			<Property Win32ID="1001"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="UpdateButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="200" MinWidth="47" MaxHeight="50" MinHeight="36" Enable="true" Display="IDS_UPDATA" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="CloseButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="200" MinWidth="47" MaxHeight="50" MinHeight="36" Enable="true" Display="IDS_CLOSE" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="Step1">    
+			<Property ImagePath="Btn_Empty.PNG" ShowStyle="Fixed" Display="" Enable="true" nID="10"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="Step2">    
+			<Property ImagePath="Btn_Empty.PNG" ShowStyle="Fixed" Display="" Enable="true" nID="11"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="Step3">    
+			<Property ImagePath="Btn_Empty.PNG" ShowStyle="Fixed" Display="" Enable="true" nID="12"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="Step4">    
+			<Property ImagePath="Btn_Empty.PNG" ShowStyle="Fixed" Display="" Enable="true" nID="13"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="Step5">    
+			<Property ImagePath="Btn_Empty.PNG" ShowStyle="Fixed" Display="" Enable="true" nID="14"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="Step6">    
+			<Property ImagePath="Btn_Empty.PNG" ShowStyle="Fixed" Display="" Enable="true" nID="15"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="Step7">    
+			<Property ImagePath="Btn_Empty.PNG" ShowStyle="Fixed" Display="" Enable="true" nID="16"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="Step8">    
+			<Property ImagePath="Btn_Empty.PNG" ShowStyle="Fixed" Display="" Enable="true" nID="17"></Property>
+		</Widget>
+		<Order Name="FileManager">
+			<Setting ParentWidget="" ID="MainLayout" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="LeftView" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="RightView" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="LeftView" ID="IDC_LIST1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="LeftView" ID="LeftBottomView" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="LeftBottomView" ID="BarView" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="LeftBottomView" ID="StepButton" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="RightView" ID="CoachImage" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="RightView" ID="RightBottomView" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="RightBottomView" ID="IDC_COMBO1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="RightBottomView" ID="Button" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BarView" ID="InfoLabel" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="BarView" ID="ProgressBar" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="Button" ID="UpdateButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="Button" ID="CloseButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StepButton" ID="Step1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StepButton" ID="Step2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StepButton" ID="Step3" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StepButton" ID="Step4" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StepButton" ID="Step5" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StepButton" ID="Step6" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StepButton" ID="Step7" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StepButton" ID="Step8" Parameter="" Description=""></Setting>
+		</Order>
+		<LayoutBase Name="FileManager">
+			<Setting ID="MainLayout" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="MainLayout" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|Top"></Setting>
+			<Setting ID="LeftView" Index="0" TopMargin="20" BottomMargin="5" LeftMargin="10" RightMargin="5" Alignment="Left|Top"></Setting>
+			<Setting ID="LeftView" Index="1" TopMargin="5" BottomMargin="15" LeftMargin="10" RightMargin="5" Alignment="Left|Top"></Setting>
+			<Setting ID="RightView" Index="0" TopMargin="20" BottomMargin="5" LeftMargin="5" RightMargin="10" Alignment="Left|Top"></Setting>
+			<Setting ID="RightView" Index="1" TopMargin="5" BottomMargin="15" LeftMargin="5" RightMargin="10" Alignment="Right|Top"></Setting>
+			<Setting ID="RightBottomView" Index="0" TopMargin="5" BottomMargin="5" LeftMargin="5" RightMargin="10" Alignment="Left|Top"></Setting>
+			<Setting ID="RightBottomView" Index="1" TopMargin="5" BottomMargin="15" LeftMargin="5" RightMargin="10" Alignment="Left|Top"></Setting>
+			<Setting ID="BarView" Index="0" TopMargin="5" BottomMargin="3" LeftMargin="" RightMargin="5" Alignment="Left|Bottom"></Setting>
+			<Setting ID="BarView" Index="1" TopMargin="3" BottomMargin="3" LeftMargin="" RightMargin="5" Alignment="Left|Top"></Setting>
+			<Setting ID="Button" Index="0" TopMargin="20" BottomMargin="5" LeftMargin="" RightMargin="" Alignment="Right|VCenter"></Setting>
+			<Setting ID="Button" Index="1" TopMargin="5" BottomMargin="5" LeftMargin="" RightMargin="" Alignment="Right|Bottom"></Setting>
+			<Setting ID="StepButton" Index="0" TopMargin="3" BottomMargin="" LeftMargin="" RightMargin="" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StepButton" Index="1" TopMargin="3" BottomMargin="" LeftMargin="" RightMargin="" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StepButton" Index="2" TopMargin="3" BottomMargin="" LeftMargin="" RightMargin="" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StepButton" Index="3" TopMargin="3" BottomMargin="" LeftMargin="" RightMargin="" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StepButton" Index="4" TopMargin="3" BottomMargin="" LeftMargin="" RightMargin="" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StepButton" Index="5" TopMargin="3" BottomMargin="" LeftMargin="" RightMargin="" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StepButton" Index="6" TopMargin="3" BottomMargin="" LeftMargin="" RightMargin="" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StepButton" Index="7" TopMargin="3" BottomMargin="" LeftMargin="" RightMargin="" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+</App>

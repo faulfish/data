@@ -1,0 +1,224 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BluePrint.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\BluePrint.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BLUEPRINT_DIALOG DIALOGEX 0, 0, 397, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "BluePrint"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Disconnect",IDC_DISCONNECT,168,185,61,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Start",IDC_START_BUTTON,42,184,68,14
+    EDITTEXT        IDC_NEWLINE_EDIT,7,145,375,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE | WS_DISABLED
+    EDITTEXT        IDC_CHATLOG_EDIT,0,86,384,45,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL | WS_HSCROLL
+    LTEXT           "Status:",IDC_STATUS_LABEL,0,70,21,8
+    LTEXT           "Ready to start a session",IDC_STATUS_TEXT,74,70,323,9,
+                    SS_SUNKEN
+    CONTROL         129,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_SUNKEN | WS_BORDER,0,0,403,65
+    PUSHBUTTON      "Close",IDOK,273,185,61,14
+END
+
+IDD_CHOOSE_SERVER_DIALOG DIALOG DISCARDABLE  0, 0, 295, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select a Printer Server"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Print",IDC_PRINT,238,21,50,14,WS_DISABLED
+    PUSHBUTTON      "Close",IDCANCEL,238,44,50,14
+    CONTROL         "List2",IDC_SERVER_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | 
+                    WS_DISABLED | WS_BORDER | WS_TABSTOP,7,21,216,129
+    LTEXT           "",IDC_STATUS_TEXT,7,7,281,8
+    CONTROL         "Support BPP",IDC_BPP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,233,73,57,10
+    CONTROL         "Support HCRP",IDC_HCRP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,232,95,63,10
+    CONTROL         "Support SPP",IDC_SPP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,233,119,57,10
+END
+
+IDD_PRINTING DIALOG DISCARDABLE  0, 0, 186, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Printing"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,65,86,50,14
+    LTEXT           "Connecting to printer...\n(this may take a few seconds)",
+                    IDC_STATUS,7,13,173,24
+    LTEXT           "Choose Cancel to abort.",IDC_CANCEL_STATIC,53,67,77,8
+    LTEXT           "",IDC_BYTE_COUNT,7,41,163,12
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#include "btversinfo.h"
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION BTWFILEVERSION
+ PRODUCTVERSION BTWPRODUCTVERSION
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", BTWCOMPANYNAMESTR
+            VALUE "FileDescription", "BluePrint MFC Application\0"
+            VALUE "FileVersion", BTWFILEVERSIONSTR
+            VALUE "InternalName", "BluePrint\0"
+            VALUE "LegalCopyright", BTWLEGALCOPYRIGHTSTR
+            VALUE "LegalTrademarks", BTWLEGALTRADEMARKSSTR
+            VALUE "OriginalFilename", "BluePrint.EXE\0"
+            VALUE "ProductName", BTWPRODUCTNAMESTR
+            VALUE "ProductVersion", BTWPRODUCTVERSIONSTR            
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BROADCOM            BITMAP  DISCARDABLE     "res\\broadcom.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PRINTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\BluePrint.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

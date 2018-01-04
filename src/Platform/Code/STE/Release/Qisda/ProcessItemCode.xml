@@ -1,0 +1,295 @@
+<ProcessItems>
+    <ProcessItem Code="1001" Name="FTMMode"/>
+    <ProcessItem Code="1002" Name="CheckGSensorWorking"/>
+    <ProcessItem Code="1003" Name="WRITE_MOB_ID"/>
+    <ProcessItem Code="1004" Name="WriteHWSWVersion"/>
+    <ProcessItem Code="1005" Name="CheckHWSWVersion"/>
+    <ProcessItem Code="1006" Name="READ_MOB_ID"/>
+    <ProcessItem Code="1007" Name="MobileOnCurrent"/>
+    <ProcessItem Code="1008" Name="LoadRFData"/>
+    <ProcessItem Code="1009" Name="TxCurrent"/>
+    <ProcessItem Code="1010" Name="WriteQFuse"/>
+    <ProcessItem Code="1011" Name="Reset_ProcessID"/>
+    <ProcessItem Code="1012" Name="Write_ProcessData"/>
+    <ProcessItem Code="1013" Name="Write_ProcessID"/>
+    <ProcessItem Code="1014" Name="CheckQFuse"/>
+    <ProcessItem Code="1015" Name="Check_ProcessID"/>
+    <ProcessItem Code="1016" Name="ResetCMU"/>
+    <ProcessItem Code="1017" Name="SIMCard"/>
+    <ProcessItem Code="1018" Name="SetOnlineFlag"/>
+    <ProcessItem Code="1019" Name="LeakageCurrent"/>
+    <ProcessItem Code="1020" Name="StandbyCurrent"/>
+    <ProcessItem Code="1021" Name="FMRSSI"/>
+    <ProcessItem Code="1022" Name="PowerSupplyOutputOn"/>
+    <ProcessItem Code="1023" Name="PowerSupplyOutputOff"/>
+    <ProcessItem Code="1024" Name="BtPower"/>
+    <ProcessItem Code="1025" Name="AudioTest"/>
+    <ProcessItem Code="2000" Name="InitGSMCal"/>
+    <ProcessItem Code="2201" Name="PA_DAC_Search"/>
+    <ProcessItem Code="2102" Name="kvco"/>
+    <ProcessItem Code="2202" Name="kvco"/>
+    <ProcessItem Code="2302" Name="kvco"/>
+    <ProcessItem Code="2402" Name="kvco"/>
+    <ProcessItem Code="2303" Name="CarrierSuppressionCal"/>
+    <ProcessItem Code="2403" Name="CarrierSuppressionCal"/>
+    <ProcessItem Code="2104" Name="PolarCalibration"/>
+    <ProcessItem Code="2204" Name="PolarCalibration"/>
+    <ProcessItem Code="2304" Name="PolarCalibration"/>
+    <ProcessItem Code="2404" Name="PolarCalibration"/>
+    <ProcessItem Code="2105" Name="RxFreqCompensation"/>
+    <ProcessItem Code="2205" Name="RxFreqCompensation"/>
+    <ProcessItem Code="2305" Name="RxFreqCompensation"/>
+    <ProcessItem Code="2405" Name="RxFreqCompensation"/>
+    <ProcessItem Code="2106" Name="TimingDelay"/>
+    <ProcessItem Code="2206" Name="TimingDelay"/>
+    <ProcessItem Code="2306" Name="TimingDelay"/>
+    <ProcessItem Code="2406" Name="TimingDelay"/>
+    <ProcessItem Code="2099" Name="EndGSMCal"/>
+    <ProcessItem Code="3000" Name="InitWCDMACal"/>
+    <ProcessItem Code="3001" Name="ThermCalibration"/>
+    <ProcessItem Code="3102" Name="DoDC"/>
+    <ProcessItem Code="3202" Name="DoDC"/>
+    <ProcessItem Code="3402" Name="DoDC"/>
+    <ProcessItem Code="3502" Name="DoDC"/>
+    <ProcessItem Code="3103" Name="CTxLinMaster"/>
+    <ProcessItem Code="3203" Name="CTxLinMaster"/>
+    <ProcessItem Code="3403" Name="CTxLinMaster"/>
+    <ProcessItem Code="3503" Name="CTxLinMaster"/>
+    <ProcessItem Code="3104" Name="TxRxSmartAlignmentCal"/>
+    <ProcessItem Code="3204" Name="TxRxSmartAlignmentCal"/>
+    <ProcessItem Code="3404" Name="TxRxSmartAlignmentCal"/>
+    <ProcessItem Code="3504" Name="TxRxSmartAlignmentCal"/>
+    <ProcessItem Code="3099" Name="EndWCDMACal"/>
+    <ProcessItem Code="4000" Name="InitGSMTest"/>
+    <ProcessItem Code="4001" Name="GSMStartCall"/>
+    <ProcessItem Code="4102" Name="PhaseError"/>
+    <ProcessItem Code="4202" Name="PhaseError"/>
+    <ProcessItem Code="4302" Name="PhaseError"/>
+    <ProcessItem Code="4402" Name="PhaseError"/>
+    <ProcessItem Code="4103" Name="FrequencyError"/>
+    <ProcessItem Code="4203" Name="FrequencyError"/>
+    <ProcessItem Code="4303" Name="FrequencyError"/>
+    <ProcessItem Code="4403" Name="FrequencyError"/>
+    <ProcessItem Code="4104" Name="BurstPower"/>
+    <ProcessItem Code="4204" Name="BurstPower"/>
+    <ProcessItem Code="4304" Name="BurstPower"/>
+    <ProcessItem Code="4404" Name="BurstPower"/>
+    <ProcessItem Code="4105" Name="ORFS_DueToSwitching"/>
+    <ProcessItem Code="4205" Name="ORFS_DueToSwitching"/>
+    <ProcessItem Code="4305" Name="ORFS_DueToSwitching"/>
+    <ProcessItem Code="4405" Name="ORFS_DueToSwitching"/>
+    <ProcessItem Code="4106" Name="ORFS_Due_ToModulation"/>
+    <ProcessItem Code="4206" Name="ORFS_Due_ToModulation"/>
+    <ProcessItem Code="4306" Name="ORFS_Due_ToModulation"/>
+    <ProcessItem Code="4406" Name="ORFS_Due_ToModulation"/>
+    <ProcessItem Code="4107" Name="ReferenceSensitivity"/>
+    <ProcessItem Code="4207" Name="ReferenceSensitivity"/>
+    <ProcessItem Code="4307" Name="ReferenceSensitivity"/>
+    <ProcessItem Code="4407" Name="ReferenceSensitivity"/>
+    <ProcessItem Code="4099" Name="EndGSMTest"/>
+    <ProcessItem Code="5000" Name="InitEDGETest"/>
+    <ProcessItem Code="5001" Name="EDGEStartCall"/>
+    <ProcessItem Code="5102" Name="PhaseError"/>
+    <ProcessItem Code="5202" Name="PhaseError"/>
+    <ProcessItem Code="5302" Name="PhaseError"/>
+    <ProcessItem Code="5402" Name="PhaseError"/>
+    <ProcessItem Code="5103" Name="FrequencyError"/>
+    <ProcessItem Code="5203" Name="FrequencyError"/>
+    <ProcessItem Code="5303" Name="FrequencyError"/>
+    <ProcessItem Code="5403" Name="FrequencyError"/>
+    <ProcessItem Code="5104" Name="BurstPower"/>
+    <ProcessItem Code="5204" Name="BurstPower"/>
+    <ProcessItem Code="5304" Name="BurstPower"/>
+    <ProcessItem Code="5404" Name="BurstPower"/>
+    <ProcessItem Code="5105" Name="ORFS_DueToSwitching"/>
+    <ProcessItem Code="5205" Name="ORFS_DueToSwitching"/>
+    <ProcessItem Code="5305" Name="ORFS_DueToSwitching"/>
+    <ProcessItem Code="5405" Name="ORFS_DueToSwitching"/>
+    <ProcessItem Code="5106" Name="ORFS_Due_ToModulation"/>
+    <ProcessItem Code="5206" Name="ORFS_Due_ToModulation"/>
+    <ProcessItem Code="5306" Name="ORFS_Due_ToModulation"/>
+    <ProcessItem Code="5406" Name="ORFS_Due_ToModulation"/>
+    <ProcessItem Code="5099" Name="EndEDGETest"/>
+    <ProcessItem Code="6000" Name="InitWCDMATest"/>
+    <ProcessItem Code="6001" Name="WCDMAStartCall"/>
+    <ProcessItem Code="6102" Name="PhaseError"/>
+    <ProcessItem Code="6202" Name="PhaseError"/>
+    <ProcessItem Code="6402" Name="PhaseError"/>
+    <ProcessItem Code="6502" Name="PhaseError"/>
+    <ProcessItem Code="6103" Name="MaxPower"/>
+    <ProcessItem Code="6203" Name="MaxPower"/>
+    <ProcessItem Code="6403" Name="MaxPower"/>
+    <ProcessItem Code="6503" Name="MaxPower"/>
+    <ProcessItem Code="6104" Name="ACLR"/>
+    <ProcessItem Code="6204" Name="ACLR"/>
+    <ProcessItem Code="6404" Name="ACLR"/>
+    <ProcessItem Code="6504" Name="ACLR"/>
+    <ProcessItem Code="6105" Name="OccupiedBandWidth"/>
+    <ProcessItem Code="6205" Name="OccupiedBandWidth"/>
+    <ProcessItem Code="6405" Name="OccupiedBandWidth"/>
+    <ProcessItem Code="6505" Name="OccupiedBandWidth"/>
+    <ProcessItem Code="6106" Name="SpectrumEmmissionMask"/>
+    <ProcessItem Code="6206" Name="SpectrumEmmissionMask"/>
+    <ProcessItem Code="6406" Name="SpectrumEmmissionMask"/>
+    <ProcessItem Code="6506" Name="SpectrumEmmissionMask"/>
+    <ProcessItem Code="6107" Name="Sensitivity"/>
+    <ProcessItem Code="6207" Name="Sensitivity"/>
+    <ProcessItem Code="6407" Name="Sensitivity"/>
+    <ProcessItem Code="6507" Name="Sensitivity"/>
+    <ProcessItem Code="6108" Name="RxLevel"/>
+    <ProcessItem Code="6208" Name="RxLevel"/>
+    <ProcessItem Code="6408" Name="RxLevel"/>
+    <ProcessItem Code="6508" Name="RxLevel"/>
+    <ProcessItem Code="6109" Name="ILPC_E"/>
+    <ProcessItem Code="6209" Name="ILPC_E"/>
+    <ProcessItem Code="6409" Name="ILPC_E"/>
+    <ProcessItem Code="6509" Name="ILPC_E"/>
+    <ProcessItem Code="6110" Name="ILPC_F"/>
+    <ProcessItem Code="6210" Name="ILPC_F"/>
+    <ProcessItem Code="6410" Name="ILPC_F"/>
+    <ProcessItem Code="6510" Name="ILPC_F"/>
+    <ProcessItem Code="6099" Name="EndWCDMATest"/>
+    <ProcessItem Code="8000" Name="Connect phone fail"/>
+    <ProcessItem Code="8001" Name="Create IMEI record fail"/>
+    <ProcessItem Code="8002" Name="Change to online mode fail"/>
+    <ProcessItem Code="8003" Name="Initial DUCK library fail"/>
+    <ProcessItem Code="8004" Name="Check MMI PICS file fail"/>
+    <ProcessItem Code="8005" Name="Check FAV PICS file fail"/>
+    <ProcessItem Code="8006" Name="BACKUP NV fail"/>
+    <ProcessItem Code="8007" Name="UnlockNW fail"/>
+    <ProcessItem Code="8008" Name="UnlockNS fail"/>
+    <ProcessItem Code="8009" Name="UnlockSP fail"/>
+    <ProcessItem Code="8010" Name="UnlockCP fail"/>
+    <ProcessItem Code="8011" Name="UnlockSIM fail"/>
+    <ProcessItem Code="8012" Name="QueryLockStatus fail after write SIMdata"/>
+    <ProcessItem Code="8013" Name="Write SIM File name to NV fail"/>
+    <ProcessItem Code="8014" Name="Backup BRT fail"/>
+    <ProcessItem Code="8015" Name="BRT File size&lt;86"/>
+    <ProcessItem Code="8016" Name="Multi_Image Download Fail"/>
+    <ProcessItem Code="8017" Name="Download QCN File Fail"/>
+    <ProcessItem Code="8018" Name="Config Time Out Fail"/>
+    <ProcessItem Code="8019" Name="Fail To Get Handle---connect server fail"/>
+    <ProcessItem Code="8020" Name="Write SIM data to Phone Fail"/>
+    <ProcessItem Code="8021" Name="Disable Fake Security fail"/>
+    <ProcessItem Code="8022" Name="Set FTM Flag to Online Fail"/>
+    <ProcessItem Code="8023" Name="Get SPC from PICS fail"/>
+    <ProcessItem Code="8024" Name="Write SPC to Phone fail"/>
+    <ProcessItem Code="8025" Name="Close SPC fial"/>
+    <ProcessItem Code="8026" Name="In rework mode, but the status of IMEI is &apos;P&apos; or &apos;S"/>
+    <ProcessItem Code="8027" Name="In normal mode, but the status of IMEI is &apos;R&apos; or &apos;D&apos;"/>
+    <ProcessItem Code="8028" Name="Check NAL/PN fail"/>
+    <ProcessItem Code="8029" Name="Query FTM mode fail"/>
+    <ProcessItem Code="8030" Name="Switch To FTM fail"/>
+    <ProcessItem Code="8031" Name="Switch To Offline Diital Mode fail"/>
+    <ProcessItem Code="8032" Name="Query Offline Digital Mode fail"/>
+    <ProcessItem Code="8033" Name="Write NV Item Fail"/>
+    <ProcessItem Code="8034" Name="Reset Phone Fail"/>
+    <ProcessItem Code="8035" Name="Read NV Item Fail"/>
+    <ProcessItem Code="8036" Name="SPC lock has not been defined"/>
+    <ProcessItem Code="8037" Name="SPC has not been defined"/>
+    <ProcessItem Code="8038" Name="Send SPC to Phone fail"/>
+    <ProcessItem Code="8039" Name="Quey SPC from PICS fail"/>
+    <ProcessItem Code="8040" Name="Unlock Phone(Open SPC) Fail"/>
+    <ProcessItem Code="8041" Name="Phone is Still In Lock Status"/>
+    <ProcessItem Code="8042" Name="Read SPC from Phone Fail"/>
+    <ProcessItem Code="8043" Name="Reset SPC to Default Fail"/>
+    <ProcessItem Code="8044" Name="Set BRT log fail"/>
+    <ProcessItem Code="8045" Name="Get BRT backup error message fail"/>
+    <ProcessItem Code="8046" Name="Backup all NV Item to BRT fail"/>
+    <ProcessItem Code="8047" Name="Backup NV Item specified by CSV file to BRT fail"/>
+    <ProcessItem Code="8048" Name="Backup QCN fail"/>
+    <ProcessItem Code="8049" Name="IMEI Status Error"/>
+    <ProcessItem Code="8050" Name="Query BT and GSN from IMEI fail"/>
+    <ProcessItem Code="8051" Name="BT Length Error"/>
+    <ProcessItem Code="8052" Name="GSN Length Error"/>
+    <ProcessItem Code="8053" Name="Write BT to Phone fail"/>
+    <ProcessItem Code="8054" Name="Read BT from Phone fail"/>
+    <ProcessItem Code="8055" Name="BT read from Phone is different to BT wrote to Phone"/>
+    <ProcessItem Code="8056" Name="Write IMEI to Phone Fail"/>
+    <ProcessItem Code="8057" Name="Read IMEI from Phone Fail"/>
+    <ProcessItem Code="8058" Name="IMEI read from Phone is different to IMEI wrote to Phone"/>
+    <ProcessItem Code="8059" Name="Create IMEI record in PICS fail"/>
+    <ProcessItem Code="8060" Name="Check IMEI in PICS fail"/>
+    <ProcessItem Code="8061" Name="Get FSN from PICS fail"/>
+    <ProcessItem Code="8062" Name="Write FSN to phone fail"/>
+    <ProcessItem Code="8063" Name="Get Public Key from QSWINFO file fail"/>
+    <ProcessItem Code="8064" Name="Write Public Key to Phone Fail"/>
+    <ProcessItem Code="8065" Name="Save IMEI\FSN to Flash and perform fail"/>
+    <ProcessItem Code="8066" Name="Query FSN from PICS fail"/>
+    <ProcessItem Code="8067" Name="Get SIM data from IMEI fail"/>
+    <ProcessItem Code="8068" Name="Get unlock\unblock code from PICS fail"/>
+    <ProcessItem Code="8069" Name="Read Factory Area Fail"/>
+    <ProcessItem Code="8070" Name="Read Mobile ID flag Fail"/>
+    <ProcessItem Code="8071" Name="Write Factory Area Fail"/>
+    <ProcessItem Code="8072" Name="Read Mobile ID fail"/>
+    <ProcessItem Code="8073" Name="Read Software Version Fail"/>
+    <ProcessItem Code="8074" Name="Read Hardware Version Fail"/>
+    <ProcessItem Code="8075" Name="Read Mechanical Version Fail"/>
+    <ProcessItem Code="8076" Name="Read KLF Byte fail"/>
+    <ProcessItem Code="8077" Name="update IMEI status fail"/>
+    <ProcessItem Code="8078" Name="Software Version Check Fail"/>
+    <ProcessItem Code="8079" Name="Hardware Version Check Fail"/>
+    <ProcessItem Code="8080" Name="Mechanical Version Check Fail"/>
+    <ProcessItem Code="8081" Name="IMEI Already Exist In Mobile(Normal Mode Fail)"/>
+    <ProcessItem Code="8082" Name="IMEI in phone is not equal to IMEI from scanner"/>
+    <ProcessItem Code="8083" Name="There is no valid IMEI in phone"/>
+    <ProcessItem Code="8084" Name="Check Function Wireless Test Fail"/>
+    <ProcessItem Code="8085" Name="Check Base Band Fail"/>
+    <ProcessItem Code="8086" Name="Check Cal Pre Test(2G) Fail"/>
+    <ProcessItem Code="8087" Name="Check Cal Pre Test(3G) Fail"/>
+    <ProcessItem Code="8088" Name="Check Leackage Charger Fail"/>
+    <ProcessItem Code="8089" Name="Check PPF Test Fail"/>
+    <ProcessItem Code="8090" Name="The Board Is a ACM Board"/>
+    <ProcessItem Code="8091" Name="Check Process Fail"/>
+    <ProcessItem Code="8092" Name="Check QVCEFS file name fail"/>
+    <ProcessItem Code="8093" Name="Check QVCEFS file time fail"/>
+    <ProcessItem Code="8094" Name="Check QVCEFS file size fail"/>
+    <ProcessItem Code="8095" Name="Check QSNV file name fail"/>
+    <ProcessItem Code="8096" Name="Check QSNV file time fail"/>
+    <ProcessItem Code="8097" Name="Check QSNV file size fail"/>
+    <ProcessItem Code="8098" Name="Check QZCS file name fail"/>
+    <ProcessItem Code="8099" Name="Check QZCS file time fail"/>
+    <ProcessItem Code="80100" Name="Check QZCS file size fail"/>
+    <ProcessItem Code="80101" Name="Check DUCK file name fail"/>
+    <ProcessItem Code="80102" Name="Check DUCK file time fail"/>
+    <ProcessItem Code="80103" Name="Check DUCK file size fail"/>
+    <ProcessItem Code="80104" Name=""/>
+    <ProcessItem Code="9000" Name="mobile ID does not exist"/>
+    <ProcessItem Code="9001" Name="Mobile ID in phone is error, need to Rewrite"/>
+    <ProcessItem Code="9002" Name="Factory area is not active"/>
+    <ProcessItem Code="9003" Name="mobile ID does not exist"/>
+    <ProcessItem Code="9004" Name="Read Factory Area Fail"/>
+    <ProcessItem Code="9005" Name="Mobile ID is already exist in phone,but tool is in normal mode!!"/>
+    <ProcessItem Code="9006" Name="Open registry key HKEY_LOCAL_MACHINE\\HARDWARE\\DEVICEMAP\\SERIALCOMM\\ fail"/>
+    <ProcessItem Code="9007" Name="Handset is not inserted yet"/>
+    <ProcessItem Code="9008" Name="Phone is in DL Mode"/>
+    <ProcessItem Code="9009" Name="factory is not active"/>
+    <ProcessItem Code="9010" Name="Write factory area fail"/>
+    <ProcessItem Code="9011" Name="Download Default QCN Fail"/>
+    <ProcessItem Code="9012" Name="Signed_CheckVersion Fail"/>
+    <ProcessItem Code="9013" Name="Software Version Check Fail"/>
+    <ProcessItem Code="9014" Name="Hardware Version Check Fail"/>
+    <ProcessItem Code="9015" Name="Mechanical Version Check Fail"/>
+    <ProcessItem Code="9016" Name="BackupNV/BRT Fail"/>
+    <ProcessItem Code="9017" Name="Download maincode/cefs fail"/>
+    <ProcessItem Code="9018" Name="RestoreNV/BRT Fail"/>
+    <ProcessItem Code="9019" Name="Download du fail"/>
+    <ProcessItem Code="9020" Name="Write ppf file name/time/size to phone fail"/>
+    <ProcessItem Code="9021" Name="Write pics fail"/>
+    <ProcessItem Code="9022" Name="Write Q_Fuse fail"/>
+    <ProcessItem Code="9023" Name="Read IsQFuse Fail...."/>
+    <ProcessItem Code="9024" Name="On Download Mode, only FTM Mode can write QFUSE......"/>
+    <ProcessItem Code="9025" Name="Should be FTM Mode, but in DL Mode..."/>
+    <ProcessItem Code="9026" Name="Query IsSPCLocked fail"/>
+    <ProcessItem Code="9027" Name="Unlock SPC fail"/>
+    <ProcessItem Code="9028" Name="Read IMEI From Phone Fail"/>
+    <ProcessItem Code="9029" Name="IMEI status is not &apos;B&apos;,&apos;R&apos;,&apos;D&apos;"/>
+    <ProcessItem Code="9030" Name="Query IMEI/BT Status Fail, Contact with Jackie (1825)"/>
+    <ProcessItem Code="9031" Name="Check Lavernock HW Version Fail"/>
+    <ProcessItem Code="9032" Name="Check Function Wireless Test Fail"/>
+    <ProcessItem Code="9033" Name="Check Cal Pre Test(2G) Fail"/>
+    <ProcessItem Code="9034" Name="Check Cal Pre Test(3G) Fail"/>
+    <ProcessItem Code="9035" Name="Check Leackage Charger Fail"/>
+    <ProcessItem Code="9036" Name="Check PPF Test Fail"/>
+    <ProcessItem Code="93737" Name="Check Process Fail"/>
+</ProcessItems>

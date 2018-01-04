@@ -1,0 +1,23 @@
+{Header
+}
+{Description
+}
+{Code
+//Vibrator test
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticMD.dll Vibrator %var1 "true"
+0002 comparetrue 0005
+0003 print "Error on Vibrator API"
+0004 comparefalse 9999
+0005 assign %var2 "Does Vibrator success ?"
+0006 waitinput %var2 ComfirmYesNo
+0007 compare %var2 "Yes"
+0008 comparetrue 0012
+0009 Run MobileToolKit_StaticMD.dll Vibrator %var1 "false"
+0010 compare "NO" "Yes"
+0011 comparefalse 9999
+0012 Run MobileToolKit_StaticMD.dll Vibrator %var1 "false"
+0013 Run MobileToolKit_StaticMD.dll WriteMMIFlag %var1 407 1
+0014 Run BZAPI_StaticMD.dll TestFunc1 testpara
+//EM_BZ_ON_OFF_VIBRATOR 407
+}

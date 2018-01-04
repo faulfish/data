@@ -1,0 +1,99 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////////////////
+////////// %var1 comPort %var10 Error code %var11 Error message/////////
+////////// %var3 inIMEI                                        ///////// 
+////////////////////////////////////////////////////////////////////////
+
+0000 print "============WRITE SPC TO PHONE============" "Title"
+0001 print "Query lock status....." "Log"
+0002 waitinput %var1 COM_PORT
+0003 assign %var8 3000
+0004 assign %var11 2
+0005 loop %var11
+0006 Run MobileToolKit_StaticM.dll ReadSPC_ForSPU %var1 %var6 %var7 %var8
+0007 comparetrue 12
+0008 print "Read SPC from phone fail......" "Log"
+0009 sleep 200
+0010 loop
+0011 print "F71" "Error"
+
+0012 compare %var7 lock 
+0013 comparefalse 16
+0014 print "Phone is locked, we can not write SPC....." "Log"
+0015 print "F72" "Error"
+
+0016 print %var6 "SPC is not locked, the value is----->"
+0017 waitinput %var3 IMEI_FROM_SCANNER
+0018 print %var3 "Get SPC from PICS by IMEI----->" 
+0019 loop %var11
+0020 run FactoryIMEIDll_StaticM.dll GetSPCCode_PICS %var3 %var8 %var0
+0021 comparetrue 26
+0022 print "Get SPC from PICS fail......" "Log"
+0023 sleep 2000
+0024 loop
+0025 print "F54" "Error"
+
+0026 print %var8 "SPC_CODE_PICS"
+0027 print "Write SPC to phone......" "Log"
+
+0028 loop %var11
+0029 Run MobileToolKit_StaticM.dll ProgramSPC_ForSPU %var1 %var8 
+0030 comparetrue 35
+0031 print "Write SPC to phone fail..." "Log"
+0032 sleep 2000
+0033 loop
+0034 print "F55" "Error"
+
+0035 print "Write SPC to Phone Successs..." "Log"
+0036 print "============WRITE SPC TO PHONE END============" "Title"
+
+0037 print 85 "Progress" // end
+///////////////////////////////////
+/////lock spc
+//0043 print "Write SPC to phone success..." "Log"
+//0044 print " Lock SPC ......" "Log"
+//0045 assign %var11 7
+//0046 loop %var11
+//0047 sleep 3000
+//0048 run MobileToolKit_StaticM.dll LockSPC_ForSPU %var1
+//0049 comparetrue 55
+//0050 compare %var11 0
+//0051 comparetrue 53
+//0052 loop
+
+//0053 print "lock SPC fail......" "Log"
+//0054 print "F57" "Error"
+
+//0055 assign %var11 2
+//0056 loop %var11
+//0057 run MobileToolKit_StaticM.dll IsSPCLocked_ForSPU %var1 %var4
+//0058 comparetrue 65
+//0059 compare %var11 0
+//0060 comparetrue 63
+//0061 sleep 2000
+//0062 loop
+
+//0063 print "Query SPC locked fail......" "Log"
+//0064 print "F56" "Error" 
+
+//0065 compare %var4 SPC Locked
+//0066 comparetrue 69
+
+//0067 print "Lock SPC fail......"  "Log"
+//0068 print "F56" "Error"
+
+//0069 print "============WRITE SPC TO PHONE END============" "Title"
+
+//0040 print 85 "Progress" // end
+}

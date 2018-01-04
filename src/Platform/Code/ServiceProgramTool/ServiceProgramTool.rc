@@ -1,0 +1,230 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#include ""res\\ServiceProgramTool.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ServiceProgramTool.dll"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "ServiceProgramTool.dll"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_WIBUKEY DIALOGEX 0, 0, 155, 61
+STYLE DS_SETFONT | DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_APPWINDOW
+CAPTION "Key Check"
+FONT 10, "Arial", 400, 0, 0x0
+BEGIN
+    CTEXT           "Firm Code",IDC_STATIC,8,8,40,12,SS_CENTERIMAGE
+    CTEXT           "User Code",IDC_STATIC,7,24,42,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT1,51,8,91,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,51,24,91,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,52,42,49,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_WIBUKEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SECURITYTOOL_DIALOG DIALOGEX 0, 0, 231, 239
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_APPWINDOW
+CAPTION "SecurityTool"
+FONT 10, "Arial", 400, 0, 0x0
+BEGIN
+    CTEXT           "IMEI",IDC_STATIC,2,20,37,12,SS_CENTERIMAGE
+    CTEXT           "FSN",IDC_STATIC,2,36,37,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_IMEI,42,20,174,12,ES_READONLY
+    EDITTEXT        IDC_EDIT_FSN,42,36,174,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "SPC",IDC_STATIC,7,51,217,62
+    CTEXT           "Old SPC",IDC_STATIC,11,61,37,12,SS_CENTERIMAGE
+    CTEXT           "New SPC",IDC_STATIC,11,77,37,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_OLD_SPC,51,61,167,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NEW_SPC,51,77,167,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "WRITE",IDC_BTN_WITE_SPC,82,93,65,15
+    GROUPBOX        "SIM Lock Programming",IDC_STATIC,7,118,217,111
+    CTEXT           "Lock File",IDC_STATIC,11,129,41,12,SS_CENTERIMAGE
+    CTEXT           "Old NWSCP",IDC_STATIC,11,145,41,12,SS_CENTERIMAGE
+    CTEXT           "Old SSCP",IDC_STATIC,11,161,41,12,SS_CENTERIMAGE
+    CTEXT           "New NWSCP",IDC_STATIC,8,177,49,12,SS_CENTERIMAGE
+    CTEXT           "New SSCP",IDC_STATIC,11,193,41,12,SS_CENTERIMAGE
+    PUSHBUTTON      "WRITE",IDC_BTN_WITE_SIMLOCK,82,209,65,15
+    EDITTEXT        IDC_EDIT_LOCKFILE,56,129,143,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_OLD_NWCP,56,145,163,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BTN_OPEN_LOCKFILE,201,129,17,12
+    EDITTEXT        IDC_EDIT_OLD_SSCP,56,161,163,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NEW_NWCP,56,177,163,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NEW_SSCP,56,193,163,12,ES_AUTOHSCROLL
+    LTEXT           "COM",IDC_COMPORT,12,9,75,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SECURITYTOOL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        VERTGUIDE, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE 4, 1
+#pragma code_page(950)
+#include "res\ServiceProgramTool.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

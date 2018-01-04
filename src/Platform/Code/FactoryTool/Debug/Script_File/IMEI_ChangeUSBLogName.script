@@ -1,0 +1,32 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////
+////////// %var1 comPort                           /////////
+////////// %var6 USB command log filename          /////////
+////////////////////////////////////////////////////////////
+
+0000 print "============Change USB command Log name============" "Title"
+0001 waitinput %var1 COM_PORT
+0002 print %var1 "Log"
+0003 waitinput %var6 USBLogName
+0004 print %var6 "Log"
+0005 Run MobileToolKit_StaticM.dll ChangeLogFileName %var1 %var6
+
+0006 comparetrue 9
+0007 print "Change USBLog name fail" "Log"
+0008 comparefalse 10
+
+0009 print "Change USBLog name success" "Log"
+0010 print "============Change USB command Log name end============" "Title"
+
+}

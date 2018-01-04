@@ -1,0 +1,115 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+}
+{Code
+//This following is a sample test code
+0000 print "API:Do All Test" Name
+0001 print API:QuerySPC
+0002 print API:EnableLog
+0003 print API:DisableLog
+0004 print API:AnalysisRecord 
+0005 print API:AnalysisRecordStereo 	
+0006 print API:Camera initial 
+0007 print API:ByPassCellTemperatureCheck 	
+0000 print API:GetBTAddr 	
+0000 print API:MasterClear 	
+0000 print API:ClearActivationData 
+0000 print API:BackupNV2BRT_IMESTATION 	
+0000 print API:CheckCEFSFileName 	
+0000 print API:CheckSIMLock 	
+0000 print API:IsGSensorWorkingV3 
+0000 print API:IsGSensorWorkingV2 
+0000 print API:IsGSensorWorking 
+0000 print API:IMEISTATION_ReadSWVersion 
+0000 print API:IMEISTATION_GetReleaseDateTime 
+0000 print API:Replace_GrpDList_File 
+0000 print API:RestoreBrt_DOWNLOADEXPORT 
+0000 print API:FreezeOTP 
+0000 print API:IsOTPFrozen 
+0000 print API:ReadBatteryVoltage 
+0000 print API:ReadBatteryTemperature 	
+0000 print API:WriteDefaultPhoneCode 
+0000 print API:TurnOnEM 
+0000 print API:TurnOffEM 
+0000 print API:WriteFailureByte 
+0000 print API:EnableGAP 	
+0000 print API:StartBT hige Power 
+0000 print API:StartBT middle Power 
+0000 print API:StartBT low Power 
+0000 print API:EnterBTTestMode 	
+0000 print API:LeaveBTTestMode 	
+0000 print API:DisableGAP 
+0000 print API:FMRegistration 
+0000 print API:FMConnect 
+0000 print API:FMDisonnect 
+0000 print API:FMInitialize 
+0000 print API:FMSetStation 
+0000 print API:FMMute 
+0000 print API:FMNotMute 
+0000 print API:FMReceiveRSSI 
+0000 print API:FMSpeaker 
+0000 print API:FMMonoHeadset 
+0000 print API:FMStereoHeadset 
+0000 print API:LockSPC 
+0000 print API:IsSPCLocked 
+0000 print API:UnlockSPC 
+0000 print API:IsSPCLocked 
+0000 print API:WriteSimLockFile 	
+0000 print API:BackupNVPartition 
+0000 print API:RestoreNVPartition 
+0000 print API:CheckNVPartition 
+0000 print API:BackupNV2BRT 	
+0000 print API:RestoreBRT2NV 	
+0000 print API:ReadNVItem 
+0000 print API:WriteNVItem 
+0000 print "API:Get IMEI"
+0000 print "API:Write IMEI"
+0000 print API:GetSWHWVersion 
+0000 print API:GetLavernockHWVersion
+0000 print API:GetLavernockHWVersionV2_ForSPU
+0000 print "API:Write Headset BT Address"
+0000 print "API:Standby Current Test "
+0000 print API:Write QFuse 
+0000 print API:Read QFuse 
+0000 print "API:BT Headset charging on"
+0000 print "API:BT Headset charging off"
+0000 print "API:Get DL Boot loader revocation Command "
+0000 print "API:Get DL Phone code revocation Command "
+0000 print "API:BT handset voltge reading "
+0000 print "API:Check SIM Card Existence 	"
+0000 print API:SetOnline
+0000 print API:SetOffline
+0000 print API:ResetHandset
+0000 print API:ChangeFTM 
+0000 print "API:Change FTM Mode "
+0000 print "API:Change Online Mode "
+0000 print API:CheckFTM 
+0000 print "API:BT Headset Voltage Reading "
+0000 print "API:Check BT headset "
+0000 print "API:Change Online mode "
+0000 print "API:GetMotoXprs_Athens "
+0000 print "API:GetMotoXprs_Lavernock "
+0000 print API:NewResetHandset 
+0000 print API:EnableQualcommEvent 
+0000 print API:DisableQualcommEvent 
+0000 print API:WriteSIMLockFileNameToNV 
+0000 print API:ReadSIMLockFileNameFromNV 
+0000 print API:RAWRequest 
+0000 print API:RAWRequest_NoCRC 
+0000 print API:Diag_RAWRequest 
+0000 print API:Diag_RAWRequest_NoCRC 
+0000 print API:WriteDummyFactoryArea 
+0000 print API:GPIB_Initialization
+0000 print API:GPIB_SetControlIndex
+0000 print API:GPIB_GetDeviceCount
+0000 print API:GPIB_QueryDeviceDescription
+0000 print API:GPIB_IsPowerSupply
+0000 print API:GPIB_SetCurrentVoltage
+0000 print API:GPIB_SendCommmand
+0000 print API:GPIB_SendQueryCommmand
+0000 print API:GPIB_ReadCommandResult
+0000 print API:GPIB_ErrorMsg
+}

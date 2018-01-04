@@ -1,0 +1,138 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+
+{Code
+//////check IMEI\\NAL\\PN
+0000 print "============Check IMEI\\NAL\\PN in PICS============" Title
+0001 waitinput %var1 COM_PORT
+0002 waitinput %var3 IN_IMEI
+0003 waitinput %var4 IN_NAL
+0005 Run FactoryIMEIDll_StaticMD.dll Check_MAL_PN_SSS02 %var3 %var1 %var4 %var10 %var11
+0006 comparetrue 11
+
+// fail
+0007 print "Check NAL\\PN fail......"
+0008 print %var10 "Error code------->"
+0009 print %var11 "Error message------->"
+0010 print "F59" "Error!" 
+//success
+0011 print "============Check NAL\\PN success============"Title
+
+////////////////////////////////Create IMEI////////////////////////////////
+0012 print %var3 "============Create IMEI as a record in PICS============" 
+0013 Run FactoryIMEIDll_StaticMD.dll Create_IMEI_PICS %var3 %var6
+
+///fail
+0014 comparefalse 16
+0015 compareture 22
+//fail
+0016 compare %var6 -7
+0017 comparetrue 21 
+0018 print %var3 "Create IMEI as a record in PICS fail-->"
+0019 print %var6 "IMEI coding fail,Error code-->"
+0020 print "F100" "Error!"
+0021 print %var3 "The record for IMEI is already existe in PICS......"
+
+//Success
+0022 print %var3  "Create IMEI as a record in PICS success--->"
+
+
+////////////////////////////////open SPC////////////////////////////////
+0023 print %var3 "============OPEN SPC============" 
+0024 Run MobileToolKit_StaticMD.dll IsSPCLocked_ForSPU %var1 %var6
+0025 comparefalse 26
+0026 comparetrue 29
+
+//QuerySPC fail
+0027 print "Query IsSPCLocked fail....."
+0028 print "F66" "Error!"
+
+// QuerySPC success
+0029 compare %var6 "SPC Locked"
+0030 comparefalse 73  //SPC is open
+
+//SPC is locked
+0031 print "SPC is locked....."
+0032 print " Write default 000000 to unlock SPC......"
+0033 assign %var7 000000
+0034 run MobileToolKit_StaticMD.dll UnlockSPC_ForSPU %var1 %var7 %var6
+0035 comparefalse 37    
+0036 comparetrue 39
+
+///run unlock fail
+0037 print "run Unlock SPC fail"
+0038 print "" "Error!"
+
+0039 compare %var6 "Unlock SPC failed." 
+0040 comparefalse 72   
+
+// unlock by default spu fail...
+0041 print "Unlock SPC (000000) to phone fail......"
+0042 sleep 3000
+0043 waitinput %var8 LOCK_STATUS
+0044 compare %var8 1
+0045 comparefalse    //SPC is already opened  
+
+//to use IMEI to query SPC
+0046 print %var3 "Use IMEI to query SPC from PICS--->"
+0047 Run FactoryIMEIDll_StaticMD.dll QuerySpc_PICS %var3 %var6 %var7
+
+///fail
+0048 comparefalse 50
+0049 compareture 56
+
+//query SPC fail
+0050 compare %var6 -9
+0051 comparetrue 54
+
+// fail status is not -9
+0052 print "Query SPC from PICS fail......"
+0053 print "F70" "Error!"
+  
+//fail status is  -9
+0054 print %var3 "There is no SPC for--->"
+0055 print "F69" "Error!"
+
+//query SPC success
+0056 print %var7 "Query SPC success, the SPC is--->"
+0057 print "Write SPC to unlock SPC......"
+
+//unlock use query SPC
+0058 run MobileToolKit_StaticMD.dll UnlockSPC_ForSPU %var1 %var7 %var6
+0059 comparefalse 61    
+0060 comparetrue 63
+
+// run unlock fail
+0061 print "run Unlock SPC fail"
+0062 print "" "Error!"
+
+0063 compare %var6 "Unlock SPC failed." 
+0064 comparefalse 67    //unlock by query spu
+
+ //unlock fail by Query SPC 
+0065 print "SPC is not correct, SPC is still locked......"
+0066 print "F69" "Error!"
+
+//unlock success
+0067 print "SPC is correct, SPC is already unlocked......"
+0068 print %var7 "open SPC is-------->"
+0069 print "==========OPEN SPC by qurey SUCCESS======="
+
+0070 compare 0 0
+0071 comparetrue 73
+
+// unlock by default spu success...
+0072 print "=========OPEN SPC by default SUCCESS========" 
+0073 print %var7 "open SPC is-------->"
+
+0073 print "============OPEN SPC SUCCESS============"
+}

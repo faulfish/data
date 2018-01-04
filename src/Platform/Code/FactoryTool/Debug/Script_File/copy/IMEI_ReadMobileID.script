@@ -1,0 +1,66 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+//This following is a sample test code ReadMobileID
+////////////////////////////////////////////////////////////////////////
+////////// %var1 comPort %var10 Error code %var11 Error message/////////
+////////// %var3 inIMEI                                        ///////// 
+////////////////////////////////////////////////////////////////////////
+//IMEI
+0000 print "============READ MOBILE ID============" Title
+
+0001 waitinput %var1 COM_PORT
+0002 assign %var2 2497
+0003 assign %var5 3000
+0004 Run MobileToolKit_StaticMD.dll ReadFactoryAreaNew_ForSPU %var1 %var2 %var3 %var4 %var5
+0005 comparetrue 7
+0006 comparefalse 32
+
+//Get HW Version
+0007 assign %var6 89
+0008 assign %var7 5
+0009 Run FactoryIMEIDll_StaticMD.dll GetBytesFromFactoryArea %var3 %var6 %var7 %var8
+0010 print %var8 "Read HW version success,HW version:"
+
+//Get KLF byte
+0011 assign %var6 3
+0012 assign %var7 1
+0013 Run FactoryIMEIDll_StaticMD.dll GetBytesFromFactoryArea %var3 %var6 %var7 %var8
+0014 print %var8 "KLF byte------->"
+
+//Get ME Version
+0015 assign %var6 84
+0016 assign %var7 1
+0017 Run FactoryIMEIDll_StaticMD.dll GetBytesFromFactoryArea %var3 %var6 %var7 %var8
+0018 print %var8 "ME version------->"
+
+//GetID Flag
+0019 assign %var6 52
+0020 assign %var7 1
+0021 Run FactoryIMEIDll_StaticMD.dll GetBytesFromFactoryArea %var3 %var6 %var7 %var8
+0022 print %var8 "Mobile ID flag-->"
+
+0023 compare %var8 
+0024 comparetrue 33
+0025 comparefalse 26
+
+//Get Mobile ID
+0026 assign %var6 45
+0027 assign %var7 11
+0028 Run FactoryIMEIDll_StaticMD.dll GetBytesFromFactoryArea %var3 %var6 %var7 %var8
+0029 print %var8 "Mobile ID----->"
+0030 compare 0 0 
+0031 comparetrue 33
+
+0032 print "program end!" Title
+0033 print "M20" "Error!"  
+}

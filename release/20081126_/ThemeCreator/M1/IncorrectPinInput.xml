@@ -1,0 +1,18 @@
+<Application name="IncorrectPinInputScreen">
+	<!-- background -->
+	<Group id="1" parentID="1">
+		<Bodybackground pos="1" zOrder="1" src="IDI_CO_BD_SYS_BODY_BACK"/>
+	</Group>
+	<!-- feedback popup -->
+	<Group id="2" parentID="2">
+		<TransparentBack pos="1" zOrder="1" src="IDI_CO_BD_SYS_TRANSPARENT"/>
+		<FeedbackPopupBack pos="15" zOrder="2" src="IDI_CO_BD_SYS_POPUP_BACK_FEEDBACK"/>
+		<FeedbackPopupIcon pos="2301" zOrder="3" src="IDI_CO_FB_EXCLAMATION"/>
+		<FeedbackPopupText pos="2302" zOrder="3" src="IDS_TH_LI_ENTERPIN"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="3" parentID="3">
+		<SoftkeyBack pos="6" zOrder="1" src="IDI_CO_BD_SYS_SOFTKEY_BACK"/>
+		<SoftkeyText pos="7" zOrder="2" src="IDS_CO_BD_LSK_SOS"/>
+	</Group>
+</Application>

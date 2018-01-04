@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LocalizationTool", "..\Components\Localization\LocalizationTool.vcproj", "{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OutlookAccess", "..\Components\OutlookAccess\OutlookAccess.vcproj", "{949E9488-58FE-4C67-B8B9-5DE81B97026D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OutlookTester", "OutlookTester\OutlookTester.vcproj", "{B2B505B4-4800-4CB5-95F1-D508F492B96D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{949E9488-58FE-4C67-B8B9-5DE81B97026D} = {949E9488-58FE-4C67-B8B9-5DE81B97026D}
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA} = {AA9D97BA-452E-44C3-9AF1-538EB639C2EA}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Debug|Win32.Build.0 = Debug|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Release|Win32.ActiveCfg = Release|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Release|Win32.Build.0 = Release|Win32
+		{949E9488-58FE-4C67-B8B9-5DE81B97026D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{949E9488-58FE-4C67-B8B9-5DE81B97026D}.Debug|Win32.Build.0 = Debug|Win32
+		{949E9488-58FE-4C67-B8B9-5DE81B97026D}.Release|Win32.ActiveCfg = Release|Win32
+		{949E9488-58FE-4C67-B8B9-5DE81B97026D}.Release|Win32.Build.0 = Release|Win32
+		{B2B505B4-4800-4CB5-95F1-D508F492B96D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B2B505B4-4800-4CB5-95F1-D508F492B96D}.Debug|Win32.Build.0 = Debug|Win32
+		{B2B505B4-4800-4CB5-95F1-D508F492B96D}.Release|Win32.ActiveCfg = Release|Win32
+		{B2B505B4-4800-4CB5-95F1-D508F492B96D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

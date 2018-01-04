@@ -1,0 +1,23 @@
+<Application name="IncomingCall">
+	<!-- background -->
+	<Group id="1" parentID="1">
+		<Bodybackground pos="1" zOrder="1" src="IDI_CO_BD_SYS_BODY_BACK"/>
+		<BodybackgroundIcon pos="1403" zOrder="2" src="IDI_CL_BD_INCOMING_CALL"/>
+		<BodybackgroundText pos="1401" zOrder="2" src="IDS_IC_LI_ITEM1"/>
+		<BodybackgroundText pos="1402" zOrder="2" src="IDS_ID_LI_ITEM2"/>
+	</Group>
+	<!-- annunciator -->
+	<Group id="2" parentID="1">
+		<AnnunciatorBack pos="2" zOrder="1" src="IDI_CO_BD_ANNUNCIATOR_REGION"/>
+		<SignalIcon pos="3" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+		<BluetoothIcon pos="4" zOrder="2" src="IDI_CO_BD_BT_ACTIVE_VISIBLE"/>
+		<BatteryIcon pos="5" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="3" parentID="1">
+		<SoftkeyBack pos="6" zOrder="1" src="IDI_CO_BD_SYS_SOFTKEY_BACK"/>
+		<SoftkeyIcon pos="8" zOrder="2" src="IDI_CO_CC_HANDSET"/>
+		<SoftkeyText pos="7" zOrder="2" src="IDS_CO_BD_LSK_ANSWER"/>
+		<SoftkeyText pos="9" zOrder="2" src="IDS_CO_BD_RSK_REJECT"/>
+	</Group>
+</Application>

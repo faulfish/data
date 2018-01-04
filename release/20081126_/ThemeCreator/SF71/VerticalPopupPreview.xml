@@ -1,0 +1,13 @@
+<Application name="VerticalPopupPreview">
+	<!-- Vertical Popup Screen -->
+	<Group id="1" parentID="1">
+		<VerticalPopupScreenBack pos="3801" zOrder="1" src="EDI_CO_BD_SYS_BODY_BACK_KS"/>
+	</Group>
+	<!-- Vertical Feedback -->
+	<Group id="2" parentID="1">
+		<VerticalFeedBackBack pos="3802" zOrder="1" src="EDI_CO_BD_SYS_POPUP_BACK_FEEDBACK_VERT_KS"/>
+		<VerticalFeedBackText pos="3803" zOrder="2" src="IDS_VP_LI_ITEM1"/>
+		<VerticalFeedBackText pos="3804" zOrder="2" src="IDS_VP_LI_ITEM2"/>
+	</Group>
+</Application>
+

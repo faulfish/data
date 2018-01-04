@@ -1,0 +1,6 @@
+; QCH_DatabastAccess.def : Declares the module parameters for the DLL.
+
+LIBRARY      "QCH_DatabastAccess"
+
+EXPORTS
+    ; Explicit exports can go here

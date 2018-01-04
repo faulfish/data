@@ -1,0 +1,1 @@
+tregsvr.exe SSS_O2.dll

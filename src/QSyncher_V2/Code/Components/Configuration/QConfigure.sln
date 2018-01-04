@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QConfigure", "QConfigure\QConfigure.vcproj", "{4600240F-62CB-4D29-A5A1-82D7E6789C35}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QConfigTestApp", "QConfigTestApp\QConfigTestApp.vcproj", "{D942D7A9-4A1E-4B4F-B91E-DC6D7D574894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4600240F-62CB-4D29-A5A1-82D7E6789C35}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4600240F-62CB-4D29-A5A1-82D7E6789C35}.Debug|Win32.Build.0 = Debug|Win32
+		{4600240F-62CB-4D29-A5A1-82D7E6789C35}.Release|Win32.ActiveCfg = Release|Win32
+		{4600240F-62CB-4D29-A5A1-82D7E6789C35}.Release|Win32.Build.0 = Release|Win32
+		{D942D7A9-4A1E-4B4F-B91E-DC6D7D574894}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D942D7A9-4A1E-4B4F-B91E-DC6D7D574894}.Debug|Win32.Build.0 = Debug|Win32
+		{D942D7A9-4A1E-4B4F-B91E-DC6D7D574894}.Release|Win32.ActiveCfg = Release|Win32
+		{D942D7A9-4A1E-4B4F-B91E-DC6D7D574894}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

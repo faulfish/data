@@ -1,0 +1,37 @@
+<Application name="MediaPlayerList">
+	<!-- ExternalBodybackground -->
+	<Group id="1" parentID="1">
+		<ExternalBodybackground pos="3501" zOrder="1" src="EDI_CO_BD_SYS_BODY_BACK_KS"/>
+		<ExternalBodybackgroundText pos="3502" zOrder="2" src="IDS_MP_LI_ITEM2"/>
+		<ExternalBodybackgroundText pos="3503" zOrder="2" src="IDS_MP_LI_ITEM3"/>
+	</Group>
+	<!-- annunciator -->
+	<Group id="2" parentID="1">
+		<AnnunciatorBack pos="3501" zOrder="1" src="EDI_CO_BD_ANNUNCIATOR_REGION_KS"/>
+		<BatteryIcon pos="3407" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+		<SignalIcon pos="3408" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="3" parentID="1">
+		<SoftkeyBack pos="3504" zOrder="1" src="EDI_CO_BD_SYS_SOFTKEY_BACK_KS"/>
+		<SoftkeyIcon pos="3505" zOrder="2" src="EDI_CO_SK_PLAY"/>
+		<SoftkeyIcon pos="3506" zOrder="2" src="EDI_CO_SK_SCROLL_UP"/>
+		<SoftkeyIcon pos="3507" zOrder="2" src="EDI_CO_SK_SCROLL_DOWN"/>
+		<SoftkeyIcon pos="3508" zOrder="2" src="EDI_CO_SK_DISMISS"/>
+	</Group>
+	<!-- Title region for External Display -->
+	<Group id="4" parentID="1">
+		<TitleRegionBack pos="3509" zOrder="1" src="EDI_CO_BD_TITLE_REGION_KS"/>
+		<TitleRegionBackText pos="3510" zOrder="2" src="IDS_MP_LI_ITEM4"/>
+	</Group>
+	<!-- Scrollbar -->
+	<Group id="5" parentID="1">
+		<ScrollBarBack pos="3511" zOrder="1" src="EDI_CO_BD_SYS_SCROLLBAR_BACK_KS"/>
+		<ScrollbarHandle pos="3512" zOrder="2" src="EDI_CO_BD_SYS_SCROLLBAR_HANDLE_KS"/>
+	</Group>
+	<!-- List Selection -->
+	<Group id="6" parentID="1">
+		<ListSelectionBack pos="3513" zOrder="1" src="EDI_CO_BD_SYS_LIST_SELECTION_1LINE_KS"/>
+		<ListSelectionText pos="3514" zOrder="2" src="IDS_MP_LI_ITEM5"/>
+	</Group>
+</Application>

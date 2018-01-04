@@ -1,0 +1,87 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////////////////
+////////// %var1 comPort %var10 Error code %var11 Error message/////////
+////////// %var3 inIMEI                                        ///////// 
+////////////////////////////////////////////////////////////////////////
+
+/////// waitinput ATHB1A_Flag ÐèÒªÌí¼ÓÅÐ¶Ï¡£¡£¡£¡£¡£¡£¡£
+
+0000 print "========================" Title
+
+0001 waitinput %var1 COM_PORT
+0002 assign %var2 2497
+0003 assign %var5 3000
+0004 Run MobileToolKit_StaticMD.dll ReadFactoryAreaNew_ForSPU %var1 %var2 %var3 %var4 %var5
+0005 comparetrue 7
+0006 comparefalse 39
+
+//GetID Flag
+0007 assign %var6 52
+0008 assign %var7 1
+0009 Run FactoryIMEIDll_StaticMD.dll GetBytesFromFactoryArea %var3 %var6 %var7 %var8
+0010 print %var8 "Mobile ID flag-->"
+
+0011 compare %var8 
+0012 comparetrue 14
+0013 comparefalse 16
+
+0014 print "Mobile ID flag-->0x00 namely mobile ID does not exist, it is empty"
+0015 print "M21" "Error!" 
+
+0016 waitinput %var6 PICASSO_NO
+0017 waitinput %var7 TRANS_NO
+0018 waitinput %var8 GSN_STRING
+
+0019 print "Read factory area success......"
+0020 print %var6 "Write picasso no to phone------>"
+0021 print %var7 "Write tranceiver no to phone------>"
+0022 print %var8 "Write MSN to phone------>"
+
+// set Picasso no ,Trans_no and GSN_String
+0023 run  FactoryIMEIDll_StaticMD.dll SetPicassoTranceiver %var3 %var6 %var7 %var8
+0024 comparefalse 26
+0025 comparetrue 28
+
+0026 print "set Picasso no ,Trans_no and GSN_String error!"
+0027 print "" "Error!"
+
+0028 assign %var4 128
+0029 run  MobileToolKit_StaticMD.dll WriteNVItem_ForSPU %var1 %var2 %var3 %var4 %var9
+0030 comparefalse 32
+0031 comparetrue 34
+
+0032 print " Write picasso no ,tranceiver no and MSN to phone fail......"
+0033 print "M25" "Error!"
+
+0034 print "Write picasso no ,tranceiver no and MSN to phone Success......"
+
+//read FactoryArea again to compare
+0035 assign %var3 0
+0036 Run MobileToolKit_StaticMD.dll ReadFactoryAreaNew_ForSPU %var1 %var2 %var3 %var4 %var5
+0037 comparetrue 41
+0038 comparefalse 39
+
+//read FactoryArea fail 
+0039 print "Read factory area fail......"
+0040 print "M15" "Error!"
+
+0041 run  FactoryIMEIDll_StaticMD.dll CompareFactoryArea %var3 %var6 %var7 
+0042 comparefalse 
+0043 comparetrue
+
+0044 print "Read the PICASSO and XCVR, not equal to write to phone"
+0045 print "M16" "Error"
+
+0046 print "Write factory area Success"
+}

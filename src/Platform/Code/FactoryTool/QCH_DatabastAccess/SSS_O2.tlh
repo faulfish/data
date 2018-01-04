@@ -1,0 +1,215 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (696ca351).
+//
+// c:\documents and settings\alan.tu\орн▒\glavs1a_imei_coding_v0.20\debug\SSS_O2.tlh
+//
+// C++ source equivalent of Win32 type library .\WORK\SSS_O2.dll
+// compiler-generated file created 12/11/08 at 16:01:33 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace SSS_O2 {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("6f60418e-1636-472c-b2ab-52cc17515bcb"))
+/* dual interface */ _clsO2Check;
+struct /* coclass */ clsO2Check;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_clsO2Check, __uuidof(_clsO2Check));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("6f60418e-1636-472c-b2ab-52cc17515bcb"))
+_clsO2Check : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long O2ChkIMEI (
+        _bstr_t strSIM,
+        _bstr_t strPhoneNo,
+        _bstr_t strIMEI );
+    _bstr_t GetO2Desc (
+        long plngResultCode,
+        _bstr_t strSIM,
+        _bstr_t strPhoneNo,
+        _bstr_t strIMEI,
+        BSTR * strModel,
+        BSTR * strProcess,
+        BSTR * strUDT );
+    VARIANT_BOOL O2UptIMEI (
+        long lngCheckResult,
+        _bstr_t strSIM,
+        _bstr_t strPhoneNo,
+        _bstr_t strIMEI );
+    long O2DelIMEI (
+        VARIANT_BOOL blnAuthentication,
+        _bstr_t strIMEI );
+    VARIANT_BOOL funQueryIMEI_Data (
+        _bstr_t pstrIMEI,
+        _bstr_t pstrQueryType,
+        BSTR * ostrCtdsn2,
+        BSTR * ostrCtdsn3,
+        BSTR * ostrCtdhw,
+        BSTR * ostrCtdsw,
+        BSTR * ostrCtdmdate,
+        BSTR * ostrCtdmtime,
+        BSTR * ostrCtdsts,
+        BSTR * ostrDBdate,
+        BSTR * ostrDBtime,
+        BSTR * ostrPhoneNo,
+        BSTR * ostrO2Model,
+        BSTR * ostrErrCode,
+        BSTR * ostrErrDesc,
+        BSTR * ostrCtdsn4 );
+    VARIANT_BOOL funUpdateIMEI_Data (
+        _bstr_t pstrIMEI,
+        _bstr_t pstrCtdsw,
+        _bstr_t pstrCtdhw,
+        _bstr_t pstrCtdNAL,
+        short * ointEffectedRow,
+        BSTR * ostrErrCode,
+        BSTR * ostrErrDesc );
+    VARIANT_BOOL funUpdateSIM_Data (
+        _bstr_t pstrIMEI,
+        _bstr_t pstrSimNo,
+        _bstr_t pstrForce,
+        short * ointEffectedRow,
+        BSTR * ostrErrCode,
+        BSTR * ostrErrDesc );
+    VARIANT_BOOL WriteLogFile (
+        long lngResultCode,
+        _bstr_t strSIM,
+        _bstr_t strPhoneNo,
+        _bstr_t strIMEI,
+        BSTR * strModel,
+        BSTR * strProcess,
+        BSTR * strUDT );
+    VARIANT_BOOL funGetProcessResult (
+        _bstr_t In_strID,
+        _bstr_t In_strProcess,
+        _bstr_t In_strModel,
+        BSTR * Out_strGDNG,
+        BSTR * Out_strErrCode,
+        BSTR * Out_strErrDesc );
+    VARIANT_BOOL funCheckNALPN_Data (
+        _bstr_t pstrIMEI,
+        _bstr_t pstrpartNo,
+        _bstr_t pstrCtdNAL,
+        BSTR * ostrErrCode,
+        BSTR * ostrErrDesc );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_O2ChkIMEI (
+        BSTR strSIM,
+        BSTR strPhoneNo,
+        BSTR strIMEI,
+        long * _arg4 ) = 0;
+    virtual HRESULT __stdcall raw_GetO2Desc (
+        long plngResultCode,
+        BSTR strSIM,
+        BSTR strPhoneNo,
+        BSTR strIMEI,
+        BSTR * strModel,
+        BSTR * strProcess,
+        BSTR * strUDT,
+        BSTR * _arg8 ) = 0;
+    virtual HRESULT __stdcall raw_O2UptIMEI (
+        long lngCheckResult,
+        BSTR strSIM,
+        BSTR strPhoneNo,
+        BSTR strIMEI,
+        VARIANT_BOOL * _arg5 ) = 0;
+    virtual HRESULT __stdcall raw_O2DelIMEI (
+        VARIANT_BOOL blnAuthentication,
+        BSTR strIMEI,
+        long * _arg3 ) = 0;
+    virtual HRESULT __stdcall raw_funQueryIMEI_Data (
+        BSTR pstrIMEI,
+        BSTR pstrQueryType,
+        BSTR * ostrCtdsn2,
+        BSTR * ostrCtdsn3,
+        BSTR * ostrCtdhw,
+        BSTR * ostrCtdsw,
+        BSTR * ostrCtdmdate,
+        BSTR * ostrCtdmtime,
+        BSTR * ostrCtdsts,
+        BSTR * ostrDBdate,
+        BSTR * ostrDBtime,
+        BSTR * ostrPhoneNo,
+        BSTR * ostrO2Model,
+        BSTR * ostrErrCode,
+        BSTR * ostrErrDesc,
+        BSTR * ostrCtdsn4,
+        VARIANT_BOOL * _arg17 ) = 0;
+    virtual HRESULT __stdcall raw_funUpdateIMEI_Data (
+        BSTR pstrIMEI,
+        BSTR pstrCtdsw,
+        BSTR pstrCtdhw,
+        BSTR pstrCtdNAL,
+        short * ointEffectedRow,
+        BSTR * ostrErrCode,
+        BSTR * ostrErrDesc,
+        VARIANT_BOOL * _arg8 ) = 0;
+    virtual HRESULT __stdcall raw_funUpdateSIM_Data (
+        BSTR pstrIMEI,
+        BSTR pstrSimNo,
+        BSTR pstrForce,
+        short * ointEffectedRow,
+        BSTR * ostrErrCode,
+        BSTR * ostrErrDesc,
+        VARIANT_BOOL * _arg7 ) = 0;
+    virtual HRESULT __stdcall raw_WriteLogFile (
+        long lngResultCode,
+        BSTR strSIM,
+        BSTR strPhoneNo,
+        BSTR strIMEI,
+        BSTR * strModel,
+        BSTR * strProcess,
+        BSTR * strUDT,
+        VARIANT_BOOL * _arg8 ) = 0;
+    virtual HRESULT __stdcall raw_funGetProcessResult (
+        BSTR In_strID,
+        BSTR In_strProcess,
+        BSTR In_strModel,
+        BSTR * Out_strGDNG,
+        BSTR * Out_strErrCode,
+        BSTR * Out_strErrDesc,
+        VARIANT_BOOL * _arg7 ) = 0;
+    virtual HRESULT __stdcall raw_funCheckNALPN_Data (
+        BSTR pstrIMEI,
+        BSTR pstrpartNo,
+        BSTR pstrCtdNAL,
+        BSTR * ostrErrCode,
+        BSTR * ostrErrDesc,
+        VARIANT_BOOL * _arg6 ) = 0;
+};
+
+struct __declspec(uuid("2ff24f6e-8a39-4aef-b1bf-41bc16f6b4d6"))
+clsO2Check;
+    // [ default ] interface _clsO2Check
+
+//
+// Wrapper method implementations
+//
+
+#include "SSS_O2.tli"
+
+} // namespace SSS_O2
+
+#pragma pack(pop)

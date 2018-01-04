@@ -1,0 +1,11 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+}
+{Code
+//This following is a sample test code
+0000 waitinput %var1
+0001 print %var1
+}

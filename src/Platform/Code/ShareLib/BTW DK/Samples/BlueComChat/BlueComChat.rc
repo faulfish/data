@@ -1,0 +1,268 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BlueComChat.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\BlueComChat.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 280, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About BlueComChat"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "BlueComChat Version xxx",IDC_VERSION,39,10,109,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright xxx  All rights reserved.",IDC_COPYRIGHT,39,
+                    24,213,8
+    DEFPUSHBUTTON   "OK",IDOK,223,117,50,14,WS_GROUP
+    LTEXT           "",IDC_STATIC,39,106,109,8
+    LTEXT           "",IDC_STATIC,39,120,109,8
+    LTEXT           "Warning: This computer program is protected by copyright law and international treaties.",
+                    IDC_STATIC,39,37,214,22
+    LTEXT           "Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.",
+                    IDC_STATIC,39,57,212,29
+END
+
+IDD_CHOOSE_SERVER_DIALOG DIALOG DISCARDABLE  0, 0, 295, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select a Com Chat Server"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,238,21,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,238,44,50,14
+    CONTROL         "List2",IDC_SERVER_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | 
+                    WS_DISABLED | WS_BORDER | WS_TABSTOP,7,21,220,129
+    LTEXT           "",IDC_STATUS_TEXT,7,7,281,8
+    PUSHBUTTON      "Discover",IDC_DISCOVER_BUTTON,238,94,50,14,NOT 
+                    WS_VISIBLE
+END
+
+IDD_BLUECOMCHAT_DIALOG DIALOGEX 0, 0, 417, 266
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "BlueComChat"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Close",IDOK,360,245,50,14
+    CONTROL         "Act as Com Chat Server",IDC_SERVER_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,67,249,91,10
+    PUSHBUTTON      "Start Session",IDC_START_BUTTON,7,245,50,14
+    DEFPUSHBUTTON   "Send",IDC_SEND_BUTTON,360,200,50,14,WS_DISABLED
+    EDITTEXT        IDC_NEWLINE_EDIT,7,200,328,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_CHATLOG_EDIT,7,92,403,100,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL | WS_HSCROLL
+    LTEXT           "Status:",IDC_STATUS_LABEL,7,77,21,8
+    LTEXT           "Ready to start a session",IDC_STATUS_TEXT,87,77,323,9,
+                    SS_SUNKEN
+    CONTROL         "Show RFCOMM events",IDC_SHOW_EVENTS_CHECK,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,199,249,99,
+                    10
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_SUNKEN | WS_BORDER,7,7,403,65
+    EDITTEXT        IDC_CHATLOG_EDIT2,7,88,388,100,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "ReadLinkMode",IDC_READ_LINKMODE,99,224,58,14
+    PUSHBUTTON      "SetSniffMode",IDC_SET_SNIFFMODE,179,224,50,14
+    PUSHBUTTON      "CancelSniffMode",IDC_CANCEL_SNIFFMODE,250,224,60,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#include "btversinfo.h"
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    BTWFILEVERSION
+ PRODUCTVERSION BTWPRODUCTVERSION
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", BTWCOMPANYNAMESTR
+            VALUE "FileDescription", "BlueComChat MFC Application\0"
+            VALUE "FileVersion", BTWFILEVERSIONSTR
+            VALUE "InternalName", "BlueComChat\0"
+            VALUE "LegalCopyright", BTWLEGALCOPYRIGHTSTR
+            VALUE "LegalTrademarks", BTWLEGALTRADEMARKSSTR
+            VALUE "OriginalFilename", "BlueComChat.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", BTWPRODUCTNAMESTR
+            VALUE "ProductVersion", BTWPRODUCTVERSIONSTR
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_CHOOSE_SERVER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_BLUECOMCHAT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 410
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BROADCOM            BITMAP  DISCARDABLE     "res\\broadcom.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About BlueComChat..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\BlueComChat.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

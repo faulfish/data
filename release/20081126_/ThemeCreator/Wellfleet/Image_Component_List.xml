@@ -1,0 +1,44 @@
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Jennifer.CF.Liu (EMBRACE) -->
+<Image_Component_List>
+	<!-- Internal Display -->
+	<!-- Background -->
+	<img_comp id="0" type="fixed" name="Fixed images" size="not available"/>
+	<img_comp id="1" type="mandatory" name="Annunciator" size="(240X24)"/>
+	<img_comp id="2" type="mandatory" name="Body Background" size="(240X320)"/>
+	<img_comp id="3" type="mandatory" name="Softkey Background" size="(240X32)"/>
+	<img_comp id="4" type="mandatory" name="Title Region" size="(240X32)"/>
+	<img_comp id="5" type="mandatory" name="Body Background Tab" size="(240X232)"/>
+	<img_comp id="6" type="mandatory" name="Selection Box in Char Edit Box" size="(28X28)"/>
+	<img_comp id="7" type="mandatory" name="Wallpaper" size="(240X320)"/>
+	<img_comp id="8" type="mandatory" name="Char Edit Box" size="(230X42)"/>
+	<img_comp id="9" type="mandatory" name="One Line Selection Bar" size="(230X32)"/>
+	<img_comp id="10" type="mandatory" name="Two Lines Selection Bar" size="(230X64)"/>
+	<img_comp id="11" type="mandatory" name="Feedback Popup" size="(240X232)"/>
+	<img_comp id="12" type="mandatory" name="Options Popup" size="(240X232)"/>
+	<img_comp id="13" type="mandatory" name="Progressbar Filling" size="(1X26)"/>
+	<img_comp id="14" type="mandatory" name="Progressbar Background" size="(212X26)"/>
+	<img_comp id="15" type="mandatory" name="Scrollbar Back List" size="(2X228)"/>
+	<img_comp id="16" type="mandatory" name="Scrollbar in Options Popup" size="(2X184)"/>
+	<img_comp id="17" type="mandatory" name="Scrollbar Handle" size="(4X1)"/>
+	<img_comp id="18" type="mandatory" name="MFE Selection Bar" size="(230X64)"/>
+	<img_comp id="19" type="mandatory" name="Selection Line" size="(214X28)"/>
+	<img_comp id="20" type="mandatory" name="Selected Tab" size="(40X32)"/>
+	<img_comp id="21" type="mandatory" name="Unselected Tab" size="(40X32)"/>
+	<img_comp id="22" type="mandatory" name="Alert Message Background 1 Line" size="(240X104)"/>
+	<img_comp id="23" type="mandatory" name="Alert Message Background 2 Lines" size="(240X104)"/>
+	<img_comp id="24" type="mandatory" name="Alert Message Background 3 Lines" size="(240X104)"/>
+	<img_comp id="25" type="default" name="RadioButton OFF Focused" size="(22X22)"/>
+	<img_comp id="26" type="default" name="RadioButton ON Focused" size="(22X22)"/>
+	<img_comp id="27" type="mandatory" name="Hourglass Icon" size="(58X154)"/>
+	<img_comp id="28" type="mandatory" name="Confirm Icon" size="(58X154)"/>
+	<img_comp id="29" type="mandatory" name="Exclamation Icon" size="(58X154)"/>
+	<img_comp id="30" type="mandatory" name="I Icon" size="(58X154)"/>
+	<img_comp id="31" type="mandatory" name="Question Icon" size="(58X154)"/>
+	<img_comp id="32" type="mandatory" name="Fail Icon" size="(58X154)"/>
+	<img_comp id="33" type="default" name="Toggle Arrow Left" size="(22X22)"/>
+	<img_comp id="34" type="default" name="Toggle Arrow Right" size="(22X22)"/>
+	<img_comp id="35" type="default" name="Options CheckBox On" size="(22X22)"/>
+	<img_comp id="36" type="default" name="Options CheckBox Off" size="(22X22)"/>
+	<img_comp id="37" type="default" name="CheckBox On Focused" size="(22X22)"/>
+	<img_comp id="38" type="default" name="CheckBox Off Focused" size="(22X22)"/>
+</Image_Component_List>

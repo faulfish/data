@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImagerAnalysisTool", "ImagerAnalysisTool\ImagerAnalysisTool.vcproj", "{A0D61DF9-7B7E-4EC2-963D-72BE66245BBF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F} = {11376385-FC09-4DA9-A9C6-6C03AE39805F}
+		{D25F7132-0316-4D34-B6D6-7DB8AD76212E} = {D25F7132-0316-4D34-B6D6-7DB8AD76212E}
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0} = {F9E4953A-48A6-4945-BB69-1CE6419DC6B0}
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE} = {9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA} = {AA9D97BA-452E-44C3-9AF1-538EB639C2EA}
+		{18ABEE75-C1D9-4271-ADF2-B7915E640FAD} = {18ABEE75-C1D9-4271-ADF2-B7915E640FAD}
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284} = {3514292E-1544-4DE3-AFBA-3AE38D7D3284}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConfigureTool", "..\Components\ConfigureTool\ConfigureTool.vcproj", "{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UIFramework", "..\Components\UIFramework\UIFramework.vcproj", "{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE} = {9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA} = {AA9D97BA-452E-44C3-9AF1-538EB639C2EA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LocalizationTool", "..\Components\Localization\LocalizationTool.vcproj", "{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE} = {9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QLib_Export", "..\QLib_Export\QLib_Export_share_UNICODE.vcproj", "{18ABEE75-C1D9-4271-ADF2-B7915E640FAD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RequestManager", "..\RequestManager\RequestManager.vcproj", "{11376385-FC09-4DA9-A9C6-6C03AE39805F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284} = {3514292E-1544-4DE3-AFBA-3AE38D7D3284}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QisdaNVModule", "..\Modules\QisdaNVModule\QisdaNVModule.vcproj", "{D25F7132-0316-4D34-B6D6-7DB8AD76212E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F} = {11376385-FC09-4DA9-A9C6-6C03AE39805F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SerCOMLib", "..\odmtma_api\SerCOMLib\SerCOMLib.vcproj", "{3514292E-1544-4DE3-AFBA-3AE38D7D3284}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0D61DF9-7B7E-4EC2-963D-72BE66245BBF}.Debug|Win32.ActiveCfg = Share_Unicode_Debug|Win32
+		{A0D61DF9-7B7E-4EC2-963D-72BE66245BBF}.Debug|Win32.Build.0 = Share_Unicode_Debug|Win32
+		{A0D61DF9-7B7E-4EC2-963D-72BE66245BBF}.Release|Win32.ActiveCfg = Share_Unicode_Release|Win32
+		{A0D61DF9-7B7E-4EC2-963D-72BE66245BBF}.Release|Win32.Build.0 = Share_Unicode_Release|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Debug|Win32.ActiveCfg = Share_Unicode_Debug|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Debug|Win32.Build.0 = Share_Unicode_Debug|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Release|Win32.ActiveCfg = Share_Unicode_Release|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Release|Win32.Build.0 = Share_Unicode_Release|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Debug|Win32.ActiveCfg = Share_Unicode_Debug|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Debug|Win32.Build.0 = Share_Unicode_Debug|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Release|Win32.ActiveCfg = Share_Unicode_Release|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Release|Win32.Build.0 = Share_Unicode_Release|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Debug|Win32.ActiveCfg = Share_Unicode_Debug|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Debug|Win32.Build.0 = Share_Unicode_Debug|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Release|Win32.ActiveCfg = Share_Unicode_Release|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Release|Win32.Build.0 = Share_Unicode_Release|Win32
+		{18ABEE75-C1D9-4271-ADF2-B7915E640FAD}.Debug|Win32.ActiveCfg = Share_Multibyte_Debug|Win32
+		{18ABEE75-C1D9-4271-ADF2-B7915E640FAD}.Debug|Win32.Build.0 = Share_Multibyte_Debug|Win32
+		{18ABEE75-C1D9-4271-ADF2-B7915E640FAD}.Release|Win32.ActiveCfg = Share_Multibyte_Release|Win32
+		{18ABEE75-C1D9-4271-ADF2-B7915E640FAD}.Release|Win32.Build.0 = Share_Multibyte_Release|Win32
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F}.Debug|Win32.ActiveCfg = Share_MultiByte_Debug|Win32
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F}.Debug|Win32.Build.0 = Share_MultiByte_Debug|Win32
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F}.Release|Win32.ActiveCfg = Share_MultiByte_Release|Win32
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F}.Release|Win32.Build.0 = Share_MultiByte_Release|Win32
+		{D25F7132-0316-4D34-B6D6-7DB8AD76212E}.Debug|Win32.ActiveCfg = Share_MultiByte_Debug|Win32
+		{D25F7132-0316-4D34-B6D6-7DB8AD76212E}.Debug|Win32.Build.0 = Share_MultiByte_Debug|Win32
+		{D25F7132-0316-4D34-B6D6-7DB8AD76212E}.Release|Win32.ActiveCfg = Share_MultiByte_Release|Win32
+		{D25F7132-0316-4D34-B6D6-7DB8AD76212E}.Release|Win32.Build.0 = Share_MultiByte_Release|Win32
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284}.Debug|Win32.ActiveCfg = Share_MultiByte_Debug|Win32
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284}.Debug|Win32.Build.0 = Share_MultiByte_Debug|Win32
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284}.Release|Win32.ActiveCfg = Share_Multibyte_Release_Without_Log|Win32
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284}.Release|Win32.Build.0 = Share_Multibyte_Release_Without_Log|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

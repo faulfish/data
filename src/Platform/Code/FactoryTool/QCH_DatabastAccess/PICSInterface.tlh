@@ -1,0 +1,229 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (70b4784c).
+//
+// c:\documents and settings\alan.tu\орн▒\glavs1a_imei_coding_v0.20\debug\PICSInterface.tlh
+//
+// C++ source equivalent of Win32 type library .\WORK\PICSInterface.dll
+// compiler-generated file created 12/11/08 at 16:01:33 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace PICSInterface {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("dd97fed8-c9f7-4a27-bdc5-7af7da3cc414"))
+/* dual interface */ _clsPICSInterface;
+struct /* coclass */ clsPICSInterface;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_clsPICSInterface, __uuidof(_clsPICSInterface));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("dd97fed8-c9f7-4a27-bdc5-7af7da3cc414"))
+_clsPICSInterface : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCheckPlatform,put=PutCheckPlatform))
+    _bstr_t CheckPlatform;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetErrorMessage (
+        short errorCode );
+    short CheckImei (
+        _bstr_t strImeiCode,
+        _bstr_t strPartNumber );
+    short WriteImei (
+        _bstr_t strImeiCode );
+    short QuerySpcCode (
+        _bstr_t strImeiCode,
+        BSTR * strSpcCode );
+    short GetSpcCode (
+        _bstr_t strImeiCode,
+        BSTR * strSpcCode );
+    short QueryFSNCode (
+        _bstr_t strImeiCode,
+        BSTR * strFsnCode );
+    short GetFSNCode (
+        _bstr_t strImeiCode,
+        BSTR * strFsnCode );
+    short QuerySimFile (
+        _bstr_t strSimFileName,
+        BSTR * strSimFilePath );
+    short GetSimData (
+        short intSimType,
+        _bstr_t strImeiCode,
+        _bstr_t strFsnCode,
+        _bstr_t strSimFileName,
+        BSTR * strSimData,
+        short * intSimDataSize );
+    short QueryUnlockCode (
+        _bstr_t strImeiCode,
+        BSTR * strUnlockN,
+        BSTR * strUnlockS,
+        BSTR * strUnlockC,
+        BSTR * strUnlockNS,
+        BSTR * strUnlockUS,
+        BSTR * strUnlockSIM,
+        BSTR * strUnlockRES,
+        BSTR * strSpc,
+        BSTR * strPhoneLock );
+    short QueryBtAddrCode (
+        _bstr_t strImeiCode,
+        _bstr_t strPartNumber,
+        BSTR * strBtAddrCode );
+    short Connection (
+        _bstr_t strLoginUser,
+        _bstr_t strPassword );
+    enum T_MID_RET_VALUE EnableTextLog (
+        VARIANT_BOOL blnEnableTextLog,
+        _bstr_t pstrFilePath );
+    _bstr_t GetCheckPlatform ( );
+    void PutCheckPlatform (
+        _bstr_t _arg1 );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_GetErrorMessage (
+        short errorCode,
+        BSTR * _arg2 ) = 0;
+    virtual HRESULT __stdcall raw_CheckImei (
+        BSTR strImeiCode,
+        BSTR strPartNumber,
+        short * _arg3 ) = 0;
+    virtual HRESULT __stdcall raw_WriteImei (
+        BSTR strImeiCode,
+        short * _arg2 ) = 0;
+    virtual HRESULT __stdcall raw_QuerySpcCode (
+        BSTR strImeiCode,
+        BSTR * strSpcCode,
+        short * _arg3 ) = 0;
+    virtual HRESULT __stdcall raw_GetSpcCode (
+        BSTR strImeiCode,
+        BSTR * strSpcCode,
+        short * _arg3 ) = 0;
+    virtual HRESULT __stdcall raw_QueryFSNCode (
+        BSTR strImeiCode,
+        BSTR * strFsnCode,
+        short * _arg3 ) = 0;
+    virtual HRESULT __stdcall raw_GetFSNCode (
+        BSTR strImeiCode,
+        BSTR * strFsnCode,
+        short * _arg3 ) = 0;
+    virtual HRESULT __stdcall raw_QuerySimFile (
+        BSTR strSimFileName,
+        BSTR * strSimFilePath,
+        short * _arg3 ) = 0;
+    virtual HRESULT __stdcall raw_GetSimData (
+        short intSimType,
+        BSTR strImeiCode,
+        BSTR strFsnCode,
+        BSTR strSimFileName,
+        BSTR * strSimData,
+        short * intSimDataSize,
+        short * _arg7 ) = 0;
+    virtual HRESULT __stdcall raw_QueryUnlockCode (
+        BSTR strImeiCode,
+        BSTR * strUnlockN,
+        BSTR * strUnlockS,
+        BSTR * strUnlockC,
+        BSTR * strUnlockNS,
+        BSTR * strUnlockUS,
+        BSTR * strUnlockSIM,
+        BSTR * strUnlockRES,
+        BSTR * strSpc,
+        BSTR * strPhoneLock,
+        short * _arg11 ) = 0;
+    virtual HRESULT __stdcall raw_QueryBtAddrCode (
+        BSTR strImeiCode,
+        BSTR strPartNumber,
+        BSTR * strBtAddrCode,
+        short * _arg4 ) = 0;
+    virtual HRESULT __stdcall raw_Connection (
+        BSTR strLoginUser,
+        BSTR strPassword,
+        short * _arg3 ) = 0;
+    virtual HRESULT __stdcall raw_EnableTextLog (
+        VARIANT_BOOL blnEnableTextLog,
+        BSTR pstrFilePath,
+        enum T_MID_RET_VALUE * _arg3 ) = 0;
+    virtual HRESULT __stdcall get_CheckPlatform (
+        BSTR * _arg1 ) = 0;
+    virtual HRESULT __stdcall put_CheckPlatform (
+        BSTR _arg1 ) = 0;
+};
+
+struct __declspec(uuid("38ec370b-f82d-4797-bc74-13f221d90c5e"))
+clsPICSInterface;
+    // [ default ] interface _clsPICSInterface
+
+enum T_MID_RET_VALUE
+{
+    MID_RET_SUCCESS = 0,
+    MID_RET_EXCEPTION = -1,
+    MID_RET_INVALID_IMEI_LEN = -2,
+    MID_RET_INVALID_IMEI_TACFAC = -3,
+    MID_RET_INVALID_IMEI_FAC = -4,
+    MID_RET_INVALID_IMEI_RANGE = -5,
+    MID_RET_INVALID_IMEI_CHECKSUM = -6,
+    MID_RET_EXISTS_IMEI = -7,
+    MID_RET_NO_IMEI = -8,
+    MID_RET_NO_SPC = -9,
+    MID_RET_NO_FSN = -10,
+    MID_RET_NOT_SAME_FSN = -11,
+    MID_RET_NO_FILE = -12,
+    MID_RET_NO_BTADDCODE = -13,
+    MID_RET_NO_BOOKING_PARTNO = -14,
+    MID_RET_LOG_CREATE_FAIL = -15,
+    MID_RET_INVALID_PARTNO = -16,
+    MID_RET_NO_BOOKING_IMEI = -17,
+    SIM_RET_NONE_SUPP_FUNC = 1,
+    SIM_RET_NONE_ENOUGH_MEM = 2,
+    SIM_RET_INVALID_PARAM = 3,
+    SIM_RET_INVALID_OBJECT = 4,
+    SIM_RET_NO_IMEI = 5,
+    SIM_RET_NO_FSN = 6,
+    SIM_RET_NO_SIM_FILE = 7,
+    SIM_RET_NO_UNLOCK_CODE = 8,
+    SIM_RET_FILE_PARSE_FAIL = 9,
+    SIM_RET_BUF_NOT_ENOUGH = 10,
+    SIM_RET_RESULT_FAIL = 11,
+    INT_RET_EXCEPTION = -100,
+    MID_RET_INVALID_MAC = -18,
+    MID_RET_NO_USER = -19,
+    MID_RET_INVALID_USER = -20,
+    MID_RET_INVALID_PASSWORD = -21,
+    MID_RET_NO_LOGIN_LONGTIME = -22,
+    MID_RET_NO_RESPONSE = -23,
+    MID_RET_NO_AUTHORITY = -24,
+    MID_RET_NO_PASSKEY = -25,
+    MID_RET_INCONSISTENT_MAC = -26
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "PICSInterface.tli"
+
+} // namespace PICSInterface
+
+#pragma pack(pop)

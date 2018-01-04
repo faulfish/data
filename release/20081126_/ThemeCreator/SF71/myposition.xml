@@ -1,0 +1,181 @@
+<!-- General and mostly used Types -->
+<pos id="1" xPos="0" yPos="0"/><!-- Background -->
+<pos id="2" xPos="0" yPos="0"/><!-- Annunciator -->
+<pos id="3" xPos="4" yPos="4"/><!-- Signal Strength -->
+<pos id="4" xPos="112" yPos="4"/><!-- Bluetooth Active Icon -->
+<pos id="5" xPos="184" yPos="4"/><!-- Battery Indication -->
+<pos id="6" xPos="0" yPos="288"/><!-- Softkey Area -->
+<pos id="7" xPos="6" yPos="291"/><!-- LSK Text -->
+<pos id="8" xPos="107" yPos="291"/><!-- Center Icon -->
+<pos id="9" xPos="139" yPos="291"/><!-- RSK Text -->
+<pos id="10" xPos="0" yPos="24"/><!-- Title Region -->
+<pos id="11" xPos="2" yPos="32"/><!-- Date Information -->
+<pos id="12" xPos="120" yPos="32"/><!-- Time Information -->
+<pos id="13" xPos="4" yPos="27"/><!-- Title Icon -->
+<pos id="14" xPos="32" yPos="27"/><!-- Title caption -->
+<pos id="15" xPos="0" yPos="56"/><!-- Backgrounf Tab -->
+<!-- iconmenuback app -->
+<pos id="16" xPos="7" yPos="73"/><!-- Menu Icon Row 1 Left -->
+<pos id="17" xPos="85" yPos="73"/><!-- Menu Icon Row 1 Middle -->
+<pos id="18" xPos="163" yPos="73"/><!-- Menu Icon Row 1 Right -->
+<pos id="19" xPos="7" yPos="122"/><!-- Menu Icon Row 2 Left -->
+<pos id="20" xPos="78" yPos="105"/><!-- Menu Icon Row 2 Middle/selected & floating box -->
+<pos id="21" xPos="163" yPos="122"/><!-- Menu Icon Row 2 right -->
+<pos id="22" xPos="7" yPos="171"/><!-- Menu Icon Row 3 Left -->
+<pos id="23" xPos="85" yPos="171"/><!-- Menu Icon Row 3 Middle -->
+<pos id="24" xPos=""163 yPos="171"/><!-- Menu Icon Row 3 Right -->
+<pos id="25" xPos="7" yPos="221"/><!-- Menu Icon Row 4 Left -->
+<pos id="26" xPos="85" yPos="221"/><!-- Menu Icon Row 4 Middle -->
+<pos id="27" xPos="163" yPos="221"/><!-- Menu Icon Row 4 Right -->
+<!-- volume screen -->
+<pos id="28" xPos="44" yPos="56"/><!-- volume level icon -->
+<pos id="29" xPos="99" yPos="195"/><!-- arrow up icon -->
+<pos id="30" xPos="99" yPos="264"/><!-- arrow down icon -->
+<pos id="31" xPos="35" yPos="219"/><!-- volume down text -->
+
+
+
+
+<!-- Bookmark string-->
+<pos id="" xPos="45" yPos="65"/><!-- others -->
+<pos id="" xPos="45" yPos="95"/><!-- google -->
+<pos id="" xPos="45" yPos="125"/><!-- teo -->
+<pos id="" xPos="45" yPos="155"/><!-- siemens -->
+<pos id="" xPos="45" yPos="185"/><!-- yahoo -->
+
+<!-- Date setting Screen string-->
+<pos id="" xPos="20" yPos="65"/><!-- Set(YYYY-MM-DD): -->
+<pos id="" xPos="20" yPos="95"/><!-- 2005 -->
+<pos id="" xPos="80" yPos="95"/><!-- -11-05 -->
+
+<!-- Edit Screen string-->
+<pos id="" xPos="20" yPos="92"/><!-- Last name -->
+<pos id="" xPos="20" yPos="120"/><!-- Rodrig -->
+<pos id="" xPos="95" yPos="120"/><!-- o -->
+<pos id="" xPos="20" yPos="180"/><!-- private phone -->
+<pos id="" xPos="50" yPos="180"/><!-- 123456789 -->
+<pos id="" xPos="20" yPos="210"/><!-- Business phone: -->
+<pos id="" xPos="20" yPos="250"/><!-- m n  6 -->
+<pos id="" xPos="90" yPos="250"/><!-- o -->
+
+<!-- Feedback Popup Positive, Question, Warning -->
+<!-- Wait Screen, Feedback Popup 1, Feedback Popup Fail -->
+<pos id="" xPos="90" yPos="100"/><!-- Feedback line 1 -->
+<pos id="" xPos="90" yPos="130"/><!-- Feedback line 2 -->
+<pos id="" xPos="90" yPos="160"/><!-- Feedback line 3 -->
+<pos id="" xPos="90" yPos="190"/><!-- Feedback line 4 -->
+
+<!-- Focused Radio Off/On -->
+<pos id="" xPos="50" yPos="65"/><!-- General  -->
+<pos id="" xPos="50" yPos="95"/><!-- Silent -->
+<pos id="" xPos="50" yPos="125"/><!-- Meeting -->
+<pos id="" xPos="50" yPos="155"/><!-- Outdoor -->
+<pos id="" xPos="50" yPos="185"/><!-- User Profile 1 -->
+<pos id="" xPos="50" yPos="215"/><!-- User Profile 2 -->
+<pos id="" xPos="50" yPos="245"/><!-- Car Kit -->
+
+<!-- Idle With Wallpaper 1,2,3 Screen, Idle Screen -->
+<pos id="" xPos="85" yPos="60"/><!-- Provider  -->
+<pos id="" xPos="35" yPos="190"/><!-- Missed Call -->
+<pos id="" xPos="35" yPos="220"/><!-- New message -->
+<pos id="" xPos="35" yPos="250"/><!-- New appoints -->
+
+<!-- Incoming Call Screen -->
+<pos id="" xPos="10" yPos="30"/><!-- IncomingCall -->
+<pos id="" xPos="10" yPos="230"/><!-- +49284925 --> 
+
+<!-- Marked Screen -->
+<pos id="" xPos="40" yPos="92"/><!-- <New entry> -->
+<pos id="" xPos="40" yPos="130"/><!-- benzui -->
+<pos id="" xPos="40" yPos="160"/><!-- Low -->
+<pos id="" xPos="40" yPos="190"/><!-- No default available -->
+<pos id="" xPos="40" yPos="220"/><!-- John Rodrigo -->
+
+<!-- Menu Screen, MMS Screen-->
+<pos id="" xPos="10" yPos="60"/><!-- Line 1 -->
+<pos id="" xPos="10" yPos="90"/><!-- Line 2 -->
+<pos id="" xPos="10" yPos="120"/><!-- Line 3 -->
+<pos id="" xPos="10" yPos="150"/><!-- Line 4 -->
+<pos id="" xPos="10" yPos="180"/><!-- Line 5 -->
+<pos id="" xPos="10" yPos="210"/><!-- Line 6 -->
+<pos id="" xPos="10" yPos="240"/><!-- Line 7 -->
+
+<!-- Organizer 1, 2 Screen -->
+<pos id="" xPos="10" yPos="225"/><!-- 16:54 meeting -->
+<pos id="" xPos="10" yPos="250"/><!-- 19:00 birthday -->
+
+<!-- Organizer 3 Screen -->
+<pos id="" xPos="80" yPos="85"/><!-- meeting -->
+<pos id="" xPos="80" yPos="160"/><!-- Birthday -->
+
+<!-- Options Popup Screen -->
+<pos id="" xPos="10" yPos="80"/><!-- Options -->
+<pos id="" xPos="10" yPos="110"/><!-- Send contact -->
+<pos id="" xPos="10" yPos="140"/><!-- Duplicate -->
+<pos id="" xPos="10" yPos="170"/><!-- Add to Distr.list -->
+<pos id="" xPos="10" yPos="200"/><!-- Add to group -->
+<pos id="" xPos="10" yPos="230"/><!-- Save options -->
+
+<!-- Pin Input, Incoreect Pin input Screen -->
+<pos id="" xPos="70" yPos="150"/><!-- Enter PIN: -->
+
+<!-- Progress Bar Screen -->
+<pos id="" xPos="15" yPos="110"/><!-- Copying 1 if 1 -->
+<pos id="" xPos="15" yPos="170"/><!-- 7% complete -->
+
+<!-- Symbols Screen -->
+<pos id="" xPos="15" yPos="100"/><!-- Special characters -->
+<pos id="" xPos="25" yPos="140"/><!-- ~  @  #  $  %  ^  &   -->
+<pos id="" xPos="25" yPos="165"/><!-- ~  @  #  $  %  ^  &   -->
+<pos id="" xPos="25" yPos="185"/><!-- ~  @  #  $  %  ^  &   -->
+<pos id="" xPos="25" yPos="205"/><!-- ~  @  #  $  %  ^  &   -->
+
+<!-- Themes Screen -->
+<pos id="" xPos="80" yPos="66"/><!-- Standard -->
+<pos id="" xPos="80" yPos="130"/><!-- BlueNum -->
+<pos id="" xPos="80" yPos="155"/><!-- 3787KB-->
+<pos id="" xPos="80" yPos="196"/><!-- Cyber   -->
+<pos id="" xPos="80" yPos="221"/><!-- 3749KB -->
+
+<!-- Ticked CheckBox Screen, Unticked CheckBox Screen -->
+<pos id="" xPos="55" yPos="92"/><!-- Jmagp,Jmtw-->
+<pos id="" xPos="55" yPos="120"/><!-- 566885 -->
+<pos id="" xPos="55" yPos="160"/><!-- Rodrigo,John-->
+
+<!-- Toggle Arrow Screen -->
+<pos id="" xPos="5" yPos="60"/><!-- Images-->
+<pos id="" xPos="45" yPos="90"/><!-- Dont Show -->
+<pos id="" xPos="5" yPos="130"/><!-- Sounds-->
+<pos id="" xPos="45" yPos="160"/><!-- Dont play-->
+<pos id="" xPos="5" yPos="200"/><!-- Objects -->
+<pos id="" xPos="45" yPos="230"/><!-- Dont download-->
+
+<!-- Volume Screen -->
+<pos id="" xPos="100" yPos="240"/><!-- Off-->
+
+<!-- Idle for External Display -->
+<pos id="" xPos="5" yPos="25"/><!-- provider... -->
+<pos id="" xPos="30" yPos="60"/><!-- 12:04 -->
+
+<!-- Media Player List -->
+<pos id="" xPos="3" yPos="19"/><!-- All tracks -->
+<pos id="" xPos="5" yPos="55"/><!-- Bells of O... -->
+<pos id="" xPos="5" yPos="80"/><!-- Call of time -->
+<pos id="" xPos="50" yPos="100"/><!-- FatRatGro.. -->
+
+<!-- Media Player Preview -->
+<pos id="" xPos="5" yPos="110"/><!-- All tracks -->
+<pos id="" xPos="75" yPos="110"/><!-- Bells of O... -->
+
+<!-- Horizontal Popup Preview -->
+<pos id="" xPos="6" yPos="60"/><!-- Cannot -->
+<pos id="" xPos="6" yPos="75"/><!-- process -->
+<pos id="" xPos="6" yPos="90"/><!-- media -->
+
+<!-- Vertical Popup Preview -->
+<pos id="" xPos="70" yPos="6"/><!-- Saving, please-->
+<pos id="" xPos="50" yPos="50"/><!-- Wait -->
+
+
+
+

@@ -1,0 +1,23 @@
+{Header
+}
+{Description
+}
+{Code
+//SIMcard test
+0000 waitinput %var1 COMPort
+0001 sleep 0
+0002 Run MobileToolKit_StaticM.dll CheckSIMCardExistence_ForSPU %var1 %var2
+0003 comparetrue 0006
+0004 print "Fail to CheckSIMCardExistence API"
+0005 comparefalse 9999
+0006 compare %var2 "0"
+0007 print %var2
+0008 comparefalse 0012
+0009 compare %var2 "9999"
+0010 print "SIM card not exist"
+0011 comparefalse 9999
+0012 print "SIM card exist"
+0013 Run MobileToolKit_StaticM.dll WriteMMIFlag %var1 420 1
+//420		1						used		EM_BZ_OC_WITH_SIM_CARD
+}
+}

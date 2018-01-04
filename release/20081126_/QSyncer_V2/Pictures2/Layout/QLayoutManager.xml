@@ -1,0 +1,7 @@
+<App Name="QSyncer 2.0" Version="1.1">
+	<Widget ClassName="MainFrame" ID="MainFrameID" EnableShadow="0" FrameStyle="1">
+		<Shadow PositionX="0" PositionY="5" Size="3" Sharpness="117" Darkness="117" ColorR="10" ColorG="10" ColorB="10"></Shadow>
+		<FixedPicture FixedPic="..\General\Background\OnePic.bmp"></FixedPicture>
+		<NinePictures First="..\General\Background\mainFrm1.bmp" Second="..\General\Background\mainFrm2.bmp" Third="..\General\Background\mainFrm3.bmp" Fourth="..\General\Background\mainFrm4.bmp" Fifth="..\General\Background\mainFrm5.bmp" Sixth="..\General\Background\mainFrm6.bmp" Seventh="..\General\Background\mainFrm7.bmp" Eighth="..\General\Background\mainFrm8.bmp" Ninth="..\General\Background\mainFrm9.bmp"></NinePictures>
+	</Widget>
+</App>

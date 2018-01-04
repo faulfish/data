@@ -1,0 +1,82 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (f54eefd4).
+//
+// SSS_O2.tli
+//
+// Wrapper implementations for Win32 type library .\work\SSS_O2.dll
+// compiler-generated file created 12/12/08 at 13:29:40 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface _clsO2Check wrapper method implementations
+//
+
+inline long _clsO2Check::O2ChkIMEI ( _bstr_t strSIM, _bstr_t strPhoneNo, _bstr_t strIMEI ) {
+    long _result;
+    HRESULT _hr = raw_O2ChkIMEI(strSIM, strPhoneNo, strIMEI, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t _clsO2Check::GetO2Desc ( long plngResultCode, _bstr_t strSIM, _bstr_t strPhoneNo, _bstr_t strIMEI, BSTR * strModel, BSTR * strProcess, BSTR * strUDT ) {
+    BSTR _result;
+    HRESULT _hr = raw_GetO2Desc(plngResultCode, strSIM, strPhoneNo, strIMEI, strModel, strProcess, strUDT, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL _clsO2Check::O2UptIMEI ( long lngCheckResult, _bstr_t strSIM, _bstr_t strPhoneNo, _bstr_t strIMEI ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_O2UptIMEI(lngCheckResult, strSIM, strPhoneNo, strIMEI, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long _clsO2Check::O2DelIMEI ( VARIANT_BOOL blnAuthentication, _bstr_t strIMEI ) {
+    long _result;
+    HRESULT _hr = raw_O2DelIMEI(blnAuthentication, strIMEI, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _clsO2Check::funQueryIMEI_Data ( _bstr_t pstrIMEI, _bstr_t pstrQueryType, BSTR * ostrCtdsn2, BSTR * ostrCtdsn3, BSTR * ostrCtdhw, BSTR * ostrCtdsw, BSTR * ostrCtdmdate, BSTR * ostrCtdmtime, BSTR * ostrCtdsts, BSTR * ostrDBdate, BSTR * ostrDBtime, BSTR * ostrPhoneNo, BSTR * ostrO2Model, BSTR * ostrErrCode, BSTR * ostrErrDesc, BSTR * ostrCtdsn4 ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_funQueryIMEI_Data(pstrIMEI, pstrQueryType, ostrCtdsn2, ostrCtdsn3, ostrCtdhw, ostrCtdsw, ostrCtdmdate, ostrCtdmtime, ostrCtdsts, ostrDBdate, ostrDBtime, ostrPhoneNo, ostrO2Model, ostrErrCode, ostrErrDesc, ostrCtdsn4, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _clsO2Check::funUpdateIMEI_Data ( _bstr_t pstrIMEI, _bstr_t pstrCtdsw, _bstr_t pstrCtdhw, _bstr_t pstrCtdNAL, short * ointEffectedRow, BSTR * ostrErrCode, BSTR * ostrErrDesc ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_funUpdateIMEI_Data(pstrIMEI, pstrCtdsw, pstrCtdhw, pstrCtdNAL, ointEffectedRow, ostrErrCode, ostrErrDesc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _clsO2Check::funUpdateSIM_Data ( _bstr_t pstrIMEI, _bstr_t pstrSimNo, _bstr_t pstrForce, short * ointEffectedRow, BSTR * ostrErrCode, BSTR * ostrErrDesc ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_funUpdateSIM_Data(pstrIMEI, pstrSimNo, pstrForce, ointEffectedRow, ostrErrCode, ostrErrDesc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _clsO2Check::WriteLogFile ( long lngResultCode, _bstr_t strSIM, _bstr_t strPhoneNo, _bstr_t strIMEI, BSTR * strModel, BSTR * strProcess, BSTR * strUDT ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_WriteLogFile(lngResultCode, strSIM, strPhoneNo, strIMEI, strModel, strProcess, strUDT, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _clsO2Check::funGetProcessResult ( _bstr_t In_strID, _bstr_t In_strProcess, _bstr_t In_strModel, BSTR * Out_strGDNG, BSTR * Out_strErrCode, BSTR * Out_strErrDesc ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_funGetProcessResult(In_strID, In_strProcess, In_strModel, Out_strGDNG, Out_strErrCode, Out_strErrDesc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _clsO2Check::funCheckNALPN_Data ( _bstr_t pstrIMEI, _bstr_t pstrpartNo, _bstr_t pstrCtdNAL, BSTR * ostrErrCode, BSTR * ostrErrDesc ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_funCheckNALPN_Data(pstrIMEI, pstrpartNo, pstrCtdNAL, ostrErrCode, ostrErrDesc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}

@@ -1,0 +1,167 @@
+;-------------------------------------------------------------------------------
+; QCWWAN.INF
+;
+; BenQ Wireless Network Device for Windows 7
+;
+; Copyright (c) 2014 BenQ Inc.  All rights reserved.
+
+
+[version]
+Signature   = "$Windows NT$"
+Class       = Net
+ClassGUID   = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider    = %BENQ%
+DriverVer   = 02/20/2013,4.0.2.2
+Catalogfile = qcwwan.cat
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%BENQ% = BENQ, NTx86.6.1, NTia64.6.1, NTamd64.6.1
+
+[SourceDisksNames.x86]
+1000 = %BenQSrcDisk%,"",,\ndis\6.2\i386
+
+[SourceDisksNames.amd64]
+1000 = %BenQSrcDisk%,"",,\ndis\6.2\amd64
+
+[SourceDisksFiles]
+  qcusbwwan.sys = 1000
+
+[BENQ.NTx86.6.1]
+%qcwwan.DeviceDesc461E4%    = qcwwan.ndi, USB\VID_1D45&PID_461E&MI_04
+%qcwwan.DeviceDesc461F5%    = qcwwan.ndi, USB\VID_1D45&PID_461F&MI_05
+%qcwwan.DeviceDesc46205%    = qcwwan.ndi, USB\VID_1D45&PID_4620&MI_05
+%qcwwan.DeviceDesc46216%    = qcwwan.ndi, USB\VID_1D45&PID_4621&MI_06
+
+[BENQ.NTia64.6.1]
+%qcwwan.DeviceDesc461E4%    = qcwwan.ndi, USB\VID_1D45&PID_461E&MI_04
+%qcwwan.DeviceDesc461F5%    = qcwwan.ndi, USB\VID_1D45&PID_461F&MI_05
+%qcwwan.DeviceDesc46205%    = qcwwan.ndi, USB\VID_1D45&PID_4620&MI_05
+%qcwwan.DeviceDesc46216%    = qcwwan.ndi, USB\VID_1D45&PID_4621&MI_06
+
+[BENQ.NTamd64.6.1]
+%qcwwan.DeviceDesc461E4%    = qcwwan.ndi, USB\VID_1D45&PID_461E&MI_04
+%qcwwan.DeviceDesc461F5%    = qcwwan.ndi, USB\VID_1D45&PID_461F&MI_05
+%qcwwan.DeviceDesc46205%    = qcwwan.ndi, USB\VID_1D45&PID_4620&MI_05
+%qcwwan.DeviceDesc46216%    = qcwwan.ndi, USB\VID_1D45&PID_4621&MI_06
+
+[qcwwan.ndi]
+Characteristics = 0x4 ; NCF_PHYSICAL
+BusType         = 15  ; PNPBus
+
+; Windows 7 specific
+*IfType = 244 ; IF_TYPE_WWANPP2
+*MediaType = 9 ; NdisMediumWirelessWan
+*PhysicalMediaType = 8 ; NdisPhysicalMediumWirelessWan
+EnableDhcp = 0
+
+AddReg          = qcwwan.Reg
+CopyFiles       = qcwwan.CopyFiles
+
+[qcwwan.ndi.Services]
+AddService      = qcusbwwan, 2, qcwwan.Service, qcwwan.EventLog
+
+;-----------------------------------------------------------------------------
+; WMI security settings
+;-----------------------------------------------------------------------------
+[gobiwwan.ndi.WMI]
+WMIInterface={DE81837E-BD78-4EC8-ABA8-89B7D026C1CF},,WMIGuidSecurity_AllReadAdminFul
+
+[WMIGuidSecurity_AllReadAdminFul]
+security="O:BAG:BAD:(A;;0x12001f;;;BA)(A;;0x12001f;;;LS)(A;;0x12001f;;;NS)(A;;0x12001f;;;SY)(A;;0x12001f;;;NO)(A;;CC;;;BU)"
+
+;-----------------------------------------------------------------------------
+; Virtual Miniport Common
+;
+[qcwwan.Reg]
+HKR,    ,                         BusNumber,           0, "0" 
+HKR, Ndi,                         Service,             0, "qcusbwwan"
+
+;Entries to be put in add-registry-section for NdisMediumWirelessWan
+HKR, Ndi\Interfaces, UpperRange, 0, "flpp4, flpp6"
+HKR, Ndi\Interfaces, LowerRange, 0, "ppip"
+HKR,, QCDevDisableQoS, 0x00010001, 0x00000003
+
+; Diable QMI
+; HKR,, QCMPDisableQMI, 0x00010001, 0x00000001
+
+; Disable QMAP V3
+HKR,, QCMPEnableQMAPV3, 0x00010001, 0x00000000
+
+; Disable QMAP V2
+HKR,, QCMPEnableQMAPV2, 0x00010001, 0x00000000
+
+; Disable QMAP V1
+; HKR,, QCMPEnableQMAPV1, 0x00010001, 0x00000000
+
+; Disable QCNCM UL
+; HKR,, QCMPEnableMBIMUL, 0x00010001, 0x00000000
+
+; Disable QCNCM DL
+; HKR,, QCMPEnableMBIMDL, 0x00010001, 0x00000000
+
+; Disable TLP UL
+; HKR,, QCMPEnableTLP, 0x00010001, 0x00000000
+
+; Disable TLP DL
+; HKR,, QCMPEnableDLTLP, 0x00010001, 0x00000000
+
+; Max UL aggregated packets
+; HKR,, QCDriverTLPMaxPackets, 0x00010001, 0x00000003
+
+; Max DL aggregated packets
+HKR,, QCDriverDLMaxPackets, 0x00010001, 0x00000020
+
+; Max DL aggregated Size
+HKR,, QCDriverDLAggregationSize, 0x00010001, 0x00008000
+;-----------------------------------------------------------------------------
+; Driver and Service Section
+;
+[qcwwan.CopyFiles]
+qcusbwwan.sys,,,2
+
+[qcwwan.Service]
+DisplayName     = %qcwwan.Service.DispName%
+ServiceType     = 1 ;%SERVICE_KERNEL_DRIVER%
+StartType       = 3 ;%SERVICE_DEMAND_START%
+ErrorControl    = 1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary   = %12%\qcusbwwan.sys
+LoadOrderGroup  = NDIS
+AddReg          = TextModeFlags.Reg
+
+[qcwwan.EventLog]
+AddReg = qcwwan.AddEventLog.Reg
+
+[qcwwan.AddEventLog.Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported,   0x00010001, 7
+
+[TextModeFlags.Reg]
+HKR, , TextModeFlags,    0x00010001, 0x0001
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+qcusbwwan.sys  = 1,,
+
+;-----------------------------------------------------------------------------
+; DestinationDirs
+;
+[DestinationDirs]
+qcwwan.CopyFiles = 12
+
+;-----------------------------------------------------------------------------
+; Localizable Strings
+;
+[Strings]
+BenQSrcDisk = "BENQ USB Driver Disk"
+BENQ                       = "BenQ"                      
+qcwwan.DeviceDesc461E4      = "BenQ HS-USB WWAN Adapter 461E"
+qcwwan.DeviceDesc461F5      = "BenQ HS-USB WWAN Adapter 461F"
+qcwwan.DeviceDesc46205      = "BenQ HS-USB WWAN Adapter 4620"
+qcwwan.DeviceDesc46216      = "BenQ HS-USB WWAN Adapter 4621"
+qcwwan.Service.DispName     = "BenQ USB-NDIS WWAN miniport"
+DiskId1 = "BenQ USB-NDIS Miniport Device Installation Disk #1"

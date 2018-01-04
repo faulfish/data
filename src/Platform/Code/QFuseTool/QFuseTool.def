@@ -1,0 +1,5 @@
+LIBRARY	"QFuseTool"
+
+EXPORTS
+    ; Explicit exports can go here
+	ShowDlgServiceTool

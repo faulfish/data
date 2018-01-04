@@ -1,0 +1,20 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+}
+{Code
+0000 waitinput %var1 COMPort
+0001 waitinput %var2 Input
+0002 Run MobileToolKit_StaticM.dll CheckSIMCardExistence_ForSPU %var1 %var2
+0003 comparetrue 0006
+0004 print "Fail to CheckSIMCardExistence API"
+0005 comparefalse 9999
+0006 compare %var2 "0"
+0007 comparetrue 0010
+0008 print "SIM card exist"
+0009 comparefalse 0011
+0010 print "SIM card not exist"
+0011 print "Success to CheckSIMCardExistence API"
+}

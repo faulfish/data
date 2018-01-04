@@ -1,0 +1,7 @@
+; QisdaSimLockModule.def : Declares the module parameters for the DLL.
+
+LIBRARY      "QisdaSimLockModule"
+
+EXPORTS
+    ; Explicit exports can go here
+	CheckSimDataIsProgrammed

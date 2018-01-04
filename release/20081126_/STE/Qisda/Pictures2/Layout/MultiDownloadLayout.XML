@@ -1,0 +1,162 @@
+<App Name="MultiDownload 1.0" Version="1.0">
+	<Widget ClassName="CMultiDownloadDlg" ID="CMultiDownloadDlgID">
+		<Widget ClassName="SplitLayout" ID="MainLayout">
+			<Property Direction="V" FixedStyle="Value" FixedValue="470"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="Left">
+			<Property Direction="H" FixedStyle="Value" FixedValue="30"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="InfoLabel1">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="\BK_StatusBar.png" TextColorAlpha="255" TextColorR="0" TextColorG="255" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_DISPLAY1" nID="11"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="View1">
+			<Property Direction="H" FixedStyle="Value" FixedValue="20"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_COMBO9">
+			<Property Win32ID="1019"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="View2">
+			<Property Direction="H" FixedStyle="Value" FixedValue="30"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="InfoLabel2">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="\BK_StatusBar.png" TextColorAlpha="255" TextColorR="0" TextColorG="255" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_DISPLAY2" nID="12"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="View3">
+			<Property Direction="H" FixedStyle="Value" FixedValue="30"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="View4">
+			<Property Direction="0" Spacing="250"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="InfoLabel3">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="\BK_StatusBar.png" TextColorAlpha="255" TextColorR="0" TextColorG="255" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_COMDIS" nID="13"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="InfoLabel4">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="\BK_StatusBar.png" TextColorAlpha="255" TextColorR="0" TextColorG="255" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_STATUSDIS" nID="14"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="ProgressBox">
+			<Property Direction="2" Spacing="22"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="ProgressBar1">
+			<Property Style="ClipPicture" BkImage="\ProgressBar\ProgressBar_Empty2.PNG" BarImage="\ProgressBar\ProgressBar_Full2.PNG" TimerID="0" Elapse="0" Count="0" MaxWidth="300" MinWidth="200" MaxHeight="50" MinHeight="36" Enable="true" Display="" nID="15"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="ProgressBar2">
+			<Property Style="ClipPicture" BkImage="\ProgressBar\ProgressBar_Empty2.PNG" BarImage="\ProgressBar\ProgressBar_Full2.PNG" TimerID="0" Elapse="0" Count="0" MaxWidth="300" MinWidth="200" MaxHeight="50" MinHeight="36" Enable="true" Display="" nID="16"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="ProgressBar3">
+			<Property Style="ClipPicture" BkImage="\ProgressBar\ProgressBar_Empty2.PNG" BarImage="\ProgressBar\ProgressBar_Full2.PNG" TimerID="0" Elapse="0" Count="0" MaxWidth="300" MinWidth="200" MaxHeight="50" MinHeight="36" Enable="true" Display="" nID="17"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="ProgressBar4">
+			<Property Style="ClipPicture" BkImage="\ProgressBar\ProgressBar_Empty2.PNG" BarImage="\ProgressBar\ProgressBar_Full2.PNG" TimerID="0" Elapse="0" Count="0" MaxWidth="300" MinWidth="200" MaxHeight="50" MinHeight="36" Enable="true" Display="" nID="18"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="ProgressBar5">
+			<Property Style="ClipPicture" BkImage="\ProgressBar\ProgressBar_Empty2.PNG" BarImage="\ProgressBar\ProgressBar_Full2.PNG" TimerID="0" Elapse="0" Count="0" MaxWidth="300" MinWidth="200" MaxHeight="50" MinHeight="36" Enable="true" Display="" nID="19"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="ProgressBar6">
+			<Property Style="ClipPicture" BkImage="\ProgressBar\ProgressBar_Empty2.PNG" BarImage="\ProgressBar\ProgressBar_Full2.PNG" TimerID="0" Elapse="0" Count="0" MaxWidth="300" MinWidth="200" MaxHeight="50" MinHeight="36" Enable="true" Display="" nID="20"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="ProgressBar7">
+			<Property Style="ClipPicture" BkImage="\ProgressBar\ProgressBar_Empty2.PNG" BarImage="\ProgressBar\ProgressBar_Full2.PNG" TimerID="0" Elapse="0" Count="0" MaxWidth="300" MinWidth="200" MaxHeight="50" MinHeight="36" Enable="true" Display="" nID="21"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="ProgressBar8">
+			<Property Style="ClipPicture" BkImage="\ProgressBar\ProgressBar_Empty2.PNG" BarImage="\ProgressBar\ProgressBar_Full2.PNG" TimerID="0" Elapse="0" Count="0" MaxWidth="300" MinWidth="200" MaxHeight="50" MinHeight="36" Enable="true" Display="" nID="22"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="StartButton">
+			<Property Direction="2" Spacing="8"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="BrowserButton">
+			<Property Font="Arial" FontSize="10" OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="100" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_BROWER" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="StartAll">
+			<Property Font="Arial" FontSize="10" OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="100" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_STARTALL" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Start1">
+			<Property Font="Arial" FontSize="10" OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="100" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_START" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Start2">
+			<Property Font="Arial" FontSize="10" OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="100" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_START" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Start3">
+			<Property Font="Arial" FontSize="10" OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="100" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_START" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Start4">
+			<Property Font="Arial" FontSize="10" OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="100" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_START" nID="6"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Start5">
+			<Property Font="Arial" FontSize="10" OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="100" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_START" nID="7"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Start6">
+			<Property Font="Arial" FontSize="10" OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="100" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_START" nID="8"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Start7">
+			<Property Font="Arial" FontSize="10" OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="100" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_START" nID="9"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Start8">
+			<Property Font="Arial" FontSize="10" OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="100" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_START" nID="10"></Property>
+		</Widget>
+		<Order Name="FileManager">
+			<Setting ParentWidget="" ID="MainLayout" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="Left" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="StartButton" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="Left" ID="InfoLabel1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="Left" ID="View1" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="View1" ID="IDC_COMBO9" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="View1" ID="View2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="View2" ID="InfoLabel2" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="View2" ID="View3" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="View3" ID="View4" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="View3" ID="ProgressBox" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="View4" ID="InfoLabel3" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="View4" ID="InfoLabel4" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="ProgressBox" ID="ProgressBar1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ProgressBox" ID="ProgressBar2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ProgressBox" ID="ProgressBar3" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ProgressBox" ID="ProgressBar4" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ProgressBox" ID="ProgressBar5" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ProgressBox" ID="ProgressBar6" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ProgressBox" ID="ProgressBar7" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ProgressBox" ID="ProgressBar8" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StartButton" ID="BrowserButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StartButton" ID="StartAll" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StartButton" ID="Start1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StartButton" ID="Start2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StartButton" ID="Start3" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StartButton" ID="Start4" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StartButton" ID="Start5" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StartButton" ID="Start6" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StartButton" ID="Start7" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="StartButton" ID="Start8" Parameter="" Description=""></Setting>
+		</Order>
+		<LayoutBase Name="FileManager">
+			<Setting ID="MainLayout" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" Alignment="Left|Top"></Setting>
+			<Setting ID="MainLayout" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="" RightMargin="10" Alignment="Right|Top"></Setting>
+			<Setting ID="Left" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="Left" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="View1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="View1" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="View2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Bottom"></Setting>
+			<Setting ID="View2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Bottom"></Setting>
+			<Setting ID="View3" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="View3" Index="1" TopMargin="20" BottomMargin="0" LeftMargin="1" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="View4" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="View4" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="ProgressBox" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="ProgressBox" Index="1" TopMargin="5" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="ProgressBox" Index="2" TopMargin="4" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="ProgressBox" Index="3" TopMargin="3" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="ProgressBox" Index="4" TopMargin="4" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="ProgressBox" Index="5" TopMargin="4" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="ProgressBox" Index="6" TopMargin="3" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="ProgressBox" Index="7" TopMargin="7" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="StartButton" Index="0" TopMargin="25" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StartButton" Index="1" TopMargin="10" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StartButton" Index="2" TopMargin="1" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StartButton" Index="3" TopMargin="3" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StartButton" Index="4" TopMargin="4" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StartButton" Index="5" TopMargin="3" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StartButton" Index="6" TopMargin="3" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StartButton" Index="7" TopMargin="3" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StartButton" Index="8" TopMargin="3" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="StartButton" Index="9" TopMargin="3" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+</App>

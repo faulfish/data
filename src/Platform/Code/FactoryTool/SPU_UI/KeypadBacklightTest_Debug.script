@@ -1,0 +1,19 @@
+{Header
+}
+{Description
+}
+{Code
+//KeypadBacklight test
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticMD.dll KeypadBacklight %var1 "true"
+0002 comparetrue 0005
+0003 print "Error on KeypadBacklight API"
+0004 comparefalse 9999
+0005 assign %var2 "Does KeypadBacklight test success ?"
+0006 waitinput %var2 ComfirmYesNo
+0007 Run MobileToolKit_StaticMD.dll KeypadBacklight %var1 "false"
+0008 compare %var2 "Yes"
+0009 comparefalse 9999
+0010 Run MobileToolKit_StaticMD.dll WriteMMIFlag %var1 409 1
+//409		1						used		EM_BZ_ON_OFF_KEYPAD_LIGHT
+}

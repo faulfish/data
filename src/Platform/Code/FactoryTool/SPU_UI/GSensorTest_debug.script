@@ -1,0 +1,15 @@
+{Header
+}
+{Description
+}
+{Code
+//GSensor test
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticMD.dll GSensorCalibration %var1 %var2
+0002 comparetrue 0006
+0003 print %var2
+0004 print "Error on GSensorCalibration API"
+0005 comparefalse 9999
+//0010 Run MobileToolKit_StaticMD.dll WriteMMIFlag %var1 427 1
+//EM_BZ_GSENSOR 427
+}

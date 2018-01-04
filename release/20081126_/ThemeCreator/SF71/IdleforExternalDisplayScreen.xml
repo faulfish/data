@@ -1,0 +1,28 @@
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Jennifer.CF.Liu (EMBRACE) -->
+<Application name="IdleforExternalDisplayScreen">
+	<!-- ExternalBodybackground -->
+	<Group id="1" parentID="1">
+		<ExternalBodybackground pos="3401" zOrder="1" src="EDI_CO_BD_SYS_BODY_BACK_KS"/>
+		<ExternalBodybackgroundIcon pos="3402" zOrder="2" src="EDI_CO_MM3_PICTURE_MODE_SELECTED"/>
+		<ExternalBodybackgroundIcon pos="3403" zOrder="2" src="EDI_CO_MM3_VIDEO_MODE_UNSELECTED"/>
+		<ExternalBodybackgroundIcon pos="3404" zOrder="2" src="EDI_CO_MM3_MEDIA_PLAYER_UNSELECTED"/>
+		<ExternalBodybackgroundText pos="3405" zOrder="2" src="IDS_ID_EX_PROVIDERINFO"/>
+		<ExternalBodybackgroundText pos="3406" zOrder="2" src="IDS_ID_EX_TIMEINFO"/>
+	</Group>
+	<!-- annunciator -->
+	
+	<Group id="2" parentID="1">
+		<AnnunciatorBack pos="3401" zOrder="1" src="EDI_CO_BD_ANNUNCIATOR_REGION_KS"/>
+		<BatteryIcon pos="3407" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+		<SignalIcon pos="3408" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+	</Group>
+	<!-- softkey -->
+	<!--
+	<Group id="3" parentID="1">
+		<SoftkeyBack pos="3409" zOrder="1" src="EDI_CO_BD_SYS_SOFTKEY_BACK_KS"/>
+		<SoftkeyIcon pos="3410" zOrder="2" src="EDI_CV_SK_CONFIRM_ACTION"/>
+		<SoftkeyIcon pos="3411" zOrder="2" src="EDI_CO_SK_ARROW_LEFT"/>
+		<SoftkeyIcon pos="3412" zOrder="2" src="EDI_CO_SK_ARROW_RIGHT"/>
+		<SoftkeyIcon pos="3413" zOrder="2" src="EDI_CO_SK_KEYGUARD"/>
+	</Group>-->
+</Application>

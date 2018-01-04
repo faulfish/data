@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QcnToCnvDll", "QcnToCnvDll\QcnToCnvDll.vcproj", "{4F415470-AD15-4122-BA5C-972E26391170}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D25F7132-0316-4D34-B6D6-7DB8AD76212E} = {D25F7132-0316-4D34-B6D6-7DB8AD76212E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QCN2CNVUI", "QCN2CNVUI\QCN2CNVUI.vcproj", "{294BC295-7B06-45EF-95A3-3221D6C4B7E2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4F415470-AD15-4122-BA5C-972E26391170} = {4F415470-AD15-4122-BA5C-972E26391170}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QisdaNVModule", "..\Modules\QisdaNVModule\QisdaNVModule.vcproj", "{D25F7132-0316-4D34-B6D6-7DB8AD76212E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F} = {11376385-FC09-4DA9-A9C6-6C03AE39805F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RequestManager", "..\RequestManager\RequestManager.vcproj", "{11376385-FC09-4DA9-A9C6-6C03AE39805F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284} = {3514292E-1544-4DE3-AFBA-3AE38D7D3284}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SerCOMLib", "..\odmtma_api\SerCOMLib\SerCOMLib.vcproj", "{3514292E-1544-4DE3-AFBA-3AE38D7D3284}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F415470-AD15-4122-BA5C-972E26391170}.Debug|Win32.ActiveCfg = Share_MultiByte_Debug|Win32
+		{4F415470-AD15-4122-BA5C-972E26391170}.Debug|Win32.Build.0 = Share_MultiByte_Debug|Win32
+		{4F415470-AD15-4122-BA5C-972E26391170}.Release|Win32.ActiveCfg = Share_MultiByte_Releaes|Win32
+		{4F415470-AD15-4122-BA5C-972E26391170}.Release|Win32.Build.0 = Share_MultiByte_Releaes|Win32
+		{294BC295-7B06-45EF-95A3-3221D6C4B7E2}.Debug|Win32.ActiveCfg = Share_Multibyte_Debug|Win32
+		{294BC295-7B06-45EF-95A3-3221D6C4B7E2}.Debug|Win32.Build.0 = Share_Multibyte_Debug|Win32
+		{294BC295-7B06-45EF-95A3-3221D6C4B7E2}.Release|Win32.ActiveCfg = Share_Multibyte_Release|Win32
+		{294BC295-7B06-45EF-95A3-3221D6C4B7E2}.Release|Win32.Build.0 = Share_Multibyte_Release|Win32
+		{D25F7132-0316-4D34-B6D6-7DB8AD76212E}.Debug|Win32.ActiveCfg = Share_MultiByte_Debug|Win32
+		{D25F7132-0316-4D34-B6D6-7DB8AD76212E}.Debug|Win32.Build.0 = Share_MultiByte_Debug|Win32
+		{D25F7132-0316-4D34-B6D6-7DB8AD76212E}.Release|Win32.ActiveCfg = Share_MultiByte_Release|Win32
+		{D25F7132-0316-4D34-B6D6-7DB8AD76212E}.Release|Win32.Build.0 = Share_MultiByte_Release|Win32
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F}.Debug|Win32.ActiveCfg = Share_MultiByte_Debug|Win32
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F}.Debug|Win32.Build.0 = Share_MultiByte_Debug|Win32
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F}.Release|Win32.ActiveCfg = Share_MultiByte_Release|Win32
+		{11376385-FC09-4DA9-A9C6-6C03AE39805F}.Release|Win32.Build.0 = Share_MultiByte_Release|Win32
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284}.Debug|Win32.ActiveCfg = Share_MultiByte_Debug|Win32
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284}.Debug|Win32.Build.0 = Share_MultiByte_Debug|Win32
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284}.Release|Win32.ActiveCfg = Share_MulitByte_Release|Win32
+		{3514292E-1544-4DE3-AFBA-3AE38D7D3284}.Release|Win32.Build.0 = Share_MulitByte_Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

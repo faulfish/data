@@ -1,0 +1,30 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+
+0000 print "Update IMEI status......" Title
+
+0001 waitinput %var6  pIMEI_STRUCT
+0002 run FactoryIMEIDll_StaticMD.dll UpdateIMEIStatus_SSS02 %var6 %var10 %var11 
+
+0003 comparefalse 5
+0004 comparetrue 9
+
+0005 print "Update IMEI status fail......" Title
+0006 print %var10 "Error code------->"
+0007 print %var11 "Error message------->"
+0008 print "M39" "Error"
+
+0009 print "Update IMEI status success......" Title
+0010 print 40 "Update_Progress"
+
+}

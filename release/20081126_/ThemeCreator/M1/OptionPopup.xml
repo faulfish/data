@@ -1,0 +1,63 @@
+<Application name="OptionPopup">
+	<!-- annunciator -->
+	<Group id="1" parentID="1">
+		<AnnunciatorBack pos="2" zOrder="1" src="IDI_CO_BD_ANNUNCIATOR_REGION"/>
+		<SignalIcon pos="3" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+		<BluetoothIcon pos="4" zOrder="2" src="IDI_CO_BD_BT_ACTIVE_VISIBLE"/>
+		<BatteryIcon pos="5" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+	</Group>
+	<!-- title -->
+	<Group id="2" parentID="2">
+		<TitleBack pos="10" zOrder="1" src="IDI_CO_BD_TITLE_REGION"/>
+		<TitleIcon pos="13" zOrder="2" src="IDI_CO_HL_ADDRESS_BOOK"/>
+		<TitleText pos="14" zOrder="2" src="IDS_CO_BD_TITLE_GENERALINFO"/>
+	</Group>
+	<!-- backgroundtab -->
+	<Group id="3" parentID="3">
+		<BodyBackgroundTab pos="15" zOrder="1" src="IDI_CO_BD_SYS_BODY_BACK_TABS"/>
+	</Group>
+	<!-- selected tab icons -->
+	<Group id="4" parentID="3">
+		<BodyBackgroundTabSelectedIconBack pos="18" zOrder="1" src="IDI_CO_BD_SYS_TAB_SELECTED"/>
+		<BodyBackgroundTabSelectedIcon pos="19" zOrder="2" src="IDI_AB_TAB_INFO1"/>
+	</Group>
+	<!-- unselected icons -->
+	<Group id="5" parentID="3">
+		<BodyBackgroundTabUnSelectedIconBack pos="20" zOrder="1" src="IDI_CO_BD_SYS_TAB_UNSELECTED"/>
+		<BodyBackgroundTabUnSelectedIcon pos="21" zOrder="2" src="IDI_AB_TAB_INFO2"/>
+	</Group>
+	<Group id="6" parentID="3">
+		<BodyBackgroundTabUnSelectedIconBack pos="22" zOrder="1" src="IDI_CO_BD_SYS_TAB_UNSELECTED"/>
+		<BodyBackgroundTabUnSelectedIcon pos="23" zOrder="2" src="IDI_AB_TAB_INFO3"/>
+	</Group>
+	<Group id="7" parentID="3">
+		<BodyBackgroundTabUnSelectedIconBack pos="24" zOrder="1" src="IDI_CO_BD_SYS_TAB_UNSELECTED"/>
+		<BodyBackgroundTabUnSelectedIcon pos="25" zOrder="2" src="IDI_AB_TAB_INFO4"/>
+	</Group>
+	<!-- optionspopup -->
+	<Group id="8" parentID="3">
+		<TransparentBack pos="1" zOrder="1" src="IDI_CO_BD_SYS_TRANSPARENT"/>
+		<OptionsPopupBack pos="15" zOrder="2" src="IDI_CO_BD_SYS_POPUP_BACK_OPTIONS"/>
+		<OptionsTitleText pos="2101" zOrder="3" src="IDS_OP_LI_OPTIONS"/>
+		<OptionsPopupText pos="2102" zOrder="3" src="IDS_OP_LI_ITEM1"/>
+		<OptionsPopupText pos="2103" zOrder="3" src="IDS_OP_LI_ITEM2"/>
+		<OptionsPopupText pos="2104" zOrder="3" src="IDS_OP_LI_ITEM3"/>
+		<OptionsPopupText pos="2105" zOrder="3" src="IDS_OP_LI_ITEM4"/>
+		<OptionsPopupText pos="2106" zOrder="3" src="IDS_OP_LI_ITEM5"/>
+		<OptionsPopupIcon pos="2107" zOrder="3" src="IDI_CO_L1_SYS_TOGGLE_ARROW_RIGHT"/>
+		<OptionsPopupIcon pos="2108" zOrder="3" src="IDI_CO_L1_SYS_TOGGLE_ARROW_RIGHT"/>
+	</Group>
+	<!-- scrollbar -->
+	<Group id="9" parentID="7">
+		<ScrollbarOptionBack pos="2109" zOrder="1" src="IDI_CO_BD_SYS_SCROLLBAR_BACK_OPTIONS"/>
+		<ScrollbarHandle pos="2110" zOrder="2" src="IDI_CO_BD_SYS_SCROLLBAR_HANDLE"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="10" parentID="7">
+		<SoftkeyBack pos="6" zOrder="1" src="IDI_CO_BD_SYS_SOFTKEY_BACK"/>
+		<SoftkeyIcon pos="8" zOrder="2" src="IDI_CO_CC_CHECK"/>
+		<SoftkeyText pos="7" zOrder="2" src="IDS_CO_BD_LSK_SELECT"/>
+		<SoftkeyText pos="9" zOrder="2" src="IDS_CO_BD_RSK_BACK"/>
+	</Group>
+</Application>
+

@@ -1,0 +1,9 @@
+<SOUND_LIST>
+	<SOUND name="Close Slider/Clam" src="clmshell_close_sound"/>
+	<SOUND name="Open Slider/Clam" src="clmshell_open_sound"/>
+	<SOUND name="Standard Message Ringtone" src="messaging_sound"/>
+	<SOUND name="Switch Off Melody" src="switch_Off_sound"/>
+	<SOUND name="Switch On Melody" src="switch_Onsound"/>
+	<SOUND name="Voice Call Ringtone" src="voicecall_sound"/>
+	<SOUND name="Video Call Ringtone" src="videocall_sound"/>
+</SOUND_LIST>

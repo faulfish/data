@@ -1,0 +1,20 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+
+{Code
+0000 Run FactoryIMEIDll_StaticMD.dll Create_IMEI_PICS %var3 %var6
+0001 comparefalse 4
+0002 compare %var6 -7
+0003 comparetrue 5
+0004 print "false"
+0005 print "-7"
+}

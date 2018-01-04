@@ -1,0 +1,1520 @@
+#define UMDF_VERSION_NUMBER_MAJOR 1
+#define UMDF_VERSION_NUMBER_MINOR 5
+#define UMDF_VERSION_NUMBER_SERVICE 0
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+// 
+//  Definitions of basic data types.  These match the SAL annotated
+//  C++ types for strings.
+//
+
+typedef WCHAR *PWSTR;
+typedef const WCHAR *PCWSTR;
+
+//
+// Definition of version data structure.
+//
+
+typedef struct UMDF_VERSION_DATA
+{
+    ULONG MajorNumber;
+    ULONG MinorNumber;
+    ULONG ServiceNumber;
+} UMDF_VERSION_DATA, *PUMDF_VERSION_DATA;
+
+cpp_quote("
+__declspec(dllexport) 
+__declspec(selectany) 
+UMDF_VERSION_DATA Microsoft_WDF_UMDF_Version = {UMDF_VERSION_NUMBER_MAJOR, 
+                                                UMDF_VERSION_NUMBER_MINOR, 
+                                                UMDF_VERSION_NUMBER_SERVICE};
+")
+
+//
+// Definitions of WUDF constants, enums, and data types
+//
+ 
+cpp_quote("#ifdef MIDL_PASS")
+typedef enum _SECURITY_IMPERSONATION_LEVEL
+{
+    SecurityAnonymous, 
+    SecurityIdentification, 
+    SecurityImpersonation, 
+    SecurityDelegation
+} SECURITY_IMPERSONATION_LEVEL;
+cpp_quote("#endif")
+
+cpp_quote("#ifndef STATUS_WDF_PAUSED")
+cpp_quote("#define STATUS_WDF_PAUSED       ((NTSTATUS)0xC0200203L)")
+cpp_quote("#endif")
+cpp_quote("#ifndef STATUS_WDF_BUSY")
+cpp_quote("#define STATUS_WDF_BUSY         ((NTSTATUS)0xC0200204L)")
+cpp_quote("#endif")
+
+
+typedef enum _WDF_CALLBACK_CONSTRAINT
+{
+    None                = 0,
+    WdfDeviceLevel      = 1,
+    WdfLevelReserved    = 2,
+    WdfLevelMaximum
+}WDF_CALLBACK_CONSTRAINT;
+
+typedef enum _WDF_IO_QUEUE_DISPATCH_TYPE 
+{
+  WdfIoQueueDispatchSequential = 1,   
+  WdfIoQueueDispatchParallel   = 2,
+  WdfIoQueueDispatchManual     = 3,
+  WdfIoQueueDispatchMaximum
+} WDF_IO_QUEUE_DISPATCH_TYPE;
+
+typedef enum _WDF_IO_QUEUE_STATE 
+{
+    WdfIoQueueAcceptRequests    = 0x01,
+    WdfIoQueueDispatchRequests  = 0x02,
+    WdfIoQueueNoRequests        = 0x04,
+    WdfIoQueueDriverNoRequests  = 0x08,
+    WdfIoQueuePnpHeld           = 0x10
+} WDF_IO_QUEUE_STATE, *PWDF_IO_QUEUE_STATE;
+
+typedef enum _WDF_REQUEST_TYPE
+{
+    WdfRequestUndefined        = 0,
+    WdfRequestCreate           = 1,
+    WdfRequestCleanup          = 2,
+    WdfRequestRead             = 3,
+    WdfRequestWrite            = 4,
+    WdfRequestDeviceIoControl  = 5,
+    WdfRequestClose            = 6,
+    WdfRequestUsb              = 7,
+    WdfRequestOther            = 8,
+    WdfRequestInternalIoctl    = 9,
+    WdfRequestTypeNoFormat     = 10,
+    WdfRequestMaximum          
+    
+} WDF_REQUEST_TYPE, *PWDF_REQUEST_TYPE;
+
+typedef enum _WDF_REQUEST_STOP_ACTION_FLAGS {
+    WdfRequestStopActionInvalid          = 0x00000000,
+    WdfRequestStopActionSuspend          = 0x00000001,
+    WdfRequestStopActionPurge            = 0x00000002,
+    WdfRequestStopRequestCancelable      = 0x10000000
+} WDF_REQUEST_STOP_ACTION_FLAGS;
+
+typedef enum _WDF_REQUEST_SEND_OPTIONS_FLAGS {
+    WDF_REQUEST_SEND_OPTION_TIMEOUT             = 0x01,
+    WDF_REQUEST_SEND_OPTION_SYNCHRONOUS         = 0x02,
+    WDF_REQUEST_SEND_OPTION_IGNORE_TARGET_STATE = 0x04,
+    WDF_REQUEST_SEND_OPTION_SEND_AND_FORGET     = 0x08
+} WDF_REQUEST_SEND_OPTIONS_FLAGS;
+
+typedef enum _WDF_IO_TARGET_STATE 
+{
+    WdfIoTargetStateUndefined       = 0,
+    WdfIoTargetStarted              = 1,
+    WdfIoTargetStopped              = 2,
+    WdfIoTargetClosedForQueryRemove = 3,
+    WdfIoTargetClosed               = 4,
+    WdfIoTargetDeleted              = 5,
+    WdfIoTargetStateMaximum
+} WDF_IO_TARGET_STATE, *PWDF_IO_TARGET_STATE;
+
+typedef enum _WDF_IO_TARGET_SENT_IO_ACTION 
+{
+    WdfIoTargetSentIoUndefined          = 0,
+    WdfIoTargetCancelSentIo             = 1,
+    WdfIoTargetWaitForSentIoToComplete  = 2,
+    WdfIoTargetLeaveSentIoPending       = 3,
+    WdfIoTargetSentIoMaximum
+} WDF_IO_TARGET_SENT_IO_ACTION;
+
+typedef struct _WDFMEMORY_OFFSET 
+{
+    ULONG_PTR  BufferOffset;
+    ULONG_PTR  BufferLength;
+} WDFMEMORY_OFFSET, *PWDFMEMORY_OFFSET;
+
+typedef enum _WDF_TRI_STATE {
+    WdfUseDefault   = 0,
+    WdfFalse        = 1,
+    WdfTrue         = 2,
+} WDF_TRI_STATE, *PWDF_TRI_STATE;
+
+typedef enum _WDF_PNP_STATE
+{
+    WdfPnpStateInvalid          = 0,
+    WdfPnpStateDisabled         = 1,
+    WdfPnpStateFailed           = 2,
+    WdfPnpStateRemoved          = 3,
+    WdfPnpStateResourcesChanged = 4,
+    WdfPnpStateDontDisplayInUI  = 5,
+    WdfPnpStateNotDisableable   = 6,
+    WdfPnpStateMaximum
+} WDF_PNP_STATE;
+
+typedef enum _WDF_PNP_CAPABILITY
+{
+    WdfPnpCapInvalid            = 0,
+    WdfPnpCapLockSupported      = 1,
+    WdfPnpCapEjectSupported     = 2,
+    WdfPnpCapRemovable          = 3,
+    WdfPnpCapDockDevice         = 4,
+    WdfPnpCapSurpriseRemovalOk  = 5,
+    WdfPnpCapNoDisplayInUI      = 6,
+    WdfPnpCapMaximum
+} WDF_PNP_CAPABILITY;
+
+typedef enum _WDF_POWER_DEVICE_STATE {
+    WdfPowerDeviceInvalid               = 0,
+    WdfPowerDeviceD0                    = 1,
+    WdfPowerDeviceD1                    = 2,
+    WdfPowerDeviceD2                    = 3,
+    WdfPowerDeviceD3                    = 4,
+    WdfPowerDeviceD3Final               = 5,
+    WdfPowerDevicePrepareForHibernation = 6,
+    WdfPowerDeviceMaximum
+} WDF_POWER_DEVICE_STATE, *PWDF_POWER_DEVICE_STATE;
+
+typedef enum _WDF_EVENT_TYPE 
+{
+    WdfEventReserved   = 0,
+    WdfEventBroadcast  = 1,
+    WdfEventMaximum
+} WDF_EVENT_TYPE;
+
+
+typedef enum _WDF_PROPERTY_STORE_RETRIEVE_FLAGS 
+{
+    WdfPropertyStoreNormal          = 0x00,
+    WdfPropertyStoreCreateIfMissing = 0x01
+} WDF_PROPERTY_STORE_RETRIEVE_FLAGS;
+
+typedef enum _WDF_PROPERTY_STORE_DISPOSITION
+{
+    CreatedNewStore     = 0x01,
+    OpenedExistingStore = 0x02
+} WDF_PROPERTY_STORE_DISPOSITION;
+
+//
+// Forward declarations of DDI interfaces implemented by WUDF.
+//
+
+interface IWDFObject;
+
+interface IWDFDriver;
+
+interface IWDFDeviceInitialize;
+interface IWDFDevice;
+
+interface IWDFNamedPropertyStore;
+
+interface IWDFIoQueue;
+
+interface IWDFIoRequest;
+interface IWDFRequestCompletionParams;
+interface IWDFIoRequestCompletionParams;
+
+
+interface IWDFFile;
+interface IWDFDriverCreatedFile;
+
+interface IWDFIoTarget;
+interface IWDFIoTargetStateManagement;
+
+interface IWDFFileHandleTargetFactory;
+
+interface IWDFMemory;
+
+//
+// Forward declarations of callback interfaces implemented by the driver.
+//
+
+interface IObjectCleanup;
+
+interface IDriverEntry;
+
+interface IPnpCallback;
+interface IPnpCallbackSelfManagedIo;
+interface IPnpCallbackHardware;
+
+interface IQueueCallbackCreate;
+interface IQueueCallbackRead;
+interface IQueueCallbackWrite;
+interface IQueueCallbackDeviceIoControl;     
+interface IQueueCallbackDefaultIoHandler;
+interface IQueueCallbackStateChange;
+interface IQueueCallbackIoStop;
+interface IQueueCallbackIoResume;
+
+interface IRequestCallbackCancel;
+interface IRequestCallbackRequestCompletion;
+
+interface IFileCallbackCleanup;
+interface IFileCallbackClose;
+
+interface IImpersonateCallback;
+
+//
+// Definitions of WUDF interfaces.
+//
+
+// 
+// IWDFObject interface
+//
+
+[
+    object,
+    uuid(64275C66-2E71-4060-B5F4-3A76DF96ED3C),
+    helpstring("IWDFObject Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFObject : IUnknown
+{
+
+    HRESULT 
+    DeleteWdfObject(
+        void
+        );
+
+    HRESULT 
+    AssignContext(
+        [in, unique, annotation("__in_opt")] IObjectCleanup * pCleanupCallback,
+        [in, unique, annotation("__in_opt")] void *           pContext
+        );
+
+    HRESULT 
+    RetrieveContext(
+        [out, annotation("__out")] void ** ppvContext
+        );
+
+    void 
+    AcquireLock(
+        void
+        );
+
+    void 
+    ReleaseLock(
+        void
+        );
+};
+
+//
+// IWDFDriver Interface
+//
+
+[
+    object,
+    uuid(AD368EBE-4139-43e3-A875-69B266A9139C),
+    helpstring("IWDFDriver Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFDriver : IWDFObject
+{   
+    HRESULT 
+    CreateDevice(
+        [in, annotation("__in")]   IWDFDeviceInitialize * pDeviceInit,
+        [in, annotation("__in")]   IUnknown *             pCallbackInterface,
+        [out, annotation("__out")] IWDFDevice **          ppDevice
+        );
+    HRESULT 
+    CreateWdfObject(
+        [in, unique, annotation("__in_opt")]  IUnknown *    pCallbackInterface,
+        [in, unique, annotation("__in_opt")]  IWDFObject *  pParentObject,
+        [out, annotation("__out")]            IWDFObject ** ppWdfObject
+        );
+
+    HRESULT 
+    CreatePreallocatedWdfMemory(
+        [in, size_is(BufferSize), 
+         annotation("__in_bcount(BufferSize)")] BYTE *         pBuff,
+        [in, annotation("__in")]                SIZE_T         BufferSize,
+        [in, unique, annotation("__in_opt")]    IUnknown *     pCallbackInterface,
+        [in, unique, annotation("__in_opt")]    IWDFObject *   pParentObject,
+        [out, annotation("__out")]              IWDFMemory **  ppWdfMemory
+        );
+
+    HRESULT 
+    CreateWdfMemory(
+        [in, annotation("__in")]              SIZE_T         BufferSize,
+        [in, unique, annotation("__in_opt")]  IUnknown *     pCallbackInterface,
+        [in, unique, annotation("__in_opt")]  IWDFObject *   pParentObject,
+        [out, annotation("__out")]            IWDFMemory **  ppWdfMemory
+        );
+
+    BOOL
+    IsVersionAvailable(
+        [in, annotation("__in")] UMDF_VERSION_DATA * pMinimumVersion
+        );
+
+    HRESULT
+    RetrieveVersionString(
+        [string, out, unique, 
+         annotation("__out_ecount_part_opt(*pdwVersionLength, *pdwVersionLength)")] 
+                                            PWSTR   pVersion,
+        [in, out, annotation("__inout")]    DWORD * pdwVersionLength
+        );
+};
+
+//
+// IWDFDeviceInitialize interface.
+//
+
+[
+    object,
+    uuid(74CC381C-0871-43c1-878B-3F7C9D16933D),
+    helpstring("IWDDeviceInitialize Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFDeviceInitialize :IUnknown
+{
+    void 
+    SetFilter(
+        void
+        );
+
+    void 
+    SetLockingConstraint(
+        [in, annotation("__in")] WDF_CALLBACK_CONSTRAINT LockType
+        );
+
+    HRESULT 
+    RetrieveDevicePropertyStore(
+        [in, unique, annotation("__in_opt")]   PCWSTR                            pcwszServiceName,
+        [in, annotation("__in")]               WDF_PROPERTY_STORE_RETRIEVE_FLAGS Flags,
+        [out, annotation("__out")]             IWDFNamedPropertyStore **         ppPropStore,
+        [out, unique, annotation("__out_opt")] WDF_PROPERTY_STORE_DISPOSITION *  pDisposition
+        );
+
+    void 
+    SetPowerPolicyOwnership(
+        [in, annotation("__in")] BOOL fTrue
+        );
+
+    void 
+    AutoForwardCreateCleanupClose(
+        [in, annotation("__in")] WDF_TRI_STATE State
+        );
+
+    HRESULT 
+    RetrieveDeviceInstanceId(
+        [string, out, unique, annotation("__out_opt")] PWSTR   Buffer,
+        [in, out, annotation("__inout")]               DWORD * pdwSizeInChars
+        );
+
+    void 
+    SetPnpCapability(
+        [in, annotation("__in")] WDF_PNP_CAPABILITY Capability,
+        [in, annotation("__in")] WDF_TRI_STATE      Value
+        );
+
+    WDF_TRI_STATE 
+    GetPnpCapability(
+        [in, annotation("__in")] WDF_PNP_CAPABILITY Capability
+        );
+};
+
+//
+// IWDFDevice Interface
+//
+
+[
+    object,
+    uuid(D657FE45-460A-49c3-8219-766AE8032A80),
+    helpstring("IWDFDevice Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFDevice : IWDFObject
+{
+    HRESULT 
+    RetrieveDevicePropertyStore(
+        [in, unique, annotation("__in_opt")]   PCWSTR                            pcwszServiceName,
+        [in, annotation("__in")]               WDF_PROPERTY_STORE_RETRIEVE_FLAGS Flags,
+        [out, annotation("__out")]             IWDFNamedPropertyStore **         ppPropStore,
+        [out, unique, annotation("__out_opt")] WDF_PROPERTY_STORE_DISPOSITION *  pDisposition
+        );
+
+    void 
+    GetDriver(
+        [out, annotation("__out")] IWDFDriver ** ppWdfDriver    
+        );
+
+    HRESULT 
+    RetrieveDeviceInstanceId(
+        [string, out, unique, annotation("__out_opt")] PWSTR   Buffer ,
+        [in, out, annotation("__inout")]               DWORD * pdwSizeInChars
+        );
+
+    void 
+    GetDefaultIoTarget(
+        [out, annotation("__out")] IWDFIoTarget ** ppWdfIoTarget
+        );
+
+    HRESULT 
+    CreateWdfFile(
+        [in, unique, string, annotation("__in_opt")]    LPCWSTR                  pcwszFileName,
+        [out, annotation("__out")]                      IWDFDriverCreatedFile ** ppFile
+        );
+    
+    void 
+    GetDefaultIoQueue(
+        [out, annotation("__out")] IWDFIoQueue ** ppWdfIoQueue        
+        );
+    
+    HRESULT 
+    CreateIoQueue(
+        [in, annotation("__in")]    IUnknown *                   pCallbackInterface,
+        [in, annotation("__in")]    BOOL                         bDefaultQueue,
+        [in, annotation("__in")]    WDF_IO_QUEUE_DISPATCH_TYPE   DispatchType,
+        [in, annotation("__in")]    BOOL                         bPowerManaged,
+        [in, annotation("__in")]    BOOL                         bAllowZeroLengthRequests,
+        [out, annotation("__out")]  IWDFIoQueue **               ppIoQueue
+        );
+
+    HRESULT 
+    CreateDeviceInterface(
+        [in, annotation("__in")]                     LPCGUID pDeviceInterfaceGuid,
+        [in, string, unique, annotation("__in_opt")] PCWSTR  pReferenceString
+        );
+
+    HRESULT 
+    AssignDeviceInterfaceState(
+        [in, annotation("__in")]                     LPCGUID pDeviceInterfaceGuid,
+        [in, string, unique, annotation("__in_opt")] PCWSTR  pReferenceString,
+        [in, annotation("__in")]                     BOOL    Enable
+        );
+
+    HRESULT 
+    RetrieveDeviceName(
+        [string, out, unique, annotation("__out_ecount_part_opt(*pdwDeviceNameLength, *pdwDeviceNameLength)")] PWSTR   pDeviceName,
+        [in, out, annotation("__inout")]               DWORD * pdwDeviceNameLength
+         );    
+
+    HRESULT 
+    PostEvent(
+        [in, annotation("__in")]                REFGUID        EventGuid,
+        [in, annotation("__in")]                WDF_EVENT_TYPE EventType,
+        [in, size_is(cbDataSize),
+         annotation("__in_bcount(cbDataSize)")] BYTE *         pbData,
+        [in, annotation("__in")]                DWORD          cbDataSize
+        );                            
+
+    HRESULT 
+    ConfigureRequestDispatching(
+        [in, annotation("__in")] IWDFIoQueue *    pQueue,
+        [in, annotation("__in")] WDF_REQUEST_TYPE RequestType,
+        [in, annotation("__in")] BOOL             Forward
+        );
+    
+    void 
+    SetPnpState(
+        [in, annotation("__in")] WDF_PNP_STATE State,
+        [in, annotation("__in")] WDF_TRI_STATE Value
+        );
+
+    WDF_TRI_STATE 
+    GetPnpState(
+        [in, annotation("__in")] WDF_PNP_STATE State
+        );
+
+    void 
+    CommitPnpState(
+        void
+        );
+
+    HRESULT 
+    CreateRequest(
+        [in, unique, annotation("__in_opt")]    IUnknown *      pCallbackInterface,
+        [in, unique, annotation("__in_opt")]    IWDFObject *    pParentObject,
+        [out, annotation("__out")]              IWDFIoRequest** ppRequest
+        );
+
+    HRESULT
+    CreateSymbolicLink(
+       [in, string, unique, annotation("__in")] PCWSTR  pSymbolicLink
+       );
+
+    
+};
+
+// 
+// IWDFNamedPropertyStore Interface
+//
+
+cpp_quote("#ifdef MIDL_PASS")
+typedef void* PROPVARIANT;
+cpp_quote("#else")
+cpp_quote("typedef struct tagPROPVARIANT PROPVARIANT;")
+cpp_quote("#endif")
+
+[
+    uuid(394b48c9-bca0-498f-8e2c-01225464a932),
+    object,
+    local,
+    pointer_default(unique)
+]
+interface IWDFNamedPropertyStore : IUnknown
+{
+    HRESULT 
+    GetNamedValue(
+        [in, string, annotation("__in")] LPCWSTR       pszName,
+        [out, annotation("__out")]       PROPVARIANT * pv
+        );
+    
+    HRESULT 
+    SetNamedValue(
+        [in, string, annotation("__in")] LPCWSTR             pszName,
+        [in, annotation("__in")]         const PROPVARIANT * pv
+        );
+    
+    HRESULT 
+    GetNameCount(
+        [out, annotation("__out")] DWORD * pdwCount
+        );
+    
+    HRESULT 
+    GetNameAt(
+        [in, annotation("__in")]           DWORD   iProp,
+        [out, string, annotation("__out")] PWSTR * ppwszName
+        );
+};
+
+//
+// IWDFIoQueue Interface
+//
+
+[
+    object,
+    uuid(AE1162B9-8B11-4714-993D-93DC48CC9E8A),
+    helpstring("IWDFIoQueue Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFIoQueue : IWDFObject
+{
+    void 
+    GetDevice(
+        [out, annotation("__out")] IWDFDevice ** ppWdfDevice    
+        );
+
+    HRESULT 
+    ConfigureRequestDispatching(
+        [in, annotation("__in")] WDF_REQUEST_TYPE RequestType,
+        [in, annotation("__in")] BOOL             Forward
+        );  
+
+    WDF_IO_QUEUE_STATE 
+    GetState(
+        [out, annotation("__out")] ULONG * pulNumOfRequestsInQueue,
+        [out, annotation("__out")] ULONG * pulNumOfRequestsInDriver
+        );
+
+    HRESULT 
+    RetrieveNextRequest(
+        [out, annotation("__out")] IWDFIoRequest ** ppRequest
+        );
+
+    HRESULT 
+    RetrieveNextRequestByFileObject(
+        [in, annotation("__in")]   IWDFFile *       pFile,
+        [out, annotation("__out")] IWDFIoRequest ** ppRequest
+        );
+
+    void 
+    Start(
+        void
+        );
+
+    void 
+    Stop(
+        [in, unique, annotation("__in_opt")] IQueueCallbackStateChange * pStopComplete
+        );    
+
+    void 
+    StopSynchronously(
+        void
+        );
+
+    void 
+    Drain(
+        [in, unique, annotation("__in_opt")] IQueueCallbackStateChange * pDrainComplete
+        );    
+
+    void 
+    DrainSynchronously(
+        void
+        );
+
+    void 
+    Purge(
+        [in, unique, annotation("__in_opt")] IQueueCallbackStateChange * pPurgeComplete
+        );    
+
+    void 
+    PurgeSynchronously(
+        void
+        );
+};
+
+
+//
+// IWDFIoRequest Interface
+//
+
+[
+    object,
+    uuid(896DF312-22B4-4a9d-95DD-A364AAF59769),
+    helpstring("IWDFIoRequest Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFIoRequest : IWDFObject
+{
+    void 
+    CompleteWithInformation(
+        [in, annotation("__in")] HRESULT CompletionStatus, 
+        [in, annotation("__in")] SIZE_T  Information  
+        );
+    
+    void 
+    SetInformation(
+        [in, annotation("__in")] ULONG_PTR Information
+        );
+
+    void 
+    Complete(
+        [in, annotation("__in")] HRESULT CompletionStatus
+        );
+
+    void 
+    SetCompletionCallback(
+        [in, annotation("__in")]             IRequestCallbackRequestCompletion * pCompletionCallback,
+        [in, unique, annotation("__in_opt")] void *                              pContext
+        );
+
+    WDF_REQUEST_TYPE 
+    GetType( 
+        void
+        );                
+
+    void 
+    GetCreateParameters(
+        [out, unique, annotation("__out_opt")] ULONG *  pOptions,
+        [out, unique, annotation("__out_opt")] USHORT * pFileAttributes,
+        [out, unique, annotation("__out_opt")] USHORT * pShareAccess    
+        );
+
+    void 
+    GetReadParameters(
+        [out, unique, annotation("__out_opt")] SIZE_T *    pSizeInBytes,
+        [out, unique, annotation("__out_opt")] LONGLONG *  pullOffset,
+        [out, unique, annotation("__out_opt")] ULONG *     pulKey
+        );
+
+    void 
+    GetWriteParameters(
+        [out, unique, annotation("__out_opt")] SIZE_T *    pSizeInBytes,
+        [out, unique, annotation("__out_opt")] LONGLONG *  pullOffset,
+        [out, unique, annotation("__out_opt")] ULONG *     pulKey
+        );
+
+    void 
+    GetDeviceIoControlParameters(
+        [out, unique, annotation("__out_opt")] ULONG *  pControlCode,
+        [out, unique, annotation("__out_opt")] SIZE_T * pInBufferSize,
+        [out, unique, annotation("__out_opt")] SIZE_T * pOutBufferSize
+        );          
+
+    void 
+    GetOutputMemory(
+        [out, annotation("__out")] IWDFMemory ** ppWdfMemory                
+        );
+
+    void GetInputMemory(
+        [out, annotation("__out")] IWDFMemory ** ppWdfMemory                
+        );
+
+    void MarkCancelable(
+        [in, annotation("__in")] IRequestCallbackCancel * pCancelCallback
+        );
+
+    HRESULT UnmarkCancelable(
+        void
+        );
+
+    BOOL CancelSentRequest(
+        void
+        );
+
+    HRESULT ForwardToIoQueue(
+        [in, annotation("__in")] IWDFIoQueue * pDestination
+        );  
+
+    HRESULT Send(
+        [in, annotation("__in")] IWDFIoTarget * pIoTarget,
+        [in, annotation("__in")] ULONG          Flags,
+        [in, annotation("__in")] LONGLONG       Timeout            
+        );
+
+    void GetFileObject(
+        [out, annotation("__out")] IWDFFile ** ppFileObject
+        );
+
+    void FormatUsingCurrentType(
+        void
+        );
+
+    ULONG GetRequestorProcessId(
+        void
+        );
+
+    void GetIoQueue(
+        [out, annotation("__out")] IWDFIoQueue ** ppWdfIoQueue                
+        );
+
+    HRESULT Impersonate(
+        [in, annotation("__in")]             SECURITY_IMPERSONATION_LEVEL ImpersonationLevel,
+        [in, annotation("__in")]             IImpersonateCallback *       pCallback,
+        [in, unique, annotation("__in_opt")] void *                       pvCallbackContext
+        );
+
+    BOOL
+    IsFrom32BitProcess(
+        void
+        );
+
+    void
+    GetCompletionParams(
+        [out, annotation("__out")] IWDFRequestCompletionParams ** ppCompletionParams
+        );
+};
+
+//
+// IWDFRequestCompletionParams Interface
+//
+
+[
+    object,
+    uuid(707a2b42-69b8-4971-a49c-4031861e7aff),
+    helpstring("IWDFRequestCompletionParams Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFRequestCompletionParams : IUnknown
+{
+    HRESULT
+    GetCompletionStatus(
+        void
+        );
+
+    ULONG_PTR
+    GetInformation(
+        void
+        );
+    
+    WDF_REQUEST_TYPE
+    GetCompletedRequestType(
+        );
+}
+
+[
+    object,
+    uuid(723d4f3c-7722-4c49-99ae-195937bd9582),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFIoRequestCompletionParams : IWDFRequestCompletionParams
+{    
+    void
+    GetWriteParameters(
+        [out, unique, annotation("__out_opt")] IWDFMemory**         ppWriteMemory,
+        [out, unique, annotation("__out_opt")] SIZE_T*              pBytesWritten,
+        [out, unique, annotation("__out_opt")] SIZE_T*              pWriteMemoryOffset
+        );
+
+    void
+    GetReadParameters(
+        [out, unique, annotation("__out_opt")] IWDFMemory **         ppReadMemory,
+        [out, unique, annotation("__out_opt")] SIZE_T*               pBytesRead,
+        [out, unique, annotation("__out_opt")] SIZE_T*               pReadMemoryOffset
+        );
+
+    void
+    GetIoctlParameters(
+        [out, unique, annotation("__out_opt")] ULONG*                pIoControlCode,
+        [out, unique, annotation("__out_opt")] IWDFMemory **         ppInputMemory,
+        [out, unique, annotation("__out_opt")] SIZE_T *              pInputMemoryOffset,
+        [out, unique, annotation("__out_opt")] IWDFMemory **         ppOutputMemory,
+        [out, unique, annotation("__out_opt")] SIZE_T *              pOutputMemoryOffset,
+        [out, unique, annotation("__out_opt")] SIZE_T*               pOutBytes
+        );    
+};
+
+//
+// IWDFFile Interface.
+//
+
+[
+    object,
+    uuid(CC8FE04B-FE8B-4245-AFD6-C31BC830C791),
+    helpstring("IWDFFile Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFFile : IWDFObject
+{
+    HRESULT 
+    RetrieveFileName(
+        [string, out, unique, annotation("__out_opt")] PWSTR   pFileName,
+        [in, out, annotation("__inout")]               DWORD * pdwFileNameLengthInChars
+        );
+
+    void 
+    GetDevice( 
+        [out, annotation("__out")] IWDFDevice ** ppWdfDevice                
+        );
+};
+
+//
+// IWDFDriverCreatedFile Interface.
+//
+
+[
+    object,
+    uuid(b7615d26-494b-47a6-b4cf-0271bcc3da4b),
+    helpstring("IWDFDriverCreatedFile Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFDriverCreatedFile : IWDFFile
+{
+    void
+    Close(
+        void
+        );
+};
+
+//
+// IWDFIoTarget Interface.
+//
+
+[
+    object,
+    uuid(CC060D79-C0C2-407f-8B10-A5E900FC3474),
+    helpstring("IWDFIoTarget Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFIoTarget : IWDFObject
+{
+    void
+    GetTargetFile(
+        [out, annotation("__out")] IWDFFile** ppWdfFile              
+        );        
+
+    void
+    CancelSentRequestsForFile(
+        [in, annotation("__in")] IWDFFile * pFile
+        );
+
+    HRESULT
+    FormatRequestForRead(
+        [in, annotation("__in")] IWDFIoRequest * pRequest,
+        [in, unique, annotation("__in_opt")] IWDFFile * pFile,
+        [in, unique, annotation("__in_opt")] IWDFMemory * pOutputMemory,
+        [in, unique, annotation("__in_opt")] PWDFMEMORY_OFFSET pOutputMemoryOffset,
+        [in, unique, annotation("__in_opt")] PLONGLONG DeviceOffset        
+        );
+
+    HRESULT
+    FormatRequestForWrite(
+        [in, annotation("__in")] IWDFIoRequest * pRequest,
+        [in, unique, annotation("__in_opt")] IWDFFile * pFile,
+        [in, unique, annotation("__in_opt")] IWDFMemory * pInputMemory,
+        [in, unique, annotation("__in_opt")] PWDFMEMORY_OFFSET pInputMemoryOffset,
+        [in, unique, annotation("__in_opt")] PLONGLONG DeviceOffset        
+        );
+
+    HRESULT
+    FormatRequestForIoctl(
+        [in, annotation("__in")] IWDFIoRequest * pRequest,
+        [in, annotation("__in")] ULONG IoctlCode,
+        [in, unique, annotation("__in_opt")] IWDFFile * pFile,
+        [in, unique, annotation("__in_opt")] IWDFMemory * pInputMemory,
+        [in, unique, annotation("__in_opt")] PWDFMEMORY_OFFSET pInputMemoryOffset,
+        [in, unique, annotation("__in_opt")] IWDFMemory * pOutputMemory,
+        [in, unique, annotation("__in_opt")] PWDFMEMORY_OFFSET pOutputMemoryOffset
+        );   
+};
+
+//
+// IWDFIoTargetStateManagement Interface.
+//
+
+[
+    object,
+    uuid(88b077aa-eff6-4eba-9e4d-064c70822b98),
+    helpstring("IWDFIoTarget PnP State Management Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFIoTargetStateManagement : IUnknown
+{
+    WDF_IO_TARGET_STATE 
+    GetState(
+        void
+        );
+
+    HRESULT
+    Start(
+        void
+        );
+
+    HRESULT
+    Stop(
+        [in, annotation("__in")] WDF_IO_TARGET_SENT_IO_ACTION Action
+        );
+
+    HRESULT
+    Remove(
+        [in, annotation("__in")] BOOL bIsSurpriseRemove
+        );    
+};
+
+//
+// IWDFFileHandleTargetFactory interface for creating FileHandle based I/O Targets
+//
+
+[
+    uuid(1427b7e8-e365-400b-9b92-5ace55168e25),
+    object,
+    local,
+    pointer_default(unique)
+]
+interface IWDFFileHandleTargetFactory : IUnknown
+{
+    HRESULT 
+    CreateFileHandleTarget(
+        [in, annotation("__in")]    HANDLE          hTarget,
+        [out, annotation("__out")]  IWDFIoTarget ** ppTarget
+        );
+};
+
+
+// 
+// IWDFMemory interface
+//
+
+[
+    object,
+    uuid(AB098F88-8F16-472a-B0BC-ECA46486C102),
+    helpstring("IWDFMemory Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IWDFMemory : IWDFObject
+{
+    HRESULT 
+    CopyFromMemory(
+        [in, annotation("__in")] IWDFMemory *      Source,
+        [in, unique, annotation("__in_opt")] PWDFMEMORY_OFFSET SourceOffset
+        );        
+
+    HRESULT 
+    CopyToBuffer(
+        [in, annotation("__in")]                        ULONG_PTR SourceOffset,
+        [in, size_is(NumOfBytesToCopyTo), 
+         annotation("__in_bcount(NumOfBytesToCopyTo)")] void *    TargetBuffer,
+        [in, annotation("__in")]                        SIZE_T    NumOfBytesToCopyTo
+        );
+
+    HRESULT 
+    CopyFromBuffer(        
+        [in, annotation("__in")]                           ULONG_PTR DestOffset,
+        [in, size_is(NumOfBytesToCopyFrom), 
+         annotation("__in_bcount(NumOfBytesToCopyFrom)") ] void *    SourceBuffer,
+        [in, annotation("__in")]                           SIZE_T    NumOfBytesToCopyFrom
+        );
+
+    SIZE_T 
+    GetSize( 
+        void
+        );
+
+    void*  
+    GetDataBuffer(
+        [out, unique, annotation("__out_opt")] SIZE_T * BufferSize
+        );
+
+
+    void
+    SetBuffer(
+        [in, size_is(BufferSize), 
+         annotation("__in_bcount(BufferSize)")] void *   Buffer,
+        [in, annotation("__in")]                SIZE_T   BufferSize
+        );
+};
+
+//
+// Driver Callback Interfaces.
+//
+
+//
+// IObjectCleanup Interface.
+//
+
+[
+    object,
+    uuid(244ABE3A-ABBC-43b1-A877-F00077550E6A),
+    helpstring("IObjectCleanup Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IObjectCleanup : IUnknown
+{
+    void 
+    OnCleanup(
+        [in, annotation("__in")] IWDFObject * pWdfObject
+        );
+};
+
+//
+// IDriverEntry Interface.
+//
+
+[
+    object,
+    uuid(1bec7499-8881-4f2b-b01c-a1a907304afc),
+    helpstring("IDriverEntry Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IDriverEntry : IUnknown
+{
+    HRESULT 
+    OnInitialize(
+        [in, annotation("__in")] IWDFDriver * pWdfDriver
+        );
+
+    HRESULT 
+    OnDeviceAdd(
+        [in, annotation("__in")] IWDFDriver *           pWdfDriver,
+        [in, annotation("__in")] IWDFDeviceInitialize * pWdfDeviceInit
+        );
+
+    void 
+    OnDeinitialize(
+        [in, annotation("__in")] IWDFDriver * pWdfDriver
+        );
+};
+
+//
+// IPnpCallback Interface.
+//
+[
+    object,
+    uuid(27C32374-CC45-4840-857E-8E5EF7C0EBFF),
+    helpstring("IPnpCallback Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IPnpCallback : IUnknown
+{
+    HRESULT 
+    OnD0Entry(
+        [in, annotation("__in")] IWDFDevice *           pWdfDevice,
+        [in, annotation("__in")] WDF_POWER_DEVICE_STATE previousState
+        );
+
+    HRESULT 
+    OnD0Exit(
+        [in, annotation("__in")] IWDFDevice *           pWdfDevice,
+        [in, annotation("__in")] WDF_POWER_DEVICE_STATE newState
+        );
+
+    void 
+    OnSurpriseRemoval(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+
+    HRESULT 
+    OnQueryRemove(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+
+    HRESULT 
+    OnQueryStop(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+};
+
+//
+// IPnpCallbackSelfManagedIo Interface.
+//
+
+[
+    object,
+    uuid(D1C9CA4C-46AA-46f8-BD8C-6CA9DEB13340),
+    helpstring("IPnpCallbackSelfManagedIo Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IPnpCallbackSelfManagedIo : IUnknown
+{
+    void  
+    OnSelfManagedIoCleanup(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+
+    void  
+    OnSelfManagedIoFlush(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+
+    HRESULT 
+    OnSelfManagedIoInit(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+
+    HRESULT 
+    OnSelfManagedIoSuspend(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+
+    HRESULT 
+    OnSelfManagedIoRestart(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+
+    HRESULT 
+    OnSelfManagedIoStop(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+};
+
+//
+// IPnpCallbackhardware Interface.
+//
+
+[
+    object,
+    uuid(51433BD3-C7C1-4bd8-B4C1-AB1E034626CC),
+    helpstring("IPnpCallbackHardware Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IPnpCallbackHardware : IUnknown
+{
+    HRESULT 
+    OnPrepareHardware(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+
+    HRESULT 
+    OnReleaseHardware(
+        [in, annotation("__in")] IWDFDevice * pWdfDevice
+        );
+};
+
+//
+// IQueueCallbackCreate Interface.
+//
+
+[
+    object,
+    uuid(7D8899F0-8DA9-435f-983C-7E17D4356997),
+    helpstring("IQueueCallbackCreate Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IQueueCallbackCreate : IUnknown
+{
+    void 
+    OnCreateFile(
+        [in, annotation("__in")] IWDFIoQueue *   pWdfQueue,
+        [in, annotation("__in")] IWDFIoRequest * pWDFRequest,
+        [in, annotation("__in")] IWDFFile *      pWdfFileObject
+        );
+};   
+
+//
+// IQueueCallbackRead Interface.
+//
+
+[
+    object,
+    uuid(C3072620-1DA6-48fb-B4FE-ED652B16AEB2),
+    helpstring("IQueueCallbackRead Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IQueueCallbackRead : IUnknown
+{
+    void 
+    OnRead(
+        [in, annotation("__in")] IWDFIoQueue *   pWdfQueue,
+        [in, annotation("__in")] IWDFIoRequest * pWdfRequest,
+        [in, annotation("__in")] SIZE_T          NumOfBytesToRead
+        );
+};
+
+//
+// IQueueCallbackWrite Interface.
+//
+
+[
+    object,
+    uuid(4888CBC5-3FA2-4ea3-89A3-C20ED6E04778),
+    helpstring("IQueueCallbackWrite Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IQueueCallbackWrite : IUnknown
+{
+    void 
+    OnWrite(
+        [in, annotation("__in")] IWDFIoQueue *   pWdfQueue,
+        [in, annotation("__in")] IWDFIoRequest * pWdfRequest,        
+        [in, annotation("__in")] SIZE_T          NumOfBytesToWrite
+        );
+};
+
+//
+// IQueueCallbackDeviceIoControl Interface.
+//
+
+[
+    object,
+    uuid(C5411408-0F1E-4ed6-A412-36DD15EEE707),
+    helpstring("IQueueCallbackDeviceIoControl Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IQueueCallbackDeviceIoControl : IUnknown
+{
+    void 
+    OnDeviceIoControl(
+        [in, annotation("__in")] IWDFIoQueue *   pWdfQueue,
+        [in, annotation("__in")] IWDFIoRequest * pWdfRequest,
+        [in, annotation("__in")] ULONG           ControlCode,
+        [in, annotation("__in")] SIZE_T          InputBufferSizeInBytes,
+        [in, annotation("__in")] SIZE_T          OutputBufferSizeInBytes
+        );
+};
+
+//
+// IQueueCallbackDefaultIoHandler Interface.
+//
+
+[
+    object,
+    uuid(15FB6D38-FDD8-4005-8E55-EB0B98313499),
+    helpstring("IQueueCallbackDefaultIoHandler Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IQueueCallbackDefaultIoHandler : IUnknown
+{
+    void 
+    OnDefaultIoHandler(
+        [in, annotation("__in")] IWDFIoQueue *   pWdfQueue,
+        [in, annotation("__in")] IWDFIoRequest * pWdfRequest
+        );
+};
+
+//
+// IQueueCallbackStateChange Interface.
+//
+
+[
+    object,
+    uuid(E7ECE381-7CB1-468a-BC43-ABD5948FFC75),
+    helpstring("IQueueCallbackStateChange Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IQueueCallbackStateChange : IUnknown
+{
+    void 
+    OnStateChange(
+        [in, annotation("__in")] IWDFIoQueue *      pWdfQueue,
+        [in, annotation("__in")] WDF_IO_QUEUE_STATE QueueState
+        );
+};
+
+//
+// IQueueCallbackIoStop Interface.
+//
+
+[
+    object,
+    uuid(3DE3B961-88FB-435a-9C14-0868FB4FC623),
+    helpstring("IQueueCallbackIoStop Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IQueueCallbackIoStop : IUnknown
+{
+    void 
+    OnIoStop(
+        [in, annotation("__in")] IWDFIoQueue *   pWdfQueue,
+        [in, annotation("__in")] IWDFIoRequest * pWdfRequest,
+        [in, annotation("__in")] ULONG           ActionFlags
+        );
+};
+
+//
+// IQueueCallbackIoResume Interface.
+//
+
+[
+    object,
+    uuid(BEE9FD3C-3DDA-4d9d-A8FC-02C38D79F663),
+    helpstring("IQueueCallbackIoResume Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IQueueCallbackIoResume : IUnknown
+{
+    void 
+    OnIoResume(
+        [in, annotation("__in")] IWDFIoQueue *   pWdfQueue,
+        [in, annotation("__in")] IWDFIoRequest * pWdfRequest
+        );
+};
+
+//
+// IRequestCallbackCancel Interface.
+//
+
+[
+    object,
+    uuid(4E9F1A77-4587-4235-81C4-E6D24545A656),
+    helpstring("IRequestCallbackCancel Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IRequestCallbackCancel : IUnknown
+{
+    void 
+    OnCancel(
+        [in, annotation("__in")] IWDFIoRequest * pWdfRequest
+        );
+};
+
+//
+// IRequestCallbackRequestCompletion Interface
+//
+
+[
+    object,
+    uuid(8A7CC8CB-CEB2-46f6-9851-77BD347A15C2 ),
+    helpstring("IRequestCallbackRequestCompletion Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IRequestCallbackRequestCompletion : IUnknown
+{
+    void 
+    OnCompletion(
+        [in, annotation("__in")] IWDFIoRequest *                 pWdfRequest,
+        [in, annotation("__in")] IWDFIoTarget *                  pIoTarget,
+        [in, annotation("__in")] IWDFRequestCompletionParams *   pParams,
+        [in, annotation("__in")] void *                          pContext
+        );
+};
+
+//
+// IFileCallbackCleanup Interface.
+//
+
+[
+    object,
+    uuid(35C5F79C-6D81-4819-AA64-D6A8939D94D6),
+    helpstring("IFileCallbackCleanup Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IFileCallbackCleanup : IUnknown
+{
+    void 
+    OnCleanupFile(
+        [in, annotation("__in")] IWDFFile * pWdfFileObject
+        );
+};
+
+//
+// IFileCallbackClose Interface.
+//
+
+[
+    object,
+    uuid(C28FD731-F3F1-4573-97DC-620F72D013A6),
+    helpstring("IFileCallbackClose Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IFileCallbackClose : IUnknown
+{
+    void 
+    OnCloseFile(
+        [in, annotation("__in")] IWDFFile * pWdfFileObject
+        );
+};
+
+//
+// IImpersonateCallback Interface.
+//
+
+[
+    object,
+    uuid(99B01D17-9FBD-4aa6-B16D-82DAB6A4107F),
+    helpstring("IImpersonateCallback Interface"),
+    local,
+    restricted,
+    pointer_default(unique)
+]
+interface IImpersonateCallback : IUnknown
+{
+    void 
+    OnImpersonate(
+        [in, unique, annotation("__in_opt")] void * Context
+        );
+};
+
+

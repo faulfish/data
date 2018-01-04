@@ -1,0 +1,73 @@
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Jennifer.CF.Liu (EMBRACE) -->
+<Application name="FeedbackPopupQuestion">
+	<!-- annunciator -->
+	<Group id="1" parentID="1">
+		<AnnunciatorBack pos="2" zOrder="1" src="IDI_CO_BD_ANNUNCIATOR_REGION"/>
+		<SignalIcon pos="3" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+		<BluetoothIcon pos="4" zOrder="2" src="IDI_CO_BD_BT_ACTIVE_VISIBLE"/>
+		<BatteryIcon pos="5" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+	</Group>
+	<!-- title -->
+	<Group id="2" parentID="2">
+		<TitleBack pos="10" zOrder="1" src="IDI_CO_BD_TITLE_REGION"/>
+		<TitleIcon pos="13" zOrder="2" src="IDI_CO_HL_ADDRESS_BOOK"/>
+		<TitleText pos="14" zOrder="2" src="IDS_CO_BD_TITLE_GENERALINFO"/>
+	</Group>
+	<!-- backgroundtab -->
+	<Group id="3" parentID="3">
+		<BodyBackgroundTab pos="15" zOrder="1" src="IDI_CO_BD_SYS_BODY_BACK_TABS"/>
+	</Group>
+	<!-- selected tab icons -->
+	<Group id="4" parentID="3">
+		<BodyBackgroundTabSelectedIconBack pos="18" zOrder="1" src="IDI_CO_BD_SYS_TAB_SELECTED"/>
+		<BodyBackgroundTabSelectedIcon pos="19" zOrder="2" src="IDI_AB_TAB_INFO1"/>
+	</Group>
+	<!-- unselected icons -->
+	<Group id="5" parentID="3">
+		<BodyBackgroundTabUnSelectedIconBack pos="20" zOrder="1" src="IDI_CO_BD_SYS_TAB_UNSELECTED"/>
+		<BodyBackgroundTabUnSelectedIcon pos="21" zOrder="2" src="IDI_AB_TAB_INFO2"/>
+	</Group>
+	<Group id="6" parentID="3">
+		<BodyBackgroundTabUnSelectedIconBack pos="22" zOrder="1" src="IDI_CO_BD_SYS_TAB_UNSELECTED"/>
+		<BodyBackgroundTabUnSelectedIcon pos="23" zOrder="2" src="IDI_AB_TAB_INFO3"/>
+	</Group>
+	<Group id="7" parentID="3">
+		<BodyBackgroundTabUnSelectedIconBack pos="24" zOrder="1" src="IDI_CO_BD_SYS_TAB_UNSELECTED"/>
+		<BodyBackgroundTabUnSelectedIcon pos="25" zOrder="2" src="IDI_AB_TAB_INFO4"/>
+	</Group>
+	<!-- twolineselectionbar -->
+	<Group id="8" parentID="3">
+		<TwoLineSelectionBarBack pos="17" zOrder="1" src="IDI_CO_BD_SYS_LIST_SELECTION_2LINE"/>
+	</Group>
+	<!-- char edit box -->
+	<Group id="9" parentID="3">
+		<CharEditBoxBack pos="26" zOrder="1" src="IDI_CO_BD_CHAR_WIN_BACKGROUND"/>
+		<CharEditBoxText pos="308" zOrder="2" src="IDS_ED_LI_CHARSET1"/>
+		<CharEditBoxText pos="310" zOrder="2" src="IDS_ED_LI_CHARSET2"/>
+	</Group>
+	<!-- selection box in char edit box -->
+	<Group id="10" parentID="9">
+		<SelectionBoxInCharEditBoxBack pos="27" zOrder="1" src="IDI_CO_BD_SYS_SELECTION_TEXT"/>
+		<SelectionBoxInCharEditBoxText pos="309" zOrder="2" src="IDS_ED_LI_EDITEDCHAR"/>
+	</Group>
+	<!-- scrollbar -->
+	<Group id="11" parentID="3">
+		<ScrollbarBack pos="28" zOrder="1" src="IDI_CO_BD_SYS_SCROLLBAR_BACK"/>
+		<ScrollbarHandle pos="29" zOrder="2" src="IDI_CO_BD_SYS_SCROLLBAR_HANDLE"/>
+	</Group>
+	<!-- popup question -->
+	<Group id="12" parentID="3">
+		<TransparentBack pos="1" zOrder="1" src="IDI_CO_BD_SYS_TRANSPARENT"/>
+		<PopupFeedbackQuestionBack pos="30" zOrder="2" src="IDI_CO_BD_SYS_POPUP_BACK_FEEDBACK"/>
+		<PopupFeedbackQuestionIcon pos="31" zOrder="3" src="IDI_CO_FB_QUESTION_MARK"/>
+		<PopupFeedbackQuestionText pos="501" zOrder="2" src="IDS_ED_LI_QUESTION_ITEM1"/>
+		<PopupFeedbackQuestionText pos="502" zOrder="2" src="IDS_ED_LI_QUESTION_ITEM2"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="13" parentID="3">
+		<SoftkeyBack pos="6" zOrder="1" src="IDI_CO_BD_SYS_SOFTKEY_BACK"/>
+		<SoftkeyIcon pos="8" zOrder="2" src="IDI_CO_CC_SAVE"/>
+		<SoftkeyText pos="7" zOrder="2" src="IDS_CO_BD_LSK_SAVE"/>
+		<SoftkeyText pos="9" zOrder="2" src="IDS_CO_BD_RSK_DISCARD"/>
+	</Group>
+</Application>

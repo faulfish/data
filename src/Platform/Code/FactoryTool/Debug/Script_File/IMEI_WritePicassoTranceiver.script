@@ -1,0 +1,81 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////////////////
+////////// %var1 comPort %var10 Error code %var11 Error message/////////
+////////////////////////////////////////////////////////////////////////
+0000 print "======================WRITE PIRCASSO=====================" "Title"
+0001 waitinput %var0 ATHB1A_FLAG
+0002 compare %var0 1
+0003 comparefalse 43
+
+0004 waitinput %var1 COM_PORT
+0005 assign %var2 2497
+0006 assign %var5 3000
+0007 assign %var11 2
+0008 loop %var11
+0009 Run MobileToolKit_StaticM.dll ReadFactoryAreaNew_ForSPU %var1 %var2 %var3 %var4 %var5
+0010 comparetrue 14
+0011 print "Read factory area fail......" "Log"
+0012 loop
+0013 print "M15" "Error"
+
+0014 waitinput %var6 PICASSO_NO
+0015 waitinput %var7 TRANS_NO
+0016 waitinput %var8 GSN_STRING
+
+0017 waitinput %var10 TRANCIVER_FLAG
+0018 compare %var10 1
+0019 comparetrue 26
+
+// set Picasso no ,Trans_no and GSN_String
+0020 loop %var11
+0021 run FactoryIMEIDll_StaticM.dll SetPicassoTranceiverGSN %var3 %var6 %var7 %var8
+0022 comparetrue 33
+0023 print "set Picasso no ,Trans_no and GSN_String error..." "Log"
+0024 loop
+0025 print "M21" "Error"
+
+0026 loop %var11
+0027 run FactoryIMEIDll_StaticM.dll SetPicassoTranceiver %var3 %var6 %var7
+0028 comparetrue 32
+0029 print "set Picasso no ,Trans_no error..." "Log"
+0030 loop
+0031 print "M21" "Error"
+0032 print "Set Picasso no, Trans_no success..." "Log"
+
+0033 assign %var4 128
+0034 loop %var11
+0035 run MobileToolKit_StaticM.dll WriteNVItem_ForSPU %var1 %var2 %var3 %var4 %var9
+0036 comparetrue 40
+0037 print "Write picasso no ,tranceiver no and MSN to phone fail......" "Log"
+0038 loop
+0039 print "M25" "Error"
+
+0040 print "Write factoryArea to phone Success......" "Log"
+0041 loop %var11
+0042 Run MobileToolKit_StaticM.dll ReadFactoryAreaNew_ForSPU %var1 %var2 %var10 %var4 %var5
+0043 comparetrue 47
+0044 print "Read FactoryArea fail..." "Log"
+0045 loop
+0046 print "M15" "Error"
+
+0047 loop %var11
+0048 run FactoryIMEIDll_StaticM.dll CompareFactoryArea %var10 %var6 %var7 
+0049 comparetrue 53
+0050 print "Read the PICASSO and XCVR, not equal to write to phone..." "Log"
+0051 loop
+0052 print "M16" "Error"
+
+0053 print 45 "Progress"
+0054 print "========================WRITE PIRCASSO END=====================" "Title"
+}

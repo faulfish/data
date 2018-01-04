@@ -1,0 +1,125 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+
+{Code
+0000 waitinput %var1 COM_PORT
+
+0001 print  "============OPEN SPC START============" "Title"
+0002 assign %var11 2
+0003 print "Query SPC Lock Status..." "Log"
+0004 loop %var11
+0005 Run MobileToolKit_StaticM.dll IsSPCLocked_ForSPU %var1 %var6
+0006 comparetrue 10
+0007 print "Query SPC Lock Status Fail....." "Log"
+0008 loop
+0009 print "F66" "Error"
+
+0010 compare %var6 SPC Locked
+0011 comparefalse 62  //SPC is unlocked
+
+//SPC is locked
+0012 assign %var7 000000
+0013 print %var7 "unlock SPC use SPC CODE......"
+0014 loop %var11
+0015 run MobileToolKit_StaticM.dll UnlockSPC_ForSPU %var1 %var7 %var6
+0016 comparetrue 20
+0017 print "Run Unlock SPC fail..." "Log"
+0018 loop
+0019 print "F66" "Error"
+
+0020 compare %var6 Unlock SPC succeed. 
+0021 comparetrue 51   
+0022 print %var7 "Unlock SPC to phone fail use SPC CODE......"
+
+0023 waitinput %var10 TRANCIVER_FLAG
+0024 compare %var10 1
+0025 comparefalse 27
+0026 print "F69" "Error"
+
+0027 waitinput %var3 IMEI_FROM_SCANNER
+0028 print %var3 "Use IMEI to query SPC from PICS--->"
+0029 loop %var11
+0030 Run FactoryIMEIDll_StaticM.dll QuerySpc_PICS %var3 %var6 %var7
+0031 comparetrue 39
+0032 compare %var6 -9
+0033 comparetrue 37
+0034 print "Query SPC from PICS fail......" "Log"
+0035 loop
+0036 print "F70" "Error"
+
+0037 print %var3 "There is no SPC for--->"
+0038 print "F69" "Error"
+
+0039 print %var7 "Query SPC success, the SPC is--->"
+0040 print %var7 "Unlock SPC use SPC CODE......"
+0041 loop %var11
+0042 run MobileToolKit_StaticM.dll UnlockSPC_ForSPU %var1 %var7 %var6
+0043 comparetrue 47
+0044 print "run Unlock SPC fail..." "Log"
+0045 loop
+0046 print "F66" "Error"
+
+0047 compare %var6 Unlock SPC succeed.
+0048 comparetrue 51
+0049 print "SPC is not correct, SPC is still locked......" "Log"
+0050 print "F69" "Error"
+
+0051 loop %var11
+0052 Run MobileToolKit_StaticM.dll IsSPCLocked_ForSPU %var1 %var6
+0053 comparetrue 57
+0054 print "Query SPC Lock Status Fail......" "Log"
+0055 loop
+0056 print "F66" "Error"
+
+0057 compare %var6 SPC Locked
+0058 comparefalse 61  //SPC is open
+0059 print "SPC is not correct, SPC is still locked......" "Log"
+0060 print "F69" "Error"
+
+0061 print %var7 "SPC is correct..."
+0062 print "SPC is unlocked......" "Log"
+0063 print "============OPEN SPC END============" "Title"
+0064 print 35 "Progress"
+
+0065 print "============RESET SPC TO DEFAULT============" "Title"
+//ResetSPCtoDefault
+0066 print "Write defalut SPC(000000) to reset phone......" "Log"
+0067 assign %var7 000000
+0068 loop %var11
+0069 Run MobileToolKit_StaticM.dll ProgramSPC_ForSPU %var1 %var7 
+0070 comparetrue 74
+0071 print "Write SPC(0000) to phone fail..." "Log"
+0072 loop
+0073 print "F55" "Error"
+
+//Write SPC(000000) to phone success ->Read SPC from phone
+0074 assign %var3 3000
+0075 loop %var11
+0076 Run MobileToolKit_StaticM.dll ReadSPC_ForSPU %var1 %var6 %var7 %var3
+0077 comparetrue 81
+0078 print "Read SPC from phone fail......" "Log"
+0079 loop
+0080 print "F73" "Error"
+
+//Read SPC from phone success
+0081 compare %var6 000000 
+0082 comparetrue 85
+
+//SPC from phone is not the default SPC
+0083 print %var6 "SPC from phone is not the default SPC 000000,it is--->"
+0084 print "F74" "Error"
+
+//SPC from phone is the default SPC
+0085 print "Reset SPC to default success......" "Log"
+0086 print "============RESET SPC TO DEFAULT END============" "Title"
+0087 print 40 "Progress"
+}

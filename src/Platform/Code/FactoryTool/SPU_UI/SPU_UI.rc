@@ -1,0 +1,309 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\SPU_UI.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SPU_UI.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "SPU_UI.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "SPU_UI.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About SPU_UI"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "SPU_UI Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008 - 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_SPU_UI_DIALOG DIALOGEX 0, 0, 396, 280
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SPU_UI"
+FONT 10, "Microsoft Sans Serif", 700, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Start",IDOK,195,192,43,54
+    LISTBOX         IDC_LIST_NOTE,7,193,185,84,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Test Record:",IDC_STATIC,97,7,141,182
+    LTEXT           "Total",IDC_STATIC,115,17,36,8
+    LTEXT           "Pass",IDC_STATIC,115,34,36,8
+    LTEXT           "Fail",IDC_STATIC,115,51,36,8
+    EDITTEXT        IDC_EDIT_TOTAL,160,15,48,15,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PASS,160,32,48,15,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_FAIL,160,49,48,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Fail rate",IDC_STATIC,115,68,36,8
+    EDITTEXT        IDC_EDIT_FAILRATE,160,66,48,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Aveg. Time",IDC_STATIC,115,85,36,8
+    EDITTEXT        IDC_EDIT_AVERAGETIME,160,83,48,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Time",IDC_STATIC,115,119,36,8
+    EDITTEXT        IDC_EDIT_TIME,160,117,48,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Result",IDC_STATIC,115,102,36,8
+    EDITTEXT        IDC_EDIT_RESULT,160,100,48,15,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Clear",IDC_BUTTON_CLEAR,195,248,43,14
+    LTEXT           "Information is empty",IDC_Description,7,7,86,53
+    PUSHBUTTON      "Log",IDC_LOG_BUTTON,195,263,43,14
+    COMBOBOX        IDC_MOTNAME,7,131,86,152,CBS_DROPDOWN | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBOMOTMODEL,7,168,86,125,CBS_DROPDOWN | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT2,7,118,86,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT3,7,155,86,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "BenchId",IDC_STATIC,115,136,36,8
+    LTEXT           "Version",IDC_STATIC,115,153,36,8
+    LTEXT           "TrackId",IDC_STATIC,115,170,36,8
+    EDITTEXT        IDC_EDIT_BENCHID,160,134,48,15,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_VERSION,160,151,48,15,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_TRACKID,160,168,48,15,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Config BZ",IDC_BUTTON1,7,88,86,23
+END
+
+IDD_INPUT_DLG DIALOGEX 0, 0, 176, 89
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Input Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_INPUT_EDIT,22,41,133,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,22,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,57,50,14
+    LTEXT           "Please add input into the edit box:",IDC_PROMPT,7,7,162,30
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SPU_UI_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 389
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 277
+    END
+
+    IDD_INPUT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About SPU_UI..."
+END
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 374, 187
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "SAVE",IDOK,51,152,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,152,50,14
+    CONTROL         "Profile Loader",IDC_CHECK_PROFILELOADER,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,19,14,91,14
+    CONTROL         "Check Status",IDC_CHECK_CHECK_STATUS,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,19,35,91,14
+    CONTROL         "Log Result",IDC_CHECK_LOG_DATA,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,19,55,91,14
+    EDITTEXT        IDC_EDIT_BENCHID,113,18,78,16,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Bench ID",IDC_STATIC,113,6,78,12
+    EDITTEXT        IDC_EDIT_FACTORYID,113,51,78,15,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Factory ID",IDC_STATIC,113,39,78,12
+    EDITTEXT        IDC_EDIT_SITE,113,83,78,18,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Site",IDC_STATIC,113,71,78,13
+    CONTROL         "Print Label",IDC_CHECK_PRINTLABEL,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,19,76,91,14
+    EDITTEXT        IDC_EDIT_PASSWORD,62,127,78,18,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "PASSWORD",IDC_STATIC,80,113,78,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 367
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 180
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_CONFIGBZ       HTML                    "ConfigBZ.htm"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\SPU_UI.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

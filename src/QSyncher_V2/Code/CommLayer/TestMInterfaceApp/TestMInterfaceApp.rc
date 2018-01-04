@@ -1,0 +1,362 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#include ""res\\TestMInterfaceApp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\TestMInterfaceApp.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About TestMInterfaceApp"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "TestMInterfaceApp Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_TESTMINTERFACEAPP_DIALOG DIALOGEX 0, 0, 382, 244
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Test Mobile Interface"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Connect Mobile",IDC_CONNECT_BUTTON,297,8,58,14
+    PUSHBUTTON      "DisConnect",IDC_DISCONNECT_BUTTON,312,222,50,14
+    GROUPBOX        "BenQ Mobile Interface",IDC_STATIC,17,26,347,191,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_PORT_EDIT,91,8,58,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MODEL_EDIT,223,8,58,14,ES_AUTOHSCROLL
+    RTEXT           "Enter Port Name",IDC_STATIC,24,10,64,8
+    RTEXT           "Enter Device Name",IDC_STATIC,151,10,67,8
+    CONTROL         "",IDC_INTERFACE_TAB,"SysTabControl32",0x0,27,37,329,175
+    CTEXT           "No Connection",IDC_CONNECTION_STATE,15,225,69,8
+    LTEXT           "Model",IDC_STATIC,87,225,18,8
+    LTEXT           "IMEI",IDC_STATIC,182,225,19,8
+    EDITTEXT        IDC_EDIT2,110,222,64,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,198,222,103,14,ES_AUTOHSCROLL
+END
+
+IDD_IEFS_PAGE DIALOGEX 0, 0, 321, 178
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "New IEFS",IDC_NEW_INTERFACE,7,7,62,14
+    EDITTEXT        IDC_EDIT_Result,259,141,55,14,ES_AUTOHSCROLL
+    LTEXT           "Result",IDC_STATIC,235,145,21,8
+    PUSHBUTTON      "Delete IEFS",IDC_DELETE_INTERFACE,252,7,62,14
+    EDITTEXT        IDC_EDIT_Param1,33,26,44,14,ES_AUTOHSCROLL
+    LTEXT           "Param1",IDC_STATIC,7,28,25,8
+    EDITTEXT        IDC_EDIT_Param2,106,26,44,14,ES_AUTOHSCROLL
+    LTEXT           "Param2",IDC_STATIC,80,28,25,8
+    EDITTEXT        IDC_EDIT_Param3,179,25,44,14,ES_AUTOHSCROLL
+    LTEXT           "Param3",IDC_STATIC,153,28,25,8
+    EDITTEXT        IDC_EDIT_Param4,253,25,44,14,ES_AUTOHSCROLL
+    LTEXT           "Param4",IDC_STATIC,227,28,25,8
+    CONTROL         "GetFileASync",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,44,58,10
+    CONTROL         "GetFileData",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,57,53,10
+    CONTROL         "PutFileASync",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,15,68,57,10
+    CONTROL         "PutFileData",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,15,79,53,10
+    CONTROL         "DeletFile",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,15,92,43,10
+    CONTROL         "GetFolderEntries",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,15,105,64,10
+    CONTROL         "CreateFolder",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,15,118,58,10
+    CONTROL         "RemoveFolder",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,15,129,62,10
+    PUSHBUTTON      "Execute Function",IDC_EXEC_FUNCTION,157,141,70,14
+    LISTBOX         IDC_LIST_INFO,83,44,231,93,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_IPhonebook_PAGE DIALOGEX 0, 0, 264, 178
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "New IPhonebook",IDC_NEW_INTERFACE,15,16,62,14
+END
+
+IDD_IIrMC_PAGE DIALOGEX 0, 0, 264, 178
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "New IIrMC",IDC_NEW_INTERFACE,15,16,62,14
+END
+
+IDD_COMM_INTERFACE_PAGE DIALOGEX 0, 0, 322, 178
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST1,7,7,308,144,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_IMessage_PAGE DIALOGEX 0, 0, 321, 178
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "New ISMS",IDC_NEW_INTERFACE,7,7,62,14
+    EDITTEXT        IDC_EDIT_Result,259,141,55,14,ES_AUTOHSCROLL
+    LTEXT           "Result",IDC_STATIC,235,145,21,8
+    PUSHBUTTON      "Delete ISMS",IDC_DELETE_INTERFACE,252,7,62,14
+    EDITTEXT        IDC_EDIT_Param1,33,26,44,14,ES_AUTOHSCROLL
+    LTEXT           "Param1",IDC_STATIC,7,28,25,8
+    EDITTEXT        IDC_EDIT_Param2,106,26,44,14,ES_AUTOHSCROLL
+    LTEXT           "Param2",IDC_STATIC,80,28,25,8
+    EDITTEXT        IDC_EDIT_Param3,179,25,44,14,ES_AUTOHSCROLL
+    LTEXT           "Param3",IDC_STATIC,153,28,25,8
+    EDITTEXT        IDC_EDIT_Param4,253,25,44,14,ES_AUTOHSCROLL
+    LTEXT           "Param4",IDC_STATIC,227,28,25,8
+    CONTROL         "GetServiceCenterAddress",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,40,109,10
+    CONTROL         "SetPDUMode",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,50,57,10
+    CONTROL         "SetMessageStorage",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,15,60,80,10
+    CONTROL         "QueryMessageSpace",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,15,70,83,10
+    CONTROL         "ListMessageTi",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,15,81,60,10
+    CONTROL         "ListMessageStd",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,15,92,65,10
+    CONTROL         "SendMessage",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,15,102,60,10
+    CONTROL         "SendMessageInStorage",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,15,113,92,10
+    PUSHBUTTON      "Execute Function",IDC_EXEC_FUNCTION,157,141,70,14
+    LISTBOX         IDC_LIST_INFO,127,44,187,93,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "WriteMessage",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,15,124,61,10
+    CONTROL         "ReadMessage",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,15,135,61,10
+    CONTROL         "DeleteMessage",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,15,146,65,10
+END
+
+IDD_ISyncML_PAGE DIALOGEX 0, 0, 321, 178
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "New ISyncML",IDC_NEW_ISyncML,7,7,62,14
+    EDITTEXT        IDC_EDIT_Result,259,141,55,14,ES_AUTOHSCROLL
+    LTEXT           "Result",-1,235,145,21,8
+    PUSHBUTTON      "Delete ISyncML",IDC_DELETE_INTERFACE,252,7,62,14
+    EDITTEXT        IDC_EDIT_Param1,33,26,44,14,ES_AUTOHSCROLL
+    LTEXT           "Param1",-1,7,28,25,8
+    EDITTEXT        IDC_EDIT_Param2,113,26,44,14,ES_AUTOHSCROLL
+    LTEXT           "Param2",-1,87,28,25,8
+    CONTROL         "Put",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,49,27,10
+    CONTROL         "Get",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,65,27,10
+    PUSHBUTTON      "Execute Function",IDC_EXEC_FUNCTION,157,141,70,14
+    LISTBOX         IDC_LIST_INFO,83,44,231,93,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "TestMInterfaceApp.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "TestMInterfaceApp.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_TESTMINTERFACEAPP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 375
+        VERTGUIDE, 60
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 237
+        HORZGUIDE, 14
+        HORZGUIDE, 229
+    END
+
+    IDD_IEFS_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        VERTGUIDE, 15
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+        HORZGUIDE, 149
+    END
+
+    IDD_IPhonebook_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_IIrMC_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_COMM_INTERFACE_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_IMessage_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        VERTGUIDE, 15
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+        HORZGUIDE, 149
+    END
+
+    IDD_ISyncML_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        VERTGUIDE, 15
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+        HORZGUIDE, 149
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About TestMInterfaceApp..."
+END
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE 4, 1
+#pragma code_page(950)
+#include "res\TestMInterfaceApp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,351 @@
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Hanson.Huang (EMBRACE) -->
+<Resource_List>
+	<!--Image-->
+	<Res name="IDI_CO_BD_SYS_BODY_BACK" component_name="2" width="240" height="320" src="IDI_CO_BD_SYS_BODY_BACK.png"/>
+	<Res name="IDI_CO_BD_SYS_BODY_BACK_TABS" component_name="5" width="240" height="232" src="IDI_CO_BD_SYS_BODY_BACK_TABS.png"/>
+	<Res name="IDI_CO_BD_SYS_SOFTKEY_BACK" component_name="3" width="240" height="32" src="IDI_CO_BD_SYS_SOFTKEY_BACK.png"/>
+	<Res name="IDI_CO_BD_SYS_SELECTION_TEXT" component_name="6" width="28" height="28" src="IDI_CO_BD_SELECTION_TEXT.png"/>
+	<Res name="IDI_CO_BD_SYS_WALLPAPER" component_name="7" width="240" height="320" src="IDI_CO_BD_SYS_WALLPAPER.png"/>
+	<Res name="IDI_CO_BD_TITLE_REGION" component_name="4" width="240" height="32" src="IDI_CO_BD_TITLE_REGION.png"/>
+	<Res name="IDI_CO_BD_ANNUNCIATOR_REGION" component_name="1" width="240" height="24" src="IDI_CO_BD_ANNUNCIATOR_REGION.png"/>
+	<Res name="IDI_CO_BD_CHAR_WIN_BACKGROUND" component_name="8" width="230" height="42" src="IDI_CO_BD_CHAR_WIN_BACKGROUND.png"/>
+	<Res name="IDI_CO_BD_SYS_LIST_SELECTION_1LINE" component_name="9" width="230" height="32" src="IDI_CO_BD_SYS_LIST_SELECTION_1LINE.png"/>
+	<Res name="IDI_CO_BD_SYS_LIST_SELECTION_2LINE" component_name="10" width="230" height="64" src="IDI_CO_BD_SYS_LIST_SELECTION_2LINE.png"/>
+	<Res name="IDI_CO_BD_SYS_POPUP_BACK_FEEDBACK" component_name="11" width="240" height="232" src="IDI_CO_BD_SYS_POPUP_BACK_FEEDBACK.png"/>
+	<Res name="IDI_CO_BD_SYS_POPUP_BACK_OPTIONS" component_name="12" width="240" height="232" src="IDI_CO_BD_SYS_POPUP_BACK_OPTIONS.png"/>
+	<Res name="IDI_CO_BD_SYS_PROGRESSBAR_FILL" component_name="13" width="1" height="26" src="IDI_CO_BD_SYS_PROGRESS_FILL.png"/>
+	<Res name="IDI_CO_BD_SYS_PROGRESSBAR_BACK" component_name="14" width="212" height="26" src="IDI_CO_BD_SYS_PROGRESSBAR_BACK.png"/>
+	<Res name="IDI_CO_BD_SYS_SCROLLBAR_BACK" component_name="15" width="2" height="228" src="IDI_CO_BD_SYS_SCROLLBAR_BACK.png"/>
+	<Res name="IDI_CO_BD_SYS_SCROLLBAR_BACK_OPTIONS" component_name="16" width="2" height="168" src="IDI_CO_BD_SYS_SCROLLBAR_BACK_OPTIONS.png"/>
+	<Res name="IDI_CO_BD_SYS_SCROLLBAR_HANDLE" component_name="17" width="4" height="1" src="IDI_CO_BD_SYS_SCROLLBAR_HANDLE.png"/>
+	<Res name="IDI_CO_BD_SYS_SELECTION_MFE" component_name="18" width="230" height="64" src="IDI_CO_BD_SYS_SELECTION_MFE.png"/>
+	<Res name="IDI_CO_BD_SYS_SELECTION_OPTIONS" component_name="19" width="214" height="28" src="IDI_CO_BD_SYS_SELECTION_OPTIONS.png"/>
+	<Res name="IDI_CO_BD_SYS_TAB_SELECTED" component_name="20" width="40" height="32" src="IDI_CO_BD_SYS_TAB_SELECTED.png"/>
+	<Res name="IDI_CO_BD_SYS_TAB_UNSELECTED" component_name="21" width="40" height="32" src="IDI_CO_BD_SYS_TAB_UNSELECTED.png"/>
+	<Res name="IDI_IL_BD_ALERT_MGR_BG_001" component_name="22" width="240" height="104" src="IDI_IL_BD_ALERT_MGR_BG_001.png"/>
+	<Res name="IDI_IL_BD_ALERT_MGR_BG_002" component_name="23" width="240" height="104" src="IDI_IL_BD_ALERT_MGR_BG_002.png"/>
+	<Res name="IDI_IL_BD_ALERT_MGR_BG_003" component_name="24" width="240" height="104" src="IDI_IL_BD_ALERT_MGR_BG_003.png"/>
+	<!-- Fixed Icons -->
+	<Res name="IDI_CO_BD_SYS_TRANSPRENT" component_name="0" width="240" height="320" src="IDI_CO_BD_SYS_TRANSPRENT.png"/>
+	<Res name="IDI_CO_HL_DATES_MENU" component_name="0" width="26" height="26" src="IDI_CO_HL_DATES_MENU.png"/>
+	<Res name="IDI_CO_HL_BROWSER" component_name="0" width="26" height="26" src="IDI_CO_HL_BROWSER.png"/>
+	<Res name="IDI_CO_HL_SETTINGS_TITLE" component_name="0" width="26" height="26" src="IDI_CO_HL_SETTINGS_TITLE.png"/>
+	<Res name="IDI_CO_HL_ADDRESS_BOOK" component_name="0" width="26" height="26" src="IDI_CO_HL_ADDRESS_BOOK.png"/>
+	<Res name="IDI_CO_HL_MESSAGING" component_name="0" width="26" height="26" src="IDI_CO_HL_MESSAGING.png"/>
+	<Res name="IDI_CO_HL_CALENDAR" component_name="0" width="26" height="26" src="IDI_CO_HL_CALENDAR.png"/>
+	<Res name="IDI_CO_HL_SETTINGS_TITLE" component_name="0" width="26" height="26" src="IDI_CO_HL_SETTINGS_TITLE.png"/>
+	<Res name="IDI_CO_BD_BATTERY_INDICATOR_10" component_name="0" width="52" height="16" src="IDI_CO_BD_BATTERY_INDICATOR_10.bmp"/>
+	<Res name="IDI_CO_BD_BT_ACTIVE_VISIBLE" component_name="0" width="16" height="16" src="IDI_CO_BD_BT_ACTIVE_VISIBLE.bmp"/>
+	<Res name="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5" component_name="0" width="52" height="16" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5.bmp"/>
+	<Res name="IDI_CO_BD_DOWN_ARROW" component_name="0" width="44" height="44" src="IDI_CO_BD_DOWN_ARROW.png"/>
+	<Res name="IDI_CO_BD_UP_ARROW" component_name="0" width="44" height="44" src="IDI_CO_BD_UP_ARROW.png"/>
+	<Res name="IDI_BR_L1_BOOKMARKS_ONLINE" component_name="0" width="14" height="16" src="IDI_BR_L1_BOOKMARKS_ONLINE.png"/>
+	<Res name="IDI_CO_L1_PRIVATE_PHONE" component_name="0" width="22" height="22" src="IDI_CO_L1_PRIVATE_PHONE.png"/>
+	<Res name="IDI_CO_L1_RADIOBUTTON_OFF_FOCUSED" component_name="25" width="22" height="22" src="IDI_CO_L1_RADIOBUTTON_OFF_FOCUSED.png"/>
+	<Res name="IDI_CO_L1_RADIOBUTTON_ON_FOCUSED" component_name="26" width="22" height="22" src="IDI_CO_L1_RADIOBUTTON_ON_FOCUSED.png"/>
+	<Res name="IDI_CO_L1_SYS_RADIOBUTTON_OFF" component_name="0" width="22" height="22" src="IDI_CO_L1_SYS_RADIOBUTTON_OFF.png"/>
+	<Res name="IDI_CO_L1_SYS_RADIOBUTTON_ON" component_name="0" width="22" height="22" src="IDI_CO_L1_SYS_RADIOBUTTON_ON.png"/>
+	<Res name="IDI_AB_TAB_INFO1" component_name="0" width="22" height="22" src="IDI_AB_TAB_INFO1.png"/>
+	<Res name="IDI_AB_TAB_INFO2" component_name="0" width="22" height="22" src="IDI_AB_TAB_INFO2.png"/>
+	<Res name="IDI_AB_TAB_INFO3" component_name="0" width="22" height="22" src="IDI_AB_TAB_INFO3.png"/>
+	<Res name="IDI_AB_TAB_INFO4" component_name="0" width="22" height="22" src="IDI_AB_TAB_INFO4.png"/>
+	<Res name="IDI_MM_BD_CONTACTS" component_name="0" width="70" height="50" src="IDI_MM_BD_CONTACTS.png"/>
+	<Res name="IDI_MM_BD_CALL_RECORDS" component_name="0" width="70" height="50" src="IDI_MM_BD_CALL_RECORDS.png"/>
+	<Res name="IDI_MM_BD_INTERNET" component_name="0" width="70" height="50" src="IDI_MM_BD_INTERNET.png"/>
+	<Res name="IDI_MM_BD_CAMERA" component_name="0" width="70" height="50" src="IDI_MM_BD_CAMERA.png"/>
+	<Res name="IDI_MM_BD_MESSAGES_SELECTED" component_name="0" width="70" height="50" src="IDI_MM_BD_MESSAGES_SELECTED.png"/>
+	<Res name="IDI_MM_BD_ORGANIZER" component_name="0" width="70" height="50" src="IDI_MM_BD_ORGANIZER.png"/>
+	<Res name="IDI_MM_BD_GAMES" component_name="0" width="70" height="50" src="IDI_MM_BD_GAMES.png"/>
+	<Res name="IDI_MM_BD_MEDIA_PLAYER" component_name="0" width="70" height="50" src="IDI_MM_BD_MEDIA_PLAYER.png"/>
+	<Res name="IDI_MM_BD_VIDEOPHONE" component_name="0" width="70" height="50" src="IDI_MM_BD_VIDEOPHONE.png"/>
+	<Res name="IDI_MM_BD_EXTRAS" component_name="0" width="70" height="50" src="IDI_MM_BD_EXTRAS.png"/>
+	<Res name="IDI_MM_BD_MY_STUFF" component_name="0" width="70" height="50" src="IDI_MM_BD_MY_STUFF.png"/>
+	<Res name="IDI_MM_BD_SETTINGS" component_name="0" width="70" height="50" src="IDI_MM_BD_SETTINGS.png"/>
+	<Res name="IDI_MM_BD_FLOATINGBOX" component_name="0" width="84" height="83" src="IDI_MM_BD_FLOATINGBOX.png"/>
+	<Res name="IDI_IL_L1_ALERT_MISSED_CALLS" component_name="0" width="22" height="22" src="IDI_IL_L1_ALERT_MISSED_CALLS.png"/>
+	<Res name="IDI_IL_L1_ALERT_NEW_IM" component_name="0" width="22" height="22" src="IDI_IL_L1_ALERT_NEW_IM.png"/>
+	<Res name="IDI_IL_L1_ALERT_NEW_APPOINTMENT" component_name="0" width="22" height="22" src="IDI_IL_L1_ALERT_NEW_APPOINTMENT.png"/>
+	<Res name="IDI_AB_L1_PHONE_CONTACTS" component_name="0" width="22" height="22" src="IDI_AB_L1_PHONE_CONTACTS.png"/>
+	<Res name="IDI_CO_L1_NEW_ENTRY" component_name="0" width="22" height="22" src="IDI_CO_L1_NEW_ENTRY.png"/>
+	<Res name="IDI_CO_L1_CHECKBOX_ON_FOCUSED" component_name="37" width="22" height="22" src="IDI_CO_L1_CHECKBOX_ON_FOCUSED.png"/>
+	<Res name="IDI_CO_L1_CHECKBOX_OFF_FOCUSED" component_name="38" width="22" height="22" src="IDI_CO_L1_CHECKBOX_OFF_FOCUSED.png"/>
+	<Res name="IDI_CO_L1_SYS_CHECKBOX_ON" component_name="0" width="22" height="22" src="IDI_CO_L1_SYS_CHECKBOX_ON.png"/>
+	<Res name="IDI_CO_L1_SYS_CHECKBOX_OFF" component_name="0" width="22" height="22" src="IDI_CO_L1_SYS_CHECKBOX_OFF.png"/>
+	<Res name="IDI_CO_L1_SYS_OPTIONS_CHECKBOX_ON" component_name="35" width="22" height="22" src="IDI_CO_L1_SYS_OPTIONS_CHECKBOX_ON.png"/>
+	<Res name="IDI_CO_L1_SYS_OPTIONS_CHECKBOX_OFF" component_name="36" width="22" height="22" src="IDI_CO_L1_SYS_OPTIONS_CHECKBOX_OFF.png"/>
+	<Res name="IDI_CO_L1_SYS_TOGGLE_ARROW_RIGHT" component_name="34" width="22" height="22" src="IDI_CO_L1_SYS_TOGGLE_ARROW_RIGHT.png"/>
+	<Res name="IDI_CO_L1_SYS_TOGGLE_ARROW_LEFT" component_name="33" width="22" height="22" src="IDI_CO_L1_SYS_TOGGLE_ARROW_LEFT.png"/>
+	<Res name="IDI_CO_L1_MAIN_MENU" component_name="0" width="22" height="22" src="IDI_CO_L1_MAIN_MENU.png"/>
+	<Res name="IDI_CO_L2_THEME_FILE" component_name="0" width="58" height="58" src="IDI_CO_L2_THEME_FILE.png"/>
+	<Res name="IDI_CO_CC_CHECK" component_name="0" width="22" height="26" src="IDI_CO_CC_CHECK.png"/>
+	<Res name="IDI_CO_CC_SAVE" component_name="0" width="22" height="26" src="IDI_CO_CC_SAVE.png"/>
+	<Res name="IDI_CO_CC_HANDSET" component_name="0" width="22" height="26" src="IDI_CO_CC_HANDSET.png"/>
+	<Res name="IDI_CO_CC_CHANGE" component_name="0" width="22" height="26" src="IDI_CO_CC_CHANGE.png"/>
+	<Res name="IDI_IM_L1_SEARCH" component_name="0" width="22" height="22" src="IDI_IM_L1_SEARCH.PNG"/>
+	<Res name="IDI_SE_BD_VOLUME_9" component_name="0" width="44" height="44" src="IDI_SE_BD_VOLUME_9.png"/>
+	<Res name="IDI_SA_FB_PIN" component_name="0" width="58" height="154" src="IDI_SA_FB_PIN.png"/>
+	<Res name="IDI_CO_HL_MY_STUFF" component_name="0" width="26" height="26" src="IDI_CO_HL_MY_STUFF.png"/>
+	<Res name="IDI_AB_TAB_CONTACTS" component_name="0" width="22" height="22" src="IDI_AB_TAB_CONTACTS.png"/>
+	<Res name="IDI_AB_TAB_GROUPS" component_name="0" width="22" height="22" src="IDI_AB_TAB_GROUPS.png"/>
+	<Res name="IDI_AB_TAB_SIM" component_name="0" width="22" height="22" src="IDI_AB_TAB_SIM.png"/>
+	<Res name="IDI_AB_TAB_MIXED" component_name="0" width="22" height="22" src="IDI_AB_TAB_MIXED.png"/>
+	<Res name="IDI_CO_BD_SYS_TRANSPARENT" component_name="0" width="240" height="320" src="IDI_CO_BD_SYS_TRANSPARENT.png"/>
+	<Res name="IDI_CO_BD_CALENDAR1" component_name="0" width="240" height="232" src="IDI_CO_BD_CALENDAR1.png"/>
+	<Res name="IDI_CO_BD_CALENDAR2" component_name="0" width="240" height="232" src="IDI_CO_BD_CALENDAR2.png"/>
+	<Res name="IDI_CO_BD_CALENDAR3" component_name="0" width="240" height="232" src="IDI_CO_BD_CALENDAR3.png"/>
+	<Res name="IDI_CL_BD_INCOMING_CALL" component_name="0" width="92" height="42" src="IDI_CL_BD_INCOMING_CALL.png"/>
+	<!-- Application Icons -->
+	<Res name="IDI_CO_FB_HOURGLASS" component_name="27" width="58" height="154" src="IDI_CO_FB_HOURGLASS.png"/>
+	<Res name="IDI_CO_FB_CHECK_MARK" component_name="28" width="58" height="154" src="IDI_CO_FB_CHECK_MARK.png"/>
+	<Res name="IDI_CO_FB_EXCLAMATION" component_name="29" width="58" height="154" src="IDI_CO_FB_EXCLAMATION.png"/>
+	<Res name="IDI_CO_FB_I" component_name="30" width="58" height="154" src="IDI_CO_FB_I.png"/>
+	<Res name="IDI_CO_FB_QUESTION_MARK" component_name="31" width="58" height="154" src="IDI_CO_FB_QUESTION_MARK.png"/>
+	<Res name="IDI_CO_FB_X" component_name="32" width="58" height="154" src="IDI_CO_FB_X.png"/>
+	<Res name="IDI_CO_ANI_INCORRECTPIN" component_name="0" width="58" height="154" src="IDI_CO_ANI_INCORRECTPIN.png"/>
+	<Res name="IDI_CO_BD_SYS_TRANSPARENT" component_name="0" width="240" height="320" src="IDI_CO_BD_SYS_TRANSPARENT.png"/>
+	<!-- External Display -->
+	<!-- Background -->
+	<!--
+	<Res name="EDI_CO_BD_SYS_BODY_BACK_KS" component_name="34" width="120" height="160" src="EDI_CO_BD_SYS_BODY_BACK_KS.png"/>
+	<Res name="EDI_CO_BD_SYS_POPUP_BACK_FEEDBACK_KS" component_name="35" width="118" height="107" src="EDI_CO_BD_SYS_POPUP_BACK_FEEDBACK_KS.png"/>
+	<Res name="EDI_CO_BD_SYS_POPUP_BACK_VERT_FEEDBACKS_KS" component_name="36" width="112" height="125" src="EDI_CO_BD_SYS_POPUP_BACK_FEEDBACK_VERT_KS.png"/>
+	<Res name="EDI_CO_BD_TITLE_REGION_KS" component_name="37" width="120" height="18" src="EDI_CO_BD_TITLE_REGION_KS.png"/>
+	<Res name="EDI_CO_BD_ANNUNCIATOR_REGION" component_name="38" width="120" height="18" src="EDI_CO_BD_ANNUNCIATOR_REGION_KS.png"/>
+	<Res name="EDI_CO_BD_SYS_SOFTKEY_BACK_KS" component_name="39" width="120" height="31" src="EDI_CO_BD_SYS_SOFTKEY_BACK_KS.png"/>
+	<Res name="EDI_CO_BD_SYS_LIST_SELECTION_1LINE_KS" component_name="40" width="115" height="26" src="EDI_CO_BD_SYS_LIST_SELECTION_1LINE_KS.png"/>
+	<Res name="EDI_CO_BD_SYS_PROGRESSBAR_BACK_KS" component_name="41" width="92" height="22" src="EDI_CO_BD_SYS_PROGRESSBAR_BACK_KS.png"/>
+	<Res name="EDI_CO_BD_SYS_PROGRESS_FILL_KS" component_name="42" width="1" height="22" src="EDI_CO_BD_SYS_PROGRESS_FILL_KS.png"/>
+	<Res name="EDI_CO_BD_SYS_SCROLLBAR_BACK_KS" component_name="43" width="1" height="80" src="EDI_CO_BD_SYS_SCROLLBAR_BACK_KS.png"/>
+	<Res name="EDI_CO_BD_SYS_SCROLLBAR_HANDLE_KS" component_name="44" width="3" height="1" src="EDI_CO_BD_SYS_SCROLLBAR_HANDLE_KS.png"/>
+	<Res name="EDI_CO_BD_SYS_WALLPAPER" component_name="45" width="120" height="160" src="EDI_CO_BD_SYS_WALLPAPER.png"/>-->
+	<!-- Fixed Icons-->
+	<!--
+	<Res name="EDI_CO_MM3_PICTURE_MODE_SELECTED" component_name="0" width="36" height="26" src="EDI_CO_MM3_PICTURE_MODE_SELECTED.png"/>
+	<Res name="EDI_CO_MM3_MEDIA_PLAYER_UNSELECTED" component_name="0" width="36" height="26" src="EDI_CO_MM3_MEDIA_PLAYER_UNSELECTED.png"/>
+	<Res name="EDI_CO_MM3_VIDEO_MODE_UNSELECTED" component_name="0" width="36" height="26" src="EDI_CO_MM3_VIDEO_MODE_UNSELECTED.png"/>
+	<Res name="EDI_CO_SK_CONFIRM_ACTION" component_name="0" width="25" height="25" src="EDI_CO_SK_CONFIRM_ACTION.png"/>
+	<Res name="EDI_CO_SK_ARROW_LEFT" component_name="0" width="25" height="25" src="EDI_CO_SK_ARROW_LEFT.png"/>
+	<Res name="EDI_CO_SK_ARROW_RIGHT" component_name="0" width="25" height="25" src="EDI_CO_SK_ARROW_RIGHT.png"/>
+	<Res name="EDI_CO_SK_DISMISS" component_name="0" width="25" height="25" src="EDI_CO_SK_DISMISS.png"/>
+	<Res name="EDI_CO_SK_PAUSE" component_name="0" width="25" height="25" src="EDI_CO_SK_PAUSE.png"/>
+	<Res name="EDI_CL_SK_DECREASE_VOLUME" component_name="0" width="25" height="25" src="EDI_CL_SK_DECREASE_VOLUME.png"/>
+	<Res name="EDI_CL_SK_INCREASE_VOLUME" component_name="0" width="25" height="25" src="EDI_CL_SK_INCREASE_VOLUME.png"/>
+	<Res name="EDI_CO_SK_KEYGUARD" component_name="0" width="25" height="25" src="EDI_CO_SK_KEYGUARD.png"/>
+	<Res name="EDI_CD_FB_LOW_BATTERY" component_name="0" width="58" height="154" src="EDI_CD_FB_LOW_BATTERY.png"/>
+	<Res name="EDI_CV_SK_CONFIRM_ACTION" component_name="0" width="25" height="25" src="EDI_CV_SK_CONFIRM_ACTION.png"/>
+	<Res name="EDI_CO_SK_PLAY" component_name="0" width="25" height="25" src="EDI_CO_SK_PLAY.png"/>
+	<Res name="EDI_CO_SK_SCROLL_UP" component_name="0" width="25" height="25" src="EDI_CO_SK_SCROLL_UP.png"/>
+	<Res name="EDI_CO_SK_SCROLL_DOWN" component_name="0" width="25" height="25" src="EDI_CO_SK_SCROLL_DOWN.png"/>-->
+	<!--String-->
+	<Res name="IDS_CO_BD_TITLE_MMS" component_name="17" data="MMS"/>
+	<Res name="IDS_CO_BD_TITLE_BOOKMARK" component_name="17" data="Bookmark"/>
+	<Res name="IDS_CO_BD_TITLE_DATESETTING" component_name="17" data="Date Setting"/>
+	<Res name="IDS_CO_BD_TITLE_EDIT" component_name="17" data="Edit"/>
+	<Res name="IDS_CO_BD_TITLE_FEEDBACK" component_name="17" data="Feedback"/>
+	<Res name="IDS_CO_BD_TITLE_IDLE" component_name="17" data="Idle"/>
+	<Res name="IDS_CO_BD_TITLE_WALLPAPER" component_name="17" data="Wallpaper"/>
+	<Res name="IDS_CO_BD_TITLE_PAGE_SUBTEXT" component_name="17" data="1/2"/>
+	<Res name="IDS_CO_BD_TITLE_Checkbox" component_name="17" data="Remove tracks"/>
+	<Res name="IDS_CO_BD_CSK_SENDTO" component_name="13" data="Send to"/>
+	<Res name="IDS_CO_BD_MMS_LINE1" component_name="15" data="this is line one"/>
+	<Res name="IDS_CO_BD_MMS_LINE2" component_name="15" data="this is line two"/>
+	<Res name="IDS_CO_BD_MMS_LINE3" component_name="15" data="this is line three"/>
+	<Res name="IDS_CO_BD_MMS_LINE4" component_name="15" data="this is line four"/>
+	<Res name="IDS_CO_BD_MMS_LINE5" component_name="15" data="this is line five"/>
+	<Res name="IDS_CO_BD_MMS_LINE6" component_name="15" data="this is line six"/>
+	<Res name="IDS_CO_BD_SYS_MMS_FILENAME1" component_name="15" data="Soundlala.wav"/>
+	<Res name="IDS_CO_BD_SYS_MMS_FILENAME2" component_name="15" data="112KB"/>
+	<!-- Internal display -->
+	<!-- Static texts -->
+	<!-- Bookmark app -->
+	<Res name="IDS_BM_LI_ITEM1" component_name="15" data="Others"/>
+	<Res name="IDS_BM_LI_ITEM2" component_name="15" data="Google"/>
+	<Res name="IDS_BM_LI_ITEM3" component_name="15" data="Tec"/>
+	<Res name="IDS_BM_LI_ITEM4" component_name="15" data="Siemens"/>
+	<Res name="IDS_BM_LI_ITEM5" component_name="15" data="Yahoo"/>
+	<!-- Date Setting app -->
+	<Res name="IDS_DS_LI_DATEFORMAT" component_name="15" data="Set(YYYY-MM-DD)"/>
+	<!-- Edit app -->
+	<Res name="IDS_ED_LI_LNAME" component_name="15" data="Last name:"/>
+	<Res name="IDS_ED_LI_CHARSET1" component_name="15" data="m   n"/>
+	<Res name="IDS_ED_LI_CHARSET2" component_name="15" data="6"/>
+	<Res name="IDS_ED_LI_EDITEDCHAR" component_name="15" data="o"/>
+	<Res name="IDS_ED_LI_PRIVPHONE" component_name="15" data="Private phone:"/>
+	<Res name="IDS_ED_LI_BUSIPHONE" component_name="15" data="Business phone:"/>
+	<!-- Focused Radio Off app -->
+	<Res name="IDS_FR_LI_ITEM1" component_name="15" data="General"/>
+	<Res name="IDS_FR_LI_ITEM2" component_name="15" data="Silent"/>
+	<Res name="IDS_FR_LI_ITEM3" component_name="15" data="Meeting"/>
+	<Res name="IDS_FR_LI_ITEM4" component_name="15" data="Outdoor"/>
+	<Res name="IDS_FR_LI_ITEM5" component_name="15" data="User Profile 1"/>
+	<Res name="IDS_FR_LI_ITEM6" component_name="15" data="User Profile 2"/>
+	<Res name="IDS_FR_LI_ITEM7" component_name="15" data="Car Kit"/>
+	<!-- Idle app -->
+	<Res name="IDS_ID_LI_ITEM1" component_name="15" data="1 Missed call"/>
+	<Res name="IDS_ID_LI_ITEM2" component_name="15" data="1 New message"/>
+	<Res name="IDS_ID_LI_ITEM3" component_name="15" data="2 New appoints"/>
+	<!-- Incoming call app -->
+	<Res name="IDS_IC_LI_ITEM1" component_name="15" data="Incoming call"/>
+	<Res name="IDS_IC_LI_ITEM2" component_name="15" data="+49284295"/>
+	<!-- Marked app -->
+	<Res name="IDS_MA_LI_ITEM1" component_name="15" data="&lt;New entry&gt;"/>
+	<Res name="IDS_MA_LI_ITEM2" component_name="15" data="benzui"/>
+	<Res name="IDS_MA_LI_ITEM3" component_name="15" data="Low"/>
+	<Res name="IDS_MA_LI_ITEM4" component_name="15" data="No default available"/>
+	<Res name="IDS_MA_LI_ITEM5" component_name="15" data="John Rodrigo"/>
+	<!-- Menu app -->
+	<Res name="IDS_MU_LI_ITEM1" component_name="15" data="Mobile navigation"/>
+	<Res name="IDS_MU_LI_ITEM2" component_name="15" data="Services"/>
+	<Res name="IDS_MU_LI_ITEM3" component_name="15" data="My menu"/>
+	<Res name="IDS_MU_LI_ITEM4" component_name="15" data="Alarm Clock"/>
+	<Res name="IDS_MU_LI_ITEM5" component_name="15" data="FM Radio"/>
+	<Res name="IDS_MU_LI_ITEM6" component_name="15" data="Calculator"/>
+	<Res name="IDS_MU_LI_ITEM7" component_name="15" data="Unit Converter"/>
+	<!-- MMS app -->
+	<Res name="IDS_MM_LI_ITEM1" component_name="15" data="Enter web page"/>
+	<Res name="IDS_MM_LI_ITEM2" component_name="15" data="location"/>
+	<Res name="IDS_MM_LI_ITEM3" component_name="15" data="http://"/>
+	<Res name="IDS_MM_LI_ITEM4" component_name="15" data="www"/>
+	<!-- Organizer1 app -->
+	<Res name="IDS_OR_LI_ITEM1" component_name="15" data="16:54 Meeting"/>
+	<Res name="IDS_OR_LI_ITEM2" component_name="15" data="17:00 Birthday"/>
+	<!-- Organzier3 app -->
+	<Res name="IDS_OR_LI_ITEM3" component_name="15" data="meeting"/>
+	<Res name="IDS_OR_LI_ITEM4" component_name="15" data="Birthday"/>
+	<!-- Option Popup app -->
+	<Res name="IDS_OP_LI_ITEM1" component_name="15" data="Send contact"/>
+	<Res name="IDS_OP_LI_ITEM2" component_name="15" data="Duplicate"/>
+	<Res name="IDS_OP_LI_ITEM3" component_name="15" data="Add to dist. list"/>
+	<Res name="IDS_OP_LI_ITEM4" component_name="15" data="Add to group"/>
+	<Res name="IDS_OP_LI_ITEM5" component_name="15" data="Save options"/>
+	<!-- Theme app -->
+	<Res name="IDS_TH_LI_ITEM1" component_name="15" data="Standard"/>
+	<Res name="IDS_TH_LI_ITEM2" component_name="15" data="Blue Num"/>
+	<Res name="IDS_TH_LI_ITEM3" component_name="15" data="3787 KB"/>
+	<Res name="IDS_TH_LI_ITEM4" component_name="15" data="Cyber"/>
+	<Res name="IDS_TH_LI_ITEM5" component_name="15" data="3742 KB"/>
+	<!-- Ticked Checkbox app -->
+	<Res name="IDS_TC_LI_ITEM1" component_name="15" data="Jmagp, Jmtw"/>
+	<Res name="IDS_TC_LI_ITEM2" component_name="15" data="566885"/>
+	<Res name="IDS_TC_LI_ITEM3" component_name="15" data="Rodrigo, John"/>
+	<!-- Checkbox app -->
+	<Res name="IDS_CB_LI_ITEM1" component_name="15" data="song 1.aac"/>
+	<Res name="IDS_CB_LI_ITEM2" component_name="15" data="song 2.aac"/>
+	<Res name="IDS_CB_LI_ITEM3" component_name="15" data="song 3.aac"/>
+	<Res name="IDS_CB_LI_ITEM4" component_name="15" data="song 4.aac"/>
+	<!-- Toggle arrow app -->
+	<Res name="IDS_TA_LI_ITEM1" component_name="15" data="Images"/>
+	<Res name="IDS_TA_LI_ITEM2" component_name="15" data="Don't show"/>
+	<Res name="IDS_TA_LI_ITEM3" component_name="15" data="Sounds"/>
+	<Res name="IDS_TA_LI_ITEM4" component_name="15" data="Don't play"/>
+	<Res name="IDS_TA_LI_ITEM5" component_name="15" data="Objects"/>
+	<Res name="IDS_TA_LI_ITEM6" component_name="15" data="Don't download"/>
+	<!-- Volumn app -->
+	<Res name="IDS_VO_LI_OFF" component_name="15" data="Off"/>
+	<Res name="" component_name="15" data=""/>
+	<!-- Title texts -->
+	<Res name="IDS_CO_BD_TITLE_BOOKMARK" component_name="17" data="Bookmarks"/>
+	<Res name="IDS_CO_BD_TITLE_DATE" component_name="17" data="Date"/>
+	<Res name="IDS_CO_BD_TITLE_GENERALINFO" component_name="17" data="General Info"/>
+	<Res name="IDS_CO_BD_TITLE_PROFILES" component_name="17" data="Profiles"/>
+	<Res name="IDS_CO_BD_TITLE_MESSAGES" component_name="17" data="Messages"/>
+	<Res name="IDS_CO_BD_TITLE_ALLCONTACTS" component_name="17" data="All Contacts"/>
+	<Res name="IDS_CO_BD_TITLE_EXTRAS" component_name="17" data="Extras"/>
+	<Res name="IDS_CO_BD_TITLE_ENTERURL" component_name="17" data="Enter URL"/>
+	<Res name="IDS_CO_BD_TITLE_MONTH_YEAR" component_name="17" data="October 2005"/>
+	<Res name="IDS_CO_BD_TITLE_MONTH_YEAR_WEEK" component_name="17" data="Oct 2005 W44"/>
+	<Res name="IDS_CO_BD_TITLE_DATE_DAY_MONTH_YEAR" component_name="17" data="We 26.10.2005"/>
+	<Res name="IDS_CO_BD_TITLE_CREATESMS" component_name="17" data="Create SMS"/>
+	<Res name="IDS_CO_BD_TITLE_THEMES" component_name="17" data="Themes"/>
+	<Res name="IDS_CO_BD_TITLE_MULTIMEDIA" component_name="17" data="Multimedia"/>
+	<Res name="IDS_CO_BD_TITLE_RINERVOLUME" component_name="17" data="Ringer Volume"/>
+	<!-- Softkey texts -->
+	<Res name="IDS_CO_BD_LSK_OPTIONS" component_name="13" data="Options"/>
+	<Res name="IDS_CO_BD_LSK_SAVE" component_name="13" data="Save"/>
+	<Res name="IDS_CO_BD_LSK_OK" component_name="13" data="Ok"/>
+	<Res name="IDS_CO_BD_LSK_SNOOZE" component_name="13" data="Snooze"/>
+	<Res name="IDS_CO_BD_LSK_SELECT" component_name="13" data="Select"/>
+	<Res name="IDS_CO_BD_LSK_VIEW" component_name="13" data="View"/>
+	<Res name="IDS_CO_BD_LSK_MMS" component_name="13" data="MMS"/>
+	<Res name="IDS_CO_BD_LSK_ANSWER" component_name="13" data="Answer"/>
+	<Res name="IDS_CO_BD_LSK_SOS" component_name="13" data="SOS"/>
+	<Res name="IDS_CO_BD_RSK_BACK" component_name="13" data="Back"/>
+	<Res name="IDS_CO_BD_RSK_CANCEL" component_name="13" data="Cancel"/>
+	<Res name="IDS_CO_BD_RSK_DISCARD" component_name="13" data="Discard"/>
+	<Res name="IDS_CO_BD_RSK_OFF" component_name="13" data="Off"/>
+	<Res name="IDS_CO_BD_RSK_NAVI" component_name="13" data="Navi"/>
+	<Res name="IDS_CO_BD_RSK_REJECT" component_name="13" data="Reject"/>
+	<Res name="IDS_CO_BD_RSK_EXIT" component_name="13" data="Exit"/>
+	<!-- Feedback texts -->
+	<!-- Edit app -->
+	<Res name="IDS_ED_LI_POSITIVE_ITEM1" component_name="5" data="The contact"/>
+	<Res name="IDS_ED_LI_POSITIVE_ITEM2" component_name="5" data="John Rodrigo"/>
+	<Res name="IDS_ED_LI_POSITIVE_ITEM3" component_name="5" data="has been"/>
+	<Res name="IDS_ED_LI_POSITIVE_ITEM4" component_name="5" data="saved."/>
+	<Res name="IDS_ED_LI_QUESTION_ITEM1" component_name="5" data="Save"/>
+	<Res name="IDS_ED_LI_QUESTION_ITEM2" component_name="5" data="message?"/>
+	<Res name="IDS_ED_LI_WARNING_ITEM1" component_name="5" data="Upcoming"/>
+	<Res name="IDS_ED_LI_WARNING_ITEM2" component_name="5" data="event test "/>
+	<Res name="IDS_ED_LI_WARNING_ITEM3" component_name="5" data="in 1 minute."/>
+	<!-- Theme app -->
+	<Res name="IDS_TH_LI_ENTERPIN" component_name="5" data="Enter PIN:"/>
+	<Res name="IDS_TH_LI_WAIT" component_name="5" data="Please wait..."/>
+	<!-- ProgressBar app -->
+	<Res name="IDS_PB_LI_PROGRESS_ITEM1" component_name="5" data="Copying 1 of 1"/>
+	<Res name="IDS_PB_LI_PROGRESS_ITEM2" component_name="5" data="15% complete"/>
+	<!-- Symbols app -->
+	<Res name="IDS_SY_LI_SPECIALCHAR" component_name="5" data="Special characters"/>
+	<Res name="IDS_SY_LI_CHARSET_ITEM1" component_name="5" data="A  B  C  D  E  F  G"/>
+	<Res name="IDS_SY_LI_CHARSET_ITEM2" component_name="5" data="A  B  C  D  E  F  G"/>
+	<Res name="IDS_SY_LI_CHARSET_ITEM3" component_name="5" data="A  B  C  D  E  F  G"/>
+	<Res name="IDS_SY_LI_CHARSET_ITEM4" component_name="5" data="A  B  C  D  E  F  G"/>
+	<!-- Feedback Popup app -->
+	<Res name="IDS_FP_LI_POP_ITEM1" component_name="5" data="Received: 0"/>
+	<Res name="IDS_FP_LI_POP_ITEM2" component_name="5" data="kb"/>
+	<Res name="IDS_FP_LI_POP_ITEM3" component_name="5" data="Sent: 3kb"/>
+	<Res name="IDS_FP_LI_POP_ITEM4" component_name="5" data="Web time:"/>
+	<Res name="IDS_FP_LI_POP_ITEM5" component_name="5" data="00:17 min"/>
+	<Res name="IDS_FP_LI_FAIL_ITEM1" component_name="5" data="Cannot"/>
+	<Res name="IDS_FP_LI_FAIL_ITEM2" component_name="5" data="process"/>
+	<Res name="IDS_FP_LI_FAIL_ITEM3" component_name="5" data="media."/>
+	<!-- Date Time text -->
+	<!-- Edit app -->
+	<Res name="IDS_DS_LI_DATE_EDITYEAR" component_name="9" data="2005"/>
+	<Res name="IDS_DS_LI_DATE_DATEINFO" component_name="1" data="-11-05"/>
+	<!-- Text and Edit text -->
+	<!-- Edit app -->
+	<Res name="IDS_ED_LI_LASTNAME" component_name="3" data="Rodrig"/>
+	<Res name="IDS_ED_LI_PHONENUM" component_name="3" data="123456789"/>
+	<Res name="IDS_ED_LI_EDITCHAR" component_name="11" data="o"/>
+	<!-- Marked app -->
+	<Res name="IDS_MA_LI_EDITCHAR" component_name="11" data="|"/>
+	<!-- Option text -->
+	<Res name="IDS_OP_LI_OPTIONS" component_name="7" data="Options"/>
+	<!-- Other fixed texts -->
+	<Res name="IDS_ID_IN_TIMEINFO" component_name="0" data="15:55"/>
+	<Res name="IDS_ID_IN_DATEINFO" component_name="0" data="26/10/2005"/>
+	<Res name="IDS_ID_IN_PROVIDERINFO" component_name="0" data="Provider"/>
+	<!-- External display -->
+	<!-- Static textx -->
+	<!-- Media player list app -->
+	<Res name="IDS_MP_LI_ITEM1" component_name="15" data="Bells of O"/>
+	<Res name="IDS_MP_LI_ITEM2" component_name="15" data="Call of Time"/>
+	<Res name="IDS_MP_LI_ITEM3" component_name="15" data="FatRatGro..."/>
+	<Res name="IDS_MP_LI_ITEM4" component_name="17" data="All tracks"/>
+	<Res name="IDS_MP_LI_ITEM5" component_name="15" data="Bells of O..."/>
+	<!-- Media player preview app -->
+	<Res name="IDS_MP_LI_SONGMAME" component_name="15" data="Bells of Orion"/>
+	<Res name="IDS_MP_LI_STARTTIME" component_name="15" data="00:02"/>
+	<Res name="IDS_MP_LI_ENDTIME" component_name="15" data="00:10"/>
+	<!-- Feedback texts -->
+	<!-- Horizontal popup app -->
+	<Res name="IDS_HP_LI_ITEM1" component_name="5" data="Cannot"/>
+	<Res name="IDS_HP_LI_ITEM2" component_name="5" data="process"/>
+	<Res name="IDS_HP_LI_ITEM3" component_name="5" data="media"/>
+	<!-- Vertical popup app -->
+	<Res name="IDS_VP_LI_ITEM1" component_name="15" data="Saving, please"/>
+	<Res name="IDS_VP_LI_ITEM2" component_name="15" data="wait..."/>
+	<!-- Other fixed texts -->
+	<Res name="IDS_ID_EX_TIMEINFO" component_name="0" data="12:04"/>
+	<Res name="IDS_ID_EX_PROVIDERINFO" component_name="0" data="provider"/>
+</Resource_List>

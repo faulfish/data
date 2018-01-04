@@ -1,0 +1,6 @@
+; IMEIStation.def : Declares the module parameters for the DLL.
+
+LIBRARY      "IMEIStation"
+
+EXPORTS
+    ; Explicit exports can go here

@@ -1,0 +1,6 @@
+; Download_Export.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Download_Export"
+
+EXPORTS
+    ; Explicit exports can go here

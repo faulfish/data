@@ -1,0 +1,78 @@
+; odmtpa_qisda_Melos.def : Declares the module parameters for the DLL.
+
+LIBRARY      "odmtpa_qisda_Melos"
+
+EXPORTS
+	ODM_Initialize			@1
+	ODM_ConnectCommPort		@2
+	ODM_DisConnectCommPort	@3
+	ODM_APIVersion			@4
+	ODM_UnInitialize		@5
+	
+
+	;Unit power up, down and restart
+	ODM_IsUnitOn			@6
+	ODM_TurnUnitOn			@7
+	ODM_IsUnitOff			@8
+	ODM_TurnUnitOff			@9
+	ODM_RestartUnit			@10
+	
+	;Test Mode, Status Check and Master Clear
+	ODM_SetTestMode				@11	
+	ODM_MasterClear				@12	
+
+	;Unit Processing information
+	ODM_ReadTrackId				@13	
+	ODM_ReadUnitInfo			@14	
+
+	;Device identification
+	ODM_ReadIMEI				@15
+	ODM_ReadESN					@16
+	
+	;Flash and Flex
+	ODM_ReadVersion				@17
+
+	;ODM WorkAround
+	ODM_GenericWrite			@18
+	ODM_GenericRead				@19
+	
+	;Call Back
+	ODM_SetCallBack				@20
+
+    ; Explicit exports can go here
+    ODM_ClearErrorMessage 		@21
+    ODM_ClearFilePath     		@22
+    ODM_CheckDataSize	  		@23
+    ODM_AddPortToString	  		@24
+    ODM_IsProgrammingComplete	@25
+    ODM_ReadBarcode				@26
+    ODM_ReadTransceiverKitNumber @27
+    ODM_ReadFactoryInfoBlock	@28
+    ODM_SetFactoryInfoBlock		@29
+    ODM_SetInFactoryFlag		@30
+    ODM_FactoryFlexSwitch		@31
+    ODM_ProgramIMEI				@32
+    ODM_VerifyIMEI				@33
+    ODM_ProgramESN				@34
+    ODM_VerifyESN				@35
+    ODM_CompareFlash			@36
+    ODM_CompareFlex				@37
+    ODM_Flash					@38
+    ODM_Flex					@39
+    ODM_ProgramPhoneBook		@40
+    ODM_ProgramBlueTooth		@41
+    ODM_ReadBlueTooth			@42
+    ODM_ProgramWLAN				@43
+    ODM_ReadWLAN				@44
+    ODM_SetRealTimeClock		@45
+    ODM_IsUnitLocked			@46
+    ODM_UnLockUnit				@47
+    ODM_ProgramLock				@48
+    ODM_ReadLock				@49
+    ODM_ProgramAkey				@50
+    ODM_ProgramMobileId			@51
+    ODM_ProgramSystemId			@52
+    ODM_ProgramSoc				@53
+    ODM_ProgramIMSI				@54
+    ODM_ExecuteFlow				@55
+    ODM_ReadBatteryLevel		@56

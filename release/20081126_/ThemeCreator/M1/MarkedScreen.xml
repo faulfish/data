@@ -1,0 +1,60 @@
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Jennifer.CF.Liu (EMBRACE) -->
+<Application name="MarkedScreen">
+	<!-- annunciator -->
+	<Group id="1" parentID="1">
+		<AnnunciatorBack pos="2" zOrder="1" src="IDI_CO_BD_ANNUNCIATOR_REGION"/>
+		<SignalIcon pos="3" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+		<BluetoothIcon pos="4" zOrder="2" src="IDI_CO_BD_BT_ACTIVE_VISIBLE"/>
+		<BatteryIcon pos="5" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+	</Group>
+	<!-- title -->
+	<Group id="2" parentID="2">
+		<TitleBack pos="10" zOrder="1" src="IDI_CO_BD_TITLE_REGION"/>
+		<TitleIcon pos="13" zOrder="2" src="IDI_CO_HL_ADDRESS_BOOK"/>
+		<TitleText pos="14" zOrder="2" src="IDS_CO_BD_TITLE_ALLCONTACTS"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="3" parentID="3">
+		<SoftkeyBack pos="6" zOrder="1" src="IDI_CO_BD_SYS_SOFTKEY_BACK"/>
+		<SoftkeyIcon pos="8" zOrder="2" src="IDI_CO_CC_CHECK"/>
+		<SoftkeyText pos="7" zOrder="2" src="IDS_CO_BD_LSK_OPTIONS"/>
+		<SoftkeyText pos="9" zOrder="2" src="IDS_CO_BD_RSK_EXIT"/>
+	</Group>
+	<!-- backgroundtab -->
+	<Group id="4" parentID="4">
+		<BodyBackgroundTab pos="15" zOrder="1" src="IDI_CO_BD_SYS_BODY_BACK_TABS"/>
+		<BodyBackgroundTabIcon pos="1501" zOrder="2" src="IDI_CO_L1_NEW_ENTRY"/>
+		<BodyBackgroundTabIcon pos="1502" zOrder="2" src="IDI_AB_L1_PHONE_CONTACTS"/>
+		<BodyBackgroundTabIcon pos="1503" zOrder="2" src="IDI_AB_L1_PHONE_CONTACTS"/>
+		<BodyBackgroundTabIcon pos="1504" zOrder="2" src="IDI_IM_L1_SEARCH"/>
+		<BodyBackgroundTabText pos="1505" zOrder="2" src="IDS_MA_LI_ITEM1"/>
+		<BodyBackgroundTabText pos="1506" zOrder="2" src="IDS_MA_LI_ITEM2"/>
+		<BodyBackgroundTabText pos="1507" zOrder="2" src="IDS_MA_LI_ITEM5"/>
+		<BodyBackgroundTabText pos="1508" zOrder="2" src="IDS_MA_LI_EDITCHAR"/>
+	</Group>
+	<!-- selected tab icons -->
+	<Group id="5" parentID="4">
+		<BodyBackgroundTabSelectedIconBack pos="18" zOrder="1" src="IDI_CO_BD_SYS_TAB_SELECTED"/>
+		<BodyBackgroundTabSelectedIcon pos="19" zOrder="2" src="IDI_AB_TAB_INFO1"/>
+	</Group>
+	<!-- unselected icons -->
+	<Group id="6" parentID="4">
+		<BodyBackgroundTabUnSelectedIconBack pos="20" zOrder="1" src="IDI_CO_BD_SYS_TAB_UNSELECTED"/>
+		<BodyBackgroundTabUnSelectedIcon pos="21" zOrder="2" src="IDI_AB_TAB_INFO2"/>
+	</Group>
+	<Group id="7" parentID="4">
+		<BodyBackgroundTabUnSelectedIconBack pos="22" zOrder="1" src="IDI_CO_BD_SYS_TAB_UNSELECTED"/>
+		<BodyBackgroundTabUnSelectedIcon pos="23" zOrder="2" src="IDI_AB_TAB_INFO3"/>
+	</Group>
+	<Group id="8" parentID="4">
+		<BodyBackgroundTabUnSelectedIconBack pos="24" zOrder="1" src="IDI_CO_BD_SYS_TAB_UNSELECTED"/>
+		<BodyBackgroundTabUnSelectedIcon pos="25" zOrder="2" src="IDI_AB_TAB_INFO4"/>
+	</Group>
+	<!-- twolineselectionbar -->
+	<Group id="9" parentID="4">
+		<TwoLineSelectionBarBack pos="1512" zOrder="1" src="IDI_CO_BD_SYS_LIST_SELECTION_2LINE"/>
+		<TwoLineSelectionBarIcon pos="1509" zOrder="2" src="IDI_AB_L1_PHONE_CONTACTS"/>
+		<TwoLineSelectionBarText pos="1510" zOrder="2" src="IDS_MA_LI_ITEM3"/>
+		<TwoLineSelectionBarText pos="1511" zOrder="2" src="IDS_MA_LI_ITEM4"/>
+	</Group>
+</Application>

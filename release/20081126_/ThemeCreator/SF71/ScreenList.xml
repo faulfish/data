@@ -1,0 +1,42 @@
+<!-- when program reads this file,
+	 it will parse each screen's configuration xml fil
+-->
+<SCREEN_LIST>
+	<SCREEN name="App_Bookmark" id="1"/> 
+	<SCREEN name="App_DateSetting" id="2"/>
+	<SCREEN name="App_Edit" id="3"/>
+	<SCREEN name="App_FeedbackPositive" id="4"/>
+	<SCREEN name="App_FeedbackQuestion" id="5"/>
+	<SCREEN name="App_FeedbackWarning" id="6"/>
+	<SCREEN name="App_FocusedRadioOff" id="7"/>
+	<SCREEN name="App_FocusedRadioOn" id="8"/>
+	<SCREEN name="App_IconMenuBackground" id="9"/>
+	<SCREEN name="App_IdleWithWallpaper1" id="10"/>
+	<SCREEN name="App_IdleWithWallpaper2" id="11"/>
+	<SCREEN name="App_IdleWithWallpaper3" id="12"/>
+	<SCREEN name="App_Idle" id="13"/>
+	<SCREEN name="App_IncomingCall" id="14"/>
+	<SCREEN name="App_MarkedScreen" id="15"/>
+	<SCREEN name="App_MenuScreen" id="16"/>
+	<SCREEN name="App_MMSScreen" id="17"/>
+	<SCREEN name="App_Organizer1" id="18"/>
+	<SCREEN name="App_Organizer2" id="19"/>
+	<SCREEN name="App_Organizer3" id="20"/>
+	<SCREEN name="APP_OptionPopup" id="21"/>
+	<SCREEN name="App_PinInput" id="22"/>
+	<SCREEN name="App_IncorrectPinInput" id="23"/>
+	<SCREEN name="App_Progressbar" id="24"/>
+	<SCREEN name="App_SymbolsScreen" id="25"/>
+	<SCREEN name="App_ThemesScreen" id="26"/>
+	<SCREEN name="App_TickedCheckboxScreen" id="27"/>
+	<SCREEN name="App_ToggleArrowScreen" id="28"/>
+	<SCREEN name="App_UntickedCheckboxScreen" id="29"/>
+	<SCREEN name="App_VolumeScreen" id="30"/>
+	<SCREEN name="App_WaitScreen" id="31"/>
+	<SCREEN name="App_Feedbackpopup1" id="32"/>
+	<SCREEN name="App_IdleforExternalDisplayScreen" id="34"/>
+	<SCREEN name="App_MediaPlayerList" id="35"/>
+	<SCREEN name="App_MediaPlayerPreview" id="36"/>
+	<SCREEN name="App_HorizontalPopupPreview" id="37"/>
+	<SCREEN name="App_VerticalPopupPreview" id="38"/>
+</SCREEN_LIST>

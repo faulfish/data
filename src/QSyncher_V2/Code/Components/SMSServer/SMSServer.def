@@ -1,0 +1,6 @@
+; SMSServer.def : Declares the module parameters for the DLL.
+
+LIBRARY	"SMSServer"
+
+EXPORTS
+    ; Explicit exports can go here

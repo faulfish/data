@@ -1,0 +1,44 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////////////////
+////////// %var1 comPort %var10 Error code %var11 Error message/////////
+////////// %var3 inIMEI                                        ///////// 
+////////////////////////////////////////////////////////////////////////
+
+0000 print "============Reset Handset============" Title
+0001 waitinput %var1 COM_PORT
+0002 Run MobileToolKit_StaticMD.dll ResetHandset_ForSPU %var1
+0003 comparefalse 5
+0004 comparetrue 7
+
+0005 print "Set phone to online mode fail....."
+0006 print "F101" "Error!"
+
+0007 sleep 3000
+0008 print "============Reset phone SUCCESS============"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

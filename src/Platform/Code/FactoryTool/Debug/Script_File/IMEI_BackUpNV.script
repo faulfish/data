@@ -1,0 +1,29 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+0000 print "===============BACKUP NV PARTITION=============" "Title"
+0001 waitinput %var1 COM_PORT
+0002 assign %var11 2
+0003 loop %var11
+0004 Run MobileToolKit_StaticM.dll BackupNVPartition_ForSPU %var1
+0005 comparetrue 9
+0006 print "BackupNV partition fail......" "Log"
+0007 loop
+0008 print "F105" "Error"
+
+0009 print "BackupNV partition Success......" "Log"
+0010 print "===============BACKUP NV PARTITION END=============" "Title"
+0011 print 95 "Progress" // end
+}

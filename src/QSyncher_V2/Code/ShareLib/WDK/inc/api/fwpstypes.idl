@@ -1,0 +1,211 @@
+/*
+   Copyright (c) Microsoft Corporation
+
+   SYNOPSIS
+
+     Defines data types used by the system portion of the FWP API.
+*/
+
+import "fwptypes.idl";
+
+cpp_quote("#if _MSC_VER >=  800")
+cpp_quote("#if _MSC_VER >= 1200")
+cpp_quote("#pragma warning(push)")
+cpp_quote("#endif")
+cpp_quote("#pragma warning(disable:4201)")
+cpp_quote("#endif")
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Definitions for building filters. A filter expresses a rule of the form "if
+// the condition is true, then perform the action."
+//
+///////////////////////////////////////////////////////////////////////////////
+
+// Expresses a filter condition that must be true for the action to be invoked.
+typedef struct FWPS_FILTER_CONDITION0_
+{
+   // LUID of the field to be tested.
+   UINT16 fieldId;
+   // Reserved for system type.
+   UINT16 reserved;
+   // Type of match to be performed.
+   FWP_MATCH_TYPE matchType;
+   // Value to match the field against.
+   FWP_CONDITION_VALUE0 conditionValue;
+} FWPS_FILTER_CONDITION0;
+
+// Action invoked if all the filter conditions are true.
+typedef struct FWPS_ACTION0_
+{
+   // Type of action.
+   FWP_ACTION_TYPE type;
+   // LUID of the callout if FWP_ACTION_FLAG_CALLOUT is set in the action type.
+   // Otherwise, it's ignored.
+   UINT32 calloutId;
+} FWPS_ACTION0;
+
+// Clear filter action right
+cpp_quote("#define FWPS_FILTER_FLAG_CLEAR_ACTION_RIGHT    (0x0001)")
+// Treat callout filters as permit filters if callout is not registered
+cpp_quote("#define FWPS_FILTER_FLAG_PERMIT_IF_CALLOUT_UNREGISTERED   (0x0002)")
+
+typedef struct FWPM_PROVIDER_CONTEXT0_ FWPM_PROVIDER_CONTEXT0;
+
+// System filter used for run-time classification.
+typedef struct FWPS_FILTER0_
+{
+   // LUID uniquely identifying the filter in the filter engine.
+   UINT64 filterId;
+
+   // Weight of the filter -- higher filters are invoked first.
+   FWP_VALUE0 weight;
+   // Weight of the filter's sub-layer -- higher weights are invoked first.
+   UINT16 subLayerWeight;
+   UINT16 flags;
+   // Array of filter conditions. All must be true for the action to be
+   // performed. In other words, the conditions are AND'ed together. If no
+   // conditions are specified, the action is always performed.
+   UINT32 numFilterConditions;
+   [size_is(numFilterConditions), unique]
+      FWPS_FILTER_CONDITION0* filterCondition;
+   // Action performed if the conditions are true.
+   FWPS_ACTION0 action;
+   // Opaque context that may be interpreted by callouts. The context of the
+   // terminating filter is also returned from classify. In many cases, this
+   // context will be the LUID of a provider context, but it need not be.
+   UINT64 context;
+   // If this is a callout filter and the callout has the
+   // FWPM_CALLOUT_FLAG_USES_PROVIDER_CONTEXT flag set, this contains the
+   // provider context from the corresponding FWPM_FILTER0 struct. Otherwise,
+   // it is null.
+   [unique] FWPM_PROVIDER_CONTEXT0* providerContext;
+} FWPS_FILTER0;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Definitions for classifying.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+// An incoming value passed to the filter engine. These are what
+// FWPS_FILTER_CONDITION0's are tested against.
+typedef struct FWPS_INCOMING_VALUE0_
+{
+   // Data value.
+   FWP_VALUE0 value;
+} FWPS_INCOMING_VALUE0;
+
+// An array of FWPS_INCOMING_VALUE0's.
+typedef struct FWPS_INCOMING_VALUES0_
+{
+   // The LUID of the layer where these values originated.
+   UINT16 layerId;
+   // Number of values in the array. The number of values, their order, and
+   // their data type is fixed for a given layer and determined by the layer
+   // schema.
+   UINT32 valueCount;
+   // Array of FWPS_INCOMING_VALUE0's.
+   [size_is(valueCount), ref] FWPS_INCOMING_VALUE0* incomingValue;
+} FWPS_INCOMING_VALUES0;
+
+//////////
+// The FWPS_INCOMING_VALUES0 are the only values which can be tested by
+// conditions. However, many layers provide additional "meta" information, that
+// can be processed by callouts.
+//////////
+
+typedef enum FWPS_DISCARD_MODULE0_
+{
+   FWPS_DISCARD_MODULE_NETWORK,
+   FWPS_DISCARD_MODULE_TRANSPORT,
+   FWPS_DISCARD_MODULE_GENERAL,
+   FWPS_DISCARD_MODULE_MAX
+} FWPS_DISCARD_MODULE0;
+
+// General (i.e., not layer-specific) reasons why a packet might be discarded.
+typedef enum FWPS_GENERAL_DISCARD_REASON_
+{
+  FWPS_DISCARD_FIREWALL_POLICY,
+  FWPS_DISCARD_IPSEC,
+  FWPS_GENERAL_DISCARD_REASON_MAX
+} FWPS_GENERAL_DISCARD_REASON;
+
+typedef struct FWPS_DISCARD_METADATA0_
+{
+   FWPS_DISCARD_MODULE0 discardModule;
+   UINT32 discardReason;
+   // LUID of filter that caused discard
+   UINT64 filterId;
+} FWPS_DISCARD_METADATA0;
+
+typedef struct FWPS_INBOUND_FRAGMENT_METADATA0_
+{
+   UINT32 fragmentIdentification;
+   UINT16 fragmentOffset;
+   ULONG fragmentLength;
+} FWPS_INBOUND_FRAGMENT_METADATA0;
+
+//////////
+// Flags that can be specified in FWPS_INCOMING_METADATA_VALUES0.flags.
+//////////
+
+cpp_quote("#define FWPS_INCOMING_FLAG_CACHE_SAFE                         (0x00000001)")
+cpp_quote("#define FWPS_INCOMING_FLAG_ENFORCE_QUERY                      (0x00000002)")
+cpp_quote("#define FWPS_INCOMING_FLAG_ABSORB                             (0x00000004)")
+cpp_quote("#define FWPS_INCOMING_FLAG_CONNECTION_FAILING_INDICATION      (0x00000008)")
+
+cpp_quote("#define FWPS_RIGHT_ACTION_WRITE          (0x00000001)")
+
+cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_ABSORB                      (0x00000001)")
+cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_BUFFER_LIMIT_REACHED        (0x00000002)")
+cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_NO_MORE_DATA                (0x00000004)")
+
+// Used to return the outcome of classification to the shim.
+typedef struct FWPS_CLASSIFY_OUT0_
+{
+
+   // Suggested action for the classification. Write access to this field is
+   // controlled by "rights" below. Note that returning block
+   // when FWPS_RIGHT_ACTION_WRITE isn't held is a veto.
+   FWP_ACTION_TYPE actionType;
+   // Opaque context data set by callout or terminating filter
+   UINT64 outContext;
+   // FilterId of filter that set final actionType
+   UINT64 filterId;
+   // Controls write access to fields in within this structure.
+   // FWPS_RIGHT_ACTION_WRITE must be held to update the actionType
+   // unless executing a veto.
+   UINT32 rights;
+   UINT32 flags;
+   // Reserved for system use
+   UINT32 reserved;
+} FWPS_CLASSIFY_OUT0;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Definitions for dispatching callout notifications.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+// Types of notifications dispatched to callouts.
+typedef enum FWPS_CALLOUT_NOTIFY_TYPE_
+{
+   // A filter invoking the callout has been added.
+   FWPS_CALLOUT_NOTIFY_ADD_FILTER,
+   // A filter invoking the callout has been deleted.
+   FWPS_CALLOUT_NOTIFY_DELETE_FILTER,
+   // Not a valid type -- used for parameter validation only.
+   FWPS_CALLOUT_NOTIFY_TYPE_MAX
+} FWPS_CALLOUT_NOTIFY_TYPE;
+
+cpp_quote("#if _MSC_VER >=  800")
+cpp_quote("#if _MSC_VER >= 1200")
+cpp_quote("#pragma warning(pop)")
+cpp_quote("#else")
+cpp_quote("#pragma warning(default:4201)")
+cpp_quote("#endif")
+cpp_quote("#endif")
+

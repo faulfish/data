@@ -1,0 +1,24 @@
+{Header
+}
+{Description
+}
+{Code
+//Keypad test
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticMD.dll DisplayTest %var1 "255" "0" "0" "255"
+0002 comparetrue 0005
+0003 print "Error on DisplayTest API"
+0004 comparefalse 9999
+0005 sleep 500
+0006 Run MobileToolKit_StaticMD.dll DisplayTest %var1 "0" "0" "0" "0"
+0007 sleep 500
+0008 Run MobileToolKit_StaticMD.dll DisplayTest %var1 "0" "255" "0" "255"
+0009 sleep 500
+0010 Run MobileToolKit_StaticMD.dll DisplayTest %var1 "0" "0" "255" "255"
+0011 assign %var2 "Does display test success ?"
+0012 waitinput %var2 ComfirmYesNo
+0013 compare %var2 "Yes"
+0014 comparefalse 9999
+0015 Run MobileToolKit_StaticMD.dll WriteMMIFlag %var1 385 1
+//EM_BZ_ON_OFF_LCM 385
+}

@@ -1,0 +1,210 @@
+; Windows Vista Modem Setup File
+; Copyright (c) 2014 BenQ Incorporated
+; Manufacturer: BenQ Incorporated
+;
+; This INF file installs a proprietary USB CDC driver
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Modem
+Provider=%BENQ%
+CLASSGUID={4D36E96D-E325-11CE-BFC1-08002BE10318}
+DriverVer=01/25/2014,2.1.1.0
+Catalogfile = qcser.cat
+
+[Manufacturer]
+%BENQ%=Models, NTia64, NTamd64, NTarm
+
+[SourceDisksNames.x86]
+1000 = %BenQSrcDisk%,"",,\serial\i386
+
+[SourceDisksNames.amd64]
+1000 = %BenQSrcDisk%,"",,\serial\amd64
+
+[SourceDisksNames.arm]
+1000 = %BenQSrcDisk%,"",,\serial\arm
+
+[SourceDisksFiles]
+  qcusbser.sys = 1000
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Models]
+%BENQ461B2% = Modem2, USB\VID_1D45&PID_461B&MI_02
+%BENQ461E2% = Modem2, USB\VID_1D45&PID_461E&MI_02
+%BENQ461F3% = Modem2, USB\VID_1D45&PID_461F&MI_03
+%BENQ46203% = Modem2, USB\VID_1D45&PID_4620&MI_03
+%BENQ46214% = Modem2, USB\VID_1D45&PID_4621&MI_04
+
+[Models.NTamd64]
+%BENQ461B2% = Modem2, USB\VID_1D45&PID_461B&MI_02
+%BENQ461E2% = Modem2, USB\VID_1D45&PID_461E&MI_02
+%BENQ461F3% = Modem2, USB\VID_1D45&PID_461F&MI_03
+%BENQ46203% = Modem2, USB\VID_1D45&PID_4620&MI_03
+%BENQ46214% = Modem2, USB\VID_1D45&PID_4621&MI_04
+
+[Models.NTia64]
+%BENQ461B2% = Modem2, USB\VID_1D45&PID_461B&MI_02
+%BENQ461E2% = Modem2, USB\VID_1D45&PID_461E&MI_02
+%BENQ461F3% = Modem2, USB\VID_1D45&PID_461F&MI_03
+%BENQ46203% = Modem2, USB\VID_1D45&PID_4620&MI_03
+%BENQ46214% = Modem2, USB\VID_1D45&PID_4621&MI_04
+
+[Models.NTarm]
+%BENQ461B2% = Modem2, USB\VID_1D45&PID_461B&MI_02
+%BENQ461E2% = Modem2, USB\VID_1D45&PID_461E&MI_02
+%BENQ461F3% = Modem2, USB\VID_1D45&PID_461F&MI_03
+%BENQ46203% = Modem2, USB\VID_1D45&PID_4620&MI_03
+%BENQ46214% = Modem2, USB\VID_1D45&PID_4621&MI_04
+
+[Modem2.NT]
+CopyFiles=QCUsbDriverFiles
+AddReg = All, MfgAddReg, Modem1.AddReg, USB
+
+; Add the following if you want to enable 
+; Aggregation by default to the above AddReg
+; , Aggregation
+
+[QCUsbDriverFiles]
+qcusbser.sys
+
+[DestinationDirs]
+QCUsbDriverFiles = 12
+
+[Modem2.NT.Services]
+AddService=qcusbser,  0x00000000, QC_USBSerialService
+
+[QC_USBSerialService]
+DisplayName   = %BENQUSBSER%
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %12%\qcusbser.sys
+
+[Modem2.NT.HW]
+AddReg=LowerFilterAddReg2
+
+[LowerFilterAddReg2]
+HKR,,"LowerFilters",0x00010000,"qcusbser"
+
+[Strings]
+BENQUSBSER = "BenQ USB Device for Legacy Serial Communication"
+BenQSrcDisk = "BenQ USB Driver Disk"
+BENQ   = "BenQ Incorporated"
+BENQ461B2 = "BenQ HS-USB Android Modem 461B"
+BENQ461E2 = "BenQ HS-USB Android Modem 461E"
+BENQ461F3 = "BenQ HS-USB Android Modem 461F"
+BENQ46203 = "BenQ HS-USB Android Modem 4620"
+BENQ46214 = "BenQ HS-USB Android Modem 4621"
+
+[All]
+HKR,,FriendlyDriver,0,Unimodem.vxd
+HKR,,DevLoader,0,*vcomm
+HKR,,ConfigDialog,0,modemui.dll
+HKR,,EnumPropPages,0,modemui.dll,EnumPropPages
+HKR,,PortSubClass,1,02
+HKR, Init,      1,, "AT<cr>"
+; HKR, Responses, "<cr><lf>OK<cr><lf>", 1, 00, 00, 00,00,00,00, 00,00,00,00
+; HKR, Responses, "<cr><lf>ERROR<cr><lf>", 1, 03, 00, 00,00,00,00, 00,00,00,00
+
+; Uncomment this section if aggregation should be enabled by default
+; [Aggregation]
+; HKR,,QCDriverAggregationEnabled,0x00010001,0x01
+; HKR,,QCDriverAggregationTime,0x00010001,2000
+; HKR,,QCDriverAggregationSize,0x00010001,20480
+; HKR,,QCDriverResolutionTime,0x00010001,0x01
+
+[Modem1.AddReg]
+HKR,, Properties, 1, 80,01,00,00, 00,00,00,00, 00,00,00,00, 07,00,00,00, 0F,00,00,00, 00,01,00,00, 00,C2,01,00, 00,C2,01,00
+HKR,, FClass, 1, c3,00,00,00
+HKR, Fax, CL1FCS,, "2"
+HKR, Fax, HardwareFlowControl,, "1"
+
+[USB]
+HKR,, DeviceType, 1, 01
+HKR,,Contention,,""
+
+[MfgAddReg]
+HKR,, InactivityScale,1, 3c,00,00,00
+HKR, Init,      1,, "AT<cr>" 
+HKR, Init, 2,, "ATE0V1<cr>"
+HKR, Monitor, 1,, "ATS0=0<cr>"
+HKR, Monitor, 2,, "None"
+HKR, Answer,    1,, "ATA<cr>"
+HKR, Hangup,    1,, "ATH E1<cr>"
+HKR,, Reset,, "AT&F<cr>"   
+HKR, Settings, Prefix,, "AT"
+HKR, Settings, Terminator,, "<cr>"
+HKR, Settings, DialPrefix,, "D"
+HKR, Settings, DialSuffix,, ""
+HKR, Settings, CallSetupFailTimer,, "S7=<#>"
+HKR, Settings, SpeakerVolume_Low,, "L0"
+HKR, Settings, SpeakerVolume_Med,, "L2"
+HKR, Settings, SpeakerVolume_High,, "L3"
+HKR, Settings, SpeakerMode_Off,, "M0"
+HKR, Settings, SpeakerMode_Dial,, "M1"
+HKR, Settings, SpeakerMode_On,, "M2"
+HKR, Settings, SpeakerMode_Setup,, "M3"
+; HKR, Settings, FlowControl_Off,, ""
+; HKR, Settings, FlowControl_Hard,, ""
+; HKR, Settings, FlowControl_Soft,, ""
+; HKR, Settings, ErrorControl_On,, ""
+; HKR, Settings, ErrorControl_Off,, ""
+; HKR, Settings, ErrorControl_Forced,, ""
+; HKR, Settings, Compression_Off,, ""
+; HKR, Settings, Compression_On,, ""
+; HKR, Settings, Modulation_CCITT,, ""
+; HKR, Settings, Modulation_Bell,, ""
+; HKR, Settings, SpeedNegotiation_Off,, ""
+; HKR, Settings, SpeedNegotiation_On,, ""
+HKR, Settings, Pulse,, "P"
+HKR, Settings, Tone,, "T"
+; HKR, Settings, Blind_Off,, "X4"
+; HKR, Settings, Blind_On,, "X3"
+HKR, Settings, InactivityTimeOut,,"S30=<#>"
+
+HKR, Responses, "0<cr>",                       1, 00, 00, 00,00,00,00, 00,00,00,00 ; OK - Command executed
+HKR, Responses, "1<cr>",                       1, 02, 00, 00,00,00,00, 00,00,00,00 ; CONNECT - Connection
+HKR, Responses, "2<cr>",                       1, 08, 00, 00,00,00,00, 00,00,00,00 ; RING - Ring signal indicated
+HKR, Responses, "3<cr>",                       1, 04, 00, 00,00,00,00, 00,00,00,00 ; NO CARRIER 
+HKR, Responses, "4<cr>",                       1, 03, 00, 00,00,00,00, 00,00,00,00 ; ERROR - Invalid command
+HKR, Responses, "5<cr>",                       1, 02, 00, B0,04,00,00, 00,00,00,00 ; CONNECT 1200
+HKR, Responses, "6<cr>",                       1, 05, 00, 00,00,00,00, 00,00,00,00 ; NO DIALTONE - No dial tone detected
+HKR, Responses, "7<cr>",                       1, 06, 00, 00,00,00,00, 00,00,00,00 ; BUSY - Engaged (busy) signal
+HKR, Responses, "8<cr>",                       1, 07, 00, 00,00,00,00, 00,00,00,00 ; NO ANSWER
+HKR, Responses, "<cr><lf>OK<cr><lf>",          1, 00, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>RING<cr><lf>",        1, 08, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>ERROR<cr><lf>",       1, 03, 00, 00,00,00,00, 00,00,00,00
+; HKR, Responses, "<cr><lf>NO DIALTONE<cr><lf>",  1, 05, 00, 80,25,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO DIALTONE<cr><lf>",  1, 05, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO DIAL TONE<cr><lf>",1, 05, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>BUSY<cr><lf>",        1, 06, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO CARRIER<cr><lf>",  1, 04, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO ANSWER<cr><lf>",   1, 07, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>FAX<cr><lf>",         1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>DATA<cr><lf>",        1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>VOICE<cr><lf>",       1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>DELAYED<cr><lf>",     1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>BLACKLISTED<cr><lf>", 1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>+FCERROR<cr><lf>",    1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT<cr><lf>",            1, 02, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 300<cr><lf>",        1, 02, 08, 2C,01,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600<cr><lf>",       1, 02, 08, 80,25,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 14400<cr><lf>",      1, 02, 08, 40,38,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 28800<cr><lf>",      1, 02, 08, 80,70,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 57600<cr><lf>",      1, 02, 08, 00,E1,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 8000<cr><lf>",       1, 02, 08, 40,1F,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 16000<cr><lf>",      1, 02, 08, 80,3E,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 32000<cr><lf>",      1, 02, 08, 00,7D,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 64000<cr><lf>",      1, 02, 08, 00,FA,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 115200<cr><lf>",     1, 02, 00, 00,c2,01,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 128000<cr><lf>",     1, 02, 08, 00,F4,01,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 256000<cr><lf>",     1, 02, 08, 00,E8,03,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 384000<cr><lf>",     1, 02, 08, 00,DC,05,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 512000<cr><lf>",     1, 02, 08, 00,D0,07,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 1024000<cr><lf>",    1, 02, 08, 00,A0,0F,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 2048000<cr><lf>",    1, 02, 08, 00,40,1F,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 1800000<cr><lf>",    1, 02, 08, 40,77,1B,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 3600000<cr><lf>",    1, 02, 08, 80,EE,36,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200000<cr><lf>",    1, 02, 08, 00,DD,6D,00, 00,00,00,00

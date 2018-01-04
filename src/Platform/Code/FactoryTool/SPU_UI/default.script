@@ -1,0 +1,156 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station MMI_Station_
+ModelName Lavernock
+Script name is default.script
+It's for MMI station
+}
+{Code
+//Get comport
+0000 sleep 0
+0001 sleep 0
+0002 sleep 0
+
+//Initialize
+0003 runscript Initialize.script
+0004 comparetrue 0007
+0005 print "Initialize fail"
+0006 comparefalse 9999
+0007 print "Initialize success"
+
+//CheckPreviousStation
+0008 runscript CheckPreviousStation.script
+0009 comparetrue 0012
+0010 print "CheckPreviousStation fail"
+0011 comparefalse 9999
+0012 print "CheckPreviousStation success"
+
+//Audio loop back test
+0013 runscript AudioLoopbackTest.script
+0014 comparetrue 0017
+0015 print "AudioLoopbackTest fail"
+0016 comparefalse 9999
+0017 print "AudioLoopbackTest success"
+
+//Keypad test
+0018 runscript KeypadPreeTest.script
+0019 comparetrue 0022
+0020 print "KeypadPreeTest fail"
+0021 comparefalse 9999
+0022 print "KeypadPreeTest success"
+
+//Keypad backlight test
+0023 runscript KeypadBacklightTest.script
+0024 comparetrue 0027
+0025 print "KeypadBacklight fail"
+0026 comparefalse 9999
+0027 print "KeypadBacklight success"
+
+//LCD RED test
+0028 runscript DisplayRedTest.script
+0029 comparetrue 0032
+0030 print "Display Red Test fail"
+0031 comparefalse 9999
+0032 print "Display Red Test success"
+
+//LCD Black test
+0033 runscript DisplayBlackTest.script
+0034 comparetrue 0037
+0035 print "Display Black Test fail"
+0036 comparefalse 9999
+0037 print "Display Black Test success"
+
+//LCD Green test
+0038 runscript DisplayGreenTest.script
+0039 comparetrue 0042
+0040 print "Display Green Test fail"
+0041 comparefalse 9999
+0042 print "Display Green Test success"
+
+//LCD Blue test
+0043 runscript DisplayBlueTest.script
+0044 comparetrue 0047
+0045 print "Display Blue Test fail"
+0046 comparefalse 9999
+0047 print "Display Blue Test success"
+
+//DSC test
+0048 runscript DSCTest.script
+0049 comparetrue 0052
+0050 print "DSC Test fail"
+0051 comparefalse 9999
+0052 print "DSC Test success"
+
+//Sub DSC test
+0053 runscript SubDSCTest.script
+0054 comparetrue 0057
+0055 print "SubDSC Test fail"
+0056 comparefalse 9999
+0057 print "SubDSC Test success"
+
+//MP3Test.script
+0058 runscript MP3Test.script
+0059 comparetrue 0062
+0060 print "MP3Test fail"
+0061 comparefalse 9999
+0062 print "MP3Test success"
+
+//BluetoothTest.script
+0063 runscript BluetoothTest.script
+0064 comparetrue 0067
+0065 print "BluetoothTest fail"
+0066 comparefalse 9999
+0067 print "BluetoothTest success"
+
+//VibratorTest.script
+0068 runscript VibratorTest.script
+0069 comparetrue 0072
+0070 print "VibratorTest fail"
+0071 comparefalse 9999
+0072 print "VibratorTest success"
+
+//CoincellTest.script
+0073 runscript CoincellTest.script
+0074 comparetrue 0077
+0075 print "CoincellTest fail"
+0076 comparefalse 9999
+0077 print "CoincellTest success"
+
+//SIMCardTest.script
+0078 runscript SIMCardTest.script
+0079 comparetrue 0082
+0080 print "SIMCardTest fail"
+0081 comparefalse 9999
+0082 print "SIMCardTest success"
+
+//SliderTest.script
+0083 runscript SliderTest.script
+0084 comparetrue 0087
+0085 print "SliderTest fail"
+0086 comparefalse 9999
+0087 print "SliderTest success"
+
+//GSensorTest.script
+0088 runscript GSensorTest.script
+0089 comparetrue 0092
+0090 print "GSensorTest fail"
+0091 comparefalse 9999
+0092 print "GSensorTest success"
+
+//MicroSDCardTest.script
+0093 runscript MicroSDCardTest.script
+0094 comparetrue 0097
+0095 print "MicroSDCardTest fail"
+0096 comparefalse 9999
+0097 print "MicroSDCardTest success"
+
+//Finish
+0098 runscript Finish.script
+0099 comparetrue 0102
+0100 print "Finish fail"
+0101 comparefalse 9999
+0102 print "Finish success"
+}

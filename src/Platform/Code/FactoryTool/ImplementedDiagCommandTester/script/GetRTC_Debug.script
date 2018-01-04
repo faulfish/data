@@ -1,0 +1,19 @@
+{Header
+}
+{Description
+}
+{Code
+0000 waitinput %var1 COMPort
+0001 waitinput %var2 Input
+0002 Run MobileToolKit_StaticMD.dll GetRTC %var1 %var2 %var3 %var4 %var5 %var6 %var7
+0003 comparetrue 0006
+0004 print "Fail GetRTC API"
+0005 comparefalse 9999
+0006 print %var2
+0007 print %var3
+0008 print %var4
+0009 print %var5
+0010 print %var6
+0011 print %var7
+0012 print "Success GetRTC API"
+}

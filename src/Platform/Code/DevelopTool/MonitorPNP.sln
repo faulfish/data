@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MonitorUPNP", "MonitorPNP\MonitorPNP.vcproj", "{26009C8D-2560-4467-9B24-4D8514B3B72E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{57155A48-25AC-47B9-A023-D57B262ACBB8} = {57155A48-25AC-47B9-A023-D57B262ACBB8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MobileFinder", "..\Components\MobileFinder\MobileFinder.vcproj", "{57155A48-25AC-47B9-A023-D57B262ACBB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Share_Unicode_Debug|Win32 = Share_Unicode_Debug|Win32
+		Share_Unicode_Release|Win32 = Share_Unicode_Release|Win32
+		Static_Unicode_Debug|Win32 = Static_Unicode_Debug|Win32
+		Static_Unicode_Release|Win32 = Static_Unicode_Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Debug|Win32.Build.0 = Debug|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Release|Win32.ActiveCfg = Release|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Release|Win32.Build.0 = Release|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Share_Unicode_Debug|Win32.ActiveCfg = Share_Unicode_Debug|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Share_Unicode_Debug|Win32.Build.0 = Share_Unicode_Debug|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Share_Unicode_Release|Win32.ActiveCfg = Share_Unicode_Release|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Share_Unicode_Release|Win32.Build.0 = Share_Unicode_Release|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Static_Unicode_Debug|Win32.ActiveCfg = Static_Unicode_Debug|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Static_Unicode_Debug|Win32.Build.0 = Static_Unicode_Debug|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Static_Unicode_Release|Win32.ActiveCfg = Static_Unicode_Release|Win32
+		{26009C8D-2560-4467-9B24-4D8514B3B72E}.Static_Unicode_Release|Win32.Build.0 = Static_Unicode_Release|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Debug|Win32.Build.0 = Debug|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Release|Win32.ActiveCfg = Release|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Release|Win32.Build.0 = Release|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Share_Unicode_Debug|Win32.ActiveCfg = Share_Unicode_Debug|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Share_Unicode_Debug|Win32.Build.0 = Share_Unicode_Debug|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Share_Unicode_Release|Win32.ActiveCfg = Share_Unicode_Release|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Share_Unicode_Release|Win32.Build.0 = Share_Unicode_Release|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Static_Unicode_Debug|Win32.ActiveCfg = Static_Unicode_Debug|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Static_Unicode_Debug|Win32.Build.0 = Static_Unicode_Debug|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Static_Unicode_Release|Win32.ActiveCfg = Static_Unicode_Release|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Static_Unicode_Release|Win32.Build.0 = Static_Unicode_Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

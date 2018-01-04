@@ -1,0 +1,265 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+//******************************************//
+// %var1: Com port
+// %var2: IMEI FROM SCANNER
+// %var3: FSN From PICS
+//******************************************//
+0000 waitinput %var0 SECURITY_MECHANISM_FLAG
+0001 compare %var0 0
+0002 comparetrue  178 // no security go to end ..
+
+0003 waitinput %var1 COM_PORT
+
+//need to write SimData
+0004 print "============WRITE SIM DATA============" "Title"
+0005 waitinput %var2 IMEI_FROM_SCANNER
+0006 print %var2 "Query FSN form PICS by IMEI----->"
+0007 run FactoryIMEIDll_StaticM.dll QueryFSNCode_PICS %var2 %var3 %var8
+0008 comparetrue 11
+0009 print "Query FSN from PICS fail......" "Log"
+0010 print "F97" "Error"
+0011 print %var3 "Query FSN from PICS success, FSN->"
+
+0012 print %var2 "Query unlock unblock code from PICS by IMEI->"
+0013 run FactoryIMEIDll_StaticM.dll QueryUnlockUnblockCode_PICS %var2 %var4 %var5 %var6 %var7 %var8 %var9 %var10 %var11 %var0
+0014 comparetrue 17
+0015 print "Query unlock unlock code from PICS fail......" "Log"
+0016 print "F99" "Error"
+0017 print "Query unlock unblock code from PICS success..." "Log"
+0018 print %var4 "BT_NETWORK_UNLOCK_CODE"
+0019 print %var5 "BT_SERVICE_PROVIDER_UNLOCK_CODE"
+0020 print %var6 "BT_COPORATE_UNLOCK_CODE"
+0021 print %var7 "BT_NETWORK_SUBSET_UNLOCK_CODE"
+0022 print %var8 "BT_USER_USIM_UNLOCK_CODE"
+0023 print %var9 "BT_USER_SIM_UNLOCK_CODE"
+0024 print %var10 "BT_SERIAL_CODE"
+0025 print %var11 "SPC_CODE"
+0026 print %var0 "BT_PHONE_LOCK_CODE"
+
+0027 print %var3 "DEAL_FSN_FROM_PICS"
+
+0028 print "Read FSN from phone......" "Log"
+0029 assign %var0 3000
+0030 run MobileToolKit_StaticM.dll  ReadFSN_ForSPU  %var1 %var9 %var0 
+0031 comparetrue 34
+0032 print "Read FSN from phone fail......" "Log"
+0033 print "F94" "Error"
+
+0034 print "Read FSN from phone success......" "Log"
+0035 print %var9 "DEAL_FSN_FROM_PHONE"
+//0036 waitinput %var9 FSN_FROM_MOBILE_32
+//0037 compare %var3 %var9
+//0038 comparetrue 41
+
+//0039 print "The FSN read from phone is not equal to get from PICS" "Log"
+//0040 print "F95" "Error"
+
+//0041 print "The FSN read from phone is equal to get from PICS" "Log"
+
+0036 print "Query SSCP Locked from phone..." "Log"
+0037 run QisdaSimLockModule_StaticM.dll IsSSCPLocked_ForSPU %var1 %var9 %var0
+0038 comparefalse   106 //------------- //Query IsSSCPLocked fail, means no SIM data
+//go to
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+0039 print "Query SSCP Locked from phone success"
+0040 compare %var9  locked
+0041 comparefalse 50
+
+// is locked
+0042 print "SSCP is Locked!" "Log"
+0043 waitinput %var9 BT_USER_USIM_UNLOCK_CODE
+0044 print "unLock phonecode......" "Log"
+0045 run QisdaSimLockModule_StaticM.dll pUnlockPhoneCode_FORSPU %var1 %var9 %var0
+0046 comparetrue 49
+0047 print "Unlock PhoneCode fail......" "Log"
+0048 print "F97" "Error"
+
+0049 print "Unlock PhoneCode Success......" "Log"
+
+0050 print "Query NWSCP Locked from phone..." "Log"
+0051 run QisdaSimLockModule_StaticM.dll pIsNWSCPLocked_FORSPU %var1 %var11 %var10 %var9 %var8 %var7 %var6
+0052 comparefalse 106  //----------------//Query IsNWSCPLock fail, means no SIM data 
+//go to
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+0053 print "Query NWSCP Locked from phone success..." "Log"
+//unlock 1  bNWUnlocked
+0054 compare %var11 locked //==============//
+0055 comparefalse  64  //unlock next lock
+0056 print "Network Locked..." "Log"
+0057 waitinput %var11 BT_NETWORK_UNLOCK_CODE
+0058 print "Unlock Network lock..." "Log"
+0059 run QisdaSimLockModule_StaticM.dll UnlockNW_ForSPU %var1 %var11 %var0
+0060 comparetrue 63
+0061 print "Unlock NW fail......" "Log"
+0062 print "F106" "Error"
+
+0063 print "Unlock NW Success....." "Log"
+
+//unlock 2  bNSUnlocked
+0064 compare %var10 locked //==============//
+0065 comparefalse  74  //unlock next lock
+0066 print "Network Subset Locked..." "Log"
+0067 waitinput %var10 BT_NETWORK_SUBSET_UNLOCK_CODE
+0068 print "Unlock network subset lock..." "Log"
+0069 run QisdaSimLockModule_StaticM.dll UnlockNS_ForSPU %var1 %var10 %var0
+0070 comparetrue 73
+0071 print "Unlock Network Subset fail....." "Log"
+0072 print "F107" "Error"
+
+0073 print "Unlock Network Subset Success....." "Log"
+
+//unlock 3 bSPUnlocked
+0074 compare %var9 locked //==============//
+0075 comparefalse  84  //unlock next lock
+0076 print "Service Provider Locked..." "Log"
+0077 waitinput %var9 BT_SERVICE_PROVIDER_UNLOCK_CODE
+0078 print "Unlock Service Provider lock..." "Log"
+0079 run QisdaSimLockModule_StaticM.dll UnlockSP_ForSPU %var1 %var9 %var0
+0080 comparetrue 83
+0081 print "Unlock Service Provider lock fail......" "Log"
+0082 print "F108" "Error"
+
+0083 print "Unlock Service Provider lock Success....." "Log"
+
+//unlock 4  bCPUnlocked
+0084 compare %var8 locked //==============//
+0085 comparefalse  94  //unlock next lock
+0086 print "Coporate Locked..." "Log"
+0087 waitinput %var8 BT_COPORATE_UNLOCK_CODE
+0088 print "Unlock Coporate Lock..." "Log"
+0089 run QisdaSimLockModule_StaticM.dll UnlockCP_ForSPU %var1 %var8 %var0
+0090 comparetrue 93
+0091 print "Unlock CP fail......" "Log"
+0092 print "F109" "Error"
+
+0093 print "Unlock CP Success....." "Log"
+
+//unlock 5  bSIMUnlocked
+0094 compare %var7 locked //==============//
+0095 comparefalse  104  //unlock next lock
+0096 print "User Sim Locked..." "Log"
+0097 waitinput %var7 BT_USER_SIM_UNLOCK_CODE
+0098 print "Unlock User sim lock..." "Log"
+0099 run QisdaSimLockModule_StaticM.dll UnlockSIM_ForSPU %var1 %var7 %var0
+0100 comparetrue 103
+0101 print "Unlock SIM lock fail......" "Log"
+0102 print "F106" "Error"
+
+0103 print "Unlock SIM lock Success....." "Log"
+
+0104 compare 0 0
+0105 comparetrue 107
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+0106 print "Query IsSSCPLocked or IsNWSCPLock fail, means no SIM data" "Log"
+
+0107 run MobileToolKit_StaticM.dll IsConnected_ForSPU %var1  
+0108 comparetrue 111
+0109 print "IsConnected return false..." "Log"
+0110 print "F11" "Error"
+
+0111 print "Phone still connected..." "Log"
+0112 print "Get SIM data from PICS by IMEI and FSN....." "Log"
+
+////////////////////GetSIMDataFromPICS
+0113 waitinput %var10 MODEL_NAME
+0114 assign %var11 1
+0115 compare %var10 ATHB1A
+0116 comparetrue 142
+
+0117 assign %var11 2
+0118 compare %var10 ATHB3A
+0119 comparetrue 142
+
+0120 assign %var11 3
+0121 compare %var10 H21
+0122 comparetrue 142
+
+0123 assign %var11 5 
+0124 compare %var10 GLAVS1A
+0125 comparetrue 142
+
+0126 compare %var10 GLAVS2A
+0127 comparetrue 142
+
+0128 compare %var10 GLAVS4A
+0129 comparetrue 142
+
+0130 compare %var10 GMELB1A
+0131 comparetrue 137
+
+0132 compare %var10 GMELB2A
+0133 comparetrue 137
+
+0134 compare %var10 GMELB3A
+0135 comparetrue 137
+
+0136 assign %var11 0
+
+///////////Melos needs to get loc file from phone
+0137 print "Get Melos .loc file from unit....." "Log"
+0138 run QisdaEFsModule_StaticM.dll EFS_GetLocFileName %var1 %var9
+0139 comparetrue 143
+0140 print "Get Melos .loc file name from unit fail....." "Log"
+0141 print "F112" "Error"
+
+0142 waitinput %var9 SIM_DATA_FILE_NAME
+
+0143 assign %var8 576
+0144 run FactoryIMEIDll_StaticM.dll GetSIMData_PICS %var11 %var2 %var3 %var9 %var7 %var8 %var0
+0145 comparetrue 149
+0146 print "Get SIM data from PICS fail......" "Log"
+0147 print %var0 "Status------->"
+0148 print "F98" "Error"
+
+0149 compare %var8 576 
+0150 comparetrue 153
+0151 print %var8 "SIM data size wrong,it should be 576,not ---->"
+0152 print "F98" "Error"
+
+0153 print "Get SIM dat from PICS success..." "Log"
+0154 print %var7 "SIM_DATA_FROM_PICS"
+
+//////////////////////////////////////////////////////////////////////////
+//check simLock Data
+0155 waitinput %var8 SIM_DATA_FOR_PHONE
+//szSimType,szIMEIFromPhone,szFSN,szIMEIFormScanner,szSimDateFileName,szSimDataForPhone,szLogString
+0156 Run FactoryIMEIDll_StaticM.dll CheckSimData_SimEncorder %var11 %var2 %var3 %var2 %var9 %var8 %var7
+0157 print %var7 "SIM Log"
+0158 comparetrue 160
+0159 print "F99" "Error"
+
+0160 waitinput %var8 SIM_DATA_FOR_PHONE
+0161 assign %var9 576
+0162 Run MobileToolKit_StaticM.dll WriteSimDataV2_ForSPU %var1 %var8 %var9
+0163 comparetrue 166
+0164 print "Write SIM data to phone fail......" "Log"
+0165 print "F51" "Error"
+
+0166 assign %var5 60000
+
+0167 run QisdaSimLockModule_StaticM.dll IsSSCPLocked_ForSPU %var1 %var2 %var5
+0168 comparetrue 171
+0169 print "Query IsSSCPLocked fail" "Log"
+0170 print "F111" "Error"
+
+0171 print "Check SIM data to phone success......" "Log"
+0172 print "============WRITE SIM DATA SUCCESS============" "Title"
+
+0173 print 75 "Progress" 
+}

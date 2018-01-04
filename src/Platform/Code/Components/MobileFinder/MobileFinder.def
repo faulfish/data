@@ -1,0 +1,6 @@
+; MobileFinder.def : Declares the module parameters for the DLL.
+
+LIBRARY      "MobileFinder"
+
+EXPORTS
+    ; Explicit exports can go here

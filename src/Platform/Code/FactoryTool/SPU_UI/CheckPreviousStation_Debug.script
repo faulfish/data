@@ -1,0 +1,13 @@
+{Header
+}
+{Description
+}
+{Code
+//Check process info 3 (Process 3 )	3G cal& Pretest
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticMD.dll ReadProcessInfo %var1 3 %var2 %var3 %var4 %var5 %var6
+0002 comparetrue 0005
+0003 print "Please redo 3G station"
+0004 comparefalse 9999
+0005 print "3G station had passed"
+}

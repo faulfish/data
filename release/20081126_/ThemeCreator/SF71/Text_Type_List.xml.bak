@@ -1,0 +1,25 @@
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Hanson.Huang (EMBRACE) -->
+<Text_Type_List>
+	<text_comp id="0" color_scheme="Fixed Text" type="FixedText"/>
+	<text_comp id="1" color_scheme="DateTime Text " type="QDateTime.Properties.fgcolor"/>
+	<text_comp id="2" color_scheme="Edited Text Background" type="QText.Properties.bgcolor"/>
+	<text_comp id="3" color_scheme="Edited Text" type="QText.Properties.fgcolor"/>
+	<text_comp id="4" color_scheme="Feedback Text Background" type="QFeedback.Properties.bgcolor"/>
+	<text_comp id="5" color_scheme="Feedback Text" type="QFeedback.Properties.fgcolor"/>
+	<text_comp id="6" color_scheme="Option Menu Title Text Background" type="QOptions.Properties.bgcolor"/>
+	<text_comp id="7" color_scheme="Option Menu Title Text" type="QOptions.Properties.fgcolor"/>
+	<text_comp id="8" color_scheme="Selected Data Time Text Background" type="QDateTime.Properties.selected.bgcolor"/>
+	<text_comp id="9" color_scheme="Selected Data Time Text" type="QDateTime.Properties.selected.fgcolor"/>
+	<text_comp id="10" color_scheme="Selected Editable Text Background" type="QText.Properties.selected.bgcolor"/>
+	<text_comp id="11" color_scheme="Selected Editable Text" type="QText.Properties.selected.fgcolor"/>
+	<text_comp id="12" color_scheme="Softkey Text Background" type="QForm.QSoftkeys.Properties.bgcolor"/>
+	<text_comp id="13" color_scheme="Softkey Text" type="QForm.QSoftkeys.Properties.fgcolor"/>
+	<text_comp id="14" color_scheme="Static Text Background" type="QStatic.Properties.bgcolor"/>
+	<text_comp id="15" color_scheme="Static Text" type="QStatic.Properties.fgcolor"/>
+	<text_comp id="16" color_scheme="Title Text Background" type="QForm.QHeader.Properties.bgcolor"/>
+	<text_comp id="17" color_scheme="Title Text" type="QForm.QHeader.Properties.fgcolor"/>
+	<!--
+	<text_comp id="18" color_scheme="Vertical Feedback Diolog Text Background" type="VerticalFeedbackDiolog.Properties.bgcolor"/>
+	<text_comp id="19" color_scheme="Vertical Feedback Diolog Text" type="VerticalFeedbackDiolog.Properties.fgcolor"/>
+	-->
+</Text_Type_List>

@@ -1,0 +1,6 @@
+; ODM_Export.def : Declares the module parameters for the DLL.
+
+LIBRARY      "ODM_Export"
+
+EXPORTS
+    ; Explicit exports can go here

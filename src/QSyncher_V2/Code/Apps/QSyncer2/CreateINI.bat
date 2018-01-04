@@ -1,0 +1,2 @@
+ConvertExcelToINI\ConvertXlsToIni.exe "%1\ConvertExcelToINI\TranslateFile\Enu.xls" "%2\Localization\enu.ini"
+ConvertExcelToINI\ConvertXlsToIni.exe "%1\ConvertExcelToINI\TranslateFile\Cht.xls" "%2\Localization\cht.ini"

@@ -1,0 +1,1665 @@
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by administrator (pop) -->
+<FrameworkConfig>
+	<EquipmentSettings>
+		<PowerSupplyId name="1">
+			<PowerSupply>
+				<GpibAddress>5</GpibAddress>
+			</PowerSupply>
+		</PowerSupplyId>
+		<PowerSupplyId name="2">
+			<PowerSupply>
+				<GpibAddress>6</GpibAddress>
+			</PowerSupply>
+		</PowerSupplyId>
+		<PowerSupplyId name="5">
+			<PowerSupply>
+				<GpibAddress>6</GpibAddress>
+			</PowerSupply>
+		</PowerSupplyId>
+		<ReferenceGenerator>
+			<External>True</External>
+		</ReferenceGenerator>
+		<TestSet>
+			<BaseStation>0</BaseStation>
+			<ComPort>COM1</ComPort>
+			<ConnectionProtocol>GPIB</ConnectionProtocol>
+			<GpibAddress>20</GpibAddress>
+			<SerialTestSet>None</SerialTestSet>
+			<SimCardType>Agilent</SimCardType>
+		</TestSet>
+		<WaveformGenerator>
+			<GpibAddress>-1</GpibAddress>
+		</WaveformGenerator>
+	</EquipmentSettings>
+	<FileSystemSettings>
+		<FlashFile1>D:\CM\A76\pb_tb\A76.hex</FlashFile1>
+		<FlashFile2>D:\CM\A76\pb_tb\ff_a76_0001_0800.hex</FlashFile2>
+		<FlashFile3>D:\CM\A76\pb_tb\LP_A76_A1_04020.hex</FlashFile3>
+		<KaFileName>RFCaliCDMA.cfg</KaFileName>
+		<LoggingDirectory/>
+		<WorkingDirectory>D:\code\MotoGate\FTM_DMTool\Test\Debug</WorkingDirectory>
+	</FileSystemSettings>
+	<PhoneSettings>
+		<ModelSettings name="A840">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="A860">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="c290">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="E815">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="E816">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="K1m">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="L7c">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="Q">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="U6c">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="V26x">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="V3a">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="V3C">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="V3M">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="V3x">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="V6c">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="V710">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="V9m">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="V9m SKT">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="Ve">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="W220">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="W360">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="Z6m">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="Z6tv">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="CDMA800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile/>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<ModelSettings name="Q700">
+			<Model>
+				<FlashFlex>
+					<BaudRate>115200</BaudRate>
+					<BootloaderFile/>
+					<ClockRate>0</ClockRate>
+					<FlashFile/>
+					<FlexFile/>
+					<LangPackFile/>
+					<ResourceFile/>
+				</FlashFlex>
+				<Rf>
+					<CdmaBands name="1900">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<CdmaBands name="800">
+						<CdmaBand>
+							<Channel>283</Channel>
+							<Nid>65535</Nid>
+							<Sid>20</Sid>
+						</CdmaBand>
+					</CdmaBands>
+					<DataFile>CMCS\Q700Rf8960.xml</DataFile>
+				</Rf>
+			</Model>
+		</ModelSettings>
+		<PhoneConnection>
+			<SerialConnection>
+				<BaudRate>115200</BaudRate>
+				<ComPorts name="COM1">
+					<ComPortAddress>11</ComPortAddress>
+				</ComPorts>
+				<ComPorts name="COM2">
+					<ComPortAddress>1</ComPortAddress>
+				</ComPorts>
+				<ComPorts name="COM3">
+					<ComPortAddress>1</ComPortAddress>
+				</ComPorts>
+				<ComPorts name="COM4">
+					<ComPortAddress>1</ComPortAddress>
+				</ComPorts>
+			</SerialConnection>
+			<XprsConfigNumber>motoxprs_salina_ht.sbf</XprsConfigNumber>
+		</PhoneConnection>
+	</PhoneSettings>
+	<RfSettings>
+		<CdmaInitialBandAtStartup>CDMA800</CdmaInitialBandAtStartup>
+		<FailRxLevelAtLowerLimit>True</FailRxLevelAtLowerLimit>
+		<MasterReset>True</MasterReset>
+		<QaMode>True</QaMode>
+		<RfCable>
+			<CurrentRfLosses>SystemLoss1</CurrentRfLosses>
+			<RfLosses name="SystemLoss1">
+				<RfType name="RX">
+					<RfBand name="AMPS800">
+						<RfChannel name="1013">
+							<RfLoss>1</RfLoss>
+						</RfChannel>
+						<RfChannel name="350">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="777">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="CDMA1900">
+						<RfChannel name="1175">
+							<RfLoss>2</RfLoss>
+						</RfChannel>
+						<RfChannel name="25">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="650">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="CDMA800">
+						<RfChannel name="1013">
+							<RfLoss>2.1</RfLoss>
+						</RfChannel>
+						<RfChannel name="350">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="777">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GPS">
+						<RfChannel name="NA">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM1800">
+						<RfChannel name="512">
+							<RfLoss>3</RfLoss>
+						</RfChannel>
+						<RfChannel name="662">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="885">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM1900">
+						<RfChannel name="512">
+							<RfLoss>3.1</RfLoss>
+						</RfChannel>
+						<RfChannel name="632">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="810">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM850">
+						<RfChannel name="128">
+							<RfLoss>3.2</RfLoss>
+						</RfChannel>
+						<RfChannel name="178">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="251">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM900">
+						<RfChannel name="021">
+							<RfLoss>4.1</RfLoss>
+						</RfChannel>
+						<RfChannel name="124">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="975">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand1">
+						<RfChannel name="10562">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="10700">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="10838">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand2">
+						<RfChannel name="9662">
+							<RfLoss>4.2</RfLoss>
+						</RfChannel>
+						<RfChannel name="9800">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="9938">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand4">
+						<RfChannel name="1537">
+							<RfLoss>4.4</RfLoss>
+						</RfChannel>
+						<RfChannel name="1637">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="1738">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand5">
+						<RfChannel name="4357">
+							<RfLoss>4.5</RfLoss>
+						</RfChannel>
+						<RfChannel name="4407">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4458">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand6">
+						<RfChannel name="4387">
+							<RfLoss>4.6</RfLoss>
+						</RfChannel>
+						<RfChannel name="4400">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4413">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+				</RfType>
+				<RfType name="TX">
+					<RfBand name="AMPS800">
+						<RfChannel name="1013">
+							<RfLoss>5</RfLoss>
+						</RfChannel>
+						<RfChannel name="350">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="777">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="CDMA1900">
+						<RfChannel name="1175">
+							<RfLoss>6</RfLoss>
+						</RfChannel>
+						<RfChannel name="25">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="650">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="CDMA800">
+						<RfChannel name="1013">
+							<RfLoss>6.1</RfLoss>
+						</RfChannel>
+						<RfChannel name="350">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="777">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM1800">
+						<RfChannel name="512">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="662">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="885">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM1900">
+						<RfChannel name="512">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="632">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="810">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM850">
+						<RfChannel name="128">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="178">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="251">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM900">
+						<RfChannel name="021">
+							<RfLoss>4.1</RfLoss>
+						</RfChannel>
+						<RfChannel name="124">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="975">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand1">
+						<RfChannel name="9612">
+							<RfLoss>8</RfLoss>
+						</RfChannel>
+						<RfChannel name="9750">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="9888">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand2">
+						<RfChannel name="9262">
+							<RfLoss>8.2</RfLoss>
+						</RfChannel>
+						<RfChannel name="9400">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="9538">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand4">
+						<RfChannel name="1312">
+							<RfLoss>8.4</RfLoss>
+						</RfChannel>
+						<RfChannel name="1412">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="1513">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand5">
+						<RfChannel name="4132">
+							<RfLoss>8.5</RfLoss>
+						</RfChannel>
+						<RfChannel name="4182">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4233">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand6">
+						<RfChannel name="4162">
+							<RfLoss>8.6</RfLoss>
+						</RfChannel>
+						<RfChannel name="4175">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4188">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+				</RfType>
+			</RfLosses>
+			<RfLosses name="SystemLoss2">
+				<RfType name="RX">
+					<RfBand name="AMPS800">
+						<RfChannel name="1013">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="350">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="777">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="CDMA1900">
+						<RfChannel name="1175">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="25">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="650">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="CDMA800">
+						<RfChannel name="1013">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="350">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="777">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GPS">
+						<RfChannel name="NA">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM1800">
+						<RfChannel name="512">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="662">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="885">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM1900">
+						<RfChannel name="512">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="632">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="810">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM850">
+						<RfChannel name="128">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="178">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="251">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM900">
+						<RfChannel name="021">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="124">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="975">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand1">
+						<RfChannel name="10562">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="10700">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="10838">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand2">
+						<RfChannel name="9662">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="9800">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="9938">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand4">
+						<RfChannel name="1537">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="1637">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="1738">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand5">
+						<RfChannel name="4357">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4407">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4458">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand6">
+						<RfChannel name="4387">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4400">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4413">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+				</RfType>
+				<RfType name="TX">
+					<RfBand name="AMPS800">
+						<RfChannel name="1013">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="350">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="777">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="CDMA1900">
+						<RfChannel name="1175">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="25">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="650">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="CDMA800">
+						<RfChannel name="1013">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="350">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="777">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM1800">
+						<RfChannel name="512">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="662">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="885">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM1900">
+						<RfChannel name="512">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="632">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="810">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM850">
+						<RfChannel name="128">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="178">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="251">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="GSM900">
+						<RfChannel name="021">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="124">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="975">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand1">
+						<RfChannel name="9612">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="9750">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="9888">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand2">
+						<RfChannel name="9262">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="9400">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="9538">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand4">
+						<RfChannel name="1312">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="1412">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="1513">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand5">
+						<RfChannel name="4132">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4182">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4233">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+					<RfBand name="UMTSBand6">
+						<RfChannel name="4162">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4175">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+						<RfChannel name="4188">
+							<RfLoss>4</RfLoss>
+						</RfChannel>
+					</RfBand>
+				</RfType>
+			</RfLosses>
+		</RfCable>
+		<RfChamber>DefaultChamber</RfChamber>
+		<TerminateOnFailure>True</TerminateOnFailure>
+	</RfSettings>
+</FrameworkConfig>

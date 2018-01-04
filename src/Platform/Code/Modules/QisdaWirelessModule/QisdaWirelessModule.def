@@ -1,0 +1,79 @@
+; QisdaWirelessModule.def : Declares the module parameters for the DLL.
+
+LIBRARY      "CalTestView.lib"
+
+EXPORTS
+
+	;//WCDMA Calibration ----------------------------------------------------------------------
+          MobileOnFTM				@1
+          CalWCDMAInit				@2
+          CalWCDMARxDVGAVsFreq		@3
+          CalWCDMARxLNAVsFreq		@4
+          CalWCDMATxLinMaster		@5
+          CalWCDMATxCompVsFreq		@6
+          CalWCDMARxDoDC			@7
+          CalWCDMAWriteToNV			@8
+          CalWCDMALoadRFData		@9
+          CalEnd					@10
+
+	;//GSM Calibration ----------------------------------------------------------------------
+          SetStartInit				@11
+          CalThermCalibration		@12
+          CalGSMInitPaDACSearch		@13
+          CalGSM4xFMODCalibration	@14
+          CalGSMPout				@15
+          CalGSMPolarCalibration	@16
+          CalGSMRSBCalibration		@17
+          CalGSMIM2Calibration		@18
+          CalGSMRxFreqCompensation	@19
+          CalGSMTimingDelaySearch	@20
+          CalGSMEnd					@21
+
+	;//GPS Test ----------------------------------------------------------------------
+          GPSTest					@22
+
+	;//WCDMA Test ----------------------------------------------------------------------
+          TestWCDMAInitSetting		@23
+          InitBSEWCDMA				@24
+          FTMWCDMAStartCall			@25
+          FTMWCDMARFLchMeasureAll	@26
+          FTMWCDMARFMchMeasureAll	@27
+          FTMWCDMARFHchMeasureAll	@28
+          TestWCDMADiversityRx		@29
+          TestWCDMAEnd				@40
+          SwitchToOnlineMode		@30
+
+	;// Testing GSM ----------------------------------------------------------------------
+          InitCallBox_GSM			@31
+          FTMGSMStartCall			@32
+          FTMGSMHandover			@33
+
+	;//Test EDGE --------------------------------------------------------------------------
+          InitCallBox_EDGE			@34
+          FTMGSMStartCall_EDGE		@35
+          FTMGSMHandover_EDGE		@36  
+          EndTesting				@37
+          SetPhoneOnlineMode		@38
+          
+	;//On-line Call function ----------------------------------------------------------------------
+          PhoneOnlineCallTest		@39
+          
+   	;//On-line Call function ----------------------------------------------------------------------
+   	 	  GSMOnlineInit				@40
+		  GSMOnlineStartCall_GSM	@41
+		  GSMOnlineTest_GSM			@42
+		  GSMOnlineEndTest			@43
+		  GSMOnlineStartCall_EDGE	@44
+		  GSMOnlineTest_EDGE		@45
+
+   	;//Power Supply On/Off function ----------------------------------------------------------------------
+		  XQTPowerSupplyOnOff       @46
+		  
+	;//WCDMA Online Test Function -------------------------------------------------------------------
+		WCDMAOnlineInitCheckDevice	@47
+		WCDMAOnlineStartCall		@48
+		WCDMAOnlineEndTest			@49
+		WCDMAOnlineRFHchGen			@50
+		WCDMAOnlineRFHchMeasure		@51
+		WCDMAOnlineILPCMeasure		@52
+

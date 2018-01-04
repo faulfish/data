@@ -1,0 +1,40 @@
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Jennifer.CF.Liu (EMBRACE) -->
+<Application name="IconMenuBackground">
+	<!-- background -->
+	<Group id="1" parentID="1">
+		<Bodybackground pos="1" zOrder="1" src="IDI_CO_BD_SYS_BODY_BACK"/>
+		<BodybackgroundIcon pos="901" zOrder="2" src="IDI_MM_BD_CONTACTS"/>
+		<BodybackgroundIcon pos="902" zOrder="2" src="IDI_MM_BD_CALL_RECORDS"/>
+		<BodybackgroundIcon pos="903" zOrder="2" src="IDI_MM_BD_INTERNET"/>
+		<BodybackgroundIcon pos="904" zOrder="2" src="IDI_MM_BD_CAMERA"/>
+		<BodybackgroundIcon pos="906" zOrder="2" src="IDI_MM_BD_ORGANIZER"/>
+		<BodybackgroundIcon pos="907" zOrder="2" src="IDI_MM_BD_GAMES"/>
+		<BodybackgroundIcon pos="908" zOrder="2" src="IDI_MM_BD_MEDIA_PLAYER"/>
+		<BodybackgroundIcon pos="909" zOrder="2" src="IDI_MM_BD_VIDEOPHONE"/>
+		<BodybackgroundIcon pos="910" zOrder="2" src="IDI_MM_BD_EXTRAS"/>
+		<BodybackgroundIcon pos="911" zOrder="2" src="IDI_MM_BD_MY_STUFF"/>
+		<BodybackgroundIcon pos="912" zOrder="2" src="IDI_MM_BD_SETTINGS"/>
+		<BodybackgroundIcon pos="913" zOrder="2" src="IDI_MM_BD_FLOATINGBOX"/>
+		<BodybackgroundIcon pos="913" zOrder="4" src="IDI_MM_BD_MESSAGES_SELECTED"/>
+	</Group>
+	<!-- annunciator -->
+	<Group id="2" parentID="1">
+		<AnnunciatorBack pos="2" zOrder="1" src="IDI_CO_BD_ANNUNCIATOR_REGION"/>
+		<SignalIcon pos="3" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+		<BluetoothIcon pos="4" zOrder="2" src="IDI_CO_BD_BT_ACTIVE_VISIBLE"/>
+		<BatteryIcon pos="5" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+	</Group>
+	<!-- title -->
+	<Group id="3" parentID="1">
+		<TitleBack pos="10" zOrder="1" src="IDI_CO_BD_TITLE_REGION"/>
+		<TitleIcon pos="13" zOrder="2" src="IDI_CO_HL_BROWSER"/>
+		<TitleText pos="14" zOrder="2" src="IDS_CO_BD_TITLE_MESSAGES"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="4" parentID="1">
+		<!--<SoftkeyBack pos="6" zOrder="1" src="IDI_CO_BD_SYS_SOFTKEY_BACK"/>-->
+		<SoftkeyIcon pos="8" zOrder="2" src="IDI_CO_CC_CHECK"/>
+		<SoftkeyText pos="7" zOrder="2" src="IDS_CO_BD_LSK_OPTIONS"/>
+		<SoftkeyText pos="9" zOrder="2" src="IDS_CO_BD_RSK_BACK"/>
+	</Group>
+</Application>

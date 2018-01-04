@@ -1,0 +1,19 @@
+{Header
+}
+{Description
+}
+{Code
+0000 waitinput %var1 COMPort
+0001 waitinput %var2 Input
+0002 Run MobileToolKit_StaticM.dll ClearActivationData_ForSPU %var1 
+0003 comparetrue 0006
+0004 print "Fail to ClearActivationData_ForSPU API"
+0005 comparefalse 9999
+0006 print "Success to ClearActivationData_ForSPU API"
+0007 Run MobileToolKit_StaticM.dll MasterClear_ForSPU %var1 
+0008 comparetrue 0011
+0009 print "Fail to MasterClear_ForSPU API"
+0010 comparefalse 9999
+0011 sleep 20000
+0012 print "Success to MasterClear_ForSPU API"
+}

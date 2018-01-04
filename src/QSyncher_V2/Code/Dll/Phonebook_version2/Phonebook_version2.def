@@ -1,0 +1,6 @@
+; Phonebook_version2.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Phonebook_version2"
+
+EXPORTS
+    ; Explicit exports can go here

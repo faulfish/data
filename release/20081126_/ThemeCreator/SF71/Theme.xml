@@ -1,0 +1,62 @@
+<Theme>
+	<JAVA_APPLICATION_LIST>
+  		<JAPP name="Java_Game_Application" src="" type="default"/> 
+  	</JAVA_APPLICATION_LIST>
+	<ANIMATION_LIST>
+	  	<ANIMATION name="netsearch_animation" src="" size="240x320" type="mandatory"/> 
+	  	<!--<ANIMATION name="Netsearch_Animation_External" src="" size="120x160" type="mandatory"/>-->
+	  	<ANIMATION name="screensaver_image" src="" size="240x294" type="default"/>
+	  	<ANIMATION name="switch_off_animation" src="" size="240x320" type="mandatory"/> 
+	  	<!--<ANIMATION name="Switch_Off_Animation_External" src="" size="120x160" type="mandatory"/>-->
+	  	<ANIMATION name="switch_on_animation" src="" size="240x320" type="mandatory"/>
+	   	<!--<ANIMATION name="Switch_On_Animation_External" src="" size="120x160" type="mandatory"/>-->
+  	</ANIMATION_LIST>
+	<SCREEN_LIST>
+		<SCREEN name="Bookmark" id="1"/> 
+		<SCREEN name="CheckboxOn" id="2"/>
+		<SCREEN name="CheckboxOff" id="3"/>
+		<SCREEN name="DateSetting" id="4"/> 		
+		<SCREEN name="Edit" id="5"/>
+		<SCREEN name="FeedbackPositive" id="6"/>  
+		<SCREEN name="FeedbackQuestion" id="7"/>
+		<SCREEN name="FeedbackWarning" id="8"/>   
+		<SCREEN name="FocusedRadioOff" id="9"/>
+		<SCREEN name="FocusedRadioOn" id="10"/>
+		<SCREEN name="IconMenuBackground" id="11"/>
+		<SCREEN name="IdleWithWallpaper1" id="12"/> 
+		<SCREEN name="IdleWithWallpaper2" id="13"/>
+		<SCREEN name="IdleWithWallpaper3" id="14"/>
+		<SCREEN name="Idle" id="15"/>
+		<SCREEN name="IncomingCall" id="16"/>   
+		<SCREEN name="MarkedScreen" id="17"/>
+		<SCREEN name="MenuScreen" id="18"/>
+		<SCREEN name="MMSScreen" id="19"/>
+		<SCREEN name="Organizer1" id="20"/>
+		<SCREEN name="Organizer2" id="21"/>
+		<SCREEN name="Organizer3" id="22"/>
+		<SCREEN name="OptionPopup" id="23"/>
+		<SCREEN name="PinInput" id="24"/>
+		<SCREEN name="IncorrectPinInput" id="25"/>
+		<SCREEN name="Progressbar" id="26"/>
+		<SCREEN name="SymbolsScreen" id="27"/>
+		<SCREEN name="ThemesScreen" id="28"/>
+		<SCREEN name="TickedCheckboxScreen" id="29"/>
+		<SCREEN name="ToggleArrowScreen" id="30"/>
+		<SCREEN name="UntickedCheckboxScreen" id="31"/>
+		<SCREEN name="VolumeScreen" id="32"/>
+		<SCREEN name="WaitScreen" id="33"/>
+		<SCREEN name="Feedbackpopup" id="34"/>
+		<SCREEN name="FeedbackpopupFail" id="35"/>
+		<SCREEN name="IdleforExternalDisplayScreen" id="36"/>
+		<SCREEN name="HorizontalPopupPreview" id="37"/>
+  	</SCREEN_LIST>
+	<SOUND_LIST>
+  		<SOUND name="close_clam_melody" src="" type="mandatory"/> 
+  		<SOUND name="open_clam_melody" src="" type="mandatory"/> 
+  		<SOUND name="standard_msg_ringtone" src="" type="mandatory"/> 
+  		<SOUND name="switch_off_melody" src="" type="mandatory"/> 
+  		<SOUND name="switch_on_melody" src="" type="mandatory"/> 
+  		<SOUND name="video_call_ringtone" src="" type="mandatory"/> 
+  		<SOUND name="voice_call_ringtone" src="" type="mandatory"/> 
+  	</SOUND_LIST>
+</Theme>

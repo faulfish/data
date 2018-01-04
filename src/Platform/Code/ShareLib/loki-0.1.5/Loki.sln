@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library", "src\library.vcproj", "{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Share_Unicode_Debug|Win32 = Share_Unicode_Debug|Win32
+		Share_Unicode_Release|Win32 = Share_Unicode_Release|Win32
+		Static_Unicode_Debug|Win32 = Static_Unicode_Debug|Win32
+		Static_Unicode_Release|Win32 = Static_Unicode_Release|Win32
+		WIN32_Unicode_Debug|Win32 = WIN32_Unicode_Debug|Win32
+		WIN32_Unicode_Release|Win32 = WIN32_Unicode_Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Debug|Win32.Build.0 = Debug|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Release|Win32.ActiveCfg = Release|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Release|Win32.Build.0 = Release|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Share_Unicode_Debug|Win32.ActiveCfg = Share_Unicode_Debug|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Share_Unicode_Debug|Win32.Build.0 = Share_Unicode_Debug|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Share_Unicode_Release|Win32.ActiveCfg = Share_Unicode_Release|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Share_Unicode_Release|Win32.Build.0 = Share_Unicode_Release|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Static_Unicode_Debug|Win32.ActiveCfg = Static_Unicode_Debug|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Static_Unicode_Debug|Win32.Build.0 = Static_Unicode_Debug|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Static_Unicode_Release|Win32.ActiveCfg = Static_Unicode_Release|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Static_Unicode_Release|Win32.Build.0 = Static_Unicode_Release|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.WIN32_Unicode_Debug|Win32.ActiveCfg = WIN32_Unicode_Debug|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.WIN32_Unicode_Debug|Win32.Build.0 = WIN32_Unicode_Debug|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.WIN32_Unicode_Release|Win32.ActiveCfg = WIN32_Unicode_Release|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.WIN32_Unicode_Release|Win32.Build.0 = WIN32_Unicode_Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

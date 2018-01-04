@@ -1,0 +1,218 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+}
+{Code
+//This following is a sample test code
+
+0000 print MasterClearStation API
+0000 print CheckRTCWithCurrentTime API
+0000 print "SetRTC" API
+0000 print "GetRTC" API
+0000 print TurnOnATKeypadEvent API
+0000 print TurnOnBatteryTemperatureDetection API
+0000 print TurnOffBatteryTemperatureDetection API
+0000 print CaptureScreenshot API
+0000 print "[Bluetooth APIs]------------------------------------" REMARK
+0000 print GetBTAddr API
+0000 print WriteBTAddr API
+0000 print BTBound API
+0000 print BTW_BondReply API
+0000 print BTW_UnBond API
+0000 print EnableGAP API
+0000 print DisableGAP API
+0000 print "StartBT hige Power" API
+0000 print "StartBT middle Power" API
+0000 print "StartBT low Power" API
+0000 print "EnterBTTestMode" API 	
+0000 print "LeaveBTTestMode" API
+0000 print TurnOnBTHFG API
+0000 print TurnOffBTHFG API
+0000 print TurnOnBTHFPGatewayConnect API
+0000 print TurnOffBTHFPGatewayConnect API
+0000 print BTHFPGatewayAnswer API
+0000 print BTHFPGatewayReject API
+0000 print TurnOnBTHFPGatewayAudioConnect API
+0000 print TurnOffBTHFPGatewayAudioConnect API
+0000 print BTHFPGatewaySpeakerGain API
+0000 print BTHFPGatewayMicrophoneGain API
+0000 print BTHFPGatewayAudioLoop API
+0000 print TurnOnBTHFPGatewayRoaming API
+0000 print TurnOffBTHFPGatewayRoaming API
+
+0000 print "[AthensBT project APIs]------------------------------------" REMARK
+0000 print "Write Headset BT Address" API
+0000 print WriteHeadsetBTAddress_ForSPU API
+0000 print "BT Headset charging on" API
+0000 print "BT Headset charging off" API
+0000 print "BT Handset voltge reading" API
+0000 print "BT Headset Voltage Reading" API
+0000 print "Check BT headset" API
+
+0000 print CheckSIMCardExistence API
+0000 print GetFlipStatus API
+0000 print GetCoincellVoltage API
+0000 print Vibrator_ON API
+0000 print Vibrator_OFF API
+0001 print ChangeLogFileName API
+0001 print EFS_ReadFile API
+0001 print EFS_ListFolder API
+0001 print EFS_GetLocFile API
+0001 print EFS_GetLocFileName API
+0001 print LCD_Red API
+0001 print LCD_Green API
+0001 print LCD_Blue API
+0001 print LCD_Black API
+0001 print KeypadBacklightTest_Open API
+0001 print KeypadBacklightTest_Close API
+0001 print KeypadPressTest_Open API
+0001 print KeypadPressTest_Close API
+0001 print CameraSensor0 API
+0001 print CameraSensor1 API
+0001 print USBChargingSwitch_Open API
+0001 print USBChargingSwitch_Close API
+0001 print CoinCellChargingSwitch_Open API
+0001 print CoinCellChargingSwitch_Close API
+0001 print QuerySPC API
+0002 print EnableLog API
+0003 print DisableLog API
+0004 print AnalysisRecord API 
+0005 print AnalysisRecordStereo API
+0006 print API:Camera initial 
+0007 print API:ByPassCellTemperatureCheck 	
+
+0000 print API:MasterClear 	
+0000 print API:ClearActivationData 
+0000 print API:BackupNV2BRT_IMESTATION 	
+0000 print API:CheckCEFSFileName 	
+0000 print API:CheckSIMLock 	
+
+0000 print "[GSensor APIs]------------------------------------" REMARK
+0000 print GSensorCalibration API
+0000 print IsGSensorWorkingV3 API
+0000 print IsGSensorWorkingV2 API
+0000 print IsGSensorWorking API
+0000 print GSensorOffset API
+
+0000 print API:IMEISTATION_ReadSWVersion 
+0000 print API:IMEISTATION_GetReleaseDateTime 
+0000 print API:Replace_GrpDList_File 
+0000 print API:RestoreBrt_DOWNLOADEXPORT 
+0000 print API:FreezeOTP 
+0000 print API:IsOTPFrozen 
+0000 print API:ReadBatteryVoltage 
+0000 print API:ReadBatteryTemperature 	
+0000 print API:WriteDefaultPhoneCode 
+0000 print API:TurnOnEM 
+0000 print API:TurnOffEM 
+0000 print API:WriteFailureByte 
+
+0000 print "[Audio APIs]------------------------------------" REMARK
+0000 print TurnOnSpeakerDevice API
+0000 print TurnOffSpeakerDevice API
+0000 print TurnOnHandsetDevice API
+0000 print TurnOffHandsetDevice API
+0000 print TurnOnBluetoothDevice API
+0000 print TurnOffBluetoothDevice API
+0000 print SetBluetoothVoiceLevel API
+0000 print SetBluetoothMultimediaLevel API
+0000 print SetSpeaketVoiceLevel API
+0000 print SetSpeakerMultimediaLevel API
+0000 print SetHandsetMultimediaLevel API
+0000 print SetHandsetVoiceLevel API
+0000 print TurnOnPlayMP3 API
+0000 print TurnOffPlayMP3 API
+0000 print TurnOnAudioPackageLoopback API
+0000 print TurnOffAudioPackageLoopback API
+
+0000 print "[FM APIs]------------------------------------" REMARK
+0000 print API:FMRegistration 
+0000 print API:FMConnect 
+0000 print API:FMDisonnect 
+0000 print API:FMInitialize 
+0000 print API:FMSetStation 
+0000 print API:FMMute 
+0000 print API:FMNotMute 
+0000 print API:FMChangeTestModeAndSetLevel
+0000 print API:FMReceiveRSSI 
+0000 print API:FMSpeaker 
+0000 print API:FMMonoHeadset 
+0000 print API:FMStereoHeadset 
+
+0000 print API:LockSPC 
+0000 print API:UnlockSPC 
+0000 print API:IsSPCLocked 
+0000 print API:WriteSimLockFile 	
+0000 print API:BackupNVPartition 
+0000 print API:RestoreNVPartition 
+0000 print API:CheckNVPartition 
+0000 print API:BackupNV2BRT 	
+0000 print API:RestoreBRT2NV 	
+0000 print API:ReadNVItem 
+0000 print API:WriteNVItem 
+0000 print "API:Get IMEI"
+0000 print "API:Write IMEI"
+0000 print API:GetSWHWVersion 
+0000 print API:GetLavernockHWVersion
+0000 print API:GetLavernockHWVersionV2_ForSPU
+
+0000 print "API:Standby Current Test "
+0000 print "API:Write QFuse "
+0000 print "API:Read QFuse "
+0000 print "API:Get DL Boot loader revocation Command "
+0000 print "API:Get DL Phone code revocation Command "
+0000 print "API:Check SIM Card Existence"
+
+0000 print "[Change mode APIs]------------------------------------" REMARK
+0000 print SetOnline API
+0000 print SetOffline API
+0000 print SetFTM API
+0000 print "[Change NV 453 APIs]------------------------------------" REMARK
+0000 print CheckFTM API
+0000 print "Set FTM NV453" API
+0000 print "Set Online NV453" API
+0000 print ResetHandset API
+0000 print "[GetMotoXprs APIs]------------------------------------" REMARK
+0000 print "API:GetMotoXprs_Athens "
+0000 print "API:GetMotoXprs_Lavernock "
+0000 print "API:GetMotoXprs_Melos"
+
+0000 print API:EnableQualcommEvent 
+0000 print API:DisableQualcommEvent 
+0000 print API:WriteSIMLockFileNameToNV 
+0000 print API:ReadSIMLockFileNameFromNV 
+0000 print API:RAWRequest 
+0000 print API:RAWRequest_NoCRC 
+0000 print API:Diag_RAWRequest 
+0000 print API:Diag_RAWRequest_NoCRC 
+0000 print API:WriteDummyFactoryArea 
+0000 print API:GPIB_Initialization
+0000 print API:GPIB_SetControlIndex
+0000 print API:GPIB_GetDeviceCount
+0000 print API:GPIB_QueryDeviceDescription
+0000 print API:GPIB_IsPowerSupply
+0000 print API:GPIB_SetCurrentVoltage
+0000 print API:GPIB_SendCommmand
+0000 print API:GPIB_SendQueryCommmand
+0000 print API:GPIB_ReadCommandResult
+0000 print API:GPIB_ErrorMsg
+0000 print "API:GetMicroSDInfo_ForSPU"
+
+0000 print "[Factory Area APIs]------------------------------------" REMARK
+0000 print ReadMobileID_ForSPU API
+0000 print WriteMobileID_ForSPU API
+0000 print ReadPicassoNumber API
+0000 print WritePicassoNumber API
+0000 print ReadTrackID API
+0000 print WriteTrackID API
+0000 print ReadProcessInfo API
+0000 print WriteProcessInfo API
+0000 print ReadFactoryHWSWMW API
+0000 print WriteFactoryHWSWMW API
+0000 print ReadHWVersion_FromFactoryArea API
+0000 print WriteHWVersion_ToFactoryArea API
+0001 print Read_MMI_Flag API
+0001 print Write_MMI_Flag API
+}

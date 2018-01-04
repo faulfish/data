@@ -1,0 +1,197 @@
+;-------------------------------------------------------------------------------
+; qcfilter.INF
+;
+; BenQ Wireless Composite Device
+;
+; Copyright (C) 2014 BenQ Inc.  All rights reserved.
+;-------------------------------------------------------------------------------
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = USB
+Provider    = %BENQ%
+ClassGUID   = {36FC9E60-C465-11CF-8056-444553540000}
+DriverVer   = 01/25/2014,1.0.1.9
+CatalogFile = qcfilter.cat
+
+[Manufacturer]
+%BENQ%  = BenQFilter, NTamd64
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[SourceDisksNames.x86]
+1000 = %BenQSrcDisk%,"",,\filter\i386
+
+[SourceDisksNames.amd64]
+1000 = %BenQSrcDisk%,"",,\filter\amd64
+
+[SourceDisksFiles]
+qcusbfilter.sys  = 1000
+
+[BenQFilter]
+%qcfilter.DeviceDesc461B%     = qcfilter, USB\VID_1D45&PID_461B
+%qcfilter.DeviceDesc461E%     = qcfilter, USB\VID_1D45&PID_461E
+%qcfilter.DeviceDesc461F%     = qcfilter, USB\VID_1D45&PID_461F
+%qcfilter.DeviceDesc4620%     = qcfilter, USB\VID_1D45&PID_4620
+%qcfilter.DeviceDesc4621%     = qcfilter, USB\VID_1D45&PID_4621
+%qcfilter.DeviceDesc9006%     = qcfilter, USB\VID_05C6&PID_9006
+
+[BenQFilter.NTamd64]
+%qcfilter.DeviceDesc461B%     = qcfilter, USB\VID_1D45&PID_461B
+%qcfilter.DeviceDesc461E%     = qcfilter, USB\VID_1D45&PID_461E
+%qcfilter.DeviceDesc461F%     = qcfilter, USB\VID_1D45&PID_461F
+%qcfilter.DeviceDesc4620%     = qcfilter, USB\VID_1D45&PID_4620
+%qcfilter.DeviceDesc4621%     = qcfilter, USB\VID_1D45&PID_4621
+%qcfilter.DeviceDesc9006%     = qcfilter, USB\VID_05C6&PID_9006
+
+[qcfilter.NT]  
+;-----------------------------------------------------------------
+; Get the standard stuff from USB.inf
+;-----------------------------------------------------------------
+Include   = USB.inf
+Needs     = Composite.Dev.NT
+CopyFiles = qcfilter.NT.Copy
+
+[qcfilter2.NT]  
+;-----------------------------------------------------------------
+; Get the standard stuff from USB.inf
+;-----------------------------------------------------------------
+Include   = USB.inf
+Needs     = Composite.Dev.NT
+CopyFiles = qcfilter2.NT.Copy
+AddReg    = qcfilterAddReg2
+
+[qcfilter3.NT]  
+;-----------------------------------------------------------------
+; Get the standard stuff from USB.inf
+;-----------------------------------------------------------------
+Include   = USB.inf
+Needs     = Composite.Dev.NT
+CopyFiles = qcfilter3.NT.Copy
+AddReg    = qcfilterAddReg3
+
+[qcfilter4.NT]  
+;-----------------------------------------------------------------
+; Get the standard stuff from USB.inf
+;-----------------------------------------------------------------
+Include   = USB.inf
+Needs     = Composite.Dev.NT
+CopyFiles = qcfilter4.NT.Copy
+AddReg    = qcfilterAddReg4
+
+[qcfilterAddReg2]
+
+; Support Muxing
+HKR,, QCDeviceMuxEnable, 0x00010001, 0x00000001
+
+; Start Interface
+HKR,, QCDeviceStartIf, 0x00010001, 0x00000002
+
+; Number of Interfaces
+HKR,, QCDeviceNumIf, 0x00010001, 0x00000001
+
+; Number of Mux Interfaces
+HKR,, QCDeviceNumMuxIf, 0x00010001, 0x00000007
+
+[qcfilterAddReg3]
+
+; Support Muxing
+HKR,, QCDeviceMuxEnable, 0x00010001, 0x00000001
+
+; Start Interface
+HKR,, QCDeviceStartIf, 0x00010001, 0x00000003
+
+; Number of Interfaces
+HKR,, QCDeviceNumIf, 0x00010001, 0x00000001
+
+; Number of Mux Interfaces
+HKR,, QCDeviceNumMuxIf, 0x00010001, 0x00000007
+
+[qcfilterAddReg4]
+
+; Support Muxing
+HKR,, QCDeviceMuxEnable, 0x00010001, 0x00000001
+
+; Start Interface
+HKR,, QCDeviceStartIf, 0x00010001, 0x00000004
+
+; Number of Interfaces
+HKR,, QCDeviceNumIf, 0x00010001, 0x00000001
+
+; Number of Mux Interfaces
+HKR,, QCDeviceNumMuxIf, 0x00010001, 0x00000007
+
+[qcfilter.NT.Copy]
+qcusbfilter.sys
+
+[qcfilter2.NT.Copy]
+qcusbfilter.sys
+
+[qcfilter3.NT.Copy]
+qcusbfilter.sys
+
+[qcfilter4.NT.Copy]
+qcusbfilter.sys
+
+[DestinationDirs]
+qcfilter.NT.Copy = 12
+qcfilter2.NT.Copy = 12
+qcfilter3.NT.Copy = 12
+qcfilter4.NT.Copy = 12
+
+[qcfilter.NT.HW]
+AddReg = LowerFilterAddReg
+
+[qcfilter2.NT.HW]
+AddReg = LowerFilterAddReg
+
+[qcfilter3.NT.HW]
+AddReg = LowerFilterAddReg
+
+[qcfilter4.NT.HW]
+AddReg = LowerFilterAddReg
+
+[LowerFilterAddReg]
+HKR,,"LowerFilters",0x00010000,"qcfilter"
+
+;-----------------------------------------------------------------
+; Filter Device Filter Service Section
+;-----------------------------------------------------------------
+[qcfilter.NT.Services]
+Include    = USB.inf
+Needs      = Composite.Dev.NT.Services
+AddService = qcfilter,, filter_Service_Inst 
+
+[qcfilter2.NT.Services]
+Include    = USB.inf
+Needs      = Composite.Dev.NT.Services
+AddService = qcfilter,, filter_Service_Inst 
+
+[qcfilter3.NT.Services]
+Include    = USB.inf
+Needs      = Composite.Dev.NT.Services
+AddService = qcfilter,, filter_Service_Inst 
+
+[qcfilter4.NT.Services]
+Include    = USB.inf
+Needs      = Composite.Dev.NT.Services
+AddService = qcfilter,, filter_Service_Inst 
+
+[filter_Service_Inst]
+DisplayName    = %qcfilter.SvcDesc%                            
+ServiceType    = 1
+StartType      = 3
+ErrorControl   = 1
+ServiceBinary  = %12%\qcusbfilter.sys                            
+
+[Strings]
+BENQ                    = "BenQ Incorporated"
+BenQSrcDisk                 = "BenQ USB Driver Disk"
+qcfilter.DeviceDesc461B     = "BenQ USB Composite Device 461B"
+qcfilter.DeviceDesc461E     = "BenQ USB Composite Device 461E"
+qcfilter.DeviceDesc461F     = "BenQ USB Composite Device 461F"
+qcfilter.DeviceDesc4620     = "BenQ USB Composite Device 4620"
+qcfilter.DeviceDesc4621     = "BenQ USB Composite Device 4621"
+qcfilter.DeviceDesc9006     = "BenQ USB Composite Device 9006"
+qcfilter.SvcDesc            = "BenQ USB Composite Device Filter Driver"

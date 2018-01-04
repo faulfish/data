@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModemSetup", "GPRSMdmSetupWiz\GPRSMdmSetupWiz.vcproj", "{3351D1B0-F57B-45D2-AD32-13050426CC49}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0} = {F9E4953A-48A6-4945-BB69-1CE6419DC6B0}
+		{57155A48-25AC-47B9-A023-D57B262ACBB8} = {57155A48-25AC-47B9-A023-D57B262ACBB8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MobileFinder", "..\CommLayer\MobileFinder\MobileFinder.vcproj", "{57155A48-25AC-47B9-A023-D57B262ACBB8}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UIFramework", "..\Components\UIFramework\UIFramework.vcproj", "{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA} = {AA9D97BA-452E-44C3-9AF1-538EB639C2EA}
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE} = {9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConfigureTool", "..\Components\ConfigureTool\ConfigureTool.vcproj", "{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LocalizationTool", "..\Components\Localization\LocalizationTool.vcproj", "{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3351D1B0-F57B-45D2-AD32-13050426CC49}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3351D1B0-F57B-45D2-AD32-13050426CC49}.Debug|Win32.Build.0 = Debug|Win32
+		{3351D1B0-F57B-45D2-AD32-13050426CC49}.Release|Win32.ActiveCfg = Release|Win32
+		{3351D1B0-F57B-45D2-AD32-13050426CC49}.Release|Win32.Build.0 = Release|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Debug|Win32.Build.0 = Debug|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Release|Win32.ActiveCfg = Release|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Release|Win32.Build.0 = Release|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Debug|Win32.Build.0 = Debug|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Release|Win32.ActiveCfg = Release|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Release|Win32.Build.0 = Release|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Debug|Win32.Build.0 = Debug|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Release|Win32.ActiveCfg = Release|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Release|Win32.Build.0 = Release|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Debug|Win32.Build.0 = Debug|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Release|Win32.ActiveCfg = Release|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1163 @@
+<App Name="QSyncer 2.0" Version="1.1">
+	<Widget ClassName="MainFrame" ID="MainFrameID" EnableShadow="0" FrameStyle="1">
+		<Shadow PositionX="0" PositionY="5" Size="3" Sharpness="117" Darkness="117" ColorR="10" ColorG="10" ColorB="10"></Shadow>
+		<FixedPicture FixedPic="General\Background\OnePic.bmp"></FixedPicture>
+		<NinePictures First="General\Background\mainFrm1.bmp" Second="General\Background\mainFrm2.bmp" Third="General\Background\mainFrm3.bmp" Fourth="General\Background\mainFrm4.bmp" Fifth="General\Background\mainFrm5.bmp" Sixth="General\Background\mainFrm6.bmp" Seventh="General\Background\mainFrm7.bmp" Eighth="General\Background\mainFrm8.bmp" Ninth="General\Background\mainFrm9.bmp"></NinePictures>
+	</Widget>
+	<Widget ClassName="FileManager" ID="FileManagerID">
+		<Widget ClassName="SplitLayout" ID="MainLayout">
+			<Property Direction="H" FixedStyle="Value" FixedValue="49"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="TopButton">
+			<Property Direction="V"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="DownView">
+			<Property Spacing="6" Direction="H" FixedItem="Second" FixedStyle="Ratio" Ratio="0.5"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="Button">
+			<Property Spacing="2"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="RefreshButton">
+			<Property OriginalImagePath="\General\Button\Btn_Refresh_Original.png" MouseOverImagePath="\General\Button\Btn_Refresh_MouseOver.png" MouseDownImagePath="\General\Button\Btn_Refresh_MouseDown.png" DisableImagePath="\General\Button\Btn_Refresh_Disable.png" MaxWidth="47" MinWidth="47" MaxHeight="36" MinHeight="36" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="DeleteButton">
+			<Property FunctionPoint="Delete" Display="IDS_Delete" Enable="false" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="ME">
+			<Property Spacing="4" Direction="V" FixedStyle="Value" FixedValue="200"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_ME_TREE">
+			<Property Win32ID="2000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_ME_LIST">
+			<Property Win32ID="2001"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="PC">
+			<Property Spacing="4" Direction="V" FixedStyle="Value" FixedValue="200"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_PC_TREE">
+			<Property Win32ID="2005"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_PC_LIST">
+			<Property Win32ID="2014"></Property>
+		</Widget>
+		<Order Name="FileManager">
+			<Setting ParentWidget="" ID="MainLayout" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="TopButton" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="DownView" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="TopButton" ID="Button" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="TopButton" ID="RefreshButton" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="Button" ID="DeleteButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="DownView" ID="ME" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="DownView" ID="PC" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="ME" ID="IDC_ME_TREE" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="ME" ID="IDC_ME_LIST" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="PC" ID="IDC_PC_TREE" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="PC" ID="IDC_PC_LIST" Parameter="Second" Description=""></Setting>
+		</Order>
+		<LayoutBase Name="FileManager">
+			<Setting ID="MainLayout" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="11" RightMargin="0" Alignment="Left|Bottom"></Setting>
+			<Setting ID="MainLayout" Index="1" Alignment="Left|Top"></Setting>
+			<Setting ID="TopButton" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="12" Alignment="Right|VCenter"></Setting>
+			<Setting ID="Button" Index="0" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Alignment="Left|VCenter"></Setting>
+			<Setting ID="ME" Index="0" TopMargin="4" BottomMargin="0" LeftMargin="3" RightMargin="0" Alignment="VCenter|HCenter"></Setting>
+			<Setting ID="ME" Index="1" TopMargin="4" BottomMargin="0" LeftMargin="0" RightMargin="4" Alignment="VCenter|HCenter"></Setting>
+			<Setting ID="PC" Index="0" TopMargin="0" BottomMargin="3" LeftMargin="3" RightMargin="0" Alignment="VCenter|HCenter"></Setting>
+			<Setting ID="PC" Index="1" TopMargin="0" BottomMargin="3" LeftMargin="0" RightMargin="4" Alignment="VCenter|HCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="Calendar" ID="CalendarID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="273"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="48"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_0">
+			<Property Direction="0" Spacing="2" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_0">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Insert" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_1">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Update" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_2">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Delete" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="16" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="158"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_4">
+			<Property Spacing="2" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="47"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_3">
+			<Property OriginalImagePath="\Calendar\Button\Btn_ToOutlook_Original.png" MouseOverImagePath="\Calendar\Button\Btn_ToOutlook_MouseOver.png" MouseDownImagePath="\Calendar\Button\Btn_ToOutlook_MouseDown.png" DisableImagePath="\Calendar\Button\Btn_ToOutlook_Disable.png" MinWidth="47" MinHeight="36" MaxWidth="47" MaxHeight="36" Enable="true" Display="" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_4">
+			<Property OriginalImagePath="\Calendar\Button\Btn_FromOutlook_Original.png" MouseOverImagePath="\Calendar\Button\Btn_FromOutlook_MouseOver.png" MouseDownImagePath="\Calendar\Button\Btn_FromOutlook_MouseDown.png" DisableImagePath="\Calendar\Button\Btn_FromOutlook_Disable.png" MinWidth="47" MinHeight="36" MaxWidth="47" MaxHeight="36" Enable="true" Display="" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_5">
+			<Property OriginalImagePath="\General\Button\Btn_Refresh_Original.png" MouseOverImagePath="\General\Button\Btn_Refresh_MouseOver.png" MouseDownImagePath="\General\Button\Btn_Refresh_MouseDown.png" DisableImagePath="\General\Button\Btn_Refresh_Disable.png" MinWidth="47" MinHeight="36" MaxWidth="47" MaxHeight="36" Enable="true" Display="" nID="6"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_5">
+			<Property Spacing="2" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_6">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="39"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_0">
+			<Property OriginalImagePath="\General\Button\Btn_Check_Original.png" MouseOverImagePath="\General\Button\Btn_Check_MouseOver.png" MouseDownImagePath="\General\Button\Btn_Check_MouseDown.png" DisableImagePath="\General\Button\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\General\Button\Btn_Check_Original_2.png" MouseOverImagePath2="\General\Button\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\General\Button\Btn_Check_MouseDown_2.png" DisableImagePath2="\General\Button\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" nID="7"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_0">
+			<Property Font="Arial" FontSize="8" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_All" nID="8"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="Win32Image_0">
+			<Property ImagePath="..\Debug\Pictures2\General\Split\VSplitBar.png" ShowStyle="WFixed" Enable="true" Display="" nID="9"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_1">
+			<Property Direction="0" Spacing="0" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_1">
+			<Property Font="Arial" FontSize="8" FontBold="false" Alignment="VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_StartDTBetween" nID="10"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_0">
+			<Property Win32ID="1068" Enable="true" Display="" nID="11"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_2">
+			<Property Font="Arial" FontSize="8" FontBold="false" Alignment="VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_Tilde" nID="12"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_1">
+			<Property Win32ID="1069" Enable="true" Display="" nID="13"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_2">
+			<Property Win32ID="1009" Enable="true" Display="" nID="14"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="SplitLayout_2" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="BoxLayout_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_0" Parameter="" Description="m_pNewButton"></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_1" Parameter="" Description="m_pEditButton"></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_2" Parameter="" Description="m_pDeleteButton"></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="SplitLayout_4" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="Win32Button_3" Parameter="First" Description="m_pSyncToOutlookButton"></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="Win32Button_4" Parameter="Second" Description="m_pSyncFromOutlookButton"></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Button_5" Parameter="Second" Description="m_pRefreshButton"></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="SplitLayout_5" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_5" ID="SplitLayout_6" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_6" ID="Win32IconButton_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_6" ID="Win32Label_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_5" ID="Win32Image_0" Parameter="SplitBar" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_5" ID="BoxLayout_1" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Label_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Label_2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="Win32Windows_2" Parameter="Second" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="11" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_4" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="47" MinHeight="36" MaxWidth="-1" MaxHeight="-1" Alignment="Right|VCenter"></Setting>
+			<Setting ID="SplitLayout_4" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="47" MinHeight="36" MaxWidth="-1" MaxHeight="-1" Alignment="Right|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="11" MinWidth="58" MinHeight="36" MaxWidth="-1" MaxHeight="-1" Alignment="Right|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_5" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_6" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="26" RightMargin="0" MinWidth="39" MinHeight="13" MaxWidth="-1" MaxHeight="-1" Alignment="Right|VCenter"></Setting>
+			<Setting ID="SplitLayout_6" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="SplitLayout_5" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="BoxLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="113" MinHeight="20" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="92" MinHeight="20" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="19" MinHeight="20" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="92" MinHeight="20" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="4" BottomMargin="3" LeftMargin="3" RightMargin="4" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="QAboutBox" ID="QAboutBoxID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="77"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="6" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="118"></Property>
+		</Widget>
+		<Widget ClassName="Win32Image" ID="Win32Image_0">
+			<Property ImagePath="..\Debug\Pictures2\MainFrame\Icon_Dialog_About.png" ShowStyle="Fixed" Enable="true" Display="" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_0">
+			<Property Font="Arial" FontSize="17" FontBold="false" Alignment="Left|Bottom" BkImage="" TextColorAlpha="255" TextColorR="50" TextColorG="160" TextColorB="200" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="QSyncer" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_1">
+			<Property Font="Arial" FontSize="9" FontBold="true" Alignment="HCenter|Bottom" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="Qisda 2.0.1.0" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_2">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="HCenter|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="Qisda.  All rights reserved." nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_0">
+			<Property OriginalImagePath="General\Button\Btn_DeepGreen_Original.png" MouseOverImagePath="General\Button\Btn_DeepGreen_MouseOver.png" MouseDownImagePath="General\Button\Btn_DeepGreen_MouseDown.png" DisableImagePath="General\Button\Btn_DeepGreen_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_OK" nID="5"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32Image_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32Label_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Label_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Label_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="Win32IconButton_0" Parameter="Second" Description="m_pButtonOK"></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="11" LeftMargin="0" RightMargin="0" MinWidth="55" MinHeight="66" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Bottom"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="0" BottomMargin="10" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Bottom"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Bottom"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Bottom"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Top"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="0" BottomMargin="12" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="38" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Bottom"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="Cal_AppointmentEditor" ID="Cal_AppointmentEditorID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="29"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_0">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="13" RightMargin="0" Enable="true" Display="IDS_CALENDAR_FUNCTION" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_0">
+			<Property OriginalImagePath="General\Button\Btn_Close_Original.png" MouseOverImagePath="General\Button\Btn_Close_MouseOver.png" MouseDownImagePath="General\Button\Btn_Close_MouseDown.png" DisableImagePath="General\Button\Btn_Close_Disable.png" MinWidth="26" MinHeight="25" MaxWidth="26" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="417"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="6" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="276"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_4">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="37"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_1">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="0" Enable="true" Display="IDS_Cal_Edit" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_5">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="347"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_0">
+			<Property Direction="2" Spacing="10" CellWidth="0" CellHeight="20" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="10" CommonRightMargin="10"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_2">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_Subject" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_3">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_Location" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_4">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_StartDT" nID="6"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_5">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_EndDT" nID="7"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_6">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_Recur" nID="8"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_7">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_Alarm" nID="9"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_8">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_Categories" nID="10"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_1">
+			<Property Direction="2" Spacing="10" CellWidth="0" CellHeight="20" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="10" CommonRightMargin="10"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_0">
+			<Property Win32ID="1034" Enable="true" Display="" nID="11"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_1">
+			<Property Win32ID="1035" Enable="true" Display="" nID="12"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_6">
+			<Property Spacing="10" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_2">
+			<Property Win32ID="1042" Enable="true" Display="" nID="13"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_3">
+			<Property Win32ID="1053" Enable="true" Display="" nID="14"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_7">
+			<Property Spacing="10" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_4">
+			<Property Win32ID="1043" Enable="true" Display="" nID="15"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_5">
+			<Property Win32ID="1058" Enable="true" Display="" nID="16"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_6">
+			<Property Win32ID="1050" Enable="true" Display="" nID="17"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_7">
+			<Property Win32ID="1051" Enable="true" Display="" nID="18"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_8">
+			<Property Win32ID="1054" Enable="true" Display="" nID="19"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_8">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="37"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_9">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="0" Enable="true" Display="IDS_Cal_Descript" nID="20"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_9">
+			<Property Win32ID="1052" Enable="true" Display="" nID="21"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_2">
+			<Property Direction="1" Spacing="5" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_1">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Cancel" nID="22"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_2">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_OK" nID="23"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32Label_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32IconButton_0" Parameter="Second" Description="m_pWinCloseButton"></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="SplitLayout_4" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="Win32Label_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="SplitLayout_5" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_5" ID="BoxLayout_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_3" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_4" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_5" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_6" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_7" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_8" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_5" ID="BoxLayout_1" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="SplitLayout_6" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_6" ID="Win32Windows_2" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_6" ID="Win32Windows_3" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="SplitLayout_7" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_7" ID="Win32Windows_4" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_7" ID="Win32Windows_5" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_6" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_7" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_8" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="SplitLayout_8" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_8" ID="Win32Label_9" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_8" ID="Win32Windows_9" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="BoxLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_2" ID="Win32IconButton_1" Parameter="" Description="m_pBtnCancel"></Setting>
+			<Setting ParentWidget="BoxLayout_2" ID="Win32IconButton_2" Parameter="" Description="m_pBtnOK"></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="3" BottomMargin="1" LeftMargin="0" RightMargin="15" MinWidth="41" MinHeight="29" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="13" BottomMargin="2" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_4" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_4" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_5" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_0" Index="0" TopMargin="10" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="30" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_0" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_0" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_0" Index="4" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_0" Index="5" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_0" Index="6" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_5" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_1" Index="0" TopMargin="10" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="30" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_1" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_1" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_6" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_6" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_1" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_7" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_7" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_1" Index="4" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_1" Index="5" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_1" Index="6" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="2" BottomMargin="2" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_8" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_8" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="Phonebook_SIMContactDlg" ID="Phonebook_SIMContactDlgID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="29"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_0">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="13" RightMargin="0" Enable="true" Display="IDS_PHONEBOOK_FUNCTION" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_0">
+			<Property OriginalImagePath="General\Button\Btn_Close_Original.png" MouseOverImagePath="General\Button\Btn_Close_MouseOver.png" MouseDownImagePath="General\Button\Btn_Close_MouseDown.png" DisableImagePath="General\Button\Btn_Close_Disable.png" MinWidth="26" MinHeight="25" MaxWidth="26" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="156"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="37"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_1">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="0" Enable="true" Display="General Info" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_4">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="233"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_0">
+			<Property Direction="2" Spacing="10" CellWidth="0" CellHeight="20" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_2">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="Name" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_3">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="Private Number" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_1">
+			<Property Direction="2" Spacing="10" CellWidth="0" CellHeight="20" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_0">
+			<Property Win32ID="3049" Enable="true" Display="" nID="6"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_1">
+			<Property Win32ID="3050" Enable="true" Display="" nID="7"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_2">
+			<Property Direction="1" Spacing="5" CellWidth="-1" CellHeight="-1" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_1">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Cancel" nID="8"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_2">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_OK" nID="9"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32Label_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32IconButton_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Label_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="SplitLayout_4" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="BoxLayout_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_3" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="BoxLayout_1" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="BoxLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_2" ID="Win32IconButton_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_2" ID="Win32IconButton_2" Parameter="" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="3" BottomMargin="1" LeftMargin="0" RightMargin="15" MinWidth="41" MinHeight="29" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="14" BottomMargin="2" LeftMargin="10" RightMargin="11" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="12" BottomMargin="0" LeftMargin="11" RightMargin="14" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_4" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_4" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="8" BottomMargin="0" LeftMargin="0" RightMargin="9" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="Phonebook_View" ID="Phonebook_ViewID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="49"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_0">
+			<Property Direction="0" Spacing="2" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_0">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Insert" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_1">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Update" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_2">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Delete" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="16" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="59"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="2" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="47"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_3">
+			<Property OriginalImagePath="\Calendar\Button\Btn_ToOutlook_Original.png" MouseOverImagePath="\Calendar\Button\Btn_ToOutlook_MouseOver.png" MouseDownImagePath="\Calendar\Button\Btn_ToOutlook_MouseDown.png" DisableImagePath="\Calendar\Button\Btn_ToOutlook_Disable.png" MinWidth="47" MinHeight="36" MaxWidth="47" MaxHeight="36" Enable="true" Display="" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_4">
+			<Property OriginalImagePath="\Calendar\Button\Btn_FromOutlook_Original.png" MouseOverImagePath="\Calendar\Button\Btn_FromOutlook_MouseOver.png" MouseDownImagePath="\Calendar\Button\Btn_FromOutlook_MouseDown.png" DisableImagePath="\Calendar\Button\Btn_FromOutlook_Disable.png" MinWidth="47" MinHeight="36" MaxWidth="47" MaxHeight="36" Enable="true" Display="" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_5">
+			<Property OriginalImagePath="\General\Button\Btn_Refresh_Original.png" MouseOverImagePath="\General\Button\Btn_Refresh_MouseOver.png" MouseDownImagePath="\General\Button\Btn_Refresh_MouseDown.png" DisableImagePath="\General\Button\Btn_Refresh_Disable.png" MinWidth="47" MinHeight="36" MaxWidth="47" MaxHeight="36" Enable="true" Display="" nID="6"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_4">
+			<Property Spacing="4" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="200"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_0">
+			<Property Win32ID="3002" Enable="true" Display="" nID="7"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_1">
+			<Property Win32ID="3003" Enable="true" Display="" nID="8"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="BoxLayout_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="SplitLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Button_3" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Button_4" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="Win32Button_5" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_4" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="Win32Windows_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="Win32Windows_1" Parameter="Second" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="11" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Bottom"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Right|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="47" MinHeight="36" MaxWidth="-1" MaxHeight="-1" Alignment="Right|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="47" MinHeight="36" MaxWidth="-1" MaxHeight="-1" Alignment="Right|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="12" MinWidth="59" MinHeight="36" MaxWidth="-1" MaxHeight="-1" Alignment="Right|VCenter"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_4" Index="0" TopMargin="4" BottomMargin="3" LeftMargin="3" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_4" Index="1" TopMargin="4" BottomMargin="3" LeftMargin="0" RightMargin="4" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="QProgressServer_Animate" ID="QProgressServer_AnimateID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="29"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_0">
+			<Property Font="Arial" FontSize="10" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="3" BottomMargin="0" LeftMargin="13" RightMargin="0" Enable="true" Display="" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="18" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="38"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="69"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_1">
+			<Property Font="Arial" FontSize="10" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="Win32ProgressBar_0">
+			<Property Style="AnimatePicture" BkImage="" BarImage="" TimerID="300" Elapse="100" Count="6" Image1="ProgressBar\ProgressBar_ANI_1.png" Image2="ProgressBar\ProgressBar_ANI_2.png" Image3="ProgressBar\ProgressBar_ANI_3.png" Image4="ProgressBar\ProgressBar_ANI_4.png" Image5="ProgressBar\ProgressBar_ANI_5.png" Image6="ProgressBar\ProgressBar_ANI_6.png" Enable="true" Display="" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_0">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="false" Display="" nID="4"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="Win32Label_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="SplitLayout_2" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="Win32Label_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="Win32ProgressBar_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32IconButton_0" Parameter="Second" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Bottom"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="30" RightMargin="30" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="231" MinHeight="18" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="0" BottomMargin="12" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="38" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Bottom"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="QProgressServer" ID="QProgressServerID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="29"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_0">
+			<Property Font="Arial" FontSize="10" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="3" BottomMargin="0" LeftMargin="13" RightMargin="0" Enable="true" Display="" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="18" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="38"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="69"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_1">
+			<Property Font="Arial" FontSize="10" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="10" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="80"></Property>
+		</Widget>
+		<Widget ClassName="Win32ProgressBar" ID="Win32ProgressBar_0">
+			<Property Style="ClipPicture" BkImage="ProgressBar\ProgressBar_Empty.PNG" BarImage="ProgressBar\ProgressBar_Full.PNG" TimerID="0" Elapse="0" Count="0" Enable="true" Display="" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_2">
+			<Property Font="Arial" FontSize="10" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="0%" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_0">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="false" Display="" nID="5"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="Win32Label_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="SplitLayout_2" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="Win32Label_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32ProgressBar_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Label_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32IconButton_0" Parameter="Second" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Bottom"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="30" RightMargin="30" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Top"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="231" MinHeight="18" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="0" BottomMargin="12" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="38" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Bottom"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="FileManager_InputFolderDlg" ID="FileManager_InputFolderDlgID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="29"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_0">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="13" RightMargin="0" Enable="true" Display="IDS_FILEMANAGER_FUNCTION" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_0">
+			<Property OriginalImagePath="General\Button\Btn_Close_Original.png" MouseOverImagePath="General\Button\Btn_Close_MouseOver.png" MouseDownImagePath="General\Button\Btn_Close_MouseDown.png" DisableImagePath="General\Button\Btn_Close_Disable.png" MinWidth="26" MinHeight="25" MaxWidth="26" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="46"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="50"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_1">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_FileMgr_Input_FolderName" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_0">
+			<Property Win32ID="2006" Enable="true" Display="" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_0">
+			<Property Direction="1" Spacing="5" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_1">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Cancel" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_2">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_OK" nID="6"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32Label_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32IconButton_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Label_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Windows_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="BoxLayout_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32IconButton_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32IconButton_2" Parameter="" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="3" BottomMargin="1" LeftMargin="0" RightMargin="15" MinWidth="41" MinHeight="29" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="14" BottomMargin="1" LeftMargin="22" RightMargin="3" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="18" BottomMargin="18" LeftMargin="82" RightMargin="82" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="SMS_AnonymousContactDlg" ID="SMS_AnonymousContactDlgID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="29"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_0">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="13" RightMargin="0" Enable="true" Display="IDS_Message_AnonymousDlg_AddPhoneNo" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_0">
+			<Property OriginalImagePath="General\Button\Btn_Close_Original.png" MouseOverImagePath="General\Button\Btn_Close_MouseOver.png" MouseDownImagePath="General\Button\Btn_Close_MouseDown.png" DisableImagePath="General\Button\Btn_Close_Disable.png" MinWidth="26" MinHeight="25" MaxWidth="26" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="234"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="36"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_1">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="0" Enable="true" Display="IDS_Message_AnonymousDlg_PhoneNo" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_4">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="25"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_2">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Message_AnonymousDlg_InsertPhoneNo" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_5">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="25"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_0">
+			<Property Direction="2" Spacing="10" CellWidth="0" CellHeight="21" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_3">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Right|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="1." nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_4">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Right|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="2." nID="6"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_5">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Right|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="3." nID="7"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_6">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Right|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="4." nID="8"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_7">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Right|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="5." nID="9"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_1">
+			<Property Direction="2" Spacing="10" CellWidth="261" CellHeight="21" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_0">
+			<Property Win32ID="1045" Enable="true" Display="" nID="10"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_1">
+			<Property Win32ID="1046" Enable="true" Display="" nID="11"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_2">
+			<Property Win32ID="1047" Enable="true" Display="" nID="12"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_3">
+			<Property Win32ID="1048" Enable="true" Display="" nID="13"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_4">
+			<Property Win32ID="1049" Enable="true" Display="" nID="14"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_2">
+			<Property Direction="1" Spacing="5" CellWidth="-1" CellHeight="-1" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_1">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Cancel" nID="15"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_2">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_OK" nID="16"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32Label_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32IconButton_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Label_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="SplitLayout_4" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="Win32Label_2" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="SplitLayout_5" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_5" ID="BoxLayout_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_3" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_4" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_5" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_6" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_7" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_5" ID="BoxLayout_1" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_3" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_4" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="BoxLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_2" ID="Win32IconButton_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_2" ID="Win32IconButton_2" Parameter="" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="3" BottomMargin="1" LeftMargin="0" RightMargin="15" MinWidth="41" MinHeight="29" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="14" BottomMargin="2" LeftMargin="10" RightMargin="11" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_4" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="8" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_4" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_5" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="4" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_5" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="4" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="8" BottomMargin="0" LeftMargin="0" RightMargin="9" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="Message_View" ID="Message_ViewID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="49"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_0">
+			<Property Direction="0" Spacing="2" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_0">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Message_Button_New" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_1">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Message_Button_Forward" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_2">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Message_Button_Replay" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_3">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Message_Button_Send" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_4">
+			<Property OriginalImagePath="General\Button\Btn_Original.png" MouseOverImagePath="General\Button\Btn_MouseOver.png" MouseDownImagePath="General\Button\Btn_MouseDown.png" DisableImagePath="General\Button\Btn_Disable.png" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Enable="true" Display="IDS_Message_Button_Delete" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="Win32Button_5">
+			<Property OriginalImagePath="\General\Button\Btn_Refresh_Original.png" MouseOverImagePath="\General\Button\Btn_Refresh_MouseOver.png" MouseDownImagePath="\General\Button\Btn_Refresh_MouseDown.png" DisableImagePath="\General\Button\Btn_Refresh_Disable.png" MinWidth="47" MinHeight="36" MaxWidth="47" MaxHeight="36" Enable="true" Display="" nID="6"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="4" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="200"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_0">
+			<Property Win32ID="1000" Enable="true" Display="" nID="7"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="4" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="210"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_1">
+			<Property Win32ID="1001" Enable="true" Display="" nID="8"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_2">
+			<Property Win32ID="1008" Enable="true" Display="" nID="9"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="BoxLayout_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_3" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Button_4" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32Button_5" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="Win32Windows_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Windows_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Windows_2" Parameter="Second" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="11" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Bottom"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="4" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="80" MinHeight="28" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="12" MinWidth="59" MinHeight="36" MaxWidth="-1" MaxHeight="-1" Alignment="Right|VCenter"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="4" BottomMargin="3" LeftMargin="3" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="4" BottomMargin="3" LeftMargin="0" RightMargin="4" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="MessageEditor" ID="MessageEditorID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="29"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_0">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="13" RightMargin="0" Enable="true" Display="IDS_MESSAGE_FUNCTION" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_0">
+			<Property OriginalImagePath="General\Button\Btn_Close_Original.png" MouseOverImagePath="General\Button\Btn_Close_MouseOver.png" MouseDownImagePath="General\Button\Btn_Close_MouseDown.png" DisableImagePath="General\Button\Btn_Close_Disable.png" MinWidth="26" MinHeight="25" MaxWidth="26" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="493"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="9" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="301"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_4">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="37"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_1">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="0" Enable="true" Display="IDS_Message_Button_Receiver" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_5">
+			<Property Spacing="5" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_0">
+			<Property Direction="2" Spacing="5" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_2">
+			<Property Font="Arial" FontSize="8" FontBold="false" Alignment="Left|Bottom" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_MESSAGE_EDITOR_KEYIN_OR_SELECT" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_0">
+			<Property Win32ID="1016" Enable="true" Display="" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_1">
+			<Property Win32ID="1031" Enable="true" Display="" nID="6"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_1">
+			<Property OriginalImagePath="General\Button\Btn_White_Original.png" MouseOverImagePath="General\Button\Btn_White_MouseOver.png" MouseDownImagePath="General\Button\Btn_White_MouseDown.png" DisableImagePath="General\Button\Btn_White_Disable.png" MinWidth="129" MinHeight="26" MaxWidth="129" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="8.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Message_Button_Add" nID="7"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_1">
+			<Property Direction="2" Spacing="2" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_3">
+			<Property Font="Arial" FontSize="8" FontBold="false" Alignment="Left|Bottom" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_MESSAGE_EDITOR_SELECT_FROM_THE_LIST_OR_KEYIN" nID="8"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_2">
+			<Property OriginalImagePath="General\Button\Btn_White_Original.png" MouseOverImagePath="General\Button\Btn_White_MouseOver.png" MouseDownImagePath="General\Button\Btn_White_MouseDown.png" DisableImagePath="General\Button\Btn_White_Disable.png" MinWidth="129" MinHeight="26" MaxWidth="129" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="8.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Message_Button_AddPhoneNo" nID="9"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_2">
+			<Property Win32ID="1042" Enable="true" Display="" nID="10"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_3">
+			<Property OriginalImagePath="General\Button\Btn_White_Original.png" MouseOverImagePath="General\Button\Btn_White_MouseOver.png" MouseDownImagePath="General\Button\Btn_White_MouseDown.png" DisableImagePath="General\Button\Btn_White_Disable.png" MinWidth="129" MinHeight="26" MaxWidth="129" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="8.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Message_Button_Remove" nID="11"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_6">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="142"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_7">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_4">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="10" RightMargin="0" Enable="true" Display="IDS_message_STATIC_CONTENT" nID="12"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_5">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Right" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="10" Enable="true" Display="" nID="13"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_3">
+			<Property Win32ID="1023" Enable="true" Display="" nID="14"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_8">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_9">
+			<Property Spacing="5" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="13"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_4">
+			<Property OriginalImagePath="\General\Button\Btn_Check_Original.png" MouseOverImagePath="\General\Button\Btn_Check_MouseOver.png" MouseDownImagePath="\General\Button\Btn_Check_MouseDown.png" DisableImagePath="\General\Button\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\General\Button\Btn_Check_Original_2.png" MouseOverImagePath2="\General\Button\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\General\Button\Btn_Check_MouseDown_2.png" DisableImagePath2="\General\Button\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" nID="15"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_6">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_MESSAGE_CHECK_SAVE_TO_SIM" nID="16"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_2">
+			<Property Direction="1" Spacing="5" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_5">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Message_Button_Cancel" nID="17"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_6">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Message_Button_Save" nID="18"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_7">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Message_Button_Send" nID="19"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32Label_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32IconButton_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="SplitLayout_4" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="Win32Label_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_4" ID="SplitLayout_5" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_5" ID="BoxLayout_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Label_2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Windows_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32Windows_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32IconButton_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_5" ID="BoxLayout_1" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Label_3" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32IconButton_2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32Windows_2" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_1" ID="Win32IconButton_3" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="SplitLayout_6" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_6" ID="SplitLayout_7" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_7" ID="Win32Label_4" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_7" ID="Win32Label_5" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_6" ID="Win32Windows_3" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_8" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_8" ID="SplitLayout_9" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_9" ID="Win32IconButton_4" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_9" ID="Win32Label_6" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_8" ID="BoxLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_2" ID="Win32IconButton_5" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_2" ID="Win32IconButton_6" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_2" ID="Win32IconButton_7" Parameter="" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="3" BottomMargin="1" LeftMargin="0" RightMargin="15" MinWidth="41" MinHeight="29" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="11" BottomMargin="2" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_4" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_4" Index="1" TopMargin="5" BottomMargin="3" LeftMargin="3" RightMargin="2" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_5" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="19" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="21" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="160" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="129" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_5" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="19" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="129" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="BoxLayout_1" Index="2" TopMargin="1" BottomMargin="3" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="164" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_1" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="129" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="2" BottomMargin="2" LeftMargin="10" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_6" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_7" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_7" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_6" Index="1" TopMargin="3" BottomMargin="3" LeftMargin="3" RightMargin="3" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_8" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="8" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_9" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="13" MinHeight="13" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="SplitLayout_9" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="SplitLayout_8" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="8" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_2" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+	<Widget ClassName="FileManager_RenameFileDlg" ID="FileManager_RenameFileDlgID">
+		<Widget ClassName="SplitLayout" ID="SplitLayout_0">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="29"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_0">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="13" RightMargin="0" Enable="true" Display="IDS_FILEMANAGER_FUNCTION" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_0">
+			<Property OriginalImagePath="General\Button\Btn_Close_Original.png" MouseOverImagePath="General\Button\Btn_Close_MouseOver.png" MouseDownImagePath="General\Button\Btn_Close_MouseDown.png" DisableImagePath="General\Button\Btn_Close_Disable.png" MinWidth="26" MinHeight="25" MaxWidth="26" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_2">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="46"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_3">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="50"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Win32Label_1">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_FileMgr_Input_FileName" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_0">
+			<Property Win32ID="2006" Enable="true" Display="" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxLayout_0">
+			<Property Direction="1" Spacing="5" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_1">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Cancel" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Win32IconButton_2">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_OK" nID="6"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="SplitLayout_0" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32Label_0" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="Win32IconButton_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_0" ID="SplitLayout_2" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="SplitLayout_3" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Label_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_3" ID="Win32Windows_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_2" ID="BoxLayout_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32IconButton_1" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxLayout_0" ID="Win32IconButton_2" Parameter="" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="SplitLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="3" BottomMargin="1" LeftMargin="0" RightMargin="15" MinWidth="41" MinHeight="29" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_3" Index="0" TopMargin="14" BottomMargin="1" LeftMargin="22" RightMargin="3" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitLayout_3" Index="1" TopMargin="18" BottomMargin="18" LeftMargin="82" RightMargin="82" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitLayout_2" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxLayout_0" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+</App>

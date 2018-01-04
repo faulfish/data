@@ -1,0 +1,6 @@
+; QisdaEFsModule.def : Declares the module parameters for the DLL.
+
+LIBRARY      "QisdaEFsModule"
+
+EXPORTS
+    ; Explicit exports can go here

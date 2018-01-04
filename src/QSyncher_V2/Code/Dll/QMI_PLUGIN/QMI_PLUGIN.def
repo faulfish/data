@@ -1,0 +1,6 @@
+; QMI_PLUGIN.def : Declares the module parameters for the DLL.
+
+LIBRARY      "QMI_PLUGIN"
+
+EXPORTS
+    ; Explicit exports can go here

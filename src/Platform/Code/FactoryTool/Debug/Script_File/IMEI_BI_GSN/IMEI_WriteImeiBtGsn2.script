@@ -1,0 +1,139 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+
+{Code
+0000 waitinput %var1 COM_PORT
+0001 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0002 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0003 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0004 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0005 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0006 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0007 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0008 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0009 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0010 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0011 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0012 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0013 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0014 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0015 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0016 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0017 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0018 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0019 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0020 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0021 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0022 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0023 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0024 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0025 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0026 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0027 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0028 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0029 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0030 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0031 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0032 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0033 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0034 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0035 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0036 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+0037 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+0038 print "" "WRITE_BT_ADDR_JUDGE"  //
+
+0039 waitinput %var8 WRITE_BT_ADDR_F
+
+0040 compare %var8 0  //Mode_Name=="NORMAL"
+0041 comparetrue 46
+
+0042 compare %var8 1  //Mode_Name!="NORMAL"
+0043 comparetrue 65
+
+0044 compare %var8 2  // go to write BT SUCCESS---========
+0045 comparetrue 93
+
+0046 waitinput %var4 BT_ADDR_UP
+0047 run MobileToolKit_StaticMD.dll WriteHeadsetBTAddress_ForSPU %var1 %var4
+0048 comparefalse 50
+0049 comparetrue 52
+
+//Write BT address to phone fail
+0050 print %var4 "Write BT address to phone fail....." 
+0051 print "F84" "Error!"
+
+//success
+0052 print "To compare the BT address from PICS with the BT address read from phone......"
+0053 assign %var6 13
+0054 run MobileToolKit_StaticMD.dll GetBTAddr_ForSPU %var1 %var5 %var6
+0055 comparefalse 57
+0056 comparetrue 59
+
+0057 print "Read BT address from phone fail......"
+0058 print "F85" "Error!"
+
+//read bt addr from phone success
+//compare 
+0059 waitinput %var4 BT_ADDR_LOW
+0060 compare %var4 %var6
+0061 comparetrue  93  //go to write BT SUCCESS---========
+0062 comparefalse 63
+
+0063 print "BT address read from phone is not equal to BT address write to phone"
+0064 print "F86" "Error!"
+
+//Mode_Name!="NORMAL"
+0065 print "To read BT address from phone......"
+
+0066 assign %var6 13
+0067 run MobileToolKit_StaticMD.dll GetBTAddr_ForSPU %var1 %var5 %var6
+0068 comparefalse 70 //write BT addr to phone
+0069 comparetrue 80  // go to success and to compare
+
+0070 print "Read BT address from phone fail......"
+0071 waitinput %var4 BT_ADDR_UP
+0072 run MobileToolKit_StaticMD.dll WriteHeadsetBTAddress_ForSPU %var1 %var4
+
+0073 comparefalse  75
+0074 comparetrue 77
+
+0075 print %var4 " Write BT address to phone fail......"
+0076 print "F84" "Error!"
+
+0077 print %var4 "Write BT address  to phone success......"
+0078 compare 0 0
+0079 comparetrue  81 // go to compare
+
+0080 print %var4 "Read BT address from phone success......"
+
+0081 print "To compare the BT address from PICS with the BT address read from phone......"
+0082 run MobileToolKit_StaticMD.dll GetBTAddr_ForSPU %var1 %var5 %var6
+0083 comparefalse 85
+0084 comparetrue 87
+
+0085 print "Read BT address from phone fail....."
+0086 print  "F85" "Error!"
+
+0087 waitinput %var4 BT_ADDR_LOW
+0088 compare %var4 %var6
+
+0089 comparetrue 93//go to write BT  SUCCESS---========
+0090 comparefalse 91
+
+0091 print "BT address read from phone is not equal to BT address write to phone"
+0092 print "F86" "Error!"
+
+//write BT SUCCESS---========
+0093 print "Write BT address to phone success......"
+
+}

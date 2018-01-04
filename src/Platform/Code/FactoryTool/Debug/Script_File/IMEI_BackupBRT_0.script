@@ -1,0 +1,31 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////////////////
+////////// %var1 comPort %var10 Error code %var11 Error message/////////
+////////////////////////////////////////////////////////////////////////
+0000 print "============BACKUP BRT1============" "Title"
+
+0001 waitinput %var1 COM_PORT 
+0002 waitinput %var6 CSV_FILE_NAME
+0003 waitinput %var7 BRT1_BACKUP_PATH
+0004 run MobileToolKit_StaticM.dll BackupNV2BRT_ForSPU %var1 %var7 %var6 
+0005 comparetrue 8 
+//backup brt fail
+0006 print "Backup NV item fail, there are still NV items not backuped......" "Log"
+0007 print "F113" "Error"
+
+0008 print %var7 "BackUpBRT_LAST"
+
+0009 print 0 "Progress"
+0010 print "============BACKUP BRT1 SUCCESS============" "Title"
+}

@@ -1,0 +1,28 @@
+<App Name="QSyncer 2.0" Version="1.1">
+	<Widget ClassName="CDAutorunDlg" ID="CDAutorunDlgID">
+		<Widget ClassName="SplitLayout" ID="MainLayout">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="210"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitLayout_1">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="30"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="SetLanguage">
+			<Property OriginalImagePath="FunctionBtn\Btn_Language_Original.png" MouseOverImagePath="FunctionBtn\Btn_Language_MouseOver.png" MouseDownImagePath="FunctionBtn\Btn_Language_MouseDown.png" DisableImagePath="FunctionBtn\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="15" TextDisableColorG="85" TextDisableColorB="105" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Group="" Enable="true" Display="IDS_LANGUAGE" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="WinClose">
+			<Property OriginalImagePath="Btn_Close_Original.png" MouseOverImagePath="Btn_Close_MouseOver.png" MouseDownImagePath="Btn_Close_MouseDown.png" DisableImagePath="Btn_Close_Disable.png" MinWidth="26" MinHeight="25" MaxWidth="26" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Group="" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="MainLayout" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="SplitLayout_1" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="WinClose" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitLayout_1" ID="SetLanguage" Parameter="Second" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="MainLayout" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="26" MinHeight="25" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="SplitLayout_1" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="MainLayout" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+</App>

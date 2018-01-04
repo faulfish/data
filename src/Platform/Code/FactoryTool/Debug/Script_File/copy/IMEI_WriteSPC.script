@@ -1,0 +1,105 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////////////////
+////////// %var1 comPort %var10 Error code %var11 Error message/////////
+////////// %var3 inIMEI                                        ///////// 
+////////////////////////////////////////////////////////////////////////
+
+0000 print "============WRITE SPC TO PHONE============" Title
+0001 print "Query lock status....."
+0002 waitinput %var1 COM_PORT
+
+0003 Run MobileToolKit_StaticMD.dll ReadSPC_ForSPU %var1 %var6 %var7 //Î´ÊµÏÖµÄDLL 6-status 
+0004 comparefalse 6
+0005 comparetrue 8
+
+//Read SPC from phone fail
+0006 print "Read SPC from phone fail......"
+0007 print "F71" "Error!"
+
+//%var6 0=unlocked, 1=locked, 2=Unlocked by default code
+0008 print "Check phone lock status success....."
+0009 compare %var6 1 
+0010 comparetrue 12
+0011 comparefalse 14
+
+0012 print "Phone is locked, we can not write SPC....."
+0013 print "F72" "Error!"
+
+0014 prnit %var6 "SPC is not locked, the value is----->"
+
+/////////////Get SPC from PICS by IMEI
+0015 print "Get SPC from PICS by IMEI"
+0016 waitinput %var3 IN_IMEI
+0017 run FactoryIMEIDll_StaticMD.dll GetSPCCode_PICS %var3 %var8 %var0
+0018 comparefalse 20
+0019 comparetrue 22
+
+0020 print " Get SPC from PICS fail......"
+0021 print "F54" "Error!"
+
+0022 print "Get SPC from PICS success......"
+0023 print %var8 SPC from PICS------->"
+0024 print "Write SPC to phone......"
+
+0025 Run MobileToolKit_StaticMD.dll ProgramSPC_ForSPU %var1 %var8 
+0026 comparefalse 28
+0027 comparetrue 31
+
+//Write SPC to phone fail
+0029 print "Write SPC to phone fail"
+0030 print "F55" "Error!"
+
+///////////////////////////////////
+/////lock spc
+0031 print " Lock SPC ......"
+0032 run Run MobileToolKit_StaticMD.dll LockSPC_ForSPU %var1
+
+0033 comparefalse 35
+0034 comparetrue 36
+ 
+0035 print "locked SPC fail......"
+
+0036 run MobileToolKit_StaticMD.dll IsSPCLocked_ForSPU %var1 %var4
+0037 comparefalse 39
+0038 comparetrue 41
+
+0039 print "Query SPC locked fail......"
+0040 print "F56" "Error" 
+
+0041 compare %var4 SPC Locked
+0042 comparefalse 44
+0043 comparetrue 46
+
+0044 print "Lock SPC fail......" 
+0045 print "F56" "Error!"
+
+0046 print "============WRITE and Lock SPC TO PHONE SUCCESS============"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

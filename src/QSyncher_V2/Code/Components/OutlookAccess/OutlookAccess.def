@@ -1,0 +1,6 @@
+; OutlookAccess.def : Declares the module parameters for the DLL.
+
+LIBRARY      "OutlookAccess"
+
+EXPORTS
+    ; Explicit exports can go here

@@ -1,0 +1,16 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+}
+{Code
+0000 waitinput %var1 COMPort
+0001 waitinput %var2 Input
+//0001 assign %var2 "000C5510D47D"
+0002 Run MobileToolKit_StaticMD.dll WriteHeadsetBTAddress_ForSPU %var1 %var2
+0003 comparetrue 0006
+0004 print "Fail to pair BT API"
+0005 comparefalse 9999
+0006 print "Success to pair BT API"
+}

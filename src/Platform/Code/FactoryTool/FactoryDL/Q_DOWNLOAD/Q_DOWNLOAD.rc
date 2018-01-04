@@ -1,0 +1,374 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Q_DOWNLOAD.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Q_DOWNLOAD.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Q_DOWNLOAD"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Q_DOWNLOAD Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_Q_DOWNLOAD_DIALOG DIALOGEX 0, 0, 626, 414
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION 
+"Q_DOWNLOAD                                                                                                                                   CONTACT  WINDOW : Nancy           Ext: 1386"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "START",IDC_BUTTON_START,543,327,74,20,BS_BITMAP
+    PUSHBUTTON      "EXIT",IDC_BUTTON_EXIT,543,385,74,20,BS_BITMAP
+    CTEXT           "TITLE",IDC_TITLE,0,0,626,42,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Partition File:",IDC_STATIC1,23,55,49,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_PARTITION,82,55,212,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Hex File:",IDC_STATIC5,298,55,39,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_Hex,352,55,180,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Oemsbl Header:",IDC_STATIC2,23,71,52,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_OEMSBLH,82,71,212,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "SO NO:",IDC_STATIC17,186,167,25,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_SO,217,167,41,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Oemsbl/QCSBL:",IDC_STATIC6,298,71,58,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_OEMSBL,352,71,180,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Amss Header:",IDC_STATIC4,23,103,49,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_AMSSH,82,103,211,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Qcsblhd/DBL:",IDC_STATIC3,23,87,49,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_QCSBLH,82,87,212,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Total:",IDC_STATIC9,555,54,21,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_TOTAL,578,54,29,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Qcsbl/FSBL:",IDC_STATIC7,298,87,39,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_QCSBL,352,87,180,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Amss File:",IDC_STATIC8,298,103,39,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_AMSS,352,103,180,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Pass:",IDC_STATIC10,555,70,21,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_PASS,578,70,29,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Fail:",IDC_STATIC11,555,86,21,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_FAIL,578,86,29,12,SS_CENTERIMAGE | SS_SUNKEN
+    PUSHBUTTON      "Reset",IDC_BUTTON_RESET,554,102,55,12
+    GROUPBOX        "Hex/Partition/Amss/Oems/Qcsbl",IDC_STATIC,14,43,527,78
+    GROUPBOX        "Test Record",IDC_STATIC,546,43,69,78
+    LTEXT           "SWVer:",IDC_STATIC15,23,167,30,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_SW,53,167,35,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "HWVer:",IDC_STATIC16,103,167,28,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_HW,133,167,39,12,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_STATIC_COM3,14,191,34,15,SS_CENTERIMAGE | WS_BORDER
+    CONTROL         "Progress1",IDC_PROGRESS_SUB1,"msctls_progress32",WS_BORDER | 0x5,14,207,15,96
+    CONTROL         "Progress1",IDC_PROGRESS_MAIN1,"msctls_progress32",WS_BORDER | 0x5,33,207,15,96
+    CTEXT           "Static",IDC_STATIC_PROGRESS1,14,304,34,15,SS_CENTERIMAGE | WS_BORDER,WS_EX_STATICEDGE
+    CTEXT           "",IDC_STATIC_COM4,95,190,34,15,SS_CENTERIMAGE | WS_BORDER
+    CONTROL         "Progress1",IDC_PROGRESS_SUB2,"msctls_progress32",WS_BORDER | 0x5,95,207,15,96
+    CONTROL         "Progress1",IDC_PROGRESS_MAIN2,"msctls_progress32",WS_BORDER | 0x5,114,207,15,96
+    CTEXT           "Static",IDC_STATIC_PROGRESS2,95,304,34,15,SS_CENTERIMAGE | WS_BORDER
+    CTEXT           "",IDC_STATIC_COM5,176,190,34,15,SS_CENTERIMAGE | WS_BORDER
+    CONTROL         "Progress1",IDC_PROGRESS_SUB3,"msctls_progress32",WS_BORDER | 0x5,176,207,15,96
+    CONTROL         "Progress1",IDC_PROGRESS_MAIN3,"msctls_progress32",WS_BORDER | 0x5,195,207,15,96
+    CTEXT           "Static",IDC_STATIC_PROGRESS3,176,304,34,15,SS_CENTERIMAGE | WS_BORDER
+    CTEXT           "",IDC_STATIC_COM6,257,190,34,15,SS_CENTERIMAGE | WS_BORDER
+    CONTROL         "Progress1",IDC_PROGRESS_SUB4,"msctls_progress32",WS_BORDER | 0x5,257,207,15,96
+    CONTROL         "Progress1",IDC_PROGRESS_MAIN4,"msctls_progress32",WS_BORDER | 0x5,276,207,15,96
+    CTEXT           "Static",IDC_STATIC_PROGRESS4,257,304,34,15,SS_CENTERIMAGE | WS_BORDER
+    CTEXT           "",IDC_STATIC_COM7,338,190,34,15,SS_CENTERIMAGE | WS_BORDER
+    CONTROL         "Progress1",IDC_PROGRESS_SUB5,"msctls_progress32",WS_BORDER | 0x5,338,207,15,96
+    CONTROL         "Progress1",IDC_PROGRESS_MAIN5,"msctls_progress32",WS_BORDER | 0x5,357,207,15,96
+    CTEXT           "Static",IDC_STATIC_PROGRESS5,338,304,34,15,SS_CENTERIMAGE | WS_BORDER
+    CTEXT           "",IDC_STATIC_COM8,419,190,34,15,SS_CENTERIMAGE | WS_BORDER
+    CONTROL         "Progress1",IDC_PROGRESS_SUB6,"msctls_progress32",WS_BORDER | 0x5,419,207,15,96
+    CONTROL         "Progress1",IDC_PROGRESS_MAIN6,"msctls_progress32",WS_BORDER | 0x5,438,207,15,96
+    CTEXT           "Static",IDC_STATIC_PROGRESS6,419,304,34,15,SS_CENTERIMAGE | WS_BORDER
+    CTEXT           "",IDC_STATIC_COM9,500,190,34,15,SS_CENTERIMAGE | WS_BORDER
+    CONTROL         "Progress1",IDC_PROGRESS_SUB7,"msctls_progress32",WS_BORDER | 0x5,500,207,15,96
+    CONTROL         "Progress1",IDC_PROGRESS_MAIN7,"msctls_progress32",WS_BORDER | 0x5,519,207,15,96
+    CTEXT           "Static",IDC_STATIC_PROGRESS7,500,304,34,15,SS_CENTERIMAGE | WS_BORDER
+    CTEXT           "",IDC_STATIC_COM10,581,190,34,15,SS_CENTERIMAGE | WS_BORDER
+    CONTROL         "Progress1",IDC_PROGRESS_SUB8,"msctls_progress32",WS_BORDER | 0x5,581,207,15,96
+    CONTROL         "Progress1",IDC_PROGRESS_MAIN8,"msctls_progress32",WS_BORDER | 0x5,600,207,15,96
+    CTEXT           "Static",IDC_STATIC_PROGRESS8,581,304,34,15,SS_CENTERIMAGE | WS_BORDER
+    LISTBOX         IDC_LIST_MESSAGE,11,327,523,79,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "PC Name:",IDC_STATIC18,446,167,33,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_PCNAME,488,167,61,12,SS_CENTERIMAGE | SS_SUNKEN
+    GROUPBOX        "SW/HW/SO",IDC_STATIC,14,158,601,26
+    PUSHBUTTON      "CycleTest",IDC_TEST,537,295,38,26
+    PUSHBUTTON      "CONFIG",IDC_CONFIG,555,167,53,13
+    LTEXT           "Qvcefs File:",IDC_STATIC12,23,138,44,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_QVCEFS,68,138,340,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "TIME:",IDC_STATIC13,418,138,21,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_QVCEFS_TIME,444,138,89,12,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "SIZE:",IDC_STATIC14,543,138,20,12,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_QVCEFS_SIZE,566,138,41,12,SS_CENTERIMAGE | SS_SUNKEN
+    GROUPBOX        "PPF Name/Size/Time",IDC_STATIC,14,129,601,26
+    PUSHBUTTON      "STOP",IDC_BUTTON_STOP,544,355,73,23,BS_BITMAP | WS_DISABLED
+END
+
+IDD_INITIAL DIALOG  0, 0, 311, 264
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "INITIAL"
+FONT 9, "Tahoma"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,61,233,65,23,BS_BITMAP
+    LTEXT           "Model Name:",IDC_STATIC,25,16,44,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_MODEL,71,16,69,58,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "SW Version:",IDC_STATIC,183,16,42,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_SW,230,16,65,56,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Download Mode:",IDC_STATIC,14,32,55,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_MODE,71,32,69,57,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "HW Version:",IDC_STATIC,183,32,42,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_HW,230,32,65,57,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Model Name/SW/HW",IDC_STATIC,7,5,293,60
+    LTEXT           "Partion File:",IDC_STATIC,28,78,37,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_PARTITION,69,77,224,57,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Hex File:",IDC_STATIC,38,94,27,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_HEX,69,93,224,50,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Qcsbl File:",IDC_STATIC,33,110,32,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_QCSBL,69,109,224,55,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Qcsbl Header:",IDC_STATIC,21,126,44,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_QCSBLH,69,125,224,55,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Oemsbl File:",IDC_STATIC,27,142,38,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_OEMSBL,69,141,224,54,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Oemsbl Header:",IDC_STATIC,14,158,51,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_OEMSBLH,69,157,224,54,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Amss File:",IDC_STATIC,34,175,31,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_AMSS,69,173,224,57,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Amss Header:",IDC_STATIC,21,191,44,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_AMSSH,69,189,224,64,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "SoftWare File",IDC_STATIC,7,67,293,158
+    PUSHBUTTON      "Cancel",IDCANCEL,189,233,65,23,BS_BITMAP
+    LTEXT           "Qvcefs File:",IDC_STATIC,28,207,36,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_QVCEFS_FILE,69,205,224,59,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Target Type:",IDC_STATIC,24,49,45,10
+    COMBOBOX        IDC_COMBO_TYPE,71,48,69,42,CBS_DROPDOWN | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_SO DIALOG  0, 0, 142, 69
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SO"
+FONT 9, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_SO_NUMBER,71,19,47,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,41,48,58,18,BS_BITMAP
+    LTEXT           "SO NUMBER:",IDC_STATIC,24,19,40,12,SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,6,4,130,41
+END
+
+IDD_PASSWORD DIALOG  0, 0, 177, 76
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PASSWORD"
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        PASSWORD,85,23,55,12,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,57,52,62,19,BS_BITMAP
+    CTEXT           "PASSWORD:",IDC_STATIC,37,21,44,14,SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,7,4,162,44
+END
+
+IDD_CONFIG DIALOG  0, 0, 235, 132
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CONFIG"
+FONT 10, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "SAVE",IDSAVE,58,110,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,135,109,50,16
+    CONTROL         "Only Download QVCEFS Flag :",IDC_DL_QVCEFS,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,62,25,111,10
+    GROUPBOX        "Only Download QVCEFS",IDC_STATIC,34,8,167,37
+    LTEXT           "Power On Timeout :",IDC_STATIC,58,66,67,8
+    EDITTEXT        IDC_WAITE_POWERON,144,65,29,12,ES_AUTOHSCROLL
+    GROUPBOX        "TimeOut Setting",IDC_STATIC,34,53,167,47
+    LTEXT           "ms",IDC_STATIC,173,67,11,8
+    LTEXT           "Rework Restart Timeout :",IDC_STATIC,58,80,86,8
+    EDITTEXT        IDC_RESTART_TIMEOUT,144,80,29,12,ES_AUTOHSCROLL
+    LTEXT           "ms",IDC_STATIC,173,81,11,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "Q_DOWNLOAD MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Q_DOWNLOAD"
+            VALUE "LegalCopyright", "Copyright (C) 2008"
+            VALUE "OriginalFilename", "Q_DOWNLOAD.EXE"
+            VALUE "ProductName", "Q_DOWNLOAD Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_INITIAL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 310
+    END
+
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_RESET        BITMAP                  "res\\reset.bmp"
+IDB_BITMAP_SAVE         BITMAP                  "res\\save.bmp"
+IDB_BITMAP_START        BITMAP                  "res\\start.bmp"
+IDB_BITMAP_CONFIG       BITMAP                  "res\\config.bmp"
+IDB_BITMAP_EXIT         BITMAP                  "res\\exit.bmp"
+IDB_BITMAP_OK           BITMAP                  "res\\ok.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Q_DOWNLOAD..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Q_DOWNLOAD.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

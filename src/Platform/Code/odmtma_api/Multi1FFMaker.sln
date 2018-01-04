@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Multi1FFMaker", "Multi1FFMaker\1FFMaker.vcproj", "{8C99A24F-36A7-43C4-A401-F1ED87692F85}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A8A22FAC-E6C4-42AD-82BA-997BC0182AE6} = {A8A22FAC-E6C4-42AD-82BA-997BC0182AE6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZipArchive", "..\Components\CZipArchive\ZipArchive.vcproj", "{A8A22FAC-E6C4-42AD-82BA-997BC0182AE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Lavernock|Win32 = Debug_Lavernock|Win32
+		Debug_Melos|Win32 = Debug_Melos|Win32
+		Release_Lavernock|Win32 = Release_Lavernock|Win32
+		Release_Melos|Win32 = Release_Melos|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C99A24F-36A7-43C4-A401-F1ED87692F85}.Debug_Lavernock|Win32.ActiveCfg = Debug_Lavernock|Win32
+		{8C99A24F-36A7-43C4-A401-F1ED87692F85}.Debug_Lavernock|Win32.Build.0 = Debug_Lavernock|Win32
+		{8C99A24F-36A7-43C4-A401-F1ED87692F85}.Debug_Melos|Win32.ActiveCfg = Debug_Melos|Win32
+		{8C99A24F-36A7-43C4-A401-F1ED87692F85}.Debug_Melos|Win32.Build.0 = Debug_Melos|Win32
+		{8C99A24F-36A7-43C4-A401-F1ED87692F85}.Release_Lavernock|Win32.ActiveCfg = Release_Lavernock|Win32
+		{8C99A24F-36A7-43C4-A401-F1ED87692F85}.Release_Lavernock|Win32.Build.0 = Release_Lavernock|Win32
+		{8C99A24F-36A7-43C4-A401-F1ED87692F85}.Release_Melos|Win32.ActiveCfg = Release_Melos|Win32
+		{8C99A24F-36A7-43C4-A401-F1ED87692F85}.Release_Melos|Win32.Build.0 = Release_Melos|Win32
+		{A8A22FAC-E6C4-42AD-82BA-997BC0182AE6}.Debug_Lavernock|Win32.ActiveCfg = Static_Multibyte_Debug|Win32
+		{A8A22FAC-E6C4-42AD-82BA-997BC0182AE6}.Debug_Lavernock|Win32.Build.0 = Static_Multibyte_Debug|Win32
+		{A8A22FAC-E6C4-42AD-82BA-997BC0182AE6}.Debug_Melos|Win32.ActiveCfg = Static_Multibyte_Debug|Win32
+		{A8A22FAC-E6C4-42AD-82BA-997BC0182AE6}.Debug_Melos|Win32.Build.0 = Static_Multibyte_Debug|Win32
+		{A8A22FAC-E6C4-42AD-82BA-997BC0182AE6}.Release_Lavernock|Win32.ActiveCfg = Static_Multibyte_Release|Win32
+		{A8A22FAC-E6C4-42AD-82BA-997BC0182AE6}.Release_Lavernock|Win32.Build.0 = Static_Multibyte_Release|Win32
+		{A8A22FAC-E6C4-42AD-82BA-997BC0182AE6}.Release_Melos|Win32.ActiveCfg = Static_Multibyte_Release|Win32
+		{A8A22FAC-E6C4-42AD-82BA-997BC0182AE6}.Release_Melos|Win32.Build.0 = Static_Multibyte_Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

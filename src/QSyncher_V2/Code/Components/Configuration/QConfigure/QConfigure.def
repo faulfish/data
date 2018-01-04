@@ -1,0 +1,6 @@
+; QConfigure.def : Declares the module parameters for the DLL.
+
+LIBRARY      "QConfigure"
+
+EXPORTS
+    ; Explicit exports can go here

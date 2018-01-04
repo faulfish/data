@@ -1,0 +1,56 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+
+{Code
+
+0000 print "============READ MOBILE SW HW VERSION============" "Title"
+0001 waitinput %var1 COM_PORT
+0002 assign %var11 2
+0003 loop %var11
+0004 Run MobileToolKit_StaticM.dll GetSWHWVersion_ForSPU %var1 %var2 %var3 
+0005 comparetrue 11
+0006 compare %var11 0
+0007 comparefalse
+0008 loop
+0009 print "Read HWSW version fail......" "Log"
+0010 print "M35" "Error" 
+// read success
+0011 print "Read SW HW version success......" "Log"
+0012 print %var2 "SW version------->" 
+0013 print %var3 "HW version------->" 
+
+0014 waitinput %var0 MODE_NAME
+0015 compare %var0 PHONE
+0016 comparefalse 31
+0017 waitinput %var0 PPF_CHECK_FLAG
+0018 compare %var0 1
+0019 comparefalse 31
+
+0020 assign %var2 128
+0021 assign %var11 2
+0022 loop %var11
+0023 Run MobileToolKit_StaticM.dll CheckCEFSFileName_ForSPU %var1 %var3 %var2 
+0024 comparetrue 30
+0025 compare %var11 0
+0026 comparetrue 28
+0027 loop
+
+0028 print "Read CEFS File Name fail......" "Log"
+0029 print "M20" "Error"  
+
+0030 print "Read CEFS File Name success..." "Log"
+
+0031 print %var3 "CHECK_HW_SW_ME_KLF"
+0032 print "============READ MOBILE SW HW VERSION END============" "Title"
+0033 print 15 "Progress"
+
+}

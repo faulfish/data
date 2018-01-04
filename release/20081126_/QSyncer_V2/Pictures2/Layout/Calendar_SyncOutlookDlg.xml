@@ -1,0 +1,139 @@
+<App Name="QSyncer 2.0" Version="1.1">
+	<Widget ClassName="Calendar_SyncOutlookDlg" ID="Cal_SyncOutlookDlgID">
+		<Widget ClassName="SplitLayout" ID="MainSplitLayout">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="29"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitCaptionAndWinClose">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="40"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="CaptionText">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="13" RightMargin="0" Enable="true" Display="IDS_Cal_SyncOLSetting" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Btn_WinClose">
+			<Property OriginalImagePath="General\Button\Btn_Close_Original.png" MouseOverImagePath="General\Button\Btn_Close_MouseOver.png" MouseDownImagePath="General\Button\Btn_Close_MouseDown.png" DisableImagePath="General\Button\Btn_Close_Disable.png" MinWidth="26" MinHeight="25" MaxWidth="26" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitSubwindowAndButton">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="46"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitSubwindowCaptionAndClient">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="50"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="SubcaptionText">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_SyncToOL" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="ItemNumber">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Right" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="" nID="4"></Property>
+		</Widget>
+		
+
+
+
+		<Widget ClassName="SplitLayout" ID="SplitRadioBtnInSubclient">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="41"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitButtonAndNote">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="14"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="IconBtn_SelectAll">
+			<Property OriginalImagePath="\General\Button\Btn_Radio_Original.png" MouseOverImagePath="\General\Button\Btn_Radio_MouseOver.png" MouseDownImagePath="\General\Button\Btn_Radio_MouseDown.png" DisableImagePath="\General\Button\Btn_Radio_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\General\Button\Btn_Radio_Original_2.png" MouseOverImagePath2="\General\Button\Btn_Radio_MouseOver_2.png" MouseDownImagePath2="\General\Button\Btn_Radio_MouseDown_2.png" DisableImagePath2="\General\Button\Btn_Radio_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="SyncOL_Filter" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Label_All">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_All"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitBetweenBtnAndDateTimeCtrl">
+			<Property Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="37"></Property>
+		</Widget>
+
+		<Widget ClassName="SplitLayout" ID="SplitButtonAndNote_Between">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="14"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="IconBtn_StartBetween">
+			<Property OriginalImagePath="\General\Button\Btn_Radio_Original.png" MouseOverImagePath="\General\Button\Btn_Radio_MouseOver.png" MouseDownImagePath="\General\Button\Btn_Radio_MouseDown.png" DisableImagePath="\General\Button\Btn_Radio_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\General\Button\Btn_Radio_Original_2.png" MouseOverImagePath2="\General\Button\Btn_Radio_MouseOver_2.png" MouseDownImagePath2="\General\Button\Btn_Radio_MouseDown_2.png" DisableImagePath2="\General\Button\Btn_Radio_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="SyncOL_Filter" nID="6"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Label_StartBetween">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_Cal_StartDTBetween"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="Box_StartDT">
+			<Property Direction="0" Spacing="0" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+
+
+		<Widget ClassName="Win32Windows" ID="WinCtrl_StartAfter">
+			<Property Win32ID="1082" Enable="true" Display="" nID="7"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="Label_Tilde">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display=" ~ " nID="8"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="WinCtrl_StartBefore">
+			<Property Win32ID="1083" Enable="true" Display="" nID="9"></Property>
+		</Widget>
+
+
+
+		<Widget ClassName="BoxLayout" ID="BoxOKAndCancel">
+			<Property Direction="1" Spacing="5" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Btn_Cancel">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="97" TextDisableColorG="97" TextDisableColorB="97" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Cancel" nID="10"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Btn_OK">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="97" TextDisableColorG="97" TextDisableColorB="97" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_PHONEBOOK_SYNC" nID="11"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitSubcaptionTextAndItemNumber">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="MainSplitLayout" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="MainSplitLayout" ID="SplitCaptionAndWinClose" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="MainSplitLayout" ID="SplitSubwindowAndButton" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitCaptionAndWinClose" ID="CaptionText" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitCaptionAndWinClose" ID="Btn_WinClose" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitSubwindowAndButton" ID="SplitSubwindowCaptionAndClient" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitSubwindowAndButton" ID="BoxOKAndCancel" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitSubwindowCaptionAndClient" ID="SplitSubcaptionTextAndItemNumber" Parameter="First" Description=""></Setting>
+
+			<Setting ParentWidget="SplitSubwindowCaptionAndClient" ID="SplitRadioBtnInSubclient" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitRadioBtnInSubclient" ID="SplitButtonAndNote" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitButtonAndNote" ID="IconBtn_SelectAll" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitButtonAndNote" ID="Label_All" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitRadioBtnInSubclient" ID="SplitBetweenBtnAndDateTimeCtrl" Parameter="Second" Description=""></Setting>
+
+			<Setting ParentWidget="SplitBetweenBtnAndDateTimeCtrl" ID="SplitButtonAndNote_Between" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitBetweenBtnAndDateTimeCtrl" ID="Box_StartDT" Parameter="Second" Description=""></Setting>
+					
+			<Setting ParentWidget="SplitButtonAndNote_Between" ID="IconBtn_StartBetween" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitButtonAndNote_Between" ID="Label_StartBetween" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="Box_StartDT" ID="WinCtrl_StartAfter" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="Box_StartDT" ID="Label_Tilde" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="Box_StartDT" ID="WinCtrl_StartBefore" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="SplitSubcaptionTextAndItemNumber" ID="SubcaptionText" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitSubcaptionTextAndItemNumber" ID="ItemNumber" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxOKAndCancel" ID="Btn_Cancel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxOKAndCancel" ID="Btn_OK" Parameter="" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="MainSplitLayout" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitCaptionAndWinClose" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitCaptionAndWinClose" Index="1" TopMargin="3" BottomMargin="1" LeftMargin="0" RightMargin="15" MinWidth="41" MinHeight="29" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="MainSplitLayout" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitSubwindowAndButton" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitSubwindowCaptionAndClient" Index="0" TopMargin="14" BottomMargin="1" LeftMargin="22" RightMargin="22" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+
+			<Setting ID="SplitSubwindowCaptionAndClient" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="22" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitRadioBtnInSubclient" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			<Setting ID="SplitButtonAndNote" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="13" MinHeight="13" MaxWidth="-1" MaxHeight="-1" Alignment="Right|VCenter"></Setting>
+			<Setting ID="SplitButtonAndNote" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|VCenter"></Setting>
+			
+			<Setting ID="SplitBetweenBtnAndDateTimeCtrl" Index="0" TopMargin="5" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitBetweenBtnAndDateTimeCtrl" Index="1" TopMargin="10" LeftMargin="22" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="Box_StartDT" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="92" MinHeight="20" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="Box_StartDT" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="19" MinHeight="20" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|Top"></Setting>
+			<Setting ID="Box_StartDT" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="92" MinHeight="20" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			
+			
+			<Setting ID="SplitSubwindowAndButton" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxOKAndCancel" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxOKAndCancel" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+</App>

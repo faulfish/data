@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UIFramework", "..\..\Components\UIFramework\UIFramework.vcproj", "{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA} = {AA9D97BA-452E-44C3-9AF1-538EB639C2EA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConfigureTool", "..\..\Components\ConfigureTool\ConfigureTool.vcproj", "{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LocalizationTool", "..\..\Components\Localization\LocalizationTool.vcproj", "{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE} = {9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CDAutoRun", "CDAutoRun\CDAutoRun.vcproj", "{A0D61DF9-7B7E-4EC2-963D-72BE66245BBF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0} = {F9E4953A-48A6-4945-BB69-1CE6419DC6B0}
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE} = {9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA} = {AA9D97BA-452E-44C3-9AF1-538EB639C2EA}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Debug|Win32.Build.0 = Debug|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Release|Win32.ActiveCfg = Release|Win32
+		{F9E4953A-48A6-4945-BB69-1CE6419DC6B0}.Release|Win32.Build.0 = Release|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Debug|Win32.Build.0 = Debug|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Release|Win32.ActiveCfg = Release|Win32
+		{9D5709A9-DCDB-4036-BB60-375D0E9F0EEE}.Release|Win32.Build.0 = Release|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Debug|Win32.Build.0 = Debug|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Release|Win32.ActiveCfg = Release|Win32
+		{AA9D97BA-452E-44C3-9AF1-538EB639C2EA}.Release|Win32.Build.0 = Release|Win32
+		{A0D61DF9-7B7E-4EC2-963D-72BE66245BBF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A0D61DF9-7B7E-4EC2-963D-72BE66245BBF}.Debug|Win32.Build.0 = Debug|Win32
+		{A0D61DF9-7B7E-4EC2-963D-72BE66245BBF}.Release|Win32.ActiveCfg = Release|Win32
+		{A0D61DF9-7B7E-4EC2-963D-72BE66245BBF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,247 @@
+<App Name="QDownload 2.0" Version="1.0">
+	<Widget ClassName="COptionDlg" ID="COptionDlgID">
+		<Widget ClassName="SplitLayout" ID="MainLayout">
+			<Property Direction="H" FixedStyle="Value" FixedValue="350"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="TopView">
+			<Property Direction="V" FixedStyle="Value" FixedValue="120"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="TopLeftView">
+			<Property Direction="V" FixedStyle="Value" FixedValue="16"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="BottomView">
+			<Property Direction="H" FixedStyle="Value" FixedValue="80"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="CheckView">
+			<Property Direction="2" Spacing="15"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="LabelView">
+			<Property Direction="2" Spacing="28"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="ButtonView">
+			<Property Direction="2" Spacing="7"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="ConfirmView">
+			<Property Direction="0" Spacing="15"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="OptionView">
+			<Property Direction="0" Spacing="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="1FFCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="80"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="HexCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="81"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="PartitionCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="82"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="QCSBLCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="83"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="QCSBLHDCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="84"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="OEMSBLCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="85"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="OEMSBLHDCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="86"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="AMSSCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="87"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="AMSSHDCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="88"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="CEFSCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="89"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="DUCheck">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="13" MinHeight="13" MaxWidth="13" MaxHeight="13" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="90"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="1FFLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="1FF " nID="50"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="HexLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="HEX " nID="51"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="PartitionLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="Partition " nID="52"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="QCSBLLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="QCSBL " nID="53"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="QCSBLHDLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="QCSBLHD " nID="54"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="OEMSBLLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="OEMSBL " nID="55"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="OEMSBLHDLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="OEMSBLHD " nID="56"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="AMSSLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="AMSS " nID="57"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="AMSSHDLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="AMSSHD " nID="58"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="CEFSLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="CEFS " nID="59"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="DULabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="DU " nID="60"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="1FFButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="61"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="HexButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="62"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="PartitionButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="63"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="QCSBLButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="64"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="QCSBLHDButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="65"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="OEMSBLButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="66"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="OEMSBLHDButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="67"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="AMSSButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="68"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="AMSSHDButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="69"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="CEFSButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="70"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="DUButton">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="40" MinWidth="20" MaxHeight="40" MinHeight="20" Enable="true" Display="..." nID="71"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="IconBtn_Backup">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="25" MinHeight="25" MaxWidth="25" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="74"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="IconBtn_CheckVer">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Check_Original.png" MouseOverImagePath="\FunctionBtn\Btn_Check_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_Check_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Check_Disable.png" MinWidth="25" MinHeight="25" MaxWidth="25" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="\FunctionBtn\Btn_Check_Original_2.png" MouseOverImagePath2="\FunctionBtn\Btn_Check_MouseOver_2.png" MouseDownImagePath2="\FunctionBtn\Btn_Check_MouseDown_2.png" DisableImagePath2="\FunctionBtn\Btn_Check_Disable_2.png" Arragement="LeftIconRightText" ToggleButton="true" SetWidthHeightByImage="false" Enable="true" Display="" Group="" nID="75"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="BackupLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_BACKUP " nID="76"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="CheckVerLabel">
+			<Property Font="Arial" FontSize="10" FontBold="true" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="0" TextColorG="0" TextColorB="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_VERSION " nID="77"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Btn_OK">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="80" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_OK" nID="73"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Btn_CANCEL">
+			<Property OriginalImagePath="\FunctionBtn\Btn_Original.png" MouseOverImagePath="\FunctionBtn\Btn_MouseOver.png" MouseDownImagePath="\FunctionBtn\Btn_MouseDown.png" DisableImagePath="\FunctionBtn\Btn_Disable.png" MaxWidth="100" MinWidth="80" MaxHeight="30" MinHeight="30" Enable="true" Display="IDS_CANCEL" nID="72"></Property>
+		</Widget>
+		<Order Name="Option">
+			<Setting ParentWidget="" ID="MainLayout" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="TopView" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="BottomView" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="TopView" ID="TopLeftView" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="TopView" ID="ButtonView" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="TopLeftView" ID="CheckView" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="TopLeftView" ID="LabelView" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="1FFCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="HexCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="PartitionCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="QCSBLCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="QCSBLHDCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="OEMSBLCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="OEMSBLHDCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="AMSSCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="AMSSHDCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="CEFSCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="CheckView" ID="DUCheck" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="1FFLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="HexLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="PartitionLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="QCSBLLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="QCSBLHDLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="OEMSBLLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="OEMSBLHDLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="AMSSLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="AMSSHDLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="CEFSLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="LabelView" ID="DULabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="1FFButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="HexButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="PartitionButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="QCSBLButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="QCSBLHDButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="OEMSBLButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="OEMSBLHDButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="AMSSButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="AMSSHDButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="CEFSButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ButtonView" ID="DUButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BottomView" ID="OptionView" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="BottomView" ID="ConfirmView" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="OptionView" ID="IconBtn_Backup" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="OptionView" ID="BackupLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="OptionView" ID="IconBtn_CheckVer" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="OptionView" ID="CheckVerLabel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="ConfirmView" ID="Btn_OK" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="ConfirmView" ID="Btn_CANCEL" Parameter="Second" Description=""></Setting>
+		</Order>
+		<LayoutBase Name="Option">
+			<Setting ID="MainLayout" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="MainLayout" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|Bottom"></Setting>
+			<Setting ID="TopView" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="15" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="TopView" Index="1" TopMargin="30" BottomMargin="0" LeftMargin="0" RightMargin="10" Alignment="Right|Top"></Setting>
+			<Setting ID="TopLeftView" Index="0" TopMargin="34" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="TopLeftView" Index="1" TopMargin="40" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|Top"></Setting>
+			<Setting ID="CheckView" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="CheckView" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="CheckView" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="CheckView" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="CheckView" Index="4" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="CheckView" Index="5" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="CheckView" Index="6" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="CheckView" Index="7" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="CheckView" Index="8" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="CheckView" Index="9" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="CheckView" Index="10" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="4" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="5" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="6" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="7" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="8" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="9" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="LabelView" Index="10" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Left|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="3" TopMargin="1" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="4" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="5" TopMargin="1" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="6" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="7" TopMargin="1" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="8" TopMargin="1" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="9" TopMargin="1" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ButtonView" Index="10" TopMargin="1" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="BottomView" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="80" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BottomView" Index="1" TopMargin="0" BottomMargin="5" LeftMargin="0" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="OptionView" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="OptionView" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="OptionView" Index="2" TopMargin="0" BottomMargin="0" LeftMargin="130" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="OptionView" Index="3" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="ConfirmView" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="120" RightMargin="0" Alignment="Right|VCenter"></Setting>
+			<Setting ID="ConfirmView" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="40" RightMargin="0" Alignment="Right|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+</App>

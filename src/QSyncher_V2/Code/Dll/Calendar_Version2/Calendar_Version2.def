@@ -1,0 +1,6 @@
+; Calendar_Version2.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Calendar_Version2"
+
+EXPORTS
+    ; Explicit exports can go here

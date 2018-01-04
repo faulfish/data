@@ -1,0 +1,6 @@
+; QisdaAudioModule.def : Declares the module parameters for the DLL.
+
+LIBRARY      "QisdaAudioModule"
+
+EXPORTS
+    ; Explicit exports can go here

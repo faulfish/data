@@ -1,0 +1,36 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+//This following is a sample test code ReadMobileID
+
+//IMEI
+0000 print "=============READ KLF BYTE============" Title
+
+0001 waitinput %var1 COM_PORT
+0002 assign %var2 2497
+0003 assign %var5 3000
+0004 Run MobileToolKit_StaticMD.dll ReadFactoryAreaNew_ForSPU %var1 %var2 %var3 %var4 %var5
+0005 comparetrue 7
+0006 comparefalse 13
+
+//Get KLF byte
+0007 assign %var6 3
+0008 assign %var7 1
+0009 Run FactoryIMEIDll_StaticMD.dll GetBytesFromFactoryArea %var3 %var6 %var7 %var8
+0010 print "Read KLF byte success......"
+0011 print %var8 "KLF byte------->"
+0012 print "============READ KLF BYTE SUCCESS============" Title
+
+0013 print "Read KLF byte fail......"
+0014 print "program end!" Title
+0015 print "M38" "Error!"
+}

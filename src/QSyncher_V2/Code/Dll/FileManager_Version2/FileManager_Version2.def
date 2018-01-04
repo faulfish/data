@@ -1,0 +1,6 @@
+; FileManager_Version2.def : Declares the module parameters for the DLL.
+
+LIBRARY      "FileManager_Version2"
+
+EXPORTS
+    ; Explicit exports can go here

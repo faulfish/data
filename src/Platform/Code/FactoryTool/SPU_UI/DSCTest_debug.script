@@ -1,0 +1,19 @@
+{Header
+}
+{Description
+}
+{Code
+//Keypad test
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticMD.dll QLIB_CapturePicture_ForSPU %var1 "0" "1600" "1200" "Sensor0_16001200.jpg"
+0002 comparetrue 0005
+0003 print "Error on DSC Test API"
+0004 comparefalse 9999
+0005 print "Sensor0_16001200.jpg" "DisplayPicture"
+0006 assign %var2 "Does DSC test success ?"
+0007 waitinput %var2 ComfirmYesNo
+0008 compare %var2 "Yes"
+0009 comparefalse 9999
+0010 Run MobileToolKit_StaticMD.dll WriteMMIFlag %var1 389 1
+//389		1						used		EM_BZ_TAKE_A_PICTURE
+}

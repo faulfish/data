@@ -1,0 +1,36 @@
+<Application name="FeedbackPopup">
+	<!-- background -->
+	<Group id="1" parentID="1">
+		<Bodybackground pos="1" zOrder="1" src="IDI_CO_BD_SYS_BODY_BACK"/>
+	</Group>
+	<!-- annunciator -->
+	<Group id="2" parentID="1">
+		<AnnunciatorBack pos="2" zOrder="1" src="IDI_CO_BD_ANNUNCIATOR_REGION"/>
+		<SignalIcon pos="3" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+		<BluetoothIcon pos="4" zOrder="2" src="IDI_CO_BD_BT_ACTIVE_VISIBLE"/>
+		<BatteryIcon pos="5" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+	</Group>
+	<!-- title -->
+	<Group id="3" parentID="1">
+		<TitleBack pos="10" zOrder="1" src="IDI_CO_BD_TITLE_REGION"/>
+		<TitleIcon pos="13" zOrder="2" src="IDI_CO_HL_BROWSER"/>
+		<TitleText pos="14" zOrder="2" src="IDS_CO_BD_TITLE_EXTRAS"/>
+	</Group>
+	<!-- Feedbackpopup -->
+	<Group id="4" parentID="4">
+		<TransparentBack pos="1" zOrder="1" src="IDI_CO_BD_SYS_TRANSPARENT"/>
+		<FeedBackPopupBack pos="15" zOrder="2" src="IDI_CO_BD_SYS_POPUP_BACK_FEEDBACK"/>
+		<IIcon pos="37" zOrder="3" src="IDI_CO_FB_I"/>
+		<FeedBackPopupText pos="3201" zOrder="3" src="IDS_FP_LI_POP_ITEM1"/>
+		<FeedBackPopupText pos="3202" zOrder="3" src="IDS_FP_LI_POP_ITEM2"/>
+		<FeedbackpopupText pos="3203" zOrder="3" src="IDS_FP_LI_POP_ITEM3"/>
+		<FeedbackpopupText pos="3204" zOrder="3" src="IDS_FP_LI_POP_ITEM4"/>
+		<FeedbackpopupText pos="3205" zOrder="3" src="IDS_FP_LI_POP_ITEM5"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="5" parentID="5">
+		<SoftkeyBack pos="6" zOrder="1" src="IDI_CO_BD_SYS_SOFTKEY_BACK"/>
+		<SoftkeyIcon pos="8" zOrder="2" src="IDI_CO_CC_CHECK"/>
+		<SoftkeyText pos="7" zOrder="2" src="IDS_CO_BD_LSK_OK"/>
+	</Group>
+</Application>

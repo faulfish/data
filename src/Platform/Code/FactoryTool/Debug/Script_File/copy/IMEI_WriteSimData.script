@@ -1,0 +1,275 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+0000 waitinput %var0 SECURITY_MECHANISM_FLAG
+0001 compare %var0 1
+0002 comparefalse   // go to end ..
+
+//need to write SimData
+0003 print "============WRITE SIM DATA============"
+0004 waitinput %var6 IN_IMEI
+0005 print %var6 "Query FSN form PICS by IMEI----->"
+0006 run FactoryIMEIDll_StaticMD.dll QueryFSNCode_PICS %var6 %var7 %var8
+
+0007 compare %var8 0
+0008 comparefalse 10
+0009 comparetrue 12
+
+0010 print " Query FSN from PICS fail......"
+0011 print "F97" "Error!"
+
+0012 print %var7 "Query FSN from PICS success, FSN->"
+0013 print %var7 "Query unlock unblock code from PICS by IMEI->"
+
+0014 run FactoryIMEIDll_StaticMD.dll QQueryUnlockUnblockCode_PICS %var6 %var0 %var2 %var3 %var4 %var5 %var8 %var9 %var10 %var11
+0015 comparefalse 17 
+0016 comparetrue 19
+
+0017 print "Query unlock unlock code from PICS fail......"
+0018 print "F99" "Error!"
+
+/////////////unlock code////////////////////////
+0019 print "Query unlock unblock code from PICS success..."
+0020 print %var0 "BT_NETWORK_UNLOCK_CODE"
+0021 print %var2 "BT_SERVICE_PROVIDER_UNLOCK_CODE"
+0022 print %var3 "BT_COPORATE_UNLOCK_CODE"
+0023 print %var4 "BT_NETWORK_SUBSET_UNLOCK_CODE"
+0024 print %var5 "BT_USER_USIM_UNLOCK_CODE"
+0025 print %var8 "BT_USER_SIM_UNLOCK_CODE"
+0026 print %var9 "BT_SERIAL_CODE"
+0027 print %var10 "SPC_CODE"
+0028 print %var11 "BT_PHONE_LOCK_CODE"
+
+0029 print %var7 "DEVICE_SERIAL_NUMBER_DIGIT"      ///////////保存FSN DEVICE_SERIAL_NUMBER_DIGIT
+0030 run MobileToolKit_StaticMD.dll  ReadFSN  %var1 %var9 //没有实现的DLL MobileToolKit_StaticMD.dll
+0031 comparefalse 33
+0032 comparetrue 35
+
+0033 print "Read FSN From phone fail......"
+0034 print "F94" "Error!"
+
+0035 compare %var7 %var9
+0036 comparefalse 39
+
+0037 print "The FSN read from phone is equal to get from PICS"
+0038 print "F95" "Error!"
+
+0039 print "The FSN read from phone is equal to get from PICS"
+
+0040 run MobileToolKit_StaticMD.dll pIsSSCPLocked_FORSPU %var1 %var2 //没有实现的DLL MobileToolKit_StaticMD.dll
+0041 comparefalse   100 ------------- //Query IsNWSCPLock fail, means no SIM data
+//go to
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+0042 compare %var2   --------------//
+0043 comparefalse 51
+
+0044 waitinput %var2 BT_USER_USIM_UNLOCK_CODE
+0045 run MobileToolKit_StaticMD.dll pUnlockPhoneCode_FORSPU %var1 %var2 //没有实现的DLL MobileToolKit_StaticMD.dll
+0046 comparefalse 48
+0047 comparetrue 50
+
+0048 print "UnlockPhoneCode fail"
+0049 print "F97" "Error!"
+
+0050 print "UnlockPhoneCode Success....."
+
+// 
+0051 run MobileToolKit_StaticMD.dll pIsNWSCPLocked_FORSPU %var1 %var2 %var3 %var4 %var5 %var6 %var7 //没有实现的DLL MobileToolKit_StaticMD.dll
+0052 comparefalse 100  ----------------//Query IsNWSCPLock fail, means no SIM data 
+//go to
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+//unlock 1  bNWUnlocked
+0053 compare %var2 bNWUnlocked ==============//
+0054 comparefalse  62  //unlock next lock
+0055 waitinput %var8 BT_NETWORK_UNLOCK_CODE
+0056 run MobileToolKit_StaticMD.dll pUnlockNW %var1 %var8 //没有实现的DLL MobileToolKit_StaticMD.dll
+0057 comparefalse 59
+0058 comparetrue 61
+
+0059 print "UnlockNW fail......"
+0060 print "F106" "Error!"
+
+0061 print "UnlockNW Success....."
+
+
+//unlock 2  bNSUnlocked
+0062 compare %var2 bNSUnlocked ==============//
+0063 comparefalse  71  //unlock next lock
+0064 waitinput %var8 BT_NETWORK_SUBSET_UNLOCK_CODE
+0065 run MobileToolKit_StaticMD.dll pUnlockNS %var1 %var8 //没有实现的DLL MobileToolKit_StaticMD.dll
+0066 comparefalse 68
+0067 comparetrue 70
+
+0068 print "UnlockNS fail....."
+0069 print "F107" "Error!"
+
+0070 print "UnlockNS Success....."
+
+//unlock 3 bSPUnlocked
+0071 compare %var2 bSPUnlocked ==============//
+0072 comparefalse  80  //unlock next lock
+0073 waitinput %var8 BT_SERVICE_PROVIDER_UNLOCK_CODE
+0074 run MobileToolKit_StaticMD.dll pUnlockSP %var1 %var8 //没有实现的DLL MobileToolKit_StaticMD.dll
+0075 comparefalse 77
+0076 comparetrue 79
+
+0077 print "UnlockSP fail......"
+0078 print "F108" "Error!"
+
+0079 print "UnlockSP Success....."
+
+
+//unlock 4  bCPUnlocked
+0080 compare %var2 bCPUnlocked ==============//
+0081 comparefalse  89  //unlock next lock
+0082 waitinput %var8 BT_COPORATE_UNLOCK_CODE
+0083 run MobileToolKit_StaticMD.dll pUnlockCP %var1 %var8 //没有实现的DLL MobileToolKit_StaticMD.dll
+0084 comparefalse 59
+0085 comparetrue 61
+
+0086 print "UnlockCP fail......"
+0087 print "F109" "Error!"
+
+0088 print "UnlockCP Success....."
+
+ 
+//unlock 5  bSIMUnlocked
+0089 compare %var2 bSIMUnlocked ==============//
+0090 comparefalse  98  //unlock next lock
+0091 waitinput %var8 BT_NETWORK_UNLOCK_CODE
+0092 run MobileToolKit_StaticMD.dll pUnlockNW %var1 %var8 //没有实现的DLL MobileToolKit_StaticMD.dll
+0093 comparefalse 59
+0094 comparetrue 61
+
+0095 print "UnlockSIM fail......"
+0096 print "F106" "Error!"
+
+0097 print "UnlockSIM Success....."
+0098 compare 0 0
+0099 comparetrue 101
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+0100 print "Query IsSSCPLocked or IsNWSCPLock fail, means no SIM data"
+
+0101 run MobileToolKit_StaticMD.dll pIsConnected %var1  //没有实现的DLL MobileToolKit_StaticMD.dll
+0102 comparefalse 104
+0103 comparetrue 106
+
+0104 print "IsConnected return false..."
+0105 print "F11" "Error!"
+
+0106 print "Phone still connected..."
+0107 print "Get SIM data from PICS by IMEI and FSN....."
+
+////////////////////GetSIMDataFromPICS
+0108 assign %var5 0
+0109 waitinput %var4 MODE_NAME
+0110 compare %var4 ATHB1A
+0111 comparefalse 0113
+0112 assign %var5 1
+
+0113 compare %var4 ATHB3A
+0114 comparefalse 0116
+0115 assign %var5 2
+
+0117 compare %var4 H21
+0118 comparefalse 0120
+0019 assign %var5 3
+
+0120 compare %var4 GLAVS1A
+0121 comparefalse 0123
+0122 comparetrue 129
+
+0123 compare %var4 GLAVS2A
+0124 comparefalse 0126
+0125 comparetrue 129
+
+0126 compare %var4 GLAVS3A
+0127 comparefalse 130
+0128 comparetrue 129
+
+0129 assign %var5 5
+
+0130 waitinput %var4 IN_IMEI
+0131 waitinput %var6 DEVICE_SERIAL_NUMBER_DIGIT  //input FSN
+0132 waitinput %var7 SIM_DATA_FILE_NAME
+0133 assign %var8 576
+0134 run FactoryIMEIDll_StaticMD.dll GetSIMData_PICS %var5 %var4 %var6 %var7 %var9 %var8 %var0
+0135 comparefalse 137
+0136 comparetrue 145
+
+0137 print "Get SIM data from PICS fail......"
+0138 print %var0 "Status------->"
+0139 print "F98" "Error!"
+
+0140 compare %var8 576 
+0141 comparefalse 143
+0142 comparetrue 145
+
+0143 print %var8 "SIM data size wrong,it should be 576,not ---->"
+0144 print "F98" "Error!"
+
+0145 print %var9 "SIM_DATA_FROM_PICS"   ///////////save SIM_Data_From_PICS
+
+ 
+0141 print "" "DEAL_SIM_DATA_FROM_PICS"
+
+
+
+//////////////////////////////////////////////////////////////////////////
+//check simLock Data
+
+0142 waitinput %var3 "IMEI_FROM_PHONE"
+0143 waitinput %var8 "SIM_DATA_FOR_PHONE"
+//szSimType,szIMEIFromPhone,szFSN,szIMEIFormScanner,szSimDateFileName,szSimDataForPhone,szLogString
+0144 Run FactoryIMEIDll_StaticMD.dll CheckSimData_SimEncorder %var5 %var3 %var6 %var4 %var7 %var8 %var9
+0145 print %var7 
+0146 comparetrue 148
+
+0147 print "F99" "Error!"
+
+// check success
+0148 print "Wait phone repower on......"
+
+
+0149 Run MobileToolKit_StaticMD.dll ResetHandset_ForSPU %var1
+0150 comparefalse 152
+0151 comparetrue 154
+
+0152 print "Set phone to online mode fail....."
+0153 print "F101" "Error!"
+
+0154 sleep 3000
+0155 print "============Reset phone SUCCESS============"
+
+0156 sleep 20000
+0157 print "Write SIM data to phone......"
+
+0158 waitinput %var8 "SIM_DATA_FOR_PHONE"
+0159 assign %var9 576
+0160 Run MobileToolKit_StaticMD.dll WriteSimDataV2_ForSPU %var1 %var8 %var9
+0161 comparetrue 164
+//fail
+0162 print "Write SIM data to phone fail......"
+0163 print "F51" "Error!"
+
+0164 print "lease wait 5s after write SIM data successfully..."
+0165 sleep 5000 
+
+0166 assign %var5 60000
+}

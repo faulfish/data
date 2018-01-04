@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MobileInterface", "MobileInterface\MobileInterface.vcproj", "{F491BCDB-13C7-48AB-99BF-CEDC53A7F690}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C46B7F62-CDBE-48AA-8701-C678F729B133} = {C46B7F62-CDBE-48AA-8701-C678F729B133}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestMInterfaceApp", "TestMInterfaceApp\TestMInterfaceApp.vcproj", "{FA639590-C595-43D0-9C5C-2A5BF3CA3160}"
+	ProjectSection(ProjectDependencies) = postProject
+		{57155A48-25AC-47B9-A023-D57B262ACBB8} = {57155A48-25AC-47B9-A023-D57B262ACBB8}
+		{F491BCDB-13C7-48AB-99BF-CEDC53A7F690} = {F491BCDB-13C7-48AB-99BF-CEDC53A7F690}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CDCInterface", "CDCInterface\CDCInterface.vcproj", "{C46B7F62-CDBE-48AA-8701-C678F729B133}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MobileFinder", "MobileFinder\MobileFinder.vcproj", "{57155A48-25AC-47B9-A023-D57B262ACBB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F491BCDB-13C7-48AB-99BF-CEDC53A7F690}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F491BCDB-13C7-48AB-99BF-CEDC53A7F690}.Debug|Win32.Build.0 = Debug|Win32
+		{F491BCDB-13C7-48AB-99BF-CEDC53A7F690}.Release|Win32.ActiveCfg = Release|Win32
+		{F491BCDB-13C7-48AB-99BF-CEDC53A7F690}.Release|Win32.Build.0 = Release|Win32
+		{FA639590-C595-43D0-9C5C-2A5BF3CA3160}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FA639590-C595-43D0-9C5C-2A5BF3CA3160}.Debug|Win32.Build.0 = Debug|Win32
+		{FA639590-C595-43D0-9C5C-2A5BF3CA3160}.Release|Win32.ActiveCfg = Release|Win32
+		{FA639590-C595-43D0-9C5C-2A5BF3CA3160}.Release|Win32.Build.0 = Release|Win32
+		{C46B7F62-CDBE-48AA-8701-C678F729B133}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C46B7F62-CDBE-48AA-8701-C678F729B133}.Debug|Win32.Build.0 = Debug|Win32
+		{C46B7F62-CDBE-48AA-8701-C678F729B133}.Release|Win32.ActiveCfg = Release|Win32
+		{C46B7F62-CDBE-48AA-8701-C678F729B133}.Release|Win32.Build.0 = Release|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Debug|Win32.Build.0 = Debug|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Release|Win32.ActiveCfg = Release|Win32
+		{57155A48-25AC-47B9-A023-D57B262ACBB8}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

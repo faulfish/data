@@ -1,0 +1,22 @@
+{Header
+}
+{Description
+}
+{Code
+//slider test
+0000 waitinput %var1 COMPort
+0001 assign %var2 "Does close the slider ?"
+0002 waitinput %var2 ComfirmYesNo
+0003 compare %var2 "Yes"
+0004 comparefalse 9999
+0005 Run MobileToolKit_StaticMD.dll GetFlipStatus %var1 %var2
+0006 comparetrue 0009
+0007 print "Error on GetFlipStatus API"
+0008 comparefalse 9999
+0009 compare %var2 "false"
+0010 comparetrue 0013
+0011 print "The slider should be close"
+0012 comparefalse 9999
+0013 Run MobileToolKit_StaticMD.dll WriteMMIFlag %var1 415 1
+//EM_BZ_R_W_FLIP_STATUS 415
+}

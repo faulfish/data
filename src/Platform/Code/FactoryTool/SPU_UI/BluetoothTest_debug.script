@@ -1,0 +1,87 @@
+{Header
+}
+{Description
+}
+{Code
+//Bluetooth test
+0000 waitinput %var1 COMPort
+0001 waitinput %var3 BTADDR
+0002 waitinput %var4 BTPIN
+0003 Run MobileToolKit_StaticMD.dll EnableGAP_ForSPU %var1 "true"
+0004 comparetrue 0007
+0005 print "Error on EnableGAP_ForSPU API"
+0006 comparefalse 9999
+
+0007 Run MobileToolKit_StaticMD.dll BTBound %var1 "true" %var3 %var4 "30"
+0008 sleep 0
+0009 comparetrue 0012
+0010 print "Error on BTPair"
+0011 comparefalse 9999
+
+0012 sleep 0
+
+0013 Run MobileToolKit_StaticMD.dll BTHFPGateway %var1 "true"
+0014 comparetrue 0017
+0015 print "Error on BTHFPGateway API"
+0016 comparefalse 9999
+
+0017 sleep 1000
+
+0018 Run MobileToolKit_StaticMD.dll BTHFPGatewayConnect %var1 "true" %var3
+0019 comparetrue 0022
+0020 print "Error on BTHFPGatewayConnect API"
+0021 comparefalse 9999
+
+0022 sleep 0
+
+0023 Run MobileToolKit_StaticMD.dll BTHFPGatewayAudioConnect %var1 "true"
+0024 comparetrue 0027
+0025 print "Error on BTHFPGatewayAudioConnect API"
+0026 comparefalse 9999
+
+0027 sleep 1000
+
+0028 Run MobileToolKit_StaticMD.dll BTHFPGatewayAudioLoop %var1 "true"
+0029 comparetrue 0032
+0030 print "Error on BTHFPGatewayAudioLoop API"
+0031 comparefalse 9999
+
+0032 sleep 2000
+
+0033 Run MobileToolKit_StaticMD.dll BTHFPGatewayAudioConnect %var1 "true"
+0034 comparetrue 0037
+0035 print "Error on BTHFPGatewayAudioConnect API"
+0036 comparefalse 9999
+
+0037 Run BZAPI_StaticMD.dll BZ_AudioTest %var5 %var6 %var7
+0038 print %var5
+0039 print %var6
+0040 print %var7
+0041 comparetrue 0053
+0042 print "Error on BZ_AudioTest API"
+0043 comparefalse 9999
+
+0044 Run MobileToolKit_StaticMD.dll BTHFPGatewayAudioLoop %var1 "false"
+0045 Run MobileToolKit_StaticMD.dll BluetoothDevice %var1 "false"
+0046 Run MobileToolKit_StaticMD.dll BTHFPGatewayAudioConnect %var1 "false"
+0047 Run MobileToolKit_StaticMD.dll BTHFPGatewayConnect %var1 "false" %var3
+0048 Run MobileToolKit_StaticMD.dll BTHFPGateway %var1 "false"
+0049 Run MobileToolKit_StaticMD.dll EnableGAP_ForSPU %var1 "false"
+
+0050 print "Error on BT audio loop test"
+0051 compare %var2 "Yes"
+0052 comparefalse 9999
+
+0053 Run MobileToolKit_StaticMD.dll BTBound %var1 "false" %var3 %var4 "30"
+
+0054 Run MobileToolKit_StaticMD.dll BluetoothDevice %var1 "false"
+0055 Run MobileToolKit_StaticMD.dll BTHFPGatewayAudioConnect %var1 "false"
+0056 Run MobileToolKit_StaticMD.dll BTHFPGatewayConnect %var1 "false" %var3
+0057 Run MobileToolKit_StaticMD.dll BTHFPGateway %var1 "false"
+0058 Run MobileToolKit_StaticMD.dll EnableGAP_ForSPU %var1 "false"
+
+0059 Run MobileToolKit_StaticMD.dll WriteMMIFlag %var1 404 1
+0060 Run MobileToolKit_StaticMD.dll WriteMMIFlag %var1 405 1
+//EM_BZ_BT_PING 404
+//EM_BZ_BT_CW_POWER 405
+}

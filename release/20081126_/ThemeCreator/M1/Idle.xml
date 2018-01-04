@@ -1,0 +1,24 @@
+<Application name="Idle">
+	<!-- background -->
+	<Group id="1" parentID="1">
+		<Wallpaper pos="1" zOrder="1" src="IDI_CO_BD_SYS_WALLPAPER"/>
+		<WallpaperText pos="11" zOrder="2" src="IDS_ID_IN_TIMEINFO"/>
+		<WallpaperText pos="12"  zOrder="2" src="IDS_ID_IN_DATEINFO"/>
+		<WallpaperText pos="64" zOrder="2" src="IDS_ID_IN_PROVIDERINFO"/>
+	</Group>
+	<!-- annunciator -->
+	<Group id="2" parentID="1">
+		<AnnunciatorBack pos="2" zOrder="1" src="IDI_CO_BD_ANNUNCIATOR_REGION"/>
+		<SignalIcon pos="3" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+		<BluetoothIcon pos="4" zOrder="2" src="IDI_CO_BD_BT_ACTIVE_VISIBLE"/>
+		<BatteryIcon pos="5" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="3" parentID="1">
+		<SoftkeyBack pos="6" zOrder="1" src="IDI_CO_BD_SYS_SOFTKEY_BACK"/>
+		<SoftkeyIcon pos="8" zOrder="2" src="IDI_CO_L1_MAIN_MENU"/>
+		<SoftkeyText pos="7" zOrder="2" src="IDS_CO_BD_LSK_MMS"/>
+		<SoftkeyText pos="9" zOrder="2" src="IDS_CO_BD_RSK_NAVI"/>
+	</Group>
+</Application>	
+

@@ -1,0 +1,36 @@
+{Header
+}
+{Description
+}
+{Code
+//Initialize
+0000 waitinput %var1 COMPort
+0001 Run MobileToolKit_StaticMD.dll ChangeFTM_ForSPU %var1
+0002 comparetrue 0005
+0003 print "ChangeFTM_ForSPU fail"
+0004 comparefalse 9999
+0005 Run MobileToolKit_StaticMD.dll ResetHandset_ForSPU %var1
+0006 comparetrue 0009
+0007 print "ResetHandset_ForSPU fail"
+0008 comparefalse 9999
+0009 sleep 20000
+0010 Run MobileToolKit_StaticMD.dll ReadPicassoNumber %var1 %var2
+0011 comparetrue 0014
+0012 print "Read Picasso number fail"
+0013 comparefalse 9999
+0014 print "Picasso number"
+0015 print %var2
+0016 Run MobileToolKit_StaticMD.dll ChangeOnline_ForSPU %var1
+0017 comparetrue 0020
+0018 print "ChangeOnline_ForSPU fail"
+0019 comparefalse 9999
+0020 assign %var3 "MotorolaModel"
+0021 waitinput %var4 %var3
+0022 Run MobileToolKit_StaticMD.dll WriteTrackID %var1 %var4
+0023 comparetrue 0027
+0024 print %var4
+0025 print "Write Transiver number fail"
+0026 comparefalse 9999
+0027 Run MobileToolKit_StaticMD.dll ReadTrackID %var1 %var5
+0028 print %var5
+}

@@ -1,0 +1,187 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#include ""res\\MakeISO.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MakeISO.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAKEISO_DIALOG DIALOGEX 0, 0, 268, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Make ISO with MagicISO"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+		EDITTEXT        IDC_SoureFolder_EDIT,103,16,134,14,ES_AUTOHSCROLL
+		EDITTEXT        IDC_TargetFolder_EDIT,103,54,134,14,ES_AUTOHSCROLL    
+		CONTROL         "",IDC_RemoveOriginal_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,38,16,10
+		CONTROL         "",IDC_SameFolder_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,231,39,16,10
+		EDITTEXT        IDC_CodeName_EDIT,103,107,134,14,ES_AUTOHSCROLL
+		EDITTEXT        IDC_ProjectName_EDIT,103,124,134,14,ES_AUTOHSCROLL
+		EDITTEXT        IDC_ProjectVersion_EDIT,103,141,24,14,ES_AUTOHSCROLL
+		EDITTEXT        IDC_Format_EDIT,103,157,134,14,ES_AUTOHSCROLL
+    RTEXT           "Source folder :",IDC_STATIC,7,17,87,8    
+    PUSHBUTTON      "...",IDC_Folder_BUTTON,239,16,22,14
+    RTEXT           "Code name [%c]:",IDC_STATIC,21,108,73,8    
+    RTEXT           "Project version [%v]:",IDC_STATIC,21,142,73,8    
+    RTEXT           "Source folder :",IDC_STATIC,7,55,87,8    
+    PUSHBUTTON      "...",IDC_Folder_BUTTON2,239,54,22,14
+    RTEXT           "Remove original files : ",IDC_STATIC,7,38,87,8    
+    RTEXT           "Output the same source folder : ",IDC_STATIC,116,39,113,8    
+    GROUPBOX        "Auto rename ISO file",IDC_STATIC,15,79,246,117
+    LTEXT           "Ex : M7_Flint1201_1.2_71723008.ISO",IDC_STATIC,19,89,202,8
+    RTEXT           "Project name [%p]:",IDC_STATIC,21,126,73,8    
+    RTEXT           "Name format:",IDC_STATIC,21,159,73,8    
+    LTEXT           "Ex : M7_Flint1201_1.2_71723008.ISO",IDC_SAMPLE_STATIC,19,178,202,8
+    PUSHBUTTON      "MakeISO",IDC_Exec_BUTTON,154,208,50,16
+    DEFPUSHBUTTON   "Close",IDOK,211,208,50,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "MakeISO.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "MakeISO.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAKEISO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE 4, 1
+#pragma code_page(950)
+#include "res\MakeISO.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

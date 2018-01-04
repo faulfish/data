@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SMSServer", "SMSServer\SMSServer.vcproj", "{BF42208B-572C-49D8-9ED0-4B96F29BE7D4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SMSServerTester", "SMSServerTester\SMSServerTester.vcproj", "{D21DE191-526A-4483-AE48-33A3986F4E81}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BF42208B-572C-49D8-9ED0-4B96F29BE7D4} = {BF42208B-572C-49D8-9ED0-4B96F29BE7D4}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF42208B-572C-49D8-9ED0-4B96F29BE7D4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BF42208B-572C-49D8-9ED0-4B96F29BE7D4}.Debug|Win32.Build.0 = Debug|Win32
+		{BF42208B-572C-49D8-9ED0-4B96F29BE7D4}.Release|Win32.ActiveCfg = Release|Win32
+		{BF42208B-572C-49D8-9ED0-4B96F29BE7D4}.Release|Win32.Build.0 = Release|Win32
+		{D21DE191-526A-4483-AE48-33A3986F4E81}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D21DE191-526A-4483-AE48-33A3986F4E81}.Debug|Win32.Build.0 = Debug|Win32
+		{D21DE191-526A-4483-AE48-33A3986F4E81}.Release|Win32.ActiveCfg = Release|Win32
+		{D21DE191-526A-4483-AE48-33A3986F4E81}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

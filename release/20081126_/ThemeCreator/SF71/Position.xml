@@ -1,0 +1,276 @@
+<!-- General and mostly used Types -->
+<Position_List>
+<!-- Internal screen -->
+	<pos id="1" xPos="0" yPos="0"/><!-- Background -->
+	<pos id="2" xPos="0" yPos="0"/><!-- Annunciator -->
+	<pos id="3" xPos="4" yPos="4"/><!-- Signal Strength -->
+	<pos id="4" xPos="112" yPos="4"/><!-- Bluetooth Active Icon -->
+	<pos id="5" xPos="184" yPos="4"/><!-- Battery Indication -->
+	<pos id="6" xPos="0" yPos="288"/><!-- Softkey Area -->
+	<pos id="7" xPos="6" yPos="295"/><!-- LSK Text -->
+	<pos id="8" xPos="107" yPos="291"/><!-- Center Icon -->
+	<pos id="9" xPos="139" yPos="295"/><!-- RSK Text -->
+	<pos id="10" xPos="0" yPos="24"/><!-- Title Region -->
+	<pos id="11" xPos="2" yPos="32"/><!-- Date Information -->
+	<pos id="12" xPos="120" yPos="32"/><!-- Time Information -->
+	<pos id="13" xPos="10" yPos="27"/><!-- Title Icon -->
+	<pos id="14" xPos="37" yPos="30"/><!-- Title caption -->
+	<pos id="15" xPos="0" yPos="56"/><!-- Background Tab -->
+	<pos id="16" xPos="5" yPos="90"/><!-- oneline selection bar -->
+	<pos id="17" xPos="5" yPos="90"/><!-- twoline selection bar -->
+	<pos id="18" xPos="40" yPos="56"/><!-- selected tab-->
+	<pos id="19" xPos="49" yPos="61"/><!-- selected tab's icon-->
+	<pos id="20" xPos="80" yPos="56"/><!-- unselected tab1 -->
+	<pos id="21" xPos="89" yPos="61"/><!-- unselected tab1's icon -->
+	<pos id="22" xPos="120" yPos="56"/><!-- unselected tab2 -->
+	<pos id="23" xPos="129" yPos="61"/><!-- unselected tab2's icon -->
+	<pos id="24" xPos="160" yPos="56"/><!-- unselected tab3 -->
+	<pos id="25" xPos="169" yPos="61"/><!-- unselected tab3's icon -->
+	<pos id="26" xPos="5" yPos="240"/><!-- char edit box -->
+	<pos id="27" xPos="85" yPos="250"/><!-- selection box in char edit box -->
+	<pos id="28" xPos="232" yPos="58"/><!-- scrollbar back -->
+	<pos id="29" xPos="232" yPos="90"/><!-- scrollbar handle -->
+	<pos id="30" xPos="0" yPos="56"/><!-- feedback popup back -->
+	<pos id="31" xPos="20" yPos="100"/><!-- confirm icon -->	
+	<pos id="32" xPos="0" yPos="184"/><!-- alert message background -->
+	<pos id="33" xPos="13" yPos="250"/><!-- selection line background -->
+	<pos id="34" xPos="13" yPos="220"/><!-- selection line background -->
+	<pos id="35" xPos="13" yPos="190"/><!-- selection line background -->
+	<pos id="36" xPos="5" yPos="120"/><!-- MFE selection bar -->
+	<pos id="37" xPos="20" yPos="100"/><!-- I Icon -->
+<!-- list items on background -->
+	<pos id="50" xPos="20" yPos="65"/><!-- list item 1 icon -->
+	<pos id="51" xPos="20" yPos="95"/><!-- list item 2 icon -->
+	<pos id="52" xPos="20" yPos="125"/><!-- list item 3 icon -->
+	<pos id="53" xPos="20" yPos="155"/><!-- list item 4 icon -->
+	<pos id="54" xPos="20" yPos="185"/><!-- list item 5 icon -->
+	<pos id="55" xPos="45" yPos="65"/><!-- list item 1 text -->
+	<pos id="56" xPos="45" yPos="95"/><!-- list item 2 text -->
+	<pos id="57" xPos="45" yPos="125"/><!-- list item 3 text -->
+	<pos id="58" xPos="45" yPos="155"/><!-- list item 4 text -->
+	<pos id="59" xPos="45" yPos="185"/><!-- list item 5 text -->
+	<pos id="60" xPos="20" yPos="215"/><!-- list item 6 icon -->
+	<pos id="61" xPos="45" yPos="215"/><!-- list item 6 text -->
+	<pos id="62" xPos="20" yPos="245"/><!-- list item 7 icon -->
+	<pos id="63" xPos="45" yPos="245"/><!-- list item 7 text -->
+<!-- others -->
+	<pos id="64" xPos="85" yPos="60"/><!-- provider on wallpaper -->
+	<pos id="" xPos="" yPos=""/><!-- dateinfo on wallpaper -->
+<!-- date setting app -->
+	<pos id="201" xPos="80" yPos="95"/><!-- date info text-->
+<!-- edit -->
+	<pos id="301" xPos="20" yPos="185"/><!-- private phone icon -->
+	<pos id="302" xPos="20" yPos="160"/><!-- private phone text -->
+	<pos id="303" xPos="50" yPos="190"/><!-- phone number text -->
+	<pos id="304" xPos="20" yPos="220"/><!-- business phone text -->
+	<pos id="305" xPos="20" yPos="100"/><!-- twoline selection bar LNAME text -->
+	<pos id="306" xPos="20" yPos="125"/><!-- twoline selection bar last name text -->
+	<pos id="307" xPos="95" yPos="125"/><!-- twoline selection bar edited char -->
+	<pos id="308" xPos="20" yPos="250"/><!-- charset in char edit box "m  n"-->
+	<pos id="309" xPos="90" yPos="250"/><!-- edited char in selection box -->
+	<pos id="310" xPos="120" yPos="250"/><!-- charset in char edit box "o"-->
+<!-- feedback popup positive -->
+	<pos id="401" xPos="90" yPos="250"/><!-- char set -->
+	<pos id="402" xPos="238" yPos="152"/><!-- edited char -->
+	<pos id="403" xPos="80" yPos="100"/><!-- popup line 1 text -->
+	<pos id="404" xPos="80" yPos="130"/><!-- popup line 2 text -->
+	<pos id="405" xPos="80" yPos="160"/><!-- popup line 3 text -->
+	<pos id="406" xPos="80" yPos="190"/><!-- popup line 4 text -->
+<!-- feedback popup question -->
+	<pos id="501" xPos="80" yPos="130"/><!-- popup line 2 text -->
+	<pos id="502" xPos="80" yPos="160"/><!-- popup line 3 text -->
+<!-- feedback popup warning -->
+	<pos id="601" xPos="80" yPos="130"/><!-- popup line 2 text -->
+	<pos id="602" xPos="80" yPos="160"/><!-- popup line 3 text -->
+	<pos id="603" xPos="80" yPos="190"/><!-- popup line 4 text -->
+<!-- iconmenu -->
+	<pos id="901" xPos="15" yPos="75"/><!-- row 1 left -->
+	<pos id="902" xPos="85" yPos="75"/><!-- row 1 middle -->
+	<pos id="903" xPos="155" yPos="75"/><!-- row 1 right -->
+	<pos id="904" xPos="15" yPos="125"/><!-- row 2 left -->
+	<pos id="905" xPos="85" yPos="125"/><!-- row 2 middle -->
+	<pos id="906" xPos="155" yPos="125"/><!-- row 2 right -->
+	<pos id="907" xPos="15" yPos="175"/><!-- row 3 left -->
+	<pos id="908" xPos="85" yPos="175"/><!-- row 3 middle -->
+	<pos id="909" xPos="155" yPos="175"/><!-- row 3 right -->
+	<pos id="910" xPos="15" yPos="225"/><!-- row 4 left -->
+	<pos id="911" xPos="85" yPos="225"/><!-- row 4 middle -->
+	<pos id="912" xPos="155" yPos="225"/><!-- row 4 right -->
+	<pos id="913" xPos="75" yPos="105"/><!-- selected icon -->
+<!-- idlewithwallpaper 1 -->
+	<pos id="1001" xPos="20" yPos="250"/><!-- alert icon -->
+	<pos id="1002" xPos="45" yPos="250"/><!-- alert text -->
+<!-- idlewithwallpaper 2 -->
+	<pos id="1101" xPos="20" yPos="250"/><!-- alert icon -->
+	<pos id="1102" xPos="45" yPos="250"/><!-- alert text -->
+	<pos id="1103" xPos="20" yPos="220"/><!-- alert icon in selection line -->
+	<pos id="1104" xPos="45" yPos="220"/><!-- alert text in selection line -->
+<!-- idlewithwallpaper 2 -->
+	<pos id="1201" xPos="20" yPos="250"/><!-- alert icon -->
+	<pos id="1202" xPos="45" yPos="250"/><!-- alert text -->
+	<pos id="1203" xPos="20" yPos="220"/><!-- alert icon in selection line -->
+	<pos id="1204" xPos="45" yPos="220"/><!-- alert text in selection line -->
+	<pos id="1205" xPos="20" yPos="190"/><!-- alert icon in selection line -->
+	<pos id="1206" xPos="45" yPos="190"/><!-- alert text in selection line -->
+<!-- incoming call -->
+	<pos id="1401" xPos="10" yPos="30"/><!-- item text 1 -->
+	<pos id="1402" xPos="10" yPos="250"/><!-- item text 2 -->
+<!-- marked screen -->
+	<pos id="1501" xPos="10" yPos="100"/><!-- new entry icon 1-->
+	<pos id="1502" xPos="10" yPos="130"/><!-- new entry text 1-->
+	<pos id="1503" xPos="10" yPos="220"/><!-- new entry icon 1-->
+	<pos id="1504" xPos="10" yPos="250"/><!-- new entry text 1-->
+	<pos id="1505" xPos="40" yPos="100"/><!-- new entry icon 1-->
+	<pos id="1506" xPos="40" yPos="130"/><!-- new entry text 1-->
+	<pos id="1507" xPos="40" yPos="220"/><!-- new entry icon 1-->
+	<pos id="1508" xPos="40" yPos="250"/><!-- new entry text 1-->
+	<pos id="1509" xPos="10" yPos="160"/><!-- new entry icon 1-->
+	<pos id="1510" xPos="40" yPos="160"/><!-- new entry icon 1-->
+	<pos id="1511" xPos="10" yPos="190"/><!-- new entry icon 1-->
+	<pos id="1512" xPos="5" yPos="155"/><!-- new entry icon 1-->
+<!-- MMS Screen -->
+	<pos id="1701" xPos="10" yPos="60"/><!-- background line 1 text -->
+	<pos id="1702" xPos="10" yPos="90"/><!-- background line 1 text -->
+	<pos id="1703" xPos="10" yPos="180"/><!-- background line 1 text -->
+	<pos id="1704" xPos="10" yPos="120"/><!-- text on MFE selection bar -->
+<!-- organizer 1 -->
+	<pos id="1801" xPos="10" yPos="230"/><!-- item 1 -->
+	<pos id="1802" xPos="10" yPos="255"/><!-- item 2 -->
+<!-- organizer 2 -->
+	<pos id="1901" xPos="10" yPos="245"/><!-- item 1 -->
+	<pos id="1902" xPos="10" yPos="264"/><!-- item 2 -->
+<!-- organizer 3 -->
+	<pos id="2001" xPos="80" yPos="85"/><!-- item 1 -->
+	<pos id="2002" xPos="80" yPos="160"/><!-- item 2 -->
+<!-- option popup -->
+	<pos id="2101" xPos="10" yPos="80"/><!-- options text -->
+	<pos id="2102" xPos="10" yPos="110"/><!-- text item 1 -->
+	<pos id="2103" xPos="10" yPos="140"/><!-- text item 2 -->
+	<pos id="2104" xPos="10" yPos="170"/><!-- text item 3 -->
+	<pos id="2105" xPos="10" yPos="200"/><!-- text item 4 -->
+	<pos id="2106" xPos="10" yPos="230"/><!-- text item 5 -->
+	<pos id="2107" xPos="200" yPos="110"/><!-- icon 1 -->
+	<pos id="2108" xPos="200" yPos="230"/><!-- icon 2 -->
+	<pos id="2109" xPos="225" yPos="105"/><!-- scrollbar back -->
+	<pos id="2110" xPos="225" yPos="220"/><!-- scrollbar handle -->
+<!-- Pin Input -->
+	<pos id="2201" xPos="10" yPos="100"/><!-- pin icon -->
+	<pos id="2202" xPos="70" yPos="150"/><!-- text -->
+<!-- Pin Input -->
+	<pos id="2301" xPos="10" yPos="100"/><!-- pin icon -->
+	<pos id="2302" xPos="70" yPos="150"/><!-- text -->
+<!-- progress bar -->
+	<pos id="2401" xPos="15" yPos="140"/><!-- progressbar back -->
+	<pos id="2402" xPos="15" yPos="140"/><!-- progressbar filling -->
+	<pos id="2403" xPos="15" yPos="110"/><!-- text item 1 -->
+	<pos id="2404" xPos="15" yPos="170"/><!-- text item 2 -->
+<!-- symbol screen -->
+	<pos id="2501" xPos="75" yPos="135"/><!-- selection bar in char edit box -->
+	<pos id="2502" xPos="15" yPos="100"/><!-- special char -->
+	<pos id="2503" xPos="25" yPos="140"/><!-- text item 1 -->
+	<pos id="2504" xPos="25" yPos="165"/><!-- text item 2 -->
+	<pos id="2505" xPos="25" yPos="185"/><!-- text item 3 -->
+	<pos id="2506" xPos="25" yPos="205"/><!-- text item 4 -->	
+<!-- theme screen -->
+	<pos id="2601" xPos="6" yPos="123"/><!-- icon 1 -->
+	<pos id="2602" xPos="6" yPos="189"/><!-- icon 1 -->
+	<pos id="2603" xPos="80" yPos="130"/><!-- text item 1 -->
+	<pos id="2604" xPos="80" yPos="155"/><!-- text item 2 -->
+	<pos id="2605" xPos="80" yPos="196"/><!-- text item 3 -->
+	<pos id="2606" xPos="80" yPos="221"/><!-- text item 4 -->
+	<pos id="2607" xPos="6" yPos="59"/><!-- icon in twoselection bar -->
+	<pos id="2608" xPos="80" yPos="66"/><!-- text in twoselection bar -->
+	<pos id="2609" xPos="5" yPos="60"/><!-- twoline selection bar -->
+<!-- tickedcheck screen -->
+	<pos id="2701" xPos="5" yPos="95"/><!-- twoline selection bar back -->
+	<pos id="2702" xPos="10" yPos="100"/><!-- icon 1 on selection bar -->
+	<pos id="2703" xPos="40" yPos="100"/><!-- icon 2 on selection bar -->
+	<pos id="2704" xPos="40" yPos="130"/><!-- icon 3 on selection bar -->
+	<pos id="2705" xPos="70" yPos="100"/><!-- text 1 on selection bar -->
+	<pos id="2706" xPos="70" yPos="130"/><!-- text 2 on selection bar -->
+	<pos id="2707" xPos="10" yPos="170"/><!-- icon 1 on backgroundtab -->
+	<pos id="2708" xPos="40" yPos="170"/><!-- icon 2 on backgroundtab -->
+	<pos id="2709" xPos="70" yPos="170"/><!-- text 1 on backgroundtab -->
+<!-- togglearrow screen -->
+	<pos id="2801" xPos="10" yPos="130"/><!-- item 3 on background -->
+	<pos id="2802" xPos="45" yPos="160"/><!-- item 4 on background -->
+	<pos id="2803" xPos="10" yPos="200"/><!-- item 5 on background -->
+	<pos id="2804" xPos="45" yPos="230"/><!-- item 6 on background -->
+	<pos id="2805" xPos="10" yPos="90"/><!-- left arrow on two line selection bar -->
+	<pos id="2806" xPos="210" yPos="90"/><!-- right arrow on two line selection bar -->
+	<pos id="2807" xPos="10" yPos="60"/><!-- text 1 on two line selection bar -->
+	<pos id="2808" xPos="45" yPos="90"/><!-- text 2 on two line selection bar -->
+<!-- volume screen -->
+	<pos id="3001" xPos="30" yPos="80"/><!-- volume icon -->
+	<pos id="3002" xPos="25" yPos="230"/><!-- up arrow icon -->
+	<pos id="3003" xPos="175" yPos="230"/><!-- down arrow icon -->
+	<pos id="3004" xPos="100" yPos="240"/><!-- text -->
+<!-- wait screen -->
+	<pos id="3101" xPos="25" yPos="100"/><!-- hour glass icon -->
+	<pos id="3102" xPos="65" yPos="170"/><!-- text -->
+<!-- feedback popup1 -->
+	<pos id="3201" xPos="90" yPos="100"/><!-- popup line 1 text -->
+	<pos id="3202" xPos="90" yPos="130"/><!-- popup line 2 text -->
+	<pos id="3203" xPos="90" yPos="160"/><!-- popup line 3 text -->
+	<pos id="3204" xPos="90" yPos="190"/><!-- popup line 4 text -->
+	<pos id="3205" xPos="90" yPos="220"/><!-- popup line 5 text -->
+<!-- externan screen -->
+<!-- idle for external display -->
+	<pos id="3401" xPos="0" yPos="0"/><!-- bodyback & annunciator -->
+	<pos id="3402" xPos="0" yPos="35"/><!-- picture icon -->
+	<pos id="3403" xPos="30" yPos="35"/><!-- video icon -->
+	<pos id="3404" xPos="60" yPos="35"/><!-- media player icon -->
+	<pos id="3405" xPos="70" yPos="27"/><!-- provider text -->
+	<pos id="3406" xPos="80" yPos="42"/><!-- timeinfo text -->
+	<pos id="3407" xPos="180" yPos="8"/><!-- battery icon-->
+	<pos id="3408" xPos="3" yPos="8"/><!-- signal icon -->
+	<pos id="3409" xPos="0" yPos="54"/><!-- softkey back -->
+	<pos id="3410" xPos="3" yPos="50"/><!-- confirm icon -->
+	<pos id="3411" xPos="25" yPos="50"/><!-- arrow left icon -->
+	<pos id="3412" xPos="50" yPos="50"/><!-- arrow right icon -->
+	<pos id="3413" xPos="70" yPos="50"/><!-- key icon -->
+<!-- media player list -->
+	<pos id="3501" xPos="0" yPos="0"/><!-- background -->
+	<pos id="3502" xPos="50" yPos="160"/><!-- call of time text -->
+	<pos id="3503" xPos="50" yPos="210"/><!-- fat to go -->
+	<pos id="3504" xPos="0" yPos="129"/><!-- softkey back -->
+	<pos id="3505" xPos="3" yPos="135"/><!-- softkey play -->
+	<pos id="3506" xPos="32" yPos="135"/><!-- softkey up -->
+	<pos id="3507" xPos="61" yPos="135"/><!-- softkey down -->
+	<pos id="3508" xPos="90" yPos="135"/><!-- softkey dismiss -->
+	<pos id="3509" xPos="0" yPos="18"/><!-- title background -->
+	<pos id="3510" xPos="30" yPos="119"/><!-- title text -->
+	<pos id="3511" xPos="118" yPos="36"/><!-- scrollbar back -->
+	<pos id="3512" xPos="117" yPos="50"/><!-- scrollbar handle -->
+	<pos id="3513" xPos="0" yPos="50"/><!-- selection line -->
+	<pos id="3514" xPos="65" yPos="115"/><!-- text on selection line -->
+<!-- media player preview -->
+	<pos id="3601" xPos="0" yPos="0"/><!-- background & annun-->
+	<pos id="3602" xPos="20" yPos="75"/><!-- song name -->
+	<pos id="3603" xPos="5" yPos="210"/><!-- start time -->
+	<pos id="3604" xPos="175" yPos="210"/><!-- end time -->
+	<pos id="3605" xPos="3" yPos="8"/><!-- signal -->
+	<pos id="3606" xPos="180" yPos="8"/><!-- battery -->
+	<pos id="3607" xPos="0" yPos="129"/><!-- softkey back -->
+	<pos id="3608" xPos="3" yPos="135"/><!-- softkey pause -->
+	<pos id="3609" xPos="32" yPos="135"/><!-- softkey decrease -->
+	<pos id="3610" xPos="61" yPos="135"/><!-- softkey increase -->
+	<pos id="3611" xPos="90" yPos="135"/><!-- key guard -->
+	<pos id="3612" xPos="10" yPos="75"/><!-- progressbar back -->
+	<pos id="3613" xPos="10" yPos="75"/><!-- progressbar fill -->
+<!-- horizontal popup -->
+	<pos id="3701" xPos="0" yPos="0"/><!-- annunciator -->
+	<pos id="3702" xPos="3" yPos="8"/><!-- signal -->
+	<pos id="3703" xPos="180" yPos="8"/><!-- battery -->
+	<pos id="3704" xPos="0" yPos="54"/><!-- softkey back -->
+	<pos id="3705" xPos="10" yPos="38"/><!-- confirm icon -->
+	<pos id="3706" xPos="1" yPos="1"/><!-- popup back -->
+	<pos id="3707" xPos="100" yPos="30"/><!-- line 1 text -->
+	<pos id="3708" xPos="100" yPos="60"/><!-- line 2 text -->
+	<pos id="3709" xPos="100" yPos="90"/><!-- line 3 text -->
+<!-- vertical popup -->
+	<pos id="3801" xPos="0" yPos="0"/><!-- background -->
+	<pos id="3802" xPos="0" yPos="0"/><!-- popup back -->
+	<pos id="3803" xPos="40" yPos="60"/><!-- line 1 text -->
+	<pos id="3804" xPos="40" yPos="90"/><!-- line 2 text -->
+</Position_List>

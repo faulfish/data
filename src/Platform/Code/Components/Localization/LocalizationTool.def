@@ -1,0 +1,6 @@
+; LocalizationTool.def : Declares the module parameters for the DLL.
+
+LIBRARY      "LocalizationTool"
+
+EXPORTS
+    ; Explicit exports can go here

@@ -1,0 +1,15 @@
+{Header
+}
+{Description
+}
+{Code
+//Keypad test
+0000 waitinput %var1 COMPort
+0001 print "Pictures\Keypad\keypadLayout.png" "DisplayPicture"
+0002 RunThread MobileToolKit_StaticM.dll ATEnableKeypadEvent
+0003 comparetrue 0005
+0004 print "Error on ATEnableKeypadEvent API"
+0005 comparefalse 9999
+0006 Run MobileToolKit_StaticMD.dll WriteMMIFlag %var1 395 1
+//EM_BZ_EN_DI_KEYPAD_VALIDATION 395
+}

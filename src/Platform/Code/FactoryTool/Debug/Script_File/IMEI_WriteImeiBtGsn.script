@@ -1,0 +1,141 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+
+{Code
+
+0000 waitinput %var1 COM_PORT
+0001 waitinput %var6 IMEI_FROM_SCANNER
+
+0002 print "============WRITE IMEI BT START============" "Title"
+0003 print %var6 "Query BT and GSN from server by IMEI--->"
+
+//Try B
+0004 assign %var8 B
+//%var2  MSN  %var3 BTAddr %var4 SW_ver %var5 HW_ver
+0005 run FactoryIMEIDll_StaticM.dll QueryIMEI_SSSO2 %var8 %var6 %var2 %var3 %var4 %var5 %var10 %var11 %var9
+0006 comparetrue 14
+//Try P
+0007 assign %var8 P
+0008 run FactoryIMEIDll_StaticM.dll QueryIMEI_SSSO2 %var8 %var6 %var2 %var3 %var4 %var5 %var10 %var11 %var9
+0009 comparetrue 14
+//B/P all failed
+0010 print "Query BT and GSN from server fail......"
+0011 print %var10 "Error code------->"
+0012 print %var11 "Error message------->"
+0013 print "F81" "Error"
+
+0014 print %var2 "MSN"
+0015 print %var3 "BT_ADDR"
+0016 print %var9 "QUERY_IMEI_CHECK"
+
+///////////////////Write BT Address//////////////////////
+0017 print "Write BT address..." "Log"
+0018 assign %var10 2
+0019 assign %var11 447
+0020 loop %var10
+0021 run MobileToolKit_StaticM.dll ReadNVItem_ForSPU %var1 %var11 %var9 %var0
+0022 comparetrue 26
+0023 print %var0 "Read NV Item 447 fail..."
+0024 loop
+0025 print "F83" "Error"
+
+0026 compare %var0 5 //inactive
+0027 comparefalse 39 //active
+
+0028 waitinput %var11 TRANCIVER_FLAG
+0029 compare %var11 1
+0030 comparefalse 32
+0031 assign %var3 %var6
+
+0032 loop %var10
+0033 run MobileToolKit_StaticM.dll WriteBTAddr_ForSPU %var1 %var3
+0034 comparetrue 38
+0035 print %var3 "Write BT address to phone fail....." 
+0036 loop
+0037 print "F84" "Error"
+
+0038 print %var3 "Write BT address to phone success... " 
+
+0039 assign %var11 13
+0040 loop %var10
+0041 run MobileToolKit_StaticM.dll GetBTAddr_ForSPU %var1 %var9 %var11
+0042 comparetrue 46
+0043 print "Read BT address from phone fail......" "Log"
+0044 loop
+0045 print "F85" "Error"
+
+0046 print %var9 "Read BT address from phone success......"
+0047 print "Compare BT address from PICS with from phone......"
+0048 print %var9 "BT_ADDRESS_FROM_PHONE"
+0049 print "Write BT address success..." "Log"
+
+0050 waitinput %var7 TRANCIVER_FLAG
+0051 compare %var7 1
+0052 comparetrue 84
+
+0053 print "Write IMEI..." "Log"
+0054 assign %var11 550
+0055 loop %var10
+0056 run MobileToolKit_StaticM.dll ReadNVItem_ForSPU %var1 %var11 %var9 %var0
+0057 comparetrue 61
+0058 print %var11 "Read NV Item fail..."
+0059 loop
+0060 print "F83" "Error
+
+0061 compare %var0 5 //inactive
+0062 comparefalse 70 //active
+
+0063 loop %var10
+0064 run MobileToolKit_StaticM.dll WriteIMEI_ForSPU %var1 %var6
+0065 comparetrue 69
+0066 print %var3 "Write IMEI to phone fail....."
+0067 loop
+0068 print "F87" "Error"
+
+0069 print %var6 "Write IMEI to phone Success..."
+
+0070 loop %var10
+0071 run MobileToolKit_StaticM.dll GetIMEI_ForSPU %var1 %var9
+0072 comparetrue 76
+0073 print "Read IMEI from phone fail......" "Log"
+0074 loop
+0075 print "F88" "Error"
+
+0076 print %var9 "Read IMEI from phone success..."
+0077 print "Compare IMEI from PICS with from phone..." "Log"
+
+0078 compare %var9 %var6
+0079 comparetrue 82
+0080 print "IMEI read from phone is not equal to from PICS ......" "Log"
+0081 print "F89" "Error"
+
+0082 print "IMEI read from phone is equal to from PICS..." "Log"
+0083 print "Write IMEI success..." "Log"
+0084 print "===========WRITE IMEI BT MSN END============"
+0085 print 50 "Progress"
+
+0086 print "============UPDATE IMEI STATUS============" "Title"
+0087 waitinput %var7  MAL_FROM_SCANNER
+0088 loop %var10
+0089 run FactoryIMEIDll_StaticM.dll UpdateIMEIStatus_SSSO2 %var6 %var4 %var5 %var7 %var8 %var9 
+0090 comparetrue 96
+0091 print "Update IMEI status fail......" "Log"
+0092 loop
+0093 print %var8 "Error code------->"
+0094 print %var9 "Error message------->"
+0095 print "M39" "Error"
+
+0096 print "Update IMEI Status Success..." "Log"
+0097 print "============UPDATE IMEI STATUS END============" "Title"
+
+
+}

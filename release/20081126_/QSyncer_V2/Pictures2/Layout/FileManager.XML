@@ -1,0 +1,74 @@
+<App Name="QSyncer 2.0" Version="1.1">
+	<Widget ClassName="FileManager" ID="FileManagerID">
+		<Widget ClassName="SplitLayout" ID="MainLayout">
+			<Property Direction="H" FixedStyle="Value" FixedValue="49"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="TopButton">
+			<Property Direction="V"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="DownView">
+			<Property Spacing="6" Direction="H" FixedItem="Second" FixedStyle="Ratio" Ratio="0.5"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="Button">
+			<Property Spacing="2"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="RefreshButton">
+			<Property OriginalImagePath="\General\Button\Btn_Refresh_Original.png" MouseOverImagePath="\General\Button\Btn_Refresh_MouseOver.png" MouseDownImagePath="\General\Button\Btn_Refresh_MouseDown.png" DisableImagePath="\General\Button\Btn_Refresh_Disable.png" MaxWidth="47" MinWidth="47" MaxHeight="36" MinHeight="36" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="DeleteButton">
+			<Property Display="IDS_Delete" Enable="false" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="RenameButton">
+			<Property Display="IDS_FileMgr_List_Rename" Enable="false" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="Win32Button" ID="DownloadButton">
+			<Property Display="IDS_FileMgr_Tree_Download" Enable="false" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="ME">
+			<Property Spacing="4" Direction="V" FixedStyle="Value" FixedValue="200"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_ME_TREE">
+			<Property Win32ID="2000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_ME_LIST">
+			<Property Win32ID="2001"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="PC">
+			<Property Spacing="4" Direction="V" FixedStyle="Value" FixedValue="200"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_PC_TREE">
+			<Property Win32ID="2005"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="IDC_PC_LIST">
+			<Property Win32ID="2014"></Property>
+		</Widget>
+		<Order Name="FileManager">
+			<Setting ParentWidget="" ID="MainLayout" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="TopButton" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="MainLayout" ID="DownView" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="TopButton" ID="Button" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="TopButton" ID="RefreshButton" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="Button" ID="DeleteButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="Button" ID="RenameButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="Button" ID="DownloadButton" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="DownView" ID="ME" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="DownView" ID="PC" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="ME" ID="IDC_ME_TREE" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="ME" ID="IDC_ME_LIST" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="PC" ID="IDC_PC_TREE" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="PC" ID="IDC_PC_LIST" Parameter="Second" Description=""></Setting>
+		</Order>
+		<LayoutBase Name="FileManager">
+			<Setting ID="MainLayout" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="11" RightMargin="0" Alignment="Left|Bottom"></Setting>
+			<Setting ID="MainLayout" Index="1" Alignment="Left|Top"></Setting>
+			<Setting ID="TopButton" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="12" Alignment="Right|VCenter"></Setting>
+			<Setting ID="Button" Index="0" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Alignment="Left|VCenter"></Setting>
+			<Setting ID="Button" Index="1" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Alignment="Left|VCenter"></Setting>
+			<Setting ID="Button" Index="2" MinWidth="80" MinHeight="28" MaxWidth="80" MaxHeight="28" Alignment="Left|VCenter"></Setting>
+			<Setting ID="ME" Index="0" TopMargin="4" BottomMargin="0" LeftMargin="3" RightMargin="0" Alignment="VCenter|HCenter"></Setting>
+			<Setting ID="ME" Index="1" TopMargin="4" BottomMargin="0" LeftMargin="0" RightMargin="4" Alignment="VCenter|HCenter"></Setting>
+			<Setting ID="PC" Index="0" TopMargin="0" BottomMargin="3" LeftMargin="3" RightMargin="0" Alignment="VCenter|HCenter"></Setting>
+			<Setting ID="PC" Index="1" TopMargin="0" BottomMargin="3" LeftMargin="0" RightMargin="4" Alignment="VCenter|HCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+</App>

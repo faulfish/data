@@ -1,0 +1,51 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////////////////
+////////// %var1 comPort %var10 Error code %var11 Error message/////////
+////////// %var3 inIMEI                                        ///////// 
+////////////////////////////////////////////////////////////////////////
+
+0000 print "============WRITE TEST BYTE============" "Title"
+0001 waitinput %var1 COM_PORT
+0002 assign %var2 2497
+0003 assign %var5 3000
+0004 assign %var11 2
+0005 loop %var11
+0006 Run MobileToolKit_StaticM.dll ReadFactoryAreaNew_ForSPU %var1 %var2 %var3 %var4 %var5
+0007 comparetrue 11
+0008 print "Read FactoryArea fail..." "Log"
+0009 loop
+0010 print "M15" "Error"
+
+// set KFL
+0011 waitinput %var6 COMPUTER_NAME
+0012 loop %var11
+0013 run  FactoryIMEIDll_StaticM.dll SetKLFByte %var3 %var6
+0014 comparetrue 18
+0015 print "set KFL Byte error!" "Log"
+0016 loop
+0017 print "M22" "Error"
+
+0018 assign %var4 128
+0019 loop %var11
+0020 run MobileToolKit_StaticM.dll WriteNVItem_ForSPU %var1 %var2 %var3 %var4 %var9
+0021 comparetrue  25
+0022 print "Write factory area fail......" "Log"
+0023 loop
+0024 print "M25" "Error"
+
+0025 print "Write Test byte success......" "Log"
+0026 print "============WRITE Test BYTE END============" "Title"
+
+0027 print 90 "Progress" // end
+}

@@ -1,0 +1,15 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+}
+{Code
+0000 waitinput %var1 COMPort
+0001 waitinput %var2 Input
+0002 Run MobileToolKit_StaticMD.dll HandsetDevice %var1 "true"
+0003 comparetrue 0006
+0004 print "Fail to turn on HandsetDevice API"
+0005 comparefalse 9999
+0006 print "Success to turn on HandsetDevice API"
+}

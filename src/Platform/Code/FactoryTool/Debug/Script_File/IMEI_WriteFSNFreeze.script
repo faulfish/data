@@ -1,0 +1,84 @@
+{Header
+Version 0.1
+UI QISDA_GENERAL
+}
+{Description
+Station IMEI
+ModelName Lavernock
+MESW 0.1
+MEHW 11
+SoNumber 1101
+}
+{Code
+////////////////////////////////////////////////////////////////////////
+////////// %var1 comPort %var10 Error code %var11 Error message/////////
+////////////////////////////////////////////////////////////////////////
+
+0000 print "============FREEZE OTP============" "Title"
+0001 waitinput %var1 COM_PORT
+
+0002 run MobileToolKit_StaticM.dll IsOTPFrozen_ForSPU %var1 %var6 %var7
+0003 comparetrue  9   //go to compare %var6 true
+0004 print "Query IsOTPFrozen fail......" "Log"
+0005 compare %var7 21
+0006 comparetrue 9    //go to compare %var6 true
+0007 print %var7 "OTP has not empty and has not freeze, flag="
+0008 print "F89" "Error"
+
+0009 compare %var6 true
+0010 comparetrue 50
+0011 compare %var6 22
+0012 comparetrue  15	//TP has been freezed.. go to end....
+0013 compare %var6 23
+0014 comparefalse 17
+
+//OTPflag==DIAG_ERROR_DAMAGED_OTP||OTPflag==DIAG_ERROR_WRONG_OTP_PROTECTED_CODE
+0015 print %var7 "OTP Warning, flag="
+0016 print "F88" "Error"
+
+0017 print %var7 "FSN has not been freezed, OTP flag is"
+
+0018 waitinput %var8 IMEI_FROM_SCANNER
+0019 run FactoryIMEIDll_StaticM.dll GetFSNCode_PICS %var8 %var9 %var0
+0020 comparetrue 23
+0021 print %var0 "Get FSN from PICS fail, Status----->"
+0022 print "F92" "Error"
+
+0023 print %var9 "DEAL_FSN_FROM_PICS"
+0024 waitinput %var9 FSN_FROM_PICS_BASE_64
+0025 assign %var0 3000
+0026 run MobileToolKit_StaticM.dll  WriteFSN_ForSPU  %var1 %var9 %var0
+0027 comparetrue 30
+0028 print "Write FSN to phone fail......" "Log"
+0029 print "F93" "Error"
+
+0030 print "Write FSN to phone success......" "Log"
+0031 run MobileToolKit_StaticM.dll ReadFSN_ForSPU %var1 %var8 %var0
+0032 comparetrue 35
+0033 print "Read FSN From phone fail......" "Log"
+0034 print "F94" "Error"
+
+0035 print %var8 "DEAL_FSN_FROM_PHONE" 
+0036 print "The FSN Read from phone is equal to write to phone..." "Log"
+
+0037 run MobileToolKit_StaticM.dll FreezeOTP_ForSPU %var1 
+0038 comparetrue 41
+0039 print "Save IMEI, FSN to Flash and perform the activation procedure fail....." "Log"
+0040 print "F96" "Error"
+
+0041 run MobileToolKit_StaticM.dll IsOTPFrozen_ForSPU %var1 %var6 %var7
+0042 comparetrue  45   //go to compare %var6 true
+0043 print "Query IsOTPFrozen fail......" "Log"
+0044 print "F88" "Error"
+
+0045 compare %var6 true
+0046 comparetrue  49		//OTP has been freezed.. go to end....
+0047 print "OTP not freezed... fail" "Log"
+0048 print "F89" "Error"
+
+0049 print "OTP has been freezed......" "Log"
+0050 print "============FREEZE OTP END============" "Title"
+
+0051 print 70 "Progress"
+
+}

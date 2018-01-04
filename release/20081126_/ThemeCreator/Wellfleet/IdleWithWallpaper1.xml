@@ -1,0 +1,33 @@
+<Application name="IdleWithWallpaper1">
+	<!-- background -->
+	<Group id="1" parentID="1">
+		<Wallpaper pos="1" zOrder="1" src="IDI_CO_BD_SYS_WALLPAPER"/>
+		<WallpaperText pos="11" zOrder="2" src="IDS_ID_IN_TIMEINFO"/>
+		<WallpaperText pos="12" zOrder="2" src="IDS_ID_IN_DATEINFO"/>
+		<WallpaperText pos="64" zOrder="2" src="IDS_ID_IN_PROVIDERINFO"/>
+	</Group>
+	<!-- annunciator -->
+	<Group id="2" parentID="1">
+		<AnnunciatorBack pos="2" zOrder="1" src="IDI_CO_BD_ANNUNCIATOR_REGION"/>
+		<SignalIcon pos="3" zOrder="2" src="IDI_CO_BD_GSM_SIGNAL_STRENGTH_5"/>
+		<BluetoothIcon pos="4" zOrder="2" src="IDI_CO_BD_BT_ACTIVE_VISIBLE"/>
+		<BatteryIcon pos="5" zOrder="2" src="IDI_CO_BD_BATTERY_INDICATOR_10"/>
+	</Group>
+	<!-- softkey -->
+	<Group id="3" parentID="1">
+		<SoftkeyBack pos="6" zOrder="1" src="IDI_CO_BD_SYS_SOFTKEY_BACK"/>
+		<SoftkeyIcon pos="8" zOrder="2" src="IDI_CO_CC_CHECK"/>
+		<SoftkeyText pos="7" zOrder="2" src="IDS_CO_BD_LSK_VIEW"/>
+		<SoftkeyText pos="9" zOrder="2" src="IDS_CO_BD_RSK_CANCEL"/>
+	</Group>
+	<!-- alert message backgrounf 1 line -->
+	<Group id="4" parentID="1">
+		<AlertMsgBackground1LineBack pos="32" zOrder="1" src="IDI_IL_BD_ALERT_MGR_BG_001"/>
+	</Group>
+	<!-- selection line -->
+	<Group id="5" parentID="4">
+		<SelectionLineBack pos="33" zOrder="1" src="IDI_CO_BD_SYS_SELECTION_OPTIONS"/>
+		<SelectionLineIcon pos="1001" zOrder="2" src="IDI_IL_L1_ALERT_MISSED_CALLS"/>
+		<SelectionLineText pos="1002" zOrder="2" src="IDS_ID_LI_ITEM1"/>
+	</Group>
+</Application>

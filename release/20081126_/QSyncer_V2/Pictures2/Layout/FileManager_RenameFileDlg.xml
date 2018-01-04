@@ -1,0 +1,62 @@
+<App Name="QSyncer 2.0" Version="1.1">
+	<Widget ClassName="FileManager_RenameFileDlg" ID="FileManager_RenameFileDlgID">
+		<Widget ClassName="SplitLayout" ID="MainSplitLayout">
+			<Property Spacing="2" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="29"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitCaptionAndWinClose">
+			<Property Spacing="0" Direction="V" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Ratio" FixedValue="0.500000"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="CaptionText">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left|VCenter" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="13" RightMargin="0" Enable="true" Display="IDS_FILEMANAGER_FUNCTION" nID="1"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Btn_WinClose">
+			<Property OriginalImagePath="General\Button\Btn_Close_Original.png" MouseOverImagePath="General\Button\Btn_Close_MouseOver.png" MouseDownImagePath="General\Button\Btn_Close_MouseDown.png" DisableImagePath="General\Button\Btn_Close_Disable.png" MinWidth="26" MinHeight="25" MaxWidth="26" MaxHeight="25" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="16.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="0" TextEnableColorG="0" TextEnableColorB="0" TextDisableColorAlpha="255" TextDisableColorR="100" TextDisableColorG="100" TextDisableColorB="100" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="" nID="2"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitSubwindowAndButton">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="second" FixedStyle="Value" FixedValue="46"></Property>
+		</Widget>
+		<Widget ClassName="SplitLayout" ID="SplitSubwindowCaptionAndClient">
+			<Property Spacing="0" Direction="H" FirstLimit="-1" SecondLimit="-1" Movable="false" FixedItem="first" FixedStyle="Value" FixedValue="50"></Property>
+		</Widget>
+		<Widget ClassName="Win32Label" ID="SubcaptionText">
+			<Property Font="Arial" FontSize="9" FontBold="false" Alignment="Left" BkImage="" TextColorAlpha="255" TextColorR="255" TextColorG="255" TextColorB="255" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Enable="true" Display="IDS_FileMgr_Input_FileName" nID="3"></Property>
+		</Widget>
+		<Widget ClassName="Win32Windows" ID="Win32Windows_0">
+			<Property Win32ID="2006" Enable="true" Display="" nID="4"></Property>
+		</Widget>
+		<Widget ClassName="BoxLayout" ID="BoxOKAndCancel">
+			<Property Direction="1" Spacing="5" CellWidth="0" CellHeight="0" Alignment="Left|Top" CommonTopMargin="0" CommonBottomMargin="0" CommonLeftMargin="0" CommonRightMargin="0"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Btn_Cancel">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="97" TextDisableColorG="97" TextDisableColorB="97" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_Cancel" nID="5"></Property>
+		</Widget>
+		<Widget ClassName="Win32IconButton" ID="Btn_OK">
+			<Property OriginalImagePath="MainFrame\Button\Btn_Language_Original.png" MouseOverImagePath="MainFrame\Button\Btn_Language_MouseOver.png" MouseDownImagePath="MainFrame\Button\Btn_Language_MouseDown.png" DisableImagePath="MainFrame\Button\Btn_Language_Disable.png" MinWidth="98" MinHeight="26" MaxWidth="98" MaxHeight="26" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" Spacing="0" FontSize="9.000000" Alignment="HCenter|VCenter" TextEnableColorAlpha="255" TextEnableColorR="255" TextEnableColorG="255" TextEnableColorB="255" TextDisableColorAlpha="255" TextDisableColorR="97" TextDisableColorG="97" TextDisableColorB="97" FontFamily="" EnableIcon="" DisableIcon="" OrgImagePath2="" MouseOverImagePath2="" MouseDownImagePath2="" DisableImagePath2="" Arragement="LeftIconRightText" ToggleButton="false" SetWidthHeightByImage="true" Enable="true" Display="IDS_OK" nID="6"></Property>
+		</Widget>
+		<Order>
+			<Setting ParentWidget="" ID="MainSplitLayout" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="MainSplitLayout" ID="SplitCaptionAndWinClose" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitCaptionAndWinClose" ID="CaptionText" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitCaptionAndWinClose" ID="Btn_WinClose" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="MainSplitLayout" ID="SplitSubwindowAndButton" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitSubwindowAndButton" ID="SplitSubwindowCaptionAndClient" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitSubwindowCaptionAndClient" ID="SubcaptionText" Parameter="First" Description=""></Setting>
+			<Setting ParentWidget="SplitSubwindowCaptionAndClient" ID="Win32Windows_0" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="SplitSubwindowAndButton" ID="BoxOKAndCancel" Parameter="Second" Description=""></Setting>
+			<Setting ParentWidget="BoxOKAndCancel" ID="Btn_Cancel" Parameter="" Description=""></Setting>
+			<Setting ParentWidget="BoxOKAndCancel" ID="Btn_OK" Parameter="" Description=""></Setting>
+		</Order>
+		<LayoutBase>
+			<Setting ID="MainSplitLayout" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitCaptionAndWinClose" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitCaptionAndWinClose" Index="1" TopMargin="3" BottomMargin="1" LeftMargin="0" RightMargin="15" MinWidth="41" MinHeight="29" MaxWidth="-1" MaxHeight="-1" Alignment="Right|Top"></Setting>
+			<Setting ID="MainSplitLayout" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitSubwindowAndButton" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitSubwindowCaptionAndClient" Index="0" TopMargin="14" BottomMargin="1" LeftMargin="22" RightMargin="3" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="Left|Top"></Setting>
+			<Setting ID="SplitSubwindowCaptionAndClient" Index="1" TopMargin="18" BottomMargin="18" LeftMargin="82" RightMargin="82" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="SplitSubwindowAndButton" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="10" MinWidth="-1" MinHeight="-1" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxOKAndCancel" Index="0" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+			<Setting ID="BoxOKAndCancel" Index="1" TopMargin="0" BottomMargin="0" LeftMargin="0" RightMargin="0" MinWidth="98" MinHeight="26" MaxWidth="-1" MaxHeight="-1" Alignment="HCenter|VCenter"></Setting>
+		</LayoutBase>
+	</Widget>
+</App>
