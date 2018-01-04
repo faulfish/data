@@ -1,0 +1,29 @@
+Build details:
+
+Product: OmniDiskSweeper
+Tag: OmniDiskSweeper/1.9/GM-v28
+Date: 2013-12-30 10:09:43 -0800
+Builder: omnibuild
+Host: tb109a.private.omnigroup.com
+Revision: 201186
+
+Xcode: /Applications/Xcode.app/Contents/Developer
+Xcode 5.0.1
+Build version 5A2034a
+
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Configurations 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Frameworks/OmniBase 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Frameworks/OmniFoundation 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Frameworks/OmniAppKit 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Frameworks/OmniSoftwareUpdate 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Applications/CrashCatcher/Framework 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Frameworks/OmniMachO 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Applications/CrashCatcher/CrashReports 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Applications/CrashCatcher/Framework 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Applications/CrashCatcher/App 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Tools/OmniLocalization 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Applications/OmniDiskSweeper 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Localizations/Resources/OmniDiskSweeper 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Scripts 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/Workspaces 201186
+/tags/OmniDiskSweeper/1.9/GM-v28/OmniGroup/DiskImageTemplates 201186

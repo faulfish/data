@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>13A598</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>OmniDiskSweeper</string>
+	<key>CFBundleGetInfoString</key>
+	<string>OmniDiskSweeper 1.9, version 28.0.201186, © 1997–2010, 2012-2013 The Omni Group</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>OmniDiskSweeper Help</string>
+	<key>CFBundleHelpBookName</key>
+	<string>OmniDiskSweeper Help</string>
+	<key>CFBundleIconFile</key>
+	<string>OmniDiskSweeper.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.omnigroup.OmniDiskSweeper</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>OmniDiskSweeper</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.9</string>
+	<key>CFBundleSignature</key>
+	<string>ODSw</string>
+	<key>CFBundleVersion</key>
+	<string>28.0.201186</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>5A2034a</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>13A595</string>
+	<key>DTSDKName</key>
+	<string>macosx10.9</string>
+	<key>DTXcode</key>
+	<string>0501</string>
+	<key>DTXcodeBuild</key>
+	<string>5A2034a</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.8</string>
+	<key>NSAppleScriptEnabled</key>
+	<string>Yes</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>© 1997–2010, 2012-2013 The Omni Group</string>
+	<key>NSMainNibFile</key>
+	<string>OmniDiskSweeper</string>
+	<key>NSPrincipalClass</key>
+	<string>OAApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>English</key>
+				<string>Size in OmniDiskSweeper</string>
+				<key>default</key>
+				<string>Size in OmniDiskSweeper</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>serviceSizeFilesOnPasteboard</string>
+			<key>NSPortName</key>
+			<string>OmniDiskSweeper</string>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSSupportsSuddenTermination</key>
+	<true/>
+	<key>OFBundleRegistryConfig</key>
+	<dict>
+		<key>BundleExtensions</key>
+		<array>
+			<string>omnidisksweeper</string>
+			<string>plugin</string>
+		</array>
+		<key>LogBundleRegistration</key>
+		<false/>
+		<key>SearchPaths</key>
+		<array>
+			<string>AppWrapper</string>
+		</array>
+	</dict>
+	<key>OFControllerClass</key>
+	<string>ODSController</string>
+	<key>OFRegistrations</key>
+	<dict>
+		<key>NSUserDefaults</key>
+		<dict>
+			<key>defaultsDictionary</key>
+			<dict>
+				<key>DebugDriveList</key>
+				<false/>
+				<key>DebugPackageScanning</key>
+				<false/>
+				<key>EnableDeleteButton</key>
+				<true/>
+				<key>FeedbackAddress</key>
+				<string>omnidisksweeper@omnigroup.com</string>
+				<key>ODSLargeFileColor</key>
+				<string>0.5 0.0 1.0</string>
+				<key>ODSSmallFileColor</key>
+				<string>0.1 0.5 0.0</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>OSUSoftwareUpdateTrack</key>
+	<string></string>
+</dict>
+</plist>

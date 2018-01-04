@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>13A598</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>com.omnigroup.OmniSoftwareUpdate.OSUInstallerService</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.omnigroup.OmniSoftwareUpdate.OSUInstallerService</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>com.omnigroup.OmniSoftwareUpdate.OSUInstallerService</string>
+	<key>CFBundlePackageType</key>
+	<string>XPC!</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>5A2034a</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>13A595</string>
+	<key>DTSDKName</key>
+	<string>macosx10.9</string>
+	<key>DTXcode</key>
+	<string>0501</string>
+	<key>DTXcodeBuild</key>
+	<string>5A2034a</string>
+	<key>SMPrivilegedExecutables</key>
+	<dict>
+		<key>com.omnigroup.OmniSoftwareUpdate.OSUInstallerPrivilegedHelper</key>
+		<string>identifier com.omnigroup.OmniSoftwareUpdate.OSUInstallerPrivilegedHelper and anchor apple generic and certificate leaf[subject.CN] = "Developer ID Application: The Omni Group"</string>
+	</dict>
+	<key>XPCService</key>
+	<dict>
+		<key>EnvironmentVariables</key>
+		<dict/>
+		<key>JoinExistingSession</key>
+		<true/>
+		<key>RunLoopType</key>
+		<string>NSRunLoop</string>
+		<key>ServiceType</key>
+		<string>Application</string>
+	</dict>
+</dict>
+</plist>
