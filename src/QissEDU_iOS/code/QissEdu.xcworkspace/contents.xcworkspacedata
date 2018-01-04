@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:iClassAPI/iClassAPI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iClass/iClass.xcodeproj">
+   </FileRef>
+</Workspace>
